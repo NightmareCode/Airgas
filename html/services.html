@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Services | AirGas Technology</title>
+<link rel="stylesheet" href="../css/styles.css">
+<style>
+  /* Refill Highlight Section */
+  .refill-highlight {
+    background: rgba(249, 115, 22, 0.05);
+    border: 1px solid var(--primary);
+    border-radius: 14px;
+    padding: 32px;
+    margin-bottom: 60px;
+  }
+  
+  /* New Gas Row Layout */
+  .gas-list-container {
+    display: flex;
+    flex-direction: column;
+    gap: 0; /* borders will handle separation */
+  }
+
+  .gas-row {
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+    padding: 40px 0;
+    border-bottom: 3px solid rgba(255,255,255,0.1); /* Thicker divider as per image */
+  }
+
+  .gas-row:first-child {
+    padding-top: 0;
+  }
+  
+  .gas-row:last-child {
+    border-bottom: none;
+  }
+
+  .gas-info {
+    flex: 1;
+  }
+
+  .gas-header-group {
+    margin-bottom: 24px;
+  }
+
+  .gas-title {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 4px;
+  }
+  
+  .gas-code {
+    font-weight: 400;
+    opacity: 0.8;
+    margin-left: 8px;
+  }
+
+  .gas-short-desc {
+    font-size: 1rem;
+    color: var(--muted);
+    font-style: italic;
+  }
+
+  .gas-details-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 32px;
+  }
+
+  .gas-detail-col h4 {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+
+  .gas-detail-col p, .gas-detail-col ul {
+    font-size: 0.95rem;
+    color: var(--text);
+    line-height: 1.6;
+  }
+  
+  .gas-detail-col ul {
+    list-style-type: none; /* Removing bullets to look more like text block in image if needed, or keep bullets */
+    padding-left: 0;
+  }
+  
+  .gas-detail-col li {
+    margin-bottom: 4px;
+  }
+
+  /* Right Side Visuals */
+  .gas-visual {
+    width: 250px;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding-top: 10px;
+  }
+
+  .gas-image-placeholder {
+    width: 100%;
+    height: 200px;
+    background: rgba(255,255,255,0.05);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 16px;
+    color: var(--muted);
+    border: 1px dashed rgba(255,255,255,0.2);
+  }
+
+  .gas-img {
+    width: 100%;
+    height: 200px;
+    object-fit: contain;
+    background: rgba(255,255,255,0.02);
+    border-radius: 8px;
+    margin-bottom: 16px;
+    border: 1px solid rgba(255,255,255,0.1);
+  }
+
+  .gas-price {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #2ecc71; /* Green color for price */
+  }
+
+  /* Responsive */
+  @media (max-width: 900px) {
+    .gas-row {
+      flex-direction: column;
+    }
+    .gas-visual {
+      width: 100%;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .gas-image-placeholder {
+      width: 120px;
+      height: 120px;
+      margin-bottom: 0;
+    }
+  }
+  
+  @media (max-width: 600px) {
+    .gas-details-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+  
+  .price-list li {
+    display: flex;
+    justify-content: space-between;
+    padding: 8px 0;
+    border-bottom: 1px solid rgba(255,255,255,0.05);
+  }
+  .price-list li:last-child { border-bottom: none; }
+  .price-tag { font-weight: 700; color: #2ecc71; }
+</style>
+</head>
+<body>
+<header class="site-header">
+<div class="container header-inner">
+<a class="logo" href="../index.html">
+<img src="../assets/company_logo.jpg" alt="AirGas Technology logo">
+<span>AirGas Technology</span>
+</a>
+<nav class="nav" aria-label="Main">
+<button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+<span></span><span></span><span></span>
+</button>
+<ul class="nav-list">
+<li><a href="../index.html">Home</a></li>
+<li><a href="about.html">About</a></li>
+<li><a href="services.html" class="active">Services</a></li>
+<li><a href="products.html">Products</a></li>
+<li><a href="training.html">Training</a></li>
+<li><a href="contact.html">Contact</a></li>
+</ul>
+<a class="btn btn-primary cta-header" href="contact.html">Get A Quote</a>
+</nav>
+</div>
+</header>
+<main>
+<section class="page-hero">
+<div class="container">
+<h1>Services & Products</h1>
+<p>Comprehensive industrial gas solutions and cylinder refill services.</p>
+</div>
+</section>
+
+<section class="content">
+<div class="container">
+<!-- Refill Services Highlight -->
+<div class="card" style="border: 1px solid var(--primary); background: rgba(249, 115, 22, 0.05);">
+  <h2 style="color: var(--primary);">Cylinder Refill Services</h2>
+  <p style="font-size: 1.1rem; color: var(--text);">Need a gas cylinder refill? We provide fast, reliable refill services for cylinders up to 10 liters. Choose from our complete range of industrial and specialty gases!</p>
+  
+  <div class="grid cards-3" style="margin-top: 32px;">
+    <div>
+      <h4 style="color: var(--muted);">Turnaround Time</h4>
+      <p class="stat-value">5 - 30 Minutes</p>
+    </div>
+    <div>
+      <h4 style="color: var(--muted);">Service Mode</h4>
+      <p style="font-weight: 600;">Walk-in Service</p>
+      <p style="font-size: 0.9rem;">Bring your empty cylinder to us.</p>
+    </div>
+    <div>
+      <h4 style="color: var(--muted);">Certifications</h4>
+      <p>Malaysian standard certifications & safety for oil and gas compliant.</p>
+    </div>
+  </div>
+
+  <div style="margin-top: 32px; background: rgba(0,0,0,0.2); padding: 24px; border-radius: 10px;">
+    <h3>Refill Pricing (Up to 10L)</h3>
+    <ul class="price-list">
+      <li><span>Oxygen</span> <span class="price-tag">RM40.00</span></li>
+      <li><span>Nitrogen</span> <span class="price-tag">RM40.00</span></li>
+      <li><span>Argon</span> <span class="price-tag">RM40.00</span></li>
+      <li><span>Helium</span> <span class="price-tag">RM40.00</span></li>
+      <li><span>Medical Oxygen</span> <span class="price-tag">RM40.00</span></li>
+      <li><span>Carbon Dioxide</span> <span class="price-tag">RM40.40</span></li>
+    </ul>
+  </div>
+</div>
+</div>
+</section>
+
+<section class="content">
+<div class="container">
+<h2 style="margin-bottom: 40px;">Gas Types & Applications</h2>
+
+<div class="gas-list-container">
+
+  <!-- Oxygen -->
+  <div class="gas-row">
+    <div class="gas-info">
+      <div class="gas-header-group">
+        <h3 class="gas-title">Oxygen <span class="gas-code">O₂</span></h3>
+        <p class="gas-short-desc">Supports combustion and essential for life support and industrial processes.</p>
+      </div>
+      <div class="gas-details-grid">
+        <div class="gas-detail-col">
+          <h4>Industries</h4>
+          <ul>
+            <li>Healthcare and hospitals</li>
+            <li>Metal fabrication and welding</li>
+            <li>Water treatment facilities</li>
+            <li>Chemical manufacturing</li>
+            <li>Aerospace</li>
+          </ul>
+        </div>
+        <div class="gas-detail-col">
+          <h4>Why It's Important</h4>
+          <p>Oxygen is critical for sustaining life in medical settings and enables high-temperature processes in industrial applications. In welding, it increases flame temperature for cutting and joining metals.</p>
+        </div>
+      </div>
+    </div>
+    <div class="gas-visual">
+      <img src="../assets/oxygen.png" alt="Oxygen Cylinder" class="gas-img">
+      <div class="gas-price">RM40.00<span style="font-size:0.5em; display:block; color:var(--text); opacity:0.7; font-weight:400;">(Refill ≤ 10L)</span></div>
+    </div>
+  </div>
+
+  <!-- Nitrogen -->
+  <div class="gas-row">
+    <div class="gas-info">
+      <div class="gas-header-group">
+        <h3 class="gas-title">Nitrogen <span class="gas-code">N₂</span></h3>
+        <p class="gas-short-desc">Inert gas used for purging, blanketing, and creating oxygen-free environments.</p>
+      </div>
+      <div class="gas-details-grid">
+        <div class="gas-detail-col">
+          <h4>Industries</h4>
+          <ul>
+            <li>Food and beverage</li>
+            <li>Electronics manufacturing</li>
+            <li>Pharmaceutical production</li>
+            <li>Oil and gas</li>
+            <li>Chemical processing</li>
+          </ul>
+        </div>
+        <div class="gas-detail-col">
+          <h4>Why It's Important</h4>
+          <p>Nitrogen prevents spoilage and contamination by displacing oxygen. In food packaging, it extends shelf life. In electronics, it prevents oxidation during manufacturing.</p>
+        </div>
+      </div>
+    </div>
+    <div class="gas-visual">
+      <img src="../assets/nitrogen.png" alt="Nitrogen Cylinder" class="gas-img">
+      <div class="gas-price">RM40.00<span style="font-size:0.5em; display:block; color:var(--text); opacity:0.7; font-weight:400;">(Refill ≤ 10L)</span></div>
+    </div>
+  </div>
+
+  <!-- Argon -->
+  <div class="gas-row">
+    <div class="gas-info">
+      <div class="gas-header-group">
+        <h3 class="gas-title">Argon <span class="gas-code">Ar</span></h3>
+        <p class="gas-short-desc">Noble gas primarily used as a shielding gas in welding and inert atmospheres.</p>
+      </div>
+      <div class="gas-details-grid">
+        <div class="gas-detail-col">
+          <h4>Industries</h4>
+          <ul>
+            <li>Metal fabrication (TIG/MIG)</li>
+            <li>Specialty metals (titanium)</li>
+            <li>Electronics production</li>
+            <li>Light bulb manufacturing</li>
+            <li>Scientific research</li>
+          </ul>
+        </div>
+        <div class="gas-detail-col">
+          <h4>Why It's Important</h4>
+          <p>Argon's complete inertness protects welds from atmospheric contamination, resulting in stronger, cleaner welds. For specialty metals like titanium, argon shielding is absolutely necessary.</p>
+        </div>
+      </div>
+    </div>
+    <div class="gas-visual">
+      <img src="../assets/argon.png" alt="Argon Cylinder" class="gas-img">
+      <div class="gas-price">RM40.00<span style="font-size:0.5em; display:block; color:var(--text); opacity:0.7; font-weight:400;">(Refill ≤ 10L)</span></div>
+    </div>
+  </div>
+
+  <!-- Carbon Dioxide -->
+  <div class="gas-row">
+    <div class="gas-info">
+      <div class="gas-header-group">
+        <h3 class="gas-title">Carbon Dioxide <span class="gas-code">CO₂</span></h3>
+        <p class="gas-short-desc">Used for carbonation, refrigeration, pH control, and welding shielding.</p>
+      </div>
+      <div class="gas-details-grid">
+        <div class="gas-detail-col">
+          <h4>Industries</h4>
+          <ul>
+            <li>Food and beverage</li>
+            <li>Welding (MIG shielding)</li>
+            <li>Water treatment</li>
+            <li>Fire suppression systems</li>
+            <li>Greenhouses</li>
+          </ul>
+        </div>
+        <div class="gas-detail-col">
+          <h4>Why It's Important</h4>
+          <p>CO₂ gives beverages their fizz and is essential for food preservation as dry ice. In welding, it's a cost-effective shielding gas. Its ability to regulate pH makes it valuable in water treatment.</p>
+        </div>
+      </div>
+    </div>
+    <div class="gas-visual">
+      <img src="../assets/carbon_dioxide.png" alt="Carbon Dioxide Cylinder" class="gas-img">
+      <div class="gas-price">RM40.40<span style="font-size:0.5em; display:block; color:var(--text); opacity:0.7; font-weight:400;">(Refill ≤ 10L)</span></div>
+    </div>
+  </div>
+
+  <!-- Helium -->
+  <div class="gas-row">
+    <div class="gas-info">
+      <div class="gas-header-group">
+        <h3 class="gas-title">Helium <span class="gas-code">He</span></h3>
+        <p class="gas-short-desc">Used for leak detection, cooling, controlled atmospheres, and analytics.</p>
+      </div>
+      <div class="gas-details-grid">
+        <div class="gas-detail-col">
+          <h4>Industries</h4>
+          <ul>
+            <li>Healthcare (MRI machines)</li>
+            <li>Aerospace and aviation</li>
+            <li>Diving (mixed gases)</li>
+            <li>Manufacturing leak detection</li>
+            <li>Scientific research</li>
+          </ul>
+        </div>
+        <div class="gas-detail-col">
+          <h4>Why It's Important</h4>
+          <p>Helium is the only substance cold enough to cool superconducting magnets in MRI machines. Its small atomic size makes it perfect for detecting tiny leaks.</p>
+        </div>
+      </div>
+    </div>
+    <div class="gas-visual">
+      <img src="../assets/helium.png" alt="Helium Cylinder" class="gas-img">
+      <div class="gas-price">RM40.00<span style="font-size:0.5em; display:block; color:var(--text); opacity:0.7; font-weight:400;">(Refill ≤ 10L)</span></div>
+    </div>
+  </div>
+
+  <!-- Medical Oxygen -->
+  <div class="gas-row">
+    <div class="gas-info">
+      <div class="gas-header-group">
+        <h3 class="gas-title">Medical Oxygen <span class="gas-code">Med</span></h3>
+        <p class="gas-short-desc">Pharmaceutical-grade oxygen for patient therapy and life support.</p>
+      </div>
+      <div class="gas-details-grid">
+        <div class="gas-detail-col">
+          <h4>Industries</h4>
+          <ul>
+            <li>Hospitals and clinics</li>
+            <li>Emergency services</li>
+            <li>Home healthcare</li>
+            <li>Dental offices</li>
+            <li>Veterinary medicine</li>
+          </ul>
+        </div>
+        <div class="gas-detail-col">
+          <h4>Why It's Important</h4>
+          <p>Medical oxygen meets strict purity standards (typically 99.5%+) regulated by health authorities. It's essential for treating respiratory conditions, surgery support, and emergency resuscitation.</p>
+        </div>
+      </div>
+    </div>
+    <div class="gas-visual">
+      <img src="../assets/medical_oxygen.png" alt="Medical Oxygen Cylinder" class="gas-img">
+      <div class="gas-price">RM40.00<span style="font-size:0.5em; display:block; color:var(--text); opacity:0.7; font-weight:400;">(Refill ≤ 10L)</span></div>
+    </div>
+  </div>
+
+</div>
+</section>
+
+<!-- Other Services (Preserved) -->
+<section class="content" style="border-top: 1px solid var(--border);">
+<div class="container">
+<h2>Other Safety Services</h2>
+<div class="grid cards-2">
+  <div class="card">
+    <h3>Safety Equipment Supply</h3>
+    <p>Stockist for SCBA, EEBD, respirators, gas detectors, and personal protective equipment (PPE). Compliant with ANZI, CE, and EN standards.</p>
+  </div>
+  <div class="card">
+    <h3>Firefighting Solutions</h3>
+    <p>Supply, inspection, and maintenance of fire extinguishers and suppression systems for factories, commercial buildings, and marine use.</p>
+  </div>
+  <div class="card">
+    <h3>Testing & Inspection (AS11)</h3>
+    <p>Certified SCBA/EEBD cylinder testing and inspection services. Pressure testing, maintenance reports, and fast turnaround.</p>
+  </div>
+  <div class="card">
+    <h3>Safety Training & Fit Tests (AS22)</h3>
+    <p>Airline escape set with face mask fit tests and safety training programs. Practical hands-on training and compliance documentation.</p>
+  </div>
+</div>
+</div>
+</section>
+
+</main>
+<footer class="site-footer">
+<div class="container">
+<div class="footer-grid">
+<div>
+<div class="logo">AirGas Technology</div>
+<p>HQ: 19, Jalan Ekoperniagaan 3, Taman Kota Masai, 81700 Pasir Gudang, Johor Bahru, Johor</p>
+<p>Branch: 297, Jalan Nilai 3/20, Kawasan Perindustrian Nilai 3, 71800 Nilai, Negeri Sembilan</p>
+</div>
+<div>
+<h4>Contact</h4>
+<p>Email: Airgas.safetyservice@gmail.com</p>
+<p>Email: Airgas.sales@gmail.com</p>
+<p>Phone: 012-9155118</p>
+</div>
+<div>
+<h4>Quick Links</h4>
+<ul class="footer-links">
+<li><a href="about.html">About</a></li>
+<li><a href="services.html">Services</a></li>
+<li><a href="products.html">Products</a></li>
+<li><a href="training.html">Training</a></li>
+<li><a href="contact.html">Contact</a></li>
+</ul>
+</div>
+</div>
+<p class="copyright">© AirGas Technology. All rights reserved.</p>
+</div>
+</footer>
+<script src="../js/main.js"></script>
+</body>
+</html>
