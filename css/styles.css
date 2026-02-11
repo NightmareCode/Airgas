@@ -322,42 +322,10 @@ p { margin: 0 0 16px; color: var(--muted) }
     max-width: 180px; /* Prevent text from pushing too far */
   }
   .nav-toggle { 
-    display: flex; 
-    flex-direction: column; 
-    justify-content: center; 
-    align-items: center;
-    width: 36px; /* Smaller toggle */
-    height: 36px;
+    display: none !important; 
   }
   .nav-list {
-    display: none;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    right: 0;
-    background: rgba(5, 8, 12, 0.98); /* More opaque */
-    backdrop-filter: blur(12px);
-    border-bottom: 1px solid var(--border);
-    flex-direction: column;
-    padding: 16px;
-    gap: 8px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
-    z-index: 100;
-  }
-  .nav-list.is-open { display: flex; animation: slideDown 0.3s ease-out; }
-  .nav-list a {
-    display: block;
-    width: 100%;
-    text-align: center;
-    padding: 12px; /* Smaller padding */
-    background: rgba(255,255,255,0.03);
-    border: 1px solid rgba(255,255,255,0.05);
-    font-size: 0.95rem;
-  }
-  .nav-list a:hover, .nav-list a.active {
-    background: var(--primary);
-    color: white;
-    border-color: var(--primary);
+    display: none !important;
   }
   .cta-header { display: none }
   
@@ -392,33 +360,8 @@ p { margin: 0 0 16px; color: var(--muted) }
   
   /* Quote Cards Override */
   .hero-quotes { 
-    position: relative; 
-    padding: 0 20px 20px; 
-    display: flex; 
-    flex-direction: column; 
-    gap: 12px; 
-    top: auto; /* Reset top */
-    bottom: auto; 
-    left: auto; 
-    right: auto;
-    margin-top: 0;
+    display: none !important;
   }
-  .quote-card { 
-    position: relative !important; 
-    max-width: 100%; 
-    min-width: auto; 
-    left: auto !important; 
-    top: auto !important;
-    transform: none !important; 
-    opacity: 1 !important; 
-    margin: 0;
-    padding: 12px; /* Smaller padding */
-  }
-  .quote-card p { font-size: 0.9rem; margin-bottom: 2px; } /* Smaller quote text */
-  .quote-card .quote-meta { font-size: 0.8rem; }
-  
-  /* Show only first 2 quotes */
-  .quote-card:nth-child(n+3) { display: none; }
 
   /* Gas Row Adjustments */
   .gas-row { flex-direction: column; }
