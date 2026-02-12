@@ -108,25 +108,34 @@
 
   .gas-image-placeholder {
     width: 100%;
-    height: 200px;
-    background: rgba(255,255,255,0.05);
-    border-radius: 8px;
+    height: 180px;
+    background: linear-gradient(135deg, rgba(255,255,255,0.05) 0%, rgba(255,255,255,0.02) 100%);
+    border-radius: 12px;
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-bottom: 16px;
-    color: var(--muted);
-    border: 1px dashed rgba(255,255,255,0.2);
+    margin-bottom: 20px;
+    border: 1px solid rgba(255,255,255,0.1);
+    position: relative;
+    overflow: hidden;
   }
 
-  .gas-img {
-    width: 100%;
-    height: 200px;
-    object-fit: contain;
-    background: rgba(255,255,255,0.02);
-    border-radius: 8px;
-    margin-bottom: 16px;
-    border: 1px solid rgba(255,255,255,0.1);
+  .gas-image-placeholder::before {
+    content: '';
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    background: var(--primary);
+    filter: blur(40px);
+    opacity: 0.2;
+  }
+
+  .gas-symbol {
+    font-size: 3.5rem;
+    font-weight: 800;
+    color: rgba(255,255,255,0.15);
+    user-select: none;
+    letter-spacing: -2px;
   }
 
   .gas-price {
@@ -270,7 +279,9 @@
       </div>
     </div>
     <div class="gas-visual">
-      <img src="../assets/oxygen.png" alt="Oxygen Cylinder" class="gas-img">
+      <div class="gas-image-placeholder">
+        <div class="gas-symbol">O₂</div>
+      </div>
       <div class="gas-price">RM40.00<span style="font-size:0.5em; display:block; color:var(--text); opacity:0.7; font-weight:400;">(Refill ≤ 10L)</span></div>
     </div>
   </div>
@@ -300,7 +311,9 @@
       </div>
     </div>
     <div class="gas-visual">
-      <img src="../assets/nitrogen.png" alt="Nitrogen Cylinder" class="gas-img">
+      <div class="gas-image-placeholder">
+        <div class="gas-symbol">N₂</div>
+      </div>
       <div class="gas-price">RM40.00<span style="font-size:0.5em; display:block; color:var(--text); opacity:0.7; font-weight:400;">(Refill ≤ 10L)</span></div>
     </div>
   </div>
@@ -330,7 +343,9 @@
       </div>
     </div>
     <div class="gas-visual">
-      <img src="../assets/argon.png" alt="Argon Cylinder" class="gas-img">
+      <div class="gas-image-placeholder">
+        <div class="gas-symbol">Ar</div>
+      </div>
       <div class="gas-price">RM40.00<span style="font-size:0.5em; display:block; color:var(--text); opacity:0.7; font-weight:400;">(Refill ≤ 10L)</span></div>
     </div>
   </div>
@@ -360,7 +375,9 @@
       </div>
     </div>
     <div class="gas-visual">
-      <img src="../assets/carbon_dioxide.png" alt="Carbon Dioxide Cylinder" class="gas-img">
+      <div class="gas-image-placeholder">
+        <div class="gas-symbol">CO₂</div>
+      </div>
       <div class="gas-price">RM40.40<span style="font-size:0.5em; display:block; color:var(--text); opacity:0.7; font-weight:400;">(Refill ≤ 10L)</span></div>
     </div>
   </div>
@@ -391,7 +408,9 @@
       </div>
     </div>
     <div class="gas-visual">
-      <img src="../assets/helium.png" alt="Helium Cylinder" class="gas-img">
+      <div class="gas-image-placeholder">
+        <div class="gas-symbol">He</div>
+      </div>
       <div class="gas-price">RM40.00<span style="font-size:0.5em; display:block; color:var(--text); opacity:0.7; font-weight:400;">(Refill ≤ 10L)</span></div>
     </div>
   </div>
@@ -421,7 +440,9 @@
       </div>
     </div>
     <div class="gas-visual">
-      <img src="../assets/medical_oxygen.png" alt="Medical Oxygen Cylinder" class="gas-img">
+      <div class="gas-image-placeholder">
+        <div class="gas-symbol">Med</div>
+      </div>
       <div class="gas-price">RM40.00<span style="font-size:0.5em; display:block; color:var(--text); opacity:0.7; font-weight:400;">(Refill ≤ 10L)</span></div>
     </div>
   </div>
