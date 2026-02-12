@@ -129,7 +129,32 @@ p { margin: 0 0 16px; color: var(--muted) }
 .intro-points { display: flex; gap: 24px; margin-top: 24px }
 .intro-points .dot { display: inline-block; width: 10px; height: 10px; border-radius: 50%; background: var(--primary); margin-right: 8px; vertical-align: middle }
 .intro-media { position: relative; min-height: 420px }
-.intro-img { position: absolute; border-radius: 14px; box-shadow: var(--shadow); border: 1px solid var(--border); object-fit: cover }
+.intro-placeholder { 
+  position: absolute; 
+  border-radius: 14px; 
+  box-shadow: var(--shadow); 
+  border: 1px solid var(--border); 
+  background: linear-gradient(135deg, rgba(255,255,255,0.05) 0%, rgba(255,255,255,0.02) 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+.intro-placeholder::before {
+  content: '';
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  background: var(--primary);
+  filter: blur(30px);
+  opacity: 0.15;
+}
+.placeholder-icon {
+  font-size: 2.5rem;
+  opacity: 0.6;
+  position: relative;
+  z-index: 1;
+}
 .intro-img-a { top: 0; right: 0; width: 48%; height: 160px }
 .intro-img-b { top: 120px; left: 0; width: 68%; height: 230px }
 .intro-img-c { bottom: 0; right: 6%; width: 56%; height: 210px }
@@ -354,6 +379,9 @@ p { margin: 0 0 16px; color: var(--muted) }
   
   /* Intro Images */
   .intro-media { min-height: 280px; margin-top: 30px; }
+  .intro-placeholder, .intro-img-a, .intro-img-b, .intro-img-c { 
+    /* styles for both placeholders and legacy image classes on mobile */
+  }
   .intro-img-a { width: 55%; height: 130px; }
   .intro-img-b { width: 70%; height: 170px; top: 90px; }
   .intro-img-c { width: 60%; height: 150px; }
