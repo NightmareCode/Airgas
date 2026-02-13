@@ -346,4 +346,32 @@ document.addEventListener("DOMContentLoaded", function () {
     
     requestAnimationFrame(animate);
   }
+
+  // Smooth scroll for sidebar filters
+  var filterLinks = document.querySelectorAll('.filter-list a[href^="#"]');
+  if (filterLinks.length > 0) {
+    filterLinks.forEach(function(link) {
+      link.addEventListener('click', function(e) {
+        e.preventDefault();
+        var targetId = this.getAttribute('href').substring(1);
+        var targetSection = document.getElementById(targetId);
+        
+        if (targetSection) {
+          // Add offset for sticky header
+          var headerOffset = 100; // Adjusted for header + spacing
+          var elementPosition = targetSection.getBoundingClientRect().top;
+          var offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+      
+          window.scrollTo({
+            top: offsetPosition,
+            behavior: "smooth"
+          });
+
+          // Update active state
+          filterLinks.forEach(function(l) { l.classList.remove('active'); });
+          this.classList.add('active');
+        }
+      });
+    });
+  }
 });

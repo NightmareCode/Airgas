@@ -403,6 +403,7 @@ p { margin: 0 0 16px; color: var(--muted) }
   flex-direction: column; 
   text-decoration: none;
   cursor: pointer;
+  position: relative; /* For badge positioning */
 }
 .product-card:hover { 
   transform: translateY(-8px); 
@@ -525,4 +526,89 @@ p { margin: 0 0 16px; color: var(--muted) }
 @keyframes slideDown {
   from { opacity: 0; transform: translateY(-10px); }
   to { opacity: 1; transform: translateY(0); }
+}
+
+/* Marketplace Layout */
+.marketplace-layout {
+  display: grid;
+  grid-template-columns: 240px 1fr;
+  gap: 40px;
+  align-items: start;
+}
+
+@media (max-width: 992px) {
+  .marketplace-layout {
+    grid-template-columns: 1fr;
+  }
+  .sidebar-filter {
+    display: none; /* Hidden on mobile for now, or could be a drawer */
+  }
+}
+
+/* Sidebar Filter */
+.sidebar-filter {
+  position: sticky;
+  top: 100px; /* Below header */
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 24px;
+}
+
+.filter-group {
+  margin-bottom: 24px;
+}
+
+.filter-group h3 {
+  font-size: 1rem;
+  margin-bottom: 12px;
+  color: var(--text);
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 8px;
+}
+
+.filter-list li {
+  margin-bottom: 8px;
+}
+
+.filter-list a {
+  color: var(--muted);
+  font-size: 0.9rem;
+  transition: color 0.2s;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.filter-list a:hover, .filter-list a.active {
+  color: var(--primary);
+}
+
+/* Status Badges */
+.product-badge {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  padding: 4px 10px;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  z-index: 10;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+.badge-new {
+  background: var(--primary);
+  color: #fff;
+}
+
+.badge-sale {
+  background: var(--danger);
+  color: #fff;
+}
+
+.badge-best {
+  background: var(--accent);
+  color: #fff;
 }

@@ -32,18 +32,25 @@ def create_placeholder(filename, text, bg_color=(30, 41, 59), icon_text=""):
 
 if __name__ == "__main__":
     placeholders = [
-        ("savage_a40_nobg.png", "Welding Helmet", (50, 50, 50), "🛡️"),
-        ("industrial_cylinder_nobg.png", "Gas Cylinder", (70, 70, 70), "🔋"),
-        ("fireman_suit_nobg.png", "Fireman Suit", (150, 50, 50), "👨‍🚒"),
-        ("extinguisher_refill_nobg.png", "Refill Parts", (180, 50, 50), "🧯"),
-        ("medical_setup_nobg.png", "Medical Equipment", (50, 100, 150), "🏥"),
-        ("testing_equip_nobg.png", "Testing Lab", (100, 100, 100), "🔬"),
-        ("rental_gear_nobg.png", "Rental Services", (50, 80, 120), "🏗️"),
-        ("height_safety_nobg.png", "Height Gear", (120, 80, 40), "🧗"),
-        ("training_gas_nobg.png", "Gas Detection Training", (40, 120, 120), "⚠️"),
-        ("training_scba_nobg.png", "SCBA Training", (50, 100, 200), "👨‍🚒"),
-        ("training_fit_test_nobg.png", "Fit Test Training", (100, 50, 150), "🎭"),
-        ("training_confined_nobg.png", "Confined Space Training", (80, 80, 80), "🕳️")
+        # Industrial Gases
+        ("industrial_oxygen_nobg.png", "Industrial Oxygen", (0, 100, 255), "O₂"),
+        ("acetylene_nobg.png", "Acetylene Gas", (200, 50, 50), "�"),
+        ("nitrogen_nobg.png", "Industrial Nitrogen", (100, 100, 100), "N₂"),
+        ("argon_nobg.png", "Argon Gas", (0, 200, 0), "Ar"),
+        ("co2_nobg.png", "Carbon Dioxide", (50, 50, 50), "CO₂"),
+        
+        # Medical Gases
+        ("medical_oxygen_nobg.png", "Medical Oxygen", (255, 255, 255), "🏥"),
+        ("nitrous_oxide_nobg.png", "Nitrous Oxide", (0, 0, 150), "N₂O"),
+
+        # Firefighting
+        ("fire_extinguisher_co2_nobg.png", "CO2 Extinguisher", (200, 0, 0), "�"),
+        ("fire_extinguisher_powder_nobg.png", "Dry Powder Extinguisher", (200, 50, 0), "🧯"),
+
+        # Safety PPE
+        ("safety_helmet_nobg.png", "Safety Helmet", (255, 200, 0), "⛑️"),
+        ("safety_gloves_nobg.png", "Industrial Gloves", (150, 150, 150), "🧤"),
+        ("fireman_suit_nobg.png", "Fireman Suit", (255, 100, 0), "🧑‍�"),
     ]
     
     for filename, name, color, icon in placeholders:
