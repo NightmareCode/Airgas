@@ -5,178 +5,6 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Services | AirGas Technology</title>
 <link rel="stylesheet" href="../css/styles.css">
-<style>
-  /* Refill Highlight Section */
-  .refill-highlight {
-    background: rgba(249, 115, 22, 0.05);
-    border: 1px solid var(--primary);
-    border-radius: 14px;
-    padding: 32px;
-    margin-bottom: 60px;
-  }
-  
-  /* New Gas Row Layout */
-  .gas-list-container {
-    display: flex;
-    flex-direction: column;
-    gap: 0; /* borders will handle separation */
-  }
-
-  .gas-row {
-    display: flex;
-    flex-direction: row;
-    gap: 40px;
-    padding: 40px 0;
-    border-bottom: 3px solid rgba(255,255,255,0.1); /* Thicker divider as per image */
-  }
-
-  .gas-row:first-child {
-    padding-top: 0;
-  }
-  
-  .gas-row:last-child {
-    border-bottom: none;
-  }
-
-  .gas-info {
-    flex: 1;
-  }
-
-  .gas-header-group {
-    margin-bottom: 24px;
-  }
-
-  .gas-title {
-    font-size: 2rem;
-    font-weight: 700;
-    color: #ffffff;
-    margin-bottom: 4px;
-  }
-  
-  .gas-code {
-    font-weight: 400;
-    opacity: 0.8;
-    margin-left: 8px;
-  }
-
-  .gas-short-desc {
-    font-size: 1rem;
-    color: var(--muted);
-    font-style: italic;
-  }
-
-  .gas-details-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 32px;
-  }
-
-  .gas-detail-col h4 {
-    font-size: 1.1rem;
-    font-weight: 700;
-    color: #ffffff;
-    margin-bottom: 12px;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-  }
-
-  .gas-detail-col p, .gas-detail-col ul {
-    font-size: 0.95rem;
-    color: var(--text);
-    line-height: 1.6;
-  }
-  
-  .gas-detail-col ul {
-    list-style-type: none; /* Removing bullets to look more like text block in image if needed, or keep bullets */
-    padding-left: 0;
-  }
-  
-  .gas-detail-col li {
-    margin-bottom: 4px;
-  }
-
-  /* Right Side Visuals */
-  .gas-visual {
-    width: 250px;
-    flex-shrink: 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-start;
-    padding-top: 10px;
-  }
-
-  .gas-image-placeholder {
-    width: 100%;
-    height: 180px;
-    background: linear-gradient(135deg, rgba(255,255,255,0.05) 0%, rgba(255,255,255,0.02) 100%);
-    border-radius: 12px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 20px;
-    border: 1px solid rgba(255,255,255,0.1);
-    position: relative;
-    overflow: hidden;
-  }
-
-  .gas-image-placeholder::before {
-    content: '';
-    position: absolute;
-    width: 60px;
-    height: 60px;
-    background: var(--primary);
-    filter: blur(40px);
-    opacity: 0.2;
-  }
-
-  .gas-symbol {
-    font-size: 3.5rem;
-    font-weight: 800;
-    color: rgba(255,255,255,0.15);
-    user-select: none;
-    letter-spacing: -2px;
-  }
-
-  .gas-price {
-    font-size: 1.5rem;
-    font-weight: 700;
-    color: #2ecc71; /* Green color for price */
-  }
-
-  /* Responsive */
-  @media (max-width: 900px) {
-    .gas-row {
-      flex-direction: column;
-    }
-    .gas-visual {
-      width: 100%;
-      flex-direction: row;
-      justify-content: space-between;
-      align-items: center;
-    }
-    .gas-image-placeholder {
-      width: 120px;
-      height: 120px;
-      margin-bottom: 0;
-    }
-  }
-  
-  @media (max-width: 600px) {
-    .gas-details-grid {
-      grid-template-columns: 1fr;
-    }
-  }
-  
-  .price-list li {
-    display: flex;
-    justify-content: space-between;
-    padding: 8px 0;
-    border-bottom: 1px solid rgba(255,255,255,0.05);
-  }
-  .price-list li:last-child { border-bottom: none; }
-  .price-tag { font-weight: 700; color: #2ecc71; }
-</style>
 </head>
 <body>
 <header class="site-header">
@@ -212,7 +40,7 @@
 <section class="content">
 <div class="container">
 <!-- Refill Services Highlight -->
-<div class="card" style="border: 1px solid var(--primary); background: rgba(249, 115, 22, 0.05);">
+<div class="card refill-highlight">
   <h2 style="color: var(--primary);">Cylinder Refill Services</h2>
   <p style="font-size: 1.1rem; color: var(--text);">Need a gas cylinder refill? We provide fast, reliable refill services for cylinders up to 10 liters. Choose from our complete range of industrial and specialty gases!</p>
   
@@ -278,7 +106,7 @@
       <div class="gas-image-placeholder">
         <div class="gas-symbol">O₂</div>
       </div>
-      <div class="gas-price" style="font-size: 1.2rem; color: var(--primary);">Contact for Price</div>
+      <div class="gas-price">Contact for Price</div>
     </div>
   </div>
 
@@ -564,7 +392,6 @@
 </div>
 </section>
 
-<!-- Other Services (Preserved) -->
 <section class="content" style="border-top: 1px solid var(--border);">
 <div class="container">
 <h2>Other Safety Services</h2>
