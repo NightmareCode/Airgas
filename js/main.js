@@ -1,11 +1,29 @@
 document.addEventListener("DOMContentLoaded", function () {
   var toggle = document.querySelector(".nav-toggle");
   var list = document.querySelector(".nav-list");
-  if (toggle) {
-    toggle.addEventListener("click", function () {
+  if (toggle && list) {
+    function closeMenu() {
+      toggle.setAttribute("aria-expanded", "false");
+      list.classList.remove("is-open");
+    }
+
+    toggle.addEventListener("click", function (e) {
+      e.stopPropagation();
       var isExpanded = toggle.getAttribute("aria-expanded") === "true";
-      toggle.setAttribute("aria-expanded", !isExpanded);
+      toggle.setAttribute("aria-expanded", String(!isExpanded));
       list.classList.toggle("is-open");
+    });
+
+    list.addEventListener("click", function (e) {
+      var target = e.target;
+      if (target && target.tagName === "A") closeMenu();
+    });
+
+    document.addEventListener("click", function (e) {
+      if (!list.classList.contains("is-open")) return;
+      var nav = toggle.closest(".nav");
+      if (nav && nav.contains(e.target)) return;
+      closeMenu();
     });
   }
   var form = document.getElementById("contact-form");
@@ -15,6 +33,29 @@ document.addEventListener("DOMContentLoaded", function () {
       return;
     });
   }
+
+  // Back to Top Button Logic
+  var backToTopBtn = document.createElement("button");
+  backToTopBtn.className = "back-to-top";
+  backToTopBtn.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 15l-6-6-6 6"/></svg>';
+  backToTopBtn.setAttribute("aria-label", "Back to top");
+  document.body.appendChild(backToTopBtn);
+
+  window.addEventListener("scroll", function() {
+    if (window.scrollY > 150) {
+      backToTopBtn.classList.add("visible");
+    } else {
+      backToTopBtn.classList.remove("visible");
+    }
+  });
+
+  backToTopBtn.addEventListener("click", function() {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth"
+    });
+  });
+
   var quoteWrap = document.querySelector(".hero-quotes");
   if (quoteWrap) {
     var cards = quoteWrap.querySelectorAll(".quote-card");
