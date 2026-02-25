@@ -685,6 +685,20 @@ p { margin: 0 0 16px; color: var(--muted) }
 .brand-info h3 { font-size: 2rem; margin-bottom: 5px; }
 .brand-info p { color: var(--muted); }
 
+/* Brand-specific logo sizing derived from FFmpeg dimension scan */
+#industrial-gases .brand-logo { height: 52px; }
+#ppe .brand-logo { height: 68px; }          /* Dräger: 500x500 */
+#msa-safety .brand-logo { height: 64px; }   /* MSA: 900x550 */
+#welding .brand-logo { height: 60px; }      /* ESAB: 690x362 */
+#aceweld .brand-logo { height: 68px; }      /* Aceweld: 400x400 */
+@media (max-width: 768px) {
+  #industrial-gases .brand-logo { height: 44px; }
+  #ppe .brand-logo { height: 56px; }
+  #msa-safety .brand-logo { height: 52px; }
+  #welding .brand-logo { height: 50px; }
+  #aceweld .brand-logo { height: 56px; }
+}
+
 .pros-cons-grid { 
   display: grid; 
   grid-template-columns: 1fr 1fr; 
