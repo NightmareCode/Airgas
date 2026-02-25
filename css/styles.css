@@ -682,6 +682,9 @@ p { margin: 0 0 16px; color: var(--muted) }
 @media (max-width: 768px) {
   .brand-logo { height: 48px; }
 }
+.brand-header.no-logo { gap: 0; }
+.brand-header.no-logo .brand-info h3 { font-size: 2.2rem; }
+.brand-header.no-logo .brand-info p { margin-top: 4px; }
 .brand-info h3 { font-size: 2rem; margin-bottom: 5px; }
 .brand-info p { color: var(--muted); }
 
