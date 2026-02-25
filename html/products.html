@@ -913,5 +913,29 @@
 </div>
 </footer>
 <script src="../js/main.js"></script>
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  var logos = document.querySelectorAll('.brand-header img.brand-logo');
+  function applySize(img) {
+    var w = img.naturalWidth;
+    var h = img.naturalHeight;
+    if (!w || !h) return;
+    var ar = w / h;
+    var target = 0;
+    if (ar >= 4) target = 52;
+    else if (ar >= 3) target = 56;
+    else if (ar >= 2) target = 60;
+    else if (ar >= 1.2) target = 64;
+    else target = 68;
+    img.style.height = target + 'px';
+    img.style.width = 'auto';
+    img.style.objectFit = 'contain';
+  }
+  logos.forEach(function (img) {
+    if (img.complete) applySize(img);
+    else img.addEventListener('load', function () { applySize(img); }, { once: true });
+  });
+});
+</script>
 </body>
 </html>
