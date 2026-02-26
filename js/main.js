@@ -1,4 +1,4 @@
-document.addEventListener("DOMContentLoaded", function () {
+﻿document.addEventListener("DOMContentLoaded", function () {
   var toggle = document.querySelector(".nav-toggle");
   var list = document.querySelector(".nav-list");
   if (toggle && list) {
@@ -60,16 +60,16 @@ document.addEventListener("DOMContentLoaded", function () {
   if (quoteWrap) {
     var cards = quoteWrap.querySelectorAll(".quote-card");
     var quotes = [
-      { text: "Safety is the first gas we deliver.", meta: "SCBA • EEBD • Fit tests" },
-      { text: "Purity that powers performance.", meta: "Oxygen • Nitrogen • Argon • Specialty gases" },
-      { text: "Certified testing you can trust.", meta: "AS11 Cylinder • AS22 Mask Fit Test" },
-      { text: "Reliability from stock to site.", meta: "One‑stop supply • Competitive pricing • Rentals" },
-      { text: "From stockroom to site, safety never stops.", meta: "Detection • Training • Compliance" },
-      { text: "Gases you need, service you trust.", meta: "Supply • Service • Support" },
-      { text: "Measured purity, measurable impact.", meta: "Calibration • Specialty blends" },
-      { text: "Readiness is our routine.", meta: "Inspection • Maintenance • Compliance" },
-      { text: "Fit to protect, tested to perform.", meta: "Mask Fit • Breathing apparatus" },
-      { text: "Delivering safety without compromise.", meta: "Certified processes • Proven standards" }
+      { text: "Safety is the first gas we deliver.", meta: "SCBA &bull; EEBD &bull; Fit tests" },
+      { text: "Purity that powers performance.", meta: "Oxygen &bull; Nitrogen &bull; Argon &bull; Specialty gases" },
+      { text: "Certified testing you can trust.", meta: "AS11 Cylinder &bull; AS22 Mask Fit Test" },
+      { text: "Reliability from stock to site.", meta: "One&#8209;stop supply &bull; Competitive pricing &bull; Rentals" },
+      { text: "From stockroom to site, safety never stops.", meta: "Detection &bull; Training &bull; Compliance" },
+      { text: "Gases you need, service you trust.", meta: "Supply &bull; Service &bull; Support" },
+      { text: "Measured purity, measurable impact.", meta: "Calibration &bull; Specialty blends" },
+      { text: "Readiness is our routine.", meta: "Inspection &bull; Maintenance &bull; Compliance" },
+      { text: "Fit to protect, tested to perform.", meta: "Mask Fit &bull; Breathing apparatus" },
+      { text: "Delivering safety without compromise.", meta: "Certified processes &bull; Proven standards" }
     ];
     function pick(n) {
       var idx = [];
@@ -416,3 +416,4 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 });
+
