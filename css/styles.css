@@ -1,4 +1,4 @@
-﻿:root {
+:root {
   --bg: #05080c;
   --surface: #10151c;
   --text: #e6e9ef;
@@ -1060,6 +1060,12 @@ p { margin: 0 0 16px; color: var(--muted) }
   border-color: var(--primary);
   outline: none;
   background: var(--surface);
+}
+
+.form-status {
+  margin-top: 12px;
+  font-size: 0.9rem;
+  color: var(--muted);
 }
 
 .btn-block {

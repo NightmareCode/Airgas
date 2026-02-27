@@ -1,0 +1,13 @@
+[name]
+name = "airgas-telegram-bot"
+
+[main]
+main = "telegram-bot-worker.js"
+
+[compatibility]
+compatibility_date = "2026-02-27"
+
+[[kv_namespaces]]
+binding = "CHAT_STATE"
+id = "REPLACE_WITH_YOUR_KV_NAMESPACE_ID"
+preview_id = "REPLACE_WITH_YOUR_KV_PREVIEW_NAMESPACE_ID"

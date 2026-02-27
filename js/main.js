@@ -1,4 +1,4 @@
-﻿document.addEventListener("DOMContentLoaded", function () {
+document.addEventListener("DOMContentLoaded", function () {
   var toggle = document.querySelector(".nav-toggle");
   var list = document.querySelector(".nav-list");
   if (toggle && list) {
@@ -26,11 +26,61 @@
       closeMenu();
     });
   }
-  var form = document.getElementById("contact-form");
-  if (form) {
-    form.addEventListener("submit", function (e) {
+  var contactForm = document.querySelector("form.contact-form-styled");
+  if (contactForm) {
+    var endpointMeta = document.querySelector('meta[name="telegram-contact-endpoint"]');
+    var endpoint = endpointMeta ? String(endpointMeta.getAttribute("content") || "").trim() : "";
+    var submitBtn = contactForm.querySelector('button[type="submit"]');
+    var statusEl = document.createElement("div");
+    statusEl.className = "form-status";
+    if (submitBtn && submitBtn.parentNode) submitBtn.parentNode.insertBefore(statusEl, submitBtn.nextSibling);
+
+    contactForm.addEventListener("submit", function (e) {
       e.preventDefault();
-      return;
+      if (!endpoint || endpoint.indexOf("REPLACE_WITH_YOUR_WORKER_DOMAIN") !== -1) {
+        statusEl.textContent = "Form is not configured. Please try again later.";
+        return;
+      }
+
+      var nameEl = contactForm.querySelector('input[name="name"]');
+      var emailEl = contactForm.querySelector('input[name="email"]');
+      var messageEl = contactForm.querySelector('textarea[name="message"]');
+
+      var payload = {
+        name: nameEl ? nameEl.value : "",
+        email: emailEl ? emailEl.value : "",
+        message: messageEl ? messageEl.value : "",
+        pageUrl: window.location.href
+      };
+
+      if (submitBtn) submitBtn.disabled = true;
+      statusEl.textContent = "Sending...";
+
+      fetch(endpoint, {
+        method: "POST",
+        headers: { "content-type": "application/json" },
+        body: JSON.stringify(payload)
+      })
+        .then(function (res) {
+          return res.json().catch(function () { return null; }).then(function (data) {
+            return { ok: res.ok, data: data };
+          });
+        })
+        .then(function (result) {
+          if (!result.ok) {
+            var msg = result.data && result.data.error ? String(result.data.error) : "Failed to send. Please try again.";
+            statusEl.textContent = msg;
+            return;
+          }
+          statusEl.textContent = "Sent successfully.";
+          contactForm.reset();
+        })
+        .catch(function () {
+          statusEl.textContent = "Failed to send. Please try again.";
+        })
+        .finally(function () {
+          if (submitBtn) submitBtn.disabled = false;
+        });
     });
   }
 
