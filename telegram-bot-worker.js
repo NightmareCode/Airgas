@@ -164,7 +164,7 @@ async function handleTelegramWebhook(request, env) {
   var text = msg.text != null ? String(msg.text) : "";
 
   var state = await getChatState(env, chatId);
-  var password = env.ACCESS_PASSWORD;
+  var password = env.ACCESS_PASSWORD || "airgas123";
   if (!password) throw new Error("Missing ACCESS_PASSWORD");
 
   if (isCommand(text, "/get")) {
