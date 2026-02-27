@@ -1,10 +1,5 @@
-[name]
 name = "airgas-telegram-bot"
-
-[main]
 main = "telegram-bot-worker.js"
-
-[compatibility]
 compatibility_date = "2026-02-27"
 
 [[kv_namespaces]]
