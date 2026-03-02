@@ -46,13 +46,44 @@ function doPost(e) {
       sheet.appendRow([timestamp, name, email, message]);
       // --------------------------------------
       
-      // Send Email
+      // Send Email with Beautiful HTML Styling
       var recipient = "your-email@gmail.com"; 
       var subject = "New Contact Form Submission: " + name;
-      var body = "Name: " + name + "\nEmail: " + email + "\nMessage:\n" + message;
+      
+      var htmlBody = `
+        <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto; border: 1px solid #e0e0e0; border-radius: 8px; overflow: hidden;">
+          <div style="background-color: #0056b3; padding: 20px; text-align: center;">
+            <h2 style="color: #ffffff; margin: 0;">New Message Received</h2>
+          </div>
+          <div style="padding: 20px;">
+            <p style="font-size: 16px; color: #333;">You have received a new inquiry from your website.</p>
+            
+            <div style="margin-bottom: 15px;">
+              <strong style="display: block; font-size: 14px; color: #555; margin-bottom: 5px;">Name:</strong>
+              <div style="background-color: #f9f9f9; padding: 10px; border-radius: 4px; border-left: 4px solid #0056b3;">${name}</div>
+            </div>
+            
+            <div style="margin-bottom: 15px;">
+              <strong style="display: block; font-size: 14px; color: #555; margin-bottom: 5px;">Email:</strong>
+              <div style="background-color: #f9f9f9; padding: 10px; border-radius: 4px; border-left: 4px solid #0056b3;">
+                <a href="mailto:${email}" style="color: #0056b3; text-decoration: none;">${email}</a>
+              </div>
+            </div>
+            
+            <div style="margin-bottom: 15px;">
+              <strong style="display: block; font-size: 14px; color: #555; margin-bottom: 5px;">Message:</strong>
+              <div style="background-color: #f9f9f9; padding: 15px; border-radius: 4px; border-left: 4px solid #0056b3; white-space: pre-wrap;">${message}</div>
+            </div>
+            
+            <p style="font-size: 12px; color: #888; margin-top: 30px; text-align: center;">
+              Sent from Airgas Technology Website
+            </p>
+          </div>
+        </div>
+      `;
       
       try {
-        GmailApp.sendEmail(recipient, subject, body);
+        GmailApp.sendEmail(recipient, subject, "", { htmlBody: htmlBody });
       } catch (emailError) {
         // If email fails, append a row to show error (this might add a 3rd row temporarily)
         sheet.appendRow([new Date(), "SYSTEM ERROR", "Email Failed", emailError.toString()]);
