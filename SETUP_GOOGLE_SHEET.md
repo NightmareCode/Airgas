@@ -18,39 +18,59 @@ This guide explains how to set up the free Google Apps Script backend to receive
 
 ```javascript
 function doPost(e) {
-  try {
-    // 1. Parse the incoming JSON data
-    // Note: The website sends data as JSON string in the post body
-    var data = JSON.parse(e.postData.contents);
-    var name = data.name || "No Name";
-    var email = data.email || "No Email";
-    var message = data.message || "No Message";
-    
-    // 2. Append to the Google Sheet
-    // Order must match your columns: Time, Name, Email, Messages
-    var sheet = SpreadsheetApp.getActiveSpreadsheet().getActiveSheet();
-    var timestamp = new Date();
-    sheet.appendRow([timestamp, name, email, message]);
-    
-    // 3. Send Email Notification to yourself (Using GmailApp for reliability)
-    // Replace "your-email@gmail.com" with your actual email address
-    var recipient = "your-email@gmail.com"; 
-    var subject = "New Contact Form Submission: " + name;
-    var body = "Name: " + name + "\nEmail: " + email + "\nMessage:\n" + message;
-    
+  // Use a Lock to prevent concurrent access issues (race conditions)
+  var lock = LockService.getScriptLock();
+  
+  // Wait up to 10 seconds for other executions to finish
+  if (lock.tryLock(10000)) {
     try {
-      GmailApp.sendEmail(recipient, subject, body);
-    } catch (emailError) {
-      // If email fails, log it to the sheet so we can see!
-      sheet.appendRow([new Date(), "SYSTEM ERROR", "Email Failed", emailError.toString()]);
-    }
-    
-    // 4. Return success response
-    return ContentService.createTextOutput(JSON.stringify({ "result": "success" }))
-      .setMimeType(ContentService.MimeType.JSON);
+      var data = JSON.parse(e.postData.contents);
+      var name = data.name || "No Name";
+      var email = data.email || "No Email";
+      var message = data.message || "No Message";
       
-  } catch (error) {
-    return ContentService.createTextOutput(JSON.stringify({ "result": "error", "error": error.toString() }))
+      var sheet = SpreadsheetApp.getActiveSpreadsheet().getActiveSheet();
+      var timestamp = new Date();
+      
+      // --- LOGIC TO REPLACE PREVIOUS ROW ---
+      // We want to keep the header (row 1) and always write to row 2.
+      // If there are existing data rows (2 and below), delete them first.
+      
+      var lastRow = sheet.getLastRow();
+      if (lastRow > 1) {
+        // Delete everything from row 2 down to the last row
+        sheet.deleteRows(2, lastRow - 1);
+      }
+      
+      // Now row 2 is fresh and empty. Append the new data.
+      sheet.appendRow([timestamp, name, email, message]);
+      // --------------------------------------
+      
+      // Send Email
+      var recipient = "your-email@gmail.com"; 
+      var subject = "New Contact Form Submission: " + name;
+      var body = "Name: " + name + "\nEmail: " + email + "\nMessage:\n" + message;
+      
+      try {
+        GmailApp.sendEmail(recipient, subject, body);
+      } catch (emailError) {
+        // If email fails, append a row to show error (this might add a 3rd row temporarily)
+        sheet.appendRow([new Date(), "SYSTEM ERROR", "Email Failed", emailError.toString()]);
+      }
+      
+      return ContentService.createTextOutput(JSON.stringify({ "result": "success" }))
+        .setMimeType(ContentService.MimeType.JSON);
+        
+    } catch (error) {
+      return ContentService.createTextOutput(JSON.stringify({ "result": "error", "error": error.toString() }))
+        .setMimeType(ContentService.MimeType.JSON);
+    } finally {
+      // Always release the lock
+      lock.releaseLock();
+    }
+  } else {
+    // Could not get lock
+    return ContentService.createTextOutput(JSON.stringify({ "result": "error", "error": "Server busy, please try again." }))
       .setMimeType(ContentService.MimeType.JSON);
   }
 }
