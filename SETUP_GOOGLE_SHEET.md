@@ -17,6 +17,30 @@ This guide explains how to set up the free Google Apps Script backend to receive
 2. Delete any default code in `Code.gs` and paste the following script:
 
 ```javascript
+var SHEET_ID = "PASTE_YOUR_SHEET_ID_HERE";
+var RECIPIENT_EMAIL = "your-email@gmail.com";
+
+function getTargetSheet_(ss) {
+  var sheet = ss.getSheetByName("Sheet1");
+  if (sheet) return sheet;
+  var sheets = ss.getSheets();
+  return sheets && sheets.length ? sheets[0] : null;
+}
+
+function getLogSheet_(ss) {
+  var sheet = ss.getSheetByName("Logs");
+  if (sheet) return sheet;
+  sheet = ss.insertSheet("Logs");
+  sheet.appendRow(["Time", "Type", "Message"]);
+  return sheet;
+}
+
+function doGet() {
+  return ContentService.createTextOutput(
+    JSON.stringify({ result: "ok", time: new Date().toISOString() })
+  ).setMimeType(ContentService.MimeType.JSON);
+}
+
 function doPost(e) {
   // Use a Lock to prevent concurrent access issues (race conditions)
   var lock = LockService.getScriptLock();
@@ -29,26 +53,25 @@ function doPost(e) {
       var email = data.email || "No Email";
       var message = data.message || "No Message";
       
-      var sheet = SpreadsheetApp.getActiveSpreadsheet().getActiveSheet();
+      var ss = SpreadsheetApp.openById(SHEET_ID);
+      var sheet = getTargetSheet_(ss);
+      if (!sheet) throw new Error("No sheet found in spreadsheet");
+      var logs = getLogSheet_(ss);
       var timestamp = new Date();
       
-      // --- LOGIC TO REPLACE PREVIOUS ROW ---
-      // We want to keep the header (row 1) and always write to row 2.
-      // If there are existing data rows (2 and below), delete them first.
-      
+      // Overwrite the latest message in row 2 (never clears it before writing)
+      sheet.getRange(2, 1, 1, 4).setValues([[timestamp, name, email, message]]);
+
+      // Keep only header (row 1) + latest message (row 2)
       var lastRow = sheet.getLastRow();
-      if (lastRow > 1) {
-        // Delete everything from row 2 down to the last row
-        sheet.deleteRows(2, lastRow - 1);
+      if (lastRow > 2) {
+        sheet.deleteRows(3, lastRow - 2);
       }
       
-      // Now row 2 is fresh and empty. Append the new data.
-      sheet.appendRow([timestamp, name, email, message]);
-      // --------------------------------------
-      
       // Send Email with Beautiful HTML Styling
-      var recipient = "your-email@gmail.com"; 
+      var recipient = RECIPIENT_EMAIL; 
       var subject = "New Contact Form Submission: " + name;
+      var plainBody = "Name: " + name + "\nEmail: " + email + "\nMessage:\n" + message;
       
       var htmlBody = `
         <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto; border: 1px solid #e0e0e0; border-radius: 8px; overflow: hidden;">
@@ -83,16 +106,20 @@ function doPost(e) {
       `;
       
       try {
-        GmailApp.sendEmail(recipient, subject, "", { htmlBody: htmlBody });
+        GmailApp.sendEmail(recipient, subject, plainBody, { htmlBody: htmlBody });
       } catch (emailError) {
-        // If email fails, append a row to show error (this might add a 3rd row temporarily)
-        sheet.appendRow([new Date(), "SYSTEM ERROR", "Email Failed", emailError.toString()]);
+        logs.appendRow([new Date(), "Email Failed", emailError.toString()]);
       }
       
       return ContentService.createTextOutput(JSON.stringify({ "result": "success" }))
         .setMimeType(ContentService.MimeType.JSON);
         
     } catch (error) {
+      try {
+        var ss2 = SpreadsheetApp.openById(SHEET_ID);
+        var logs2 = getLogSheet_(ss2);
+        logs2.appendRow([new Date(), "CRITICAL ERROR", error.toString()]);
+      } catch (_) {}
       return ContentService.createTextOutput(JSON.stringify({ "result": "error", "error": error.toString() }))
         .setMimeType(ContentService.MimeType.JSON);
     } finally {
