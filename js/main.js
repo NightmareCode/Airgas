@@ -28,7 +28,7 @@ document.addEventListener("DOMContentLoaded", function () {
   }
   var contactForm = document.querySelector("form.contact-form-styled");
   if (contactForm) {
-    var endpointMeta = document.querySelector('meta[name="telegram-contact-endpoint"]');
+    var endpointMeta = document.querySelector('meta[name="contact-endpoint"]');
     var endpoint = endpointMeta ? String(endpointMeta.getAttribute("content") || "").trim() : "";
     var submitBtn = contactForm.querySelector('button[type="submit"]');
     var statusEl = document.createElement("div");
@@ -37,8 +37,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
     contactForm.addEventListener("submit", function (e) {
       e.preventDefault();
-      if (!endpoint || endpoint.indexOf("REPLACE_WITH_YOUR_WORKER_DOMAIN") !== -1) {
-        statusEl.textContent = "Form is not configured. Please try again later.";
+      if (!endpoint || endpoint.indexOf("REPLACE_WITH_YOUR_WEB_APP_URL") !== -1) {
+        statusEl.textContent = "Form is not configured. Please contact support.";
         return;
       }
 
@@ -56,26 +56,22 @@ document.addEventListener("DOMContentLoaded", function () {
       if (submitBtn) submitBtn.disabled = true;
       statusEl.textContent = "Sending...";
 
+      // Use no-cors mode for Google Apps Script to avoid CORS errors
+      // Note: In no-cors mode, we can't read the response status/body,
+      // so we assume success if no network error occurs.
       fetch(endpoint, {
         method: "POST",
+        mode: "no-cors",
         headers: { "content-type": "application/json" },
         body: JSON.stringify(payload)
       })
-        .then(function (res) {
-          return res.json().catch(function () { return null; }).then(function (data) {
-            return { ok: res.ok, data: data };
-          });
-        })
-        .then(function (result) {
-          if (!result.ok) {
-            var msg = result.data && result.data.error ? String(result.data.error) : "Failed to send. Please try again.";
-            statusEl.textContent = msg;
-            return;
-          }
-          statusEl.textContent = "Sent successfully.";
+        .then(function () {
+          // Since mode is no-cors, we assume success
+          statusEl.textContent = "Message sent successfully.";
           contactForm.reset();
         })
-        .catch(function () {
+        .catch(function (err) {
+          console.error(err);
           statusEl.textContent = "Failed to send. Please try again.";
         })
         .finally(function () {
