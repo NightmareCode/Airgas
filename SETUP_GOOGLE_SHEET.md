@@ -63,7 +63,12 @@ function doPost(e) {
    - **Execute as**: **Me** (your email)
    - **Who has access**: **Anyone** (this is important so your website visitors can submit)
 4. Click **Deploy**.
-5. Authorize the script (click "Review permissions", choose your account, click "Advanced" > "Go to ... (unsafe)" > "Allow").
+5. **Authorize the script** (You will see a "Google hasn't verified this app" warning):
+   - Click **Review permissions**.
+   - Choose your Google account.
+   - When you see the red warning triangle ("Google hasn't verified this app"), click **Advanced** (small link on the left).
+   - Click **Go to (Untitled project) (unsafe)** at the bottom.
+   - Click **Allow**.
 6. Copy the **Web App URL** (it ends with `/exec`).
 
 ## 4. Connect to Your Website
