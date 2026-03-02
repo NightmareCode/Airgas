@@ -5,13 +5,12 @@ This guide explains how to set up the free Google Apps Script backend to receive
 
 ## 1. Create the Google Sheet
 1. Go to [Google Sheets](https://sheets.google.com) and create a new blank spreadsheet.
-2. Name it `Airgas Contact Submissions` (or similar).
-3. In the first row (headers), add these columns:
-   - **A1**: Timestamp
+2. Name it `UserMessages` (or whatever you prefer).
+3. In the first row (headers), ensure you have these columns:
+   - **A1**: Time
    - **B1**: Name
    - **C1**: Email
-   - **D1**: Message
-   - **E1**: Page URL
+   - **D1**: Messages
 
 ## 2. Add the Script
 1. In the Google Sheet, click **Extensions** > **Apps Script**.
@@ -26,12 +25,13 @@ function doPost(e) {
     var name = data.name || "";
     var email = data.email || "";
     var message = data.message || "";
-    var pageUrl = data.pageUrl || "";
+    // var pageUrl = data.pageUrl || ""; // Optional, if you add a column for it
     
     // 2. Append to the Google Sheet
+    // Order must match your columns: Time, Name, Email, Messages
     var sheet = SpreadsheetApp.getActiveSpreadsheet().getActiveSheet();
     var timestamp = new Date();
-    sheet.appendRow([timestamp, name, email, message, pageUrl]);
+    sheet.appendRow([timestamp, name, email, message]);
     
     // 3. (Optional) Send Email Notification to yourself
     // Replace "your-email@gmail.com" with your actual email if you want notifications
