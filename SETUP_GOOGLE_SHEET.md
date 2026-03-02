@@ -33,13 +33,13 @@ function doPost(e) {
     var timestamp = new Date();
     sheet.appendRow([timestamp, name, email, message]);
     
-    // 3. (Optional) Send Email Notification to yourself
-    // Replace "your-email@gmail.com" with your actual email if you want notifications
-    // MailApp.sendEmail({
-    //   to: "your-email@gmail.com",
-    //   subject: "New Contact Form Submission: " + name,
-    //   body: "Name: " + name + "\nEmail: " + email + "\nMessage:\n" + message
-    // });
+    // 3. Send Email Notification to yourself
+    // Replace "your-email@gmail.com" with your actual email address
+    MailApp.sendEmail({
+      to: "your-email@gmail.com",
+      subject: "New Contact Form Submission: " + name,
+      body: "Name: " + name + "\nEmail: " + email + "\nMessage:\n" + message
+    });
     
     // 4. Return success response
     return ContentService.createTextOutput(JSON.stringify({ "result": "success" }))
