@@ -22,10 +22,9 @@ function doPost(e) {
     // 1. Parse the incoming JSON data
     // Note: The website sends data as JSON string in the post body
     var data = JSON.parse(e.postData.contents);
-    var name = data.name || "";
-    var email = data.email || "";
-    var message = data.message || "";
-    // var pageUrl = data.pageUrl || ""; // Optional, if you add a column for it
+    var name = data.name || "No Name";
+    var email = data.email || "No Email";
+    var message = data.message || "No Message";
     
     // 2. Append to the Google Sheet
     // Order must match your columns: Time, Name, Email, Messages
@@ -33,13 +32,18 @@ function doPost(e) {
     var timestamp = new Date();
     sheet.appendRow([timestamp, name, email, message]);
     
-    // 3. Send Email Notification to yourself
+    // 3. Send Email Notification to yourself (Using GmailApp for reliability)
     // Replace "your-email@gmail.com" with your actual email address
-    MailApp.sendEmail({
-      to: "your-email@gmail.com",
-      subject: "New Contact Form Submission: " + name,
-      body: "Name: " + name + "\nEmail: " + email + "\nMessage:\n" + message
-    });
+    var recipient = "your-email@gmail.com"; 
+    var subject = "New Contact Form Submission: " + name;
+    var body = "Name: " + name + "\nEmail: " + email + "\nMessage:\n" + message;
+    
+    try {
+      GmailApp.sendEmail(recipient, subject, body);
+    } catch (emailError) {
+      // If email fails, log it to the sheet so we can see!
+      sheet.appendRow([new Date(), "SYSTEM ERROR", "Email Failed", emailError.toString()]);
+    }
     
     // 4. Return success response
     return ContentService.createTextOutput(JSON.stringify({ "result": "success" }))
@@ -52,7 +56,7 @@ function doPost(e) {
 }
 ```
 
-3. (Optional) Uncomment the email section (lines 17-21) and put your real email address if you want to be notified.
+3. **Important:** Change `your-email@gmail.com` to your real email address.
 4. Click the **Save** icon (disk).
 
 ## 3. Deploy as Web App (Crucial Step)
