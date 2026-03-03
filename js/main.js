@@ -66,16 +66,8 @@ document.addEventListener("DOMContentLoaded", function () {
         body: JSON.stringify(payload)
       })
         .then(function () {
-          statusEl.textContent = "";
-          var msg = document.createElement("span");
-          msg.textContent = "Message sent. If it doesn't appear in your inbox/sheet, open status: ";
-          var link = document.createElement("a");
-          link.href = endpoint + "?ping=1";
-          link.target = "_blank";
-          link.rel = "noopener noreferrer";
-          link.textContent = "status";
-          statusEl.appendChild(msg);
-          statusEl.appendChild(link);
+          statusEl.textContent = "Message sent successfully!";
+          statusEl.style.color = "green"; // Optional: make it green to indicate success
           contactForm.reset();
         })
         .catch(function (err) {
