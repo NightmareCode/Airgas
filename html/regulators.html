@@ -7,12 +7,15 @@
 <link rel="stylesheet" href="../css/styles.css">
 <style>
 .product-detail-hero {
-    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('../assets/home_page_background.png');
-    background-size: cover;
-    background-position: center;
-    color: white;
+    /* Image-free, on-brand hero using layered gradients */
+    background:
+      radial-gradient(1200px 420px at 10% 10%, rgba(249,115,22,0.14), transparent 60%),
+      radial-gradient(900px 360px at 90% 15%, rgba(34,197,94,0.10), transparent 55%),
+      linear-gradient(180deg, rgba(0,0,0,0.65) 0%, rgba(0,0,0,0.45) 100%);
+    color: var(--text);
     padding: 80px 0;
     text-align: center;
+    border-bottom: 1px solid var(--border);
 }
 .product-grid-page {
     display: grid;
@@ -84,14 +87,26 @@
     left: 0;
 }
 .back-link {
-    display: inline-block;
-    margin-top: 20px;
-    color: var(--primary);
-    text-decoration: none;
-    font-weight: bold;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    margin: 18px 0 26px 0;
+    padding: 10px 14px;
+    color: var(--text);
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-sm);
+    font-weight: 600;
+    transition: all .22s ease;
 }
-.back-link:hover {
-    text-decoration: underline;
+.back-link::before{
+    content: "←";
+    color: var(--primary);
+}
+.back-link:hover{
+    border-color: var(--primary);
+    box-shadow: 0 0 0 3px rgba(249,115,22,0.12);
+    transform: translateY(-1px);
 }
 </style>
 </head>
@@ -343,7 +358,30 @@
 </main>
 <footer class="site-footer">
 <div class="container">
-<p class="copyright">© Airgas Technology. All rights reserved.</p>
+  <div class="footer-grid">
+    <div>
+      <div class="logo">Airgas Technology</div>
+      <p>HQ: 19, Jalan Ekoperniagaan 3, Taman Kota Masai, 81700 Pasir Gudang, Johor Bahru, Johor</p>
+      <p>Branch: 10053, Jalan BBN 1/3K, Putra Point, 71800, Nilai, Negeri Sembilan</p>
+    </div>
+    <div>
+      <h4>Contact</h4>
+      <p>Email: Airgas.safetyservice@gmail.com</p>
+      <p>Email: Airgas.sales@gmail.com</p>
+      <p>Phone: 012-9155118</p>
+    </div>
+    <div>
+      <h4>Quick Links</h4>
+      <ul class="footer-links">
+        <li><a href="about.html">About</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="products.html">Products</a></li>
+        <li><a href="training.html">Training</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+  <p class="copyright">© Airgas Technology. All rights reserved.</p>
 </div>
 </footer>
 <script src="../js/main.js"></script>
