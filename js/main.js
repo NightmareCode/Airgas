@@ -239,25 +239,37 @@ document.addEventListener("DOMContentLoaded", function () {
       var found = false;
       var x, y;
       
-      // Define safe zones (left and right of the center content)
-      // Center content roughly takes up middle 50% horizontally
-      var safeZones = [
-          { minX: 2, maxX: 15 },   // Left side
-          { minX: 75, maxX: 88 }   // Right side
-      ];
+      // Assign a specific zone to each card index to prevent collision
+      // Card 0: Top Left, Card 1: Top Right, Card 2: Bottom Left, etc.
+      // This ensures they are always far apart.
+      var cardIndex = Array.prototype.indexOf.call(cards, card);
       
-      while (tries < 500) {
-           // Pick a random side
-           var zone = safeZones[Math.floor(Math.random() * safeZones.length)];
-           x = zone.minX + Math.random() * (zone.maxX - zone.minX);
-           
-           var minY = 15; 
-           var maxY = 85; 
-           y = minY + Math.random() * (maxY - minY - cardHeightPct);
+      var specificZone;
+      if (cardIndex % 4 === 0) {
+          specificZone = { minX: 2, maxX: 15, minY: 15, maxY: 40 }; // Top Left
+      } else if (cardIndex % 4 === 1) {
+          specificZone = { minX: 75, maxX: 88, minY: 15, maxY: 40 }; // Top Right
+      } else if (cardIndex % 4 === 2) {
+          specificZone = { minX: 2, maxX: 15, minY: 55, maxY: 80 }; // Bottom Left
+      } else {
+          specificZone = { minX: 75, maxX: 88, minY: 55, maxY: 80 }; // Bottom Right
+      }
+
+      var tries = 0;
+      var found = false;
+      var x, y;
+      
+      while (tries < 100) {
+           x = specificZone.minX + Math.random() * (specificZone.maxX - specificZone.minX);
+           y = specificZone.minY + Math.random() * (specificZone.maxY - specificZone.minY);
+
+           // Ensure it fits within bounds
+           if (y + cardHeightPct > 95) y = 95 - cardHeightPct;
 
            var currentRect = { left: x, top: y, width: cardWidthPct, height: cardHeightPct };
            var ok = true;
            
+           // Double check against other cards just in case
            for (var k=0; k<exclusions.length; k++) {
                var e = exclusions[k];
                if (

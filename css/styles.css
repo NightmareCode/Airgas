@@ -1227,7 +1227,7 @@ p { margin: 0 0 16px; color: var(--muted) }
   max-width: 800px;
   margin: 0 auto;
   /* Fixed height to prevent layout shift during typing */
-  min-height: 420px; 
+  min-height: 480px; 
   display: flex;
   flex-direction: column;
   justify-content: center;
