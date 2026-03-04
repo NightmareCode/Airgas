@@ -108,14 +108,20 @@ document.addEventListener("DOMContentLoaded", function () {
     var quotes = [
       { text: "Safety is the first gas we deliver.", meta: "SCBA • EEBD • Fit tests" },
       { text: "Purity that powers performance.", meta: "Oxygen • Nitrogen • Argon • Specialty gases" },
-      { text: "Certified testing you can trust.", meta: "AS11 Cylinder • AS22 Mask Fit Test" },
-      { text: "Reliability from stock to site.", meta: "One‑stop supply • Competitive pricing • Rentals" },
-      { text: "From stockroom to site, safety never stops.", meta: "Detection • Training • Compliance" },
-      { text: "Gases you need, service you trust.", meta: "Supply • Service • Support" },
-      { text: "Measured purity, measurable impact.", meta: "Calibration • Specialty blends" },
-      { text: "Readiness is our routine.", meta: "Inspection • Maintenance • Compliance" },
-      { text: "Fit to protect, tested to perform.", meta: "Mask Fit • Breathing apparatus" },
-      { text: "Delivering safety without compromise.", meta: "Certified processes • Proven standards" }
+      { text: "CO₂ refilling for food & beverage and industrial use.", meta: "CO₂ • Refill • Exchange" },
+      { text: "Industrial gas refilling when uptime matters.", meta: "O₂ • N₂ • Ar • Fast turnaround" },
+      { text: "Cylinder testing and certification you can trust.", meta: "Hydrostatic test • Compliance" },
+      { text: "Keep cylinders safe, legal, and ready for use.", meta: "Inspection • Testing • Records" },
+      { text: "Gas detector calibration for accurate readings.", meta: "Calibration • Bump test • Support" },
+      { text: "SCBA inspection and servicing for readiness.", meta: "SCBA • Inspection • Maintenance" },
+      { text: "Respiratory PPE that fits the job and standard.", meta: "PPE • Masks • Cartridges" },
+      { text: "Supply contracts and delivery support for sites.", meta: "Delivery • Rentals • One‑stop supply" },
+      { text: "Certified testing support for safer workplaces.", meta: "AS11 Cylinder • AS22 Mask Fit Test" },
+      { text: "Reliable supply from stock to site.", meta: "Competitive pricing • Rentals • Support" },
+      { text: "Measured purity, measurable impact.", meta: "Specialty gases • Blends" },
+      { text: "Fit to protect, tested to perform.", meta: "Mask fit • Breathing apparatus" },
+      { text: "Safety equipment that keeps teams compliant.", meta: "PPE • Detection • Training" },
+      { text: "From refill to compliance — keep operations moving.", meta: "Refill • Testing • Calibration" }
     ];
     function pick(n) {
       var idx = [];
@@ -305,12 +311,13 @@ document.addEventListener("DOMContentLoaded", function () {
           card.style.display = "block";
       } else {
           // Fallback: place in visible corners depending on index
-          var idx = Array.prototype.indexOf.call(cards, card) % 4;
+          var idx = Array.prototype.indexOf.call(cards, card) % 5;
           var fallback = [
             {x: margin, y: safeTop},
             {x: heroRect.width - cardW - margin, y: safeTop},
             {x: margin, y: heroRect.height - cardH - margin},
-            {x: heroRect.width - cardW - margin, y: heroRect.height - cardH - margin}
+            {x: heroRect.width - cardW - margin, y: heroRect.height - cardH - margin},
+            {x: margin, y: safeTop + ((heroRect.height - cardH - margin - safeTop) * 0.5)}
           ][idx];
           var leftPctFallback = (fallback.x / heroRect.width) * 100;
           var topPctFallback = (fallback.y / heroRect.height) * 100;
