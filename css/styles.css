@@ -1227,10 +1227,14 @@ p { margin: 0 0 16px; color: var(--muted) }
   max-width: 800px;
   margin: 0 auto;
   /* Fixed height to prevent layout shift during typing */
-  min-height: 480px; 
+  min-height: 520px; 
   display: flex;
   flex-direction: column;
   justify-content: center;
+}
+
+.hero-content h1 {
+  min-height: 3.5em; /* Reserve space for ~3 lines of text */
 }
 
 /* Quote cards z-index fix */
