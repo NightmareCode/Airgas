@@ -239,59 +239,81 @@ document.addEventListener("DOMContentLoaded", function () {
       var found = false;
       var x, y;
       
-      // Use safe zones again but with more randomness and collision checks
-      // Card 0 & 2: Left Side | Card 1 & 3: Right Side
-      var cardIndex = Array.prototype.indexOf.call(cards, card);
+      // Use a slot-based system to guarantee non-overlap
+      // Define 4 quadrants (slots) relative to the screen
+      // These slots are in the safe zones (Left < 20%, Right > 80%)
+      var slots = [
+          { minX: 2, maxX: 15, minY: 10, maxY: 40 }, // Top Left
+          { minX: 2, maxX: 15, minY: 55, maxY: 85 }, // Bottom Left
+          { minX: 75, maxX: 88, minY: 10, maxY: 40 }, // Top Right
+          { minX: 75, maxX: 88, minY: 55, maxY: 85 }  // Bottom Right
+      ];
+
+      // Shuffle slots to randomize which card goes where, but maintain separation
+      // We use a simple hash of the card index + timestamp to pick a slot? 
+      // No, we need to know which slots are taken by *other* cards.
       
-      var minX, maxX;
-      if (cardIndex % 2 === 0) { // Left side
-          minX = 2; maxX = 15;
-      } else { // Right side
-          minX = 75; maxX = 88;
+      // Since we don't have global state for slots easily available in this loop structure without refactoring,
+      // we will pick a random slot, check collisions. If collision, pick another.
+      
+      // Shuffle the slots array locally to try them in random order
+      for (var s = slots.length - 1; s > 0; s--) {
+          var j = Math.floor(Math.random() * (s + 1));
+          var temp = slots[s];
+          slots[s] = slots[j];
+          slots[j] = temp;
       }
 
       var tries = 0;
       var found = false;
       var x, y;
       
-      while (tries < 200) {
-           x = minX + Math.random() * (maxX - minX);
+      // Iterate through shuffled slots
+      for (var s = 0; s < slots.length; s++) {
+           var slot = slots[s];
            
-           // Random Y between 10% and 85%
-           var minY = 10;
-           var maxY = 85;
-           y = minY + Math.random() * (maxY - minY - cardHeightPct);
-           
-           if (y + cardHeightPct > 95) y = 95 - cardHeightPct;
+           // Try 10 times to find a spot within this slot
+           for (var t = 0; t < 10; t++) {
+               x = slot.minX + Math.random() * (slot.maxX - slot.minX);
+               y = slot.minY + Math.random() * (slot.maxY - slot.minY);
+               
+               // Ensure bounds
+               if (y + cardHeightPct > 95) y = 95 - cardHeightPct;
 
-           var currentRect = { left: x, top: y, width: cardWidthPct, height: cardHeightPct };
-           var ok = true;
-           
-           // Strict collision check against other cards
-           for (var k=0; k<exclusions.length; k++) {
-               var e = exclusions[k];
-               if (
-                  currentRect.left < e.left + e.width &&
-                  currentRect.left + currentRect.width > e.left &&
-                  currentRect.top < e.top + e.height &&
-                  currentRect.top + currentRect.height > e.top
-               ) {
-                  ok = false; break;
+               var currentRect = { left: x, top: y, width: cardWidthPct, height: cardHeightPct };
+               var ok = true;
+               
+               // Check collisions with other cards
+               for (var k=0; k<exclusions.length; k++) {
+                   var e = exclusions[k];
+                   if (
+                      currentRect.left < e.left + e.width &&
+                      currentRect.left + currentRect.width > e.left &&
+                      currentRect.top < e.top + e.height &&
+                      currentRect.top + currentRect.height > e.top
+                   ) {
+                      ok = false; break;
+                   }
+               }
+               
+               if (ok) { 
+                   found = true; 
+                   break; 
                }
            }
-           
-           if (ok) { found = true; break; }
-           tries++;
+           if (found) break;
       }
 
       if (found) {
           card.style.left = x + "%";
           card.style.top = y + "%";
       } else {
-          // Fallback to fixed positions if no space found
-          if (cardIndex % 4 === 0) { x = 5; y = 15; }
-          else if (cardIndex % 4 === 1) { x = 75; y = 15; }
-          else if (cardIndex % 4 === 2) { x = 5; y = 70; }
+          // Fallback to strict fixed positions if everything fails
+          // Card 0->TL, 1->TR, 2->BL, 3->BR
+          var fallbackIndex = Array.prototype.indexOf.call(cards, card) % 4;
+          if (fallbackIndex === 0) { x = 5; y = 15; }
+          else if (fallbackIndex === 1) { x = 75; y = 15; }
+          else if (fallbackIndex === 2) { x = 5; y = 70; }
           else { x = 75; y = 70; }
           card.style.left = x + "%";
           card.style.top = y + "%";
