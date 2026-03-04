@@ -239,27 +239,63 @@ document.addEventListener("DOMContentLoaded", function () {
       var found = false;
       var x, y;
       
-      // Assign a specific fixed position to each card index
-      // Card 0: Top Left
-      // Card 1: Top Right
-      // Card 2: Bottom Left
-      // Card 3: Bottom Right
+      // Use safe zones again but with more randomness and collision checks
+      // Card 0 & 2: Left Side | Card 1 & 3: Right Side
       var cardIndex = Array.prototype.indexOf.call(cards, card);
       
-      var x, y;
-      if (cardIndex % 4 === 0) {
-          x = 5; y = 15;
-      } else if (cardIndex % 4 === 1) {
-          x = 75; y = 15;
-      } else if (cardIndex % 4 === 2) {
-          x = 5; y = 70;
-      } else {
-          x = 75; y = 70;
+      var minX, maxX;
+      if (cardIndex % 2 === 0) { // Left side
+          minX = 2; maxX = 15;
+      } else { // Right side
+          minX = 75; maxX = 88;
       }
 
-      // Apply position directly - no random movement or collision checks needed
-      card.style.left = x + "%";
-      card.style.top = y + "%";
+      var tries = 0;
+      var found = false;
+      var x, y;
+      
+      while (tries < 200) {
+           x = minX + Math.random() * (maxX - minX);
+           
+           // Random Y between 10% and 85%
+           var minY = 10;
+           var maxY = 85;
+           y = minY + Math.random() * (maxY - minY - cardHeightPct);
+           
+           if (y + cardHeightPct > 95) y = 95 - cardHeightPct;
+
+           var currentRect = { left: x, top: y, width: cardWidthPct, height: cardHeightPct };
+           var ok = true;
+           
+           // Strict collision check against other cards
+           for (var k=0; k<exclusions.length; k++) {
+               var e = exclusions[k];
+               if (
+                  currentRect.left < e.left + e.width &&
+                  currentRect.left + currentRect.width > e.left &&
+                  currentRect.top < e.top + e.height &&
+                  currentRect.top + currentRect.height > e.top
+               ) {
+                  ok = false; break;
+               }
+           }
+           
+           if (ok) { found = true; break; }
+           tries++;
+      }
+
+      if (found) {
+          card.style.left = x + "%";
+          card.style.top = y + "%";
+      } else {
+          // Fallback to fixed positions if no space found
+          if (cardIndex % 4 === 0) { x = 5; y = 15; }
+          else if (cardIndex % 4 === 1) { x = 75; y = 15; }
+          else if (cardIndex % 4 === 2) { x = 5; y = 70; }
+          else { x = 75; y = 70; }
+          card.style.left = x + "%";
+          card.style.top = y + "%";
+      }
     }
 
     function startCardLoop(card, initialDelay) {
