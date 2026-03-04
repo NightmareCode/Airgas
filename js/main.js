@@ -104,7 +104,11 @@ document.addEventListener("DOMContentLoaded", function () {
 
   var quoteWrap = document.querySelector(".hero-quotes");
   if (quoteWrap) {
-    var cards = quoteWrap.querySelectorAll(".quote-card");
+    var allCards = quoteWrap.querySelectorAll(".quote-card");
+    var cards = Array.prototype.slice.call(allCards, 0, 4);
+    for (var ci = 4; ci < allCards.length; ci++) {
+      allCards[ci].style.display = "none";
+    }
     var quotes = [
       { text: "Safety is the first gas we deliver.", meta: "SCBA • EEBD • Fit tests" },
       { text: "Purity that powers performance.", meta: "Oxygen • Nitrogen • Argon • Specialty gases" },
@@ -311,13 +315,12 @@ document.addEventListener("DOMContentLoaded", function () {
           card.style.display = "block";
       } else {
           // Fallback: place in visible corners depending on index
-          var idx = Array.prototype.indexOf.call(cards, card) % 5;
+          var idx = Array.prototype.indexOf.call(cards, card) % 4;
           var fallback = [
             {x: margin, y: safeTop},
             {x: heroRect.width - cardW - margin, y: safeTop},
             {x: margin, y: heroRect.height - cardH - margin},
-            {x: heroRect.width - cardW - margin, y: heroRect.height - cardH - margin},
-            {x: margin, y: safeTop + ((heroRect.height - cardH - margin - safeTop) * 0.5)}
+            {x: heroRect.width - cardW - margin, y: heroRect.height - cardH - margin}
           ][idx];
           var leftPctFallback = (fallback.x / heroRect.width) * 100;
           var topPctFallback = (fallback.y / heroRect.height) * 100;
