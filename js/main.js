@@ -261,10 +261,6 @@ document.addEventListener("DOMContentLoaded", function () {
       var maxLeft = heroRect.width - cardW - margin;
       var maxTop = heroRect.height - cardH - margin;
       if (maxLeft > margin && maxTop > safeTop) {
-        var contentCenterX = (contentRect.left - heroRect.left) + (contentRect.width / 2);
-        var contentCenterY = (contentRect.top - heroRect.top) + (contentRect.height / 2);
-        var minDist = (Math.max(contentRect.width, contentRect.height) / 2) + (Math.max(cardW, cardH) / 2) + margin;
-        var maxDist = Math.min(heroRect.width, heroRect.height) * 0.62;
 
         for (var t = 0; t < maxTries; t++) {
           var x = margin + Math.random() * (maxLeft - margin);
@@ -281,14 +277,6 @@ document.addEventListener("DOMContentLoaded", function () {
                 candidate.bottom < exclusion.top || candidate.top > exclusion.bottom)) {
             continue;
           }
-
-          var candCenterX = x + (cardW / 2);
-          var candCenterY = y + (cardH / 2);
-          var dist = Math.sqrt(
-            (candCenterX - contentCenterX) * (candCenterX - contentCenterX) +
-            (candCenterY - contentCenterY) * (candCenterY - contentCenterY)
-          );
-          if (dist < minDist || dist > maxDist) continue;
 
           var collisionCard = false;
           for (var k = 0; k < otherCards.length; k++) {
@@ -316,7 +304,19 @@ document.addEventListener("DOMContentLoaded", function () {
           card.style.top = topPct + "%";
           card.style.display = "block";
       } else {
-          card.style.display = "none";
+          // Fallback: place in visible corners depending on index
+          var idx = Array.prototype.indexOf.call(cards, card) % 4;
+          var fallback = [
+            {x: margin, y: safeTop},
+            {x: heroRect.width - cardW - margin, y: safeTop},
+            {x: margin, y: heroRect.height - cardH - margin},
+            {x: heroRect.width - cardW - margin, y: heroRect.height - cardH - margin}
+          ][idx];
+          var leftPctFallback = (fallback.x / heroRect.width) * 100;
+          var topPctFallback = (fallback.y / heroRect.height) * 100;
+          card.style.left = leftPctFallback + "%";
+          card.style.top = topPctFallback + "%";
+          card.style.display = "block";
       }
     }
 
