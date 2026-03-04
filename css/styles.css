@@ -1226,6 +1226,17 @@ p { margin: 0 0 16px; color: var(--muted) }
   box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
   max-width: 800px;
   margin: 0 auto;
+  /* Min-height to prevent layout shift during typing */
+  min-height: 380px; 
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* Quote cards z-index fix */
+.quote-card {
+  /* Ensure quotes are above particles but below content if overlapping */
+  z-index: 5; 
 }
 
 .cursor {

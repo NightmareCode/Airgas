@@ -241,8 +241,8 @@ document.addEventListener("DOMContentLoaded", function () {
       
       while (tries < 500) {
            x = Math.random() * (100 - cardWidthPct);
-           var minY = 36;
-           var maxY = 86; 
+           var minY = 10; // Allow quotes to appear higher up
+           var maxY = 90; 
            y = minY + Math.random() * (maxY - minY - cardHeightPct);
            if (y < minY) y = minY;
            if (y + cardHeightPct > maxY) y = maxY - cardHeightPct;
