@@ -1226,8 +1226,8 @@ p { margin: 0 0 16px; color: var(--muted) }
   box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
   max-width: 800px;
   margin: 0 auto;
-  /* Min-height to prevent layout shift during typing */
-  min-height: 380px; 
+  /* Fixed height to prevent layout shift during typing */
+  min-height: 420px; 
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -1237,6 +1237,9 @@ p { margin: 0 0 16px; color: var(--muted) }
 .quote-card {
   /* Ensure quotes are above particles but below content if overlapping */
   z-index: 5; 
+  /* Fallback position if JS fails */
+  top: 10%;
+  left: 5%;
 }
 
 .cursor {

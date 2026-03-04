@@ -239,13 +239,21 @@ document.addEventListener("DOMContentLoaded", function () {
       var found = false;
       var x, y;
       
+      // Define safe zones (left and right of the center content)
+      // Center content roughly takes up middle 50% horizontally
+      var safeZones = [
+          { minX: 2, maxX: 15 },   // Left side
+          { minX: 75, maxX: 88 }   // Right side
+      ];
+      
       while (tries < 500) {
-           x = Math.random() * (100 - cardWidthPct);
-           var minY = 10; // Allow quotes to appear higher up
-           var maxY = 90; 
+           // Pick a random side
+           var zone = safeZones[Math.floor(Math.random() * safeZones.length)];
+           x = zone.minX + Math.random() * (zone.maxX - zone.minX);
+           
+           var minY = 15; 
+           var maxY = 85; 
            y = minY + Math.random() * (maxY - minY - cardHeightPct);
-           if (y < minY) y = minY;
-           if (y + cardHeightPct > maxY) y = maxY - cardHeightPct;
 
            var currentRect = { left: x, top: y, width: cardWidthPct, height: cardHeightPct };
            var ok = true;
