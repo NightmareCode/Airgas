@@ -179,7 +179,9 @@ document.addEventListener("DOMContentLoaded", function () {
       // 1. Pick Quote (avoiding currently displayed ones)
       var usedTexts = [];
       for (var i = 0; i < cards.length; i++) {
-        if (cards[i] !== card && cards[i].style.opacity !== '0') {
+        if (cards[i] !== card) {
+          var csUsed = window.getComputedStyle(cards[i]);
+          if (csUsed.display === "none" || csUsed.opacity === "0") continue;
           var p = cards[i].querySelector("p");
           if (p) usedTexts.push(p.textContent);
         }
@@ -203,13 +205,23 @@ document.addEventListener("DOMContentLoaded", function () {
       var heroRect = hero.getBoundingClientRect();
       var contentRect = content.getBoundingClientRect();
       
-      // Card dimensions (approximate or read from computed style)
-      // Assuming card is ~280px wide and ~120px tall
-      var cardW = 280; 
-      var cardH = 120;
-      
-      // Margins
       var margin = 20;
+
+      var prevDisplay = card.style.display;
+      var prevVisibility = card.style.visibility;
+      var prevLeft = card.style.left;
+      var prevTop = card.style.top;
+      card.style.display = "block";
+      card.style.visibility = "hidden";
+      card.style.left = "0px";
+      card.style.top = "0px";
+      var measured = card.getBoundingClientRect();
+      var cardW = Math.ceil(measured.width) || 280;
+      var cardH = Math.ceil(measured.height) || 120;
+      card.style.display = prevDisplay;
+      card.style.visibility = prevVisibility;
+      card.style.left = prevLeft;
+      card.style.top = prevTop;
 
       // Define exclusion zone (Center Box + Padding)
       var exclusion = {
@@ -222,77 +234,78 @@ document.addEventListener("DOMContentLoaded", function () {
       // Get positions of other active cards to avoid overlap
       var otherCards = [];
       for (var i = 0; i < cards.length; i++) {
-          if (cards[i] !== card && cards[i].style.display !== 'none') {
+          if (cards[i] !== card) {
+              var csOther = window.getComputedStyle(cards[i]);
+              if (csOther.display === "none" || csOther.opacity === "0") continue;
               var r = cards[i].getBoundingClientRect();
               otherCards.push({
-                  left: r.left - heroRect.left,
-                  top: r.top - heroRect.top,
-                  right: r.right - heroRect.left,
-                  bottom: r.bottom - heroRect.top
+                  left: (r.left - heroRect.left) - margin,
+                  top: (r.top - heroRect.top) - margin,
+                  right: (r.right - heroRect.left) + margin,
+                  bottom: (r.bottom - heroRect.top) + margin
               });
           }
       }
 
       var bestX = -1, bestY = -1;
       var found = false;
-      var maxTries = 100;
+      var maxTries = 300;
 
-      for (var t = 0; t < maxTries; t++) {
-          // Randomly pick X: either left of content or right of content
-          // This ensures we don't even try to put it in the middle
-          var side = Math.random() > 0.5 ? 'left' : 'right';
-          var x, y;
+      var safeTop = margin;
+      var header = document.querySelector(".site-header");
+      if (header) {
+        var headerRect = header.getBoundingClientRect();
+        safeTop = Math.max(safeTop, headerRect.bottom - heroRect.top + margin);
+      }
 
-          if (side === 'left') {
-              // Try to fit in left space: 0 to exclusion.left
-              var maxLeft = exclusion.left - cardW;
-              if (maxLeft < margin) continue; // No space on left
-              x = margin + Math.random() * (maxLeft - margin);
-          } else {
-              // Try to fit in right space: exclusion.right to heroRect.width
-              var minLeft = exclusion.right;
-              var maxLeft = heroRect.width - cardW - margin;
-              if (maxLeft < minLeft) continue; // No space on right
-              x = minLeft + Math.random() * (maxLeft - minLeft);
-          }
+      var maxLeft = heroRect.width - cardW - margin;
+      var maxTop = heroRect.height - cardH - margin;
+      if (maxLeft > margin && maxTop > safeTop) {
+        var contentCenterX = (contentRect.left - heroRect.left) + (contentRect.width / 2);
+        var contentCenterY = (contentRect.top - heroRect.top) + (contentRect.height / 2);
+        var minDist = (Math.max(contentRect.width, contentRect.height) / 2) + (Math.max(cardW, cardH) / 2) + margin;
+        var maxDist = Math.min(heroRect.width, heroRect.height) * 0.62;
 
-          // Random Y: anywhere vertical
-          y = margin + Math.random() * (heroRect.height - cardH - margin);
+        for (var t = 0; t < maxTries; t++) {
+          var x = margin + Math.random() * (maxLeft - margin);
+          var y = safeTop + Math.random() * (maxTop - safeTop);
 
-          // Construct candidate rect
           var candidate = {
-              left: x,
-              top: y,
-              right: x + cardW,
-              bottom: y + cardH
+            left: x,
+            top: y,
+            right: x + cardW,
+            bottom: y + cardH
           };
 
-          // Check overlap with Exclusion (Center Box) - Double check
-          // (Logic above should prevent X overlap, but Y might overlap if we allowed X to be in center)
-          // Since we restricted X to be strictly Left or Right of center, we are safe from center collision horizontally.
-          // But let's verify standard collision just in case.
           if (!(candidate.right < exclusion.left || candidate.left > exclusion.right || 
                 candidate.bottom < exclusion.top || candidate.top > exclusion.bottom)) {
-              continue; // Collision with center
+            continue;
           }
 
-          // Check overlap with Other Cards
+          var candCenterX = x + (cardW / 2);
+          var candCenterY = y + (cardH / 2);
+          var dist = Math.sqrt(
+            (candCenterX - contentCenterX) * (candCenterX - contentCenterX) +
+            (candCenterY - contentCenterY) * (candCenterY - contentCenterY)
+          );
+          if (dist < minDist || dist > maxDist) continue;
+
           var collisionCard = false;
           for (var k = 0; k < otherCards.length; k++) {
-              var o = otherCards[k];
-              if (!(candidate.right < o.left || candidate.left > o.right || 
-                    candidate.bottom < o.top || candidate.top > o.bottom)) {
-                  collisionCard = true;
-                  break;
-              }
+            var o = otherCards[k];
+            if (!(candidate.right < o.left || candidate.left > o.right || 
+                  candidate.bottom < o.top || candidate.top > o.bottom)) {
+              collisionCard = true;
+              break;
+            }
           }
           if (collisionCard) continue;
 
-          // Found a spot!
           found = true;
           bestX = x;
           bestY = y;
           break;
+        }
       }
 
       if (found) {
@@ -301,12 +314,9 @@ document.addEventListener("DOMContentLoaded", function () {
           var topPct = (bestY / heroRect.height) * 100;
           card.style.left = leftPct + "%";
           card.style.top = topPct + "%";
-          card.style.display = 'block';
-          card.style.opacity = '1';
+          card.style.display = "block";
       } else {
-          // No safe space found (screen too small?) -> Hide card
-          card.style.display = 'none';
-          card.style.opacity = '0';
+          card.style.display = "none";
       }
     }
 
