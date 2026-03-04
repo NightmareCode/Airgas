@@ -461,5 +461,42 @@ document.addEventListener("DOMContentLoaded", function () {
       });
     });
   }
+
+  // Lightbox Logic for Regulators and Valves
+  // Only activate if we find .product-item images on the page
+  if (document.querySelector('.product-item')) {
+      document.addEventListener('click', function(e) {
+          if (e.target.matches('.product-item img')) {
+              e.preventDefault();
+              var src = e.target.src;
+              
+              // Create overlay if it doesn't exist
+              var overlay = document.querySelector('.lightbox-overlay');
+              if (!overlay) {
+                  overlay = document.createElement('div');
+                  overlay.className = 'lightbox-overlay';
+                  overlay.innerHTML = '<button class="lightbox-close">&times;</button><div class="lightbox-content"><img class="lightbox-image" src=""></div>';
+                  document.body.appendChild(overlay);
+                  
+                  // Close events
+                  overlay.addEventListener('click', function(ev) {
+                      if (ev.target === overlay || ev.target.matches('.lightbox-close')) {
+                          overlay.classList.remove('active');
+                          document.body.style.overflow = '';
+                      }
+                  });
+              }
+              
+              var img = overlay.querySelector('.lightbox-image');
+              img.src = src;
+              
+              // Small timeout to allow transition
+              requestAnimationFrame(function() {
+                  overlay.classList.add('active');
+                  document.body.style.overflow = 'hidden';
+              });
+          }
+      });
+  }
 });
 
