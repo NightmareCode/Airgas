@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Products | Airgas Technology</title>
-<link rel="stylesheet" href="../css/styles.css?v=3.0">
+<link rel="stylesheet" href="../css/styles.css?v=3.1">
 <style>
 .marketplace-layout {
   grid-template-columns: 200px 1fr !important;
@@ -1027,19 +1027,30 @@ document.addEventListener("DOMContentLoaded", function() {
 
   function onScrollBranches() {
     const marker = 160;
+    const viewportHeight = window.innerHeight || document.documentElement.clientHeight || 0;
+
+    let bestId = null;
+    let bestDistance = Infinity;
 
     for (let i = 0; i < branchSections.length; i++) {
       const sec = branchSections[i];
       const rect = sec.getBoundingClientRect();
-      if (rect.top <= marker && rect.bottom > marker) {
-        setBranchActive(sec.id);
-        return;
+      const isVisible = rect.bottom > 0 && rect.top < viewportHeight;
+      if (!isVisible) continue;
+
+      const distance = Math.abs(rect.top - marker);
+      if (distance < bestDistance) {
+        bestDistance = distance;
+        bestId = sec.id;
       }
     }
 
-    const firstRect = branchSections[0].getBoundingClientRect();
-    if (firstRect.top > marker) setBranchActive(branchSections[0].id);
-    else setBranchActive(branchSections[branchSections.length - 1].id);
+    if (bestId) {
+      setBranchActive(bestId);
+      return;
+    }
+
+    setBranchActive(branchSections[0].id);
   }
 
   window.addEventListener("scroll", onScrollBranches, { passive: true });
