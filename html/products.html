@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Products | Airgas Technology</title>
-<link rel="stylesheet" href="../css/styles.css?v=2.5">
+<link rel="stylesheet" href="../css/styles.css?v=2.6">
 <style>
 /* Force sidebar styling override */
 .marketplace-layout {
@@ -30,6 +30,13 @@
   padding: 4px 0 !important;
   color: var(--muted);
   transition: color 0.2s ease;
+}
+/* Explicitly prevent stuck orange state on click/focus */
+.filter-list a:active,
+.filter-list a:focus,
+.filter-list a:visited {
+  color: var(--muted) !important;
+  outline: none !important;
 }
 .filter-list a:hover,
 .filter-list a.active {
@@ -1011,15 +1018,16 @@
         
         sections.forEach((section) => {
           const sectionTop = section.offsetTop;
-          const sectionHeight = section.clientHeight;
-          if (scrollY >= (sectionTop - 150)) {
+          // Use a smaller offset to ensure we trigger closer to the section start
+          if (window.scrollY >= (sectionTop - 200)) {
             current = section.getAttribute("id");
           }
         });
 
         navLinks.forEach((link) => {
           link.classList.remove("active");
-          if (link.getAttribute("href").includes(current)) {
+          const href = link.getAttribute("href");
+          if (current && href === "#" + current) {
             link.classList.add("active");
           }
         });
