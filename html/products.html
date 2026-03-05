@@ -4,15 +4,31 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Products | Airgas Technology</title>
-<link rel="stylesheet" href="../css/styles.css?v=3.2">
+<link rel="stylesheet" href="../css/styles.css?v=3.3">
 <style>
 .marketplace-layout {
-  grid-template-columns: 200px 1fr !important;
+  grid-template-columns: 1fr !important;
   gap: 30px !important;
 }
+.products-main-content {
+  width: 100%;
+}
 .sidebar-filter {
-  padding: 16px !important;
-  font-size: 0.9rem !important;
+  display: none !important;
+}
+.product-grid {
+  grid-template-columns: repeat(3, 1fr) !important;
+  gap: 28px !important;
+}
+@media (max-width: 992px) {
+  .product-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+}
+@media (max-width: 600px) {
+  .product-grid {
+    grid-template-columns: 1fr !important;
+  }
 }
 .filter-group h3 {
   font-size: 0.9rem !important;
@@ -86,35 +102,7 @@
 <section class="content">
 <div class="container marketplace-layout">
   
-  <!-- Sidebar Filter -->
-  <aside class="sidebar-filter">
-    <div class="filter-group">
-      <h3>Categories</h3>
-      <ul class="filter-list">
-        <li><a href="#johor-products">Johor HQ Products</a></li>
-        <li><a href="#nilai-products">Nilai Branch Products</a></li>
-        <li class="separator"></li>
-        <li><a href="#industrial-gases">Industrial Gases</a></li>
-        <li><a href="#medical-gases">Medical Gases</a></li>
-        <li><a href="#welding">Welding & Cutting</a></li>
-        <li><a href="#ppe">Safety PPE</a></li>
-        <li><a href="#fire-safety">Fire Safety</a></li>
-        <li><a href="#medical-equip">Medical Equipment</a></li>
-        <li><a href="#regulators">Regulators</a></li>
-        <li><a href="#valves">Valves</a></li>
-      </ul>
-    </div>
-    <div class="filter-group">
-      <h3>Brands</h3>
-      <ul class="filter-list">
-        <li><a href="#industrial-gases">Airgas Tech</a></li>
-        <li><a href="#ppe">DrÃ¤ger</a></li>
-        <li><a href="#msa-safety">MSA Safety</a></li>
-        <li><a href="#welding">ESAB</a></li>
-        <li><a href="#aceweld">Aceweld</a></li>
-      </ul>
-    </div>
-  </aside>
+  <!-- Sidebar removed for cleaner layout -->
 
   <!-- Main Product Grid -->
   <div class="products-main-content">
@@ -1009,50 +997,6 @@
 </div>
 </footer>
 <script src="../js/main.js"></script>
-<!-- Logo sizes are set via CSS rules derived from FFmpeg dimension scan -->
-<script>
-document.addEventListener("DOMContentLoaded", function() {
-  // Highlight branch links (Johor/Nilai) based on which branch-section is in view
-  const branchLinks = {
-    "johor-products": document.querySelector('.filter-list a[href="#johor-products"]'),
-    "nilai-products": document.querySelector('.filter-list a[href="#nilai-products"]')
-  };
-
-  const branchSections = ["johor-products", "nilai-products"]
-    .map((id) => {
-      const el = document.getElementById(id);
-      return el ? { id, el } : null;
-    })
-    .filter(Boolean)
-    .sort((a, b) => a.el.offsetTop - b.el.offsetTop);
-
-  if (!branchSections.length || !branchLinks["johor-products"] || !branchLinks["nilai-products"]) return;
-
-  function setBranchActive(id) {
-    branchLinks["johor-products"].classList.toggle("active", id === "johor-products");
-    branchLinks["nilai-products"].classList.toggle("active", id === "nilai-products");
-  }
-
-  function onScrollBranches() {
-    const y = (window.pageYOffset || document.documentElement.scrollTop || 0) + 200;
-    let activeId = branchSections[0].id;
-
-    for (let i = 0; i < branchSections.length; i++) {
-      if (branchSections[i].el.offsetTop <= y) {
-        activeId = branchSections[i].id;
-      } else {
-        break;
-      }
-    }
-
-    setBranchActive(activeId);
-  }
-
-  window.addEventListener("scroll", onScrollBranches, { passive: true });
-  window.addEventListener("resize", onScrollBranches);
-  onScrollBranches();
-});
-</script>
 </body>
 </html>
 
