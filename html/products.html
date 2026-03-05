@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Products | Airgas Technology</title>
-<link rel="stylesheet" href="../css/styles.css?v=2.2">
+<link rel="stylesheet" href="../css/styles.css?v=2.3">
 <style>
 /* Force sidebar styling override */
 .marketplace-layout {
@@ -28,6 +28,10 @@
 .filter-list a {
   font-size: 0.85rem !important;
   padding: 4px 0 !important;
+  color: var(--muted) !important; /* Force default color even if visited/active */
+}
+.filter-list a:hover {
+  color: var(--primary) !important; /* Only orange on hover */
 }
 .filter-list .separator {
   height: 1px;
