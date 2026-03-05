@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Products | Airgas Technology</title>
-<link rel="stylesheet" href="../css/styles.css?v=2.9">
+<link rel="stylesheet" href="../css/styles.css?v=3.0">
 <style>
 .marketplace-layout {
   grid-template-columns: 200px 1fr !important;
@@ -1026,20 +1026,20 @@ document.addEventListener("DOMContentLoaded", function() {
   }
 
   function onScrollBranches() {
-    const y = window.pageYOffset || document.documentElement.scrollTop || 0;
-    const headerOffset = 160;
-    // Determine which branch section the current scroll position is within
+    const marker = 160;
+
     for (let i = 0; i < branchSections.length; i++) {
       const sec = branchSections[i];
-      const top = sec.offsetTop;
-      const bottom = top + sec.offsetHeight;
-      if (y + headerOffset >= top && y + headerOffset < bottom) {
+      const rect = sec.getBoundingClientRect();
+      if (rect.top <= marker && rect.bottom > marker) {
         setBranchActive(sec.id);
         return;
       }
     }
-    // Fallback: before first branch -> Johor
-    setBranchActive(branchSections[0].id);
+
+    const firstRect = branchSections[0].getBoundingClientRect();
+    if (firstRect.top > marker) setBranchActive(branchSections[0].id);
+    else setBranchActive(branchSections[branchSections.length - 1].id);
   }
 
   window.addEventListener("scroll", onScrollBranches, { passive: true });
