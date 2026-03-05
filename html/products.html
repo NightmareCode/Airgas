@@ -4,9 +4,8 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Products | Airgas Technology</title>
-<link rel="stylesheet" href="../css/styles.css?v=2.6">
+<link rel="stylesheet" href="../css/styles.css?v=2.7">
 <style>
-/* Force sidebar styling override */
 .marketplace-layout {
   grid-template-columns: 200px 1fr !important;
   gap: 30px !important;
@@ -28,17 +27,20 @@
 .filter-list a {
   font-size: 0.85rem !important;
   padding: 4px 0 !important;
-  color: var(--muted);
+  color: var(--muted) !important;
   transition: color 0.2s ease;
 }
-/* Explicitly prevent stuck orange state on click/focus */
-.filter-list a:active,
-.filter-list a:focus,
 .filter-list a:visited {
+  color: var(--muted) !important;
+}
+.filter-list a:focus,
+.filter-list a:active {
   color: var(--muted) !important;
   outline: none !important;
 }
-.filter-list a:hover,
+.filter-list a:hover {
+  color: var(--primary) !important;
+}
 .filter-list a.active {
   color: var(--primary) !important;
 }
@@ -1008,35 +1010,56 @@
 </footer>
 <script src="../js/main.js"></script>
 <!-- Logo sizes are set via CSS rules derived from FFmpeg dimension scan -->
-  <script>
-    document.addEventListener("DOMContentLoaded", function() {
-      const sections = document.querySelectorAll(".branch-section, .product-brand-section");
-      const navLinks = document.querySelectorAll(".filter-list a");
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+  const sidebar = document.querySelector(".sidebar-filter");
+  if (!sidebar) return;
 
-      function activateLink() {
-        let current = "";
-        
-        sections.forEach((section) => {
-          const sectionTop = section.offsetTop;
-          // Use a smaller offset to ensure we trigger closer to the section start
-          if (window.scrollY >= (sectionTop - 200)) {
-            current = section.getAttribute("id");
-          }
-        });
+  const links = Array.prototype.slice.call(sidebar.querySelectorAll('a[href^="#"]'));
+  const ids = [];
 
-        navLinks.forEach((link) => {
-          link.classList.remove("active");
-          const href = link.getAttribute("href");
-          if (current && href === "#" + current) {
-            link.classList.add("active");
-          }
-        });
-      }
+  for (let i = 0; i < links.length; i++) {
+    const href = links[i].getAttribute("href");
+    const id = href ? href.slice(1) : "";
+    if (id && ids.indexOf(id) === -1) ids.push(id);
+  }
 
-      window.addEventListener("scroll", activateLink);
-      activateLink(); // Run on load
+  const targets = ids
+    .map((id) => document.getElementById(id))
+    .filter(Boolean)
+    .sort((a, b) => {
+      const pos = a.compareDocumentPosition(b);
+      if (pos & Node.DOCUMENT_POSITION_PRECEDING) return 1;
+      if (pos & Node.DOCUMENT_POSITION_FOLLOWING) return -1;
+      return 0;
     });
-  </script>
+
+  if (!targets.length) return;
+
+  function setActive(id) {
+    for (let i = 0; i < links.length; i++) {
+      links[i].classList.toggle("active", links[i].getAttribute("href") === "#" + id);
+    }
+  }
+
+  function onScroll() {
+    const offset = 140;
+    let activeId = targets[0].id;
+
+    for (let i = 0; i < targets.length; i++) {
+      const top = targets[i].getBoundingClientRect().top;
+      if (top - offset <= 0) activeId = targets[i].id;
+      else break;
+    }
+
+    setActive(activeId);
+  }
+
+  window.addEventListener("scroll", onScroll, { passive: true });
+  window.addEventListener("resize", onScroll);
+  onScroll();
+});
+</script>
 </body>
 </html>
 
