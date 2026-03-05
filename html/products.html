@@ -4,9 +4,26 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Products | Airgas Technology</title>
-<link rel="stylesheet" href="../css/styles.css">
+<link rel="stylesheet" href="../css/styles.css?v=3.4">
 <style>
-
+.marketplace-layout {
+  grid-template-columns: 1fr !important;
+  gap: 30px !important;
+}
+.product-grid {
+  grid-template-columns: repeat(3, 1fr) !important;
+  gap: 28px !important;
+}
+@media (max-width: 992px) {
+  .product-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+}
+@media (max-width: 600px) {
+  .product-grid {
+    grid-template-columns: 1fr !important;
+  }
+}
 </style>
 </head>
 <body>
@@ -43,35 +60,7 @@
 <section class="content">
 <div class="container marketplace-layout">
   
-  <!-- Sidebar Filter -->
-  <aside class="sidebar-filter">
-    <div class="filter-group">
-      <h3>Categories</h3>
-      <ul class="filter-list">
-        <li><a href="#johor-products" class="active">Johor HQ Products</a></li>
-        <li><a href="#nilai-products">Nilai Branch Products</a></li>
-        <li class="separator">---</li>
-        <li><a href="#industrial-gases">Industrial Gases</a></li>
-        <li><a href="#medical-gases">Medical Gases</a></li>
-        <li><a href="#welding">Welding & Cutting</a></li>
-        <li><a href="#ppe">Safety PPE</a></li>
-        <li><a href="#fire-safety">Fire Safety</a></li>
-        <li><a href="#medical-equip">Medical Equipment</a></li>
-        <li><a href="#regulators">Regulators</a></li>
-        <li><a href="#valves">Valves</a></li>
-      </ul>
-    </div>
-    <div class="filter-group">
-      <h3>Brands</h3>
-      <ul class="filter-list">
-        <li><a href="#industrial-gases">Airgas Tech</a></li>
-        <li><a href="#ppe">DrÃ¤ger</a></li>
-        <li><a href="#msa-safety">MSA Safety</a></li>
-        <li><a href="#welding">ESAB</a></li>
-        <li><a href="#aceweld">Aceweld</a></li>
-      </ul>
-    </div>
-  </aside>
+  <!-- Sidebar removed for cleaner layout -->
 
   <!-- Main Product Grid -->
   <div class="products-main-content">
@@ -966,7 +955,6 @@
 </div>
 </footer>
 <script src="../js/main.js"></script>
-<!-- Logo sizes are set via CSS rules derived from FFmpeg dimension scan -->
 </body>
 </html>
 
