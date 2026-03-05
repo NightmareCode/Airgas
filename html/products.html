@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Products | Airgas Technology</title>
-<link rel="stylesheet" href="../css/styles.css?v=2.8">
+<link rel="stylesheet" href="../css/styles.css?v=2.9">
 <style>
 .marketplace-layout {
   grid-template-columns: 200px 1fr !important;
@@ -1012,51 +1012,39 @@
 <!-- Logo sizes are set via CSS rules derived from FFmpeg dimension scan -->
 <script>
 document.addEventListener("DOMContentLoaded", function() {
-  const sidebar = document.querySelector(".sidebar-filter");
-  if (!sidebar) return;
+  // Highlight branch links (Johor/Nilai) based on which branch-section is in view
+  const branchSections = Array.prototype.slice.call(document.querySelectorAll(".branch-section"));
+  const branchLinks = {
+    "johor-products": document.querySelector('.filter-list a[href="#johor-products"]'),
+    "nilai-products": document.querySelector('.filter-list a[href="#nilai-products"]')
+  };
+  if (!branchSections.length || !branchLinks["johor-products"] || !branchLinks["nilai-products"]) return;
 
-  const links = Array.prototype.slice.call(sidebar.querySelectorAll('a[href^="#"]'));
-  let sections = links
-    .map((a) => {
-      const id = a.hash ? a.hash.slice(1) : "";
-      const el = id ? document.getElementById(id) : null;
-      return el ? { id, el, link: a } : null;
-    })
-    .filter(Boolean);
-
-  if (!sections.length) return;
-
-  function sortSections() {
-    sections.sort((a, b) => a.el.offsetTop - b.el.offsetTop);
+  function setBranchActive(id) {
+    branchLinks["johor-products"].classList.toggle("active", id === "johor-products");
+    branchLinks["nilai-products"].classList.toggle("active", id === "nilai-products");
   }
 
-  function setActive(id) {
-    for (let i = 0; i < sections.length; i++) {
-      sections[i].link.classList.toggle("active", sections[i].id === id);
-    }
-  }
-
-  function onScroll() {
+  function onScrollBranches() {
     const y = window.pageYOffset || document.documentElement.scrollTop || 0;
-    const offset = 160;
-    let activeId = sections[0].id;
-    for (let i = 0; i < sections.length; i++) {
-      if (sections[i].el.offsetTop <= y + offset) {
-        activeId = sections[i].id;
-      } else {
-        break;
+    const headerOffset = 160;
+    // Determine which branch section the current scroll position is within
+    for (let i = 0; i < branchSections.length; i++) {
+      const sec = branchSections[i];
+      const top = sec.offsetTop;
+      const bottom = top + sec.offsetHeight;
+      if (y + headerOffset >= top && y + headerOffset < bottom) {
+        setBranchActive(sec.id);
+        return;
       }
     }
-    setActive(activeId);
+    // Fallback: before first branch -> Johor
+    setBranchActive(branchSections[0].id);
   }
 
-  sortSections();
-  window.addEventListener("resize", function() {
-    sortSections();
-    onScroll();
-  });
-  window.addEventListener("scroll", onScroll, { passive: true });
-  onScroll();
+  window.addEventListener("scroll", onScrollBranches, { passive: true });
+  window.addEventListener("resize", onScrollBranches);
+  onScrollBranches();
 });
 </script>
 </body>
