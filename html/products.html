@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Products | Airgas Technology</title>
-<link rel="stylesheet" href="../css/styles.css?v=3.1">
+<link rel="stylesheet" href="../css/styles.css?v=3.2">
 <style>
 .marketplace-layout {
   grid-template-columns: 200px 1fr !important;
@@ -1013,11 +1013,19 @@
 <script>
 document.addEventListener("DOMContentLoaded", function() {
   // Highlight branch links (Johor/Nilai) based on which branch-section is in view
-  const branchSections = Array.prototype.slice.call(document.querySelectorAll(".branch-section"));
   const branchLinks = {
     "johor-products": document.querySelector('.filter-list a[href="#johor-products"]'),
     "nilai-products": document.querySelector('.filter-list a[href="#nilai-products"]')
   };
+
+  const branchSections = ["johor-products", "nilai-products"]
+    .map((id) => {
+      const el = document.getElementById(id);
+      return el ? { id, el } : null;
+    })
+    .filter(Boolean)
+    .sort((a, b) => a.el.offsetTop - b.el.offsetTop);
+
   if (!branchSections.length || !branchLinks["johor-products"] || !branchLinks["nilai-products"]) return;
 
   function setBranchActive(id) {
@@ -1026,31 +1034,18 @@ document.addEventListener("DOMContentLoaded", function() {
   }
 
   function onScrollBranches() {
-    const marker = 160;
-    const viewportHeight = window.innerHeight || document.documentElement.clientHeight || 0;
-
-    let bestId = null;
-    let bestDistance = Infinity;
+    const y = (window.pageYOffset || document.documentElement.scrollTop || 0) + 200;
+    let activeId = branchSections[0].id;
 
     for (let i = 0; i < branchSections.length; i++) {
-      const sec = branchSections[i];
-      const rect = sec.getBoundingClientRect();
-      const isVisible = rect.bottom > 0 && rect.top < viewportHeight;
-      if (!isVisible) continue;
-
-      const distance = Math.abs(rect.top - marker);
-      if (distance < bestDistance) {
-        bestDistance = distance;
-        bestId = sec.id;
+      if (branchSections[i].el.offsetTop <= y) {
+        activeId = branchSections[i].id;
+      } else {
+        break;
       }
     }
 
-    if (bestId) {
-      setBranchActive(bestId);
-      return;
-    }
-
-    setBranchActive(branchSections[0].id);
+    setBranchActive(activeId);
   }
 
   window.addEventListener("scroll", onScrollBranches, { passive: true });
