@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "docx": "^9.6.0",
+    "docx2pdf": "^0.0.4"
+  }
+}
