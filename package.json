@@ -2,5 +2,8 @@
   "dependencies": {
     "docx": "^9.6.0",
     "docx2pdf": "^0.0.4"
+  },
+  "scripts": {
+    "deploy": "powershell -ExecutionPolicy Bypass -File ./deploy.ps1"
   }
 }
