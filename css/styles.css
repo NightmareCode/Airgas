@@ -621,6 +621,12 @@ p { margin: 0 0 16px; color: var(--muted) }
   color: #2ecc71; /* Green color for price */
 }
 
+.gas-price-btn {
+  width: 100%;
+  text-align: center;
+  justify-content: center;
+}
+
 .price-list li {
   display: flex;
   justify-content: space-between;
