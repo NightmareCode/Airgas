@@ -103,7 +103,8 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   var quoteWrap = document.querySelector(".hero-quotes");
-  if (quoteWrap) {
+  var tickerWrap = document.querySelector(".hero-quotes-ticker");
+  if (quoteWrap && !tickerWrap) {
     var allCards = quoteWrap.querySelectorAll(".quote-card");
     var cards = Array.prototype.slice.call(allCards, 0, 4);
     for (var ci = 4; ci < allCards.length; ci++) {
