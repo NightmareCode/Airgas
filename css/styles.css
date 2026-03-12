@@ -136,7 +136,7 @@ p { margin: 0 0 16px; color: var(--muted) }
   overflow: hidden;
 }
 
-.hero {
+.hero:not(.hero-has-frames) {
   background-position: 0 0, 0 0, 50% 50%;
   animation: heroBgPan 18s ease-in-out infinite;
 }
@@ -170,7 +170,6 @@ p { margin: 0 0 16px; color: var(--muted) }
 .intro-points .dot { display: inline-block; width: 10px; height: 10px; border-radius: 50%; background: var(--primary); margin-right: 8px; vertical-align: middle }
 .intro-media { position: relative; min-height: 420px }
 .intro-img { position: absolute; border-radius: 14px; box-shadow: var(--shadow); border: 1px solid var(--border); object-fit: cover }
-.intro-img { object-fit: contain; background: rgba(11, 15, 21, 0.7); padding: 10px }
 .intro-img-a { top: 0; right: 0; width: 48%; height: 160px }
 .intro-img-b { top: 120px; left: 0; width: 68%; height: 230px }
 .intro-img-c { bottom: 0; right: 6%; width: 56%; height: 210px }

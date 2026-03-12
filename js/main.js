@@ -493,9 +493,14 @@ document.addEventListener("DOMContentLoaded", function () {
 
     var probe = new Image();
     probe.onload = function () {
-      if (probe.naturalWidth > 0) requestAnimationFrame(animate);
+      if (probe.naturalWidth > 0) {
+        heroSection.classList.add("hero-has-frames");
+        requestAnimationFrame(animate);
+      }
     };
-    probe.onerror = function () {};
+    probe.onerror = function () {
+      heroSection.classList.remove("hero-has-frames");
+    };
     probe.src = frameUrl(2);
   }
 
