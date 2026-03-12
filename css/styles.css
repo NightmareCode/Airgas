@@ -126,14 +126,43 @@ p { margin: 0 0 16px; color: var(--muted) }
 .hero {
   padding: 120px 0 80px;
   min-height: 100vh;
-  --hero-bg: url("../assets/home_page_animation_optimized/ezgif-frame-001.jpg");
   background:
     radial-gradient(900px 400px at 15% 0%, rgba(0,0,0,.35) 0%, rgba(0,0,0,.55) 50%, rgba(0,0,0,.65) 100%),
-    linear-gradient(180deg, rgba(5, 8, 12, .35) 0%, rgba(5, 8, 12, .45) 100%),
-    var(--hero-bg) center center / cover no-repeat;
+    linear-gradient(180deg, rgba(5, 8, 12, .35) 0%, rgba(5, 8, 12, .45) 100%);
   border-bottom: none;
   position: relative;
   overflow: hidden;
+}
+
+.hero-bg {
+  position: absolute;
+  inset: 0;
+  z-index: -2;
+  pointer-events: none;
+}
+
+.hero-bg-layer {
+  position: absolute;
+  inset: 0;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  opacity: 0;
+  transform: scale(1.03);
+  filter: brightness(0.65) saturate(1.05) contrast(1.05);
+  animation: heroBgFade 18s ease-in-out infinite;
+}
+
+.hero-bg-1 { background-image: url("../assets/SCBACylinderTesting.png"); animation-delay: 0s; }
+.hero-bg-2 { background-image: url("../assets/SafetyEquipment.png"); animation-delay: 6s; }
+.hero-bg-3 { background-image: url("../assets/IndustrialOxygen.png"); animation-delay: 12s; }
+
+@keyframes heroBgFade {
+  0% { opacity: 0; }
+  8% { opacity: 1; }
+  30% { opacity: 1; }
+  38% { opacity: 0; }
+  100% { opacity: 0; }
 }
 .hero-inner { display: grid; grid-template-columns: 1fr; gap: 24px }
 .hero-content h1 { font-size: clamp(2.2rem, 4vw + 1rem, 3.2rem); line-height: 1.04; letter-spacing: -0.02em }
@@ -362,7 +391,7 @@ p { margin: 0 0 16px; color: var(--muted) }
   box-shadow: 0 6px 18px rgba(0,0,0,.25);
   opacity: 0;
   animation: heroQuoteLTR 24s linear infinite;
-  animation-delay: var(--q-delay, 0s);
+  animation-delay: calc(var(--q-index, 0) * 6s);
   will-change: transform, opacity;
 }
 
@@ -380,8 +409,9 @@ p { margin: 0 0 16px; color: var(--muted) }
 
 @keyframes heroQuoteLTR {
   0% { transform: translate(-115%, -50%); opacity: 0; }
-  8% { opacity: 1; }
-  92% { opacity: 1; }
+  10% { opacity: 1; }
+  25% { transform: translate(115%, -50%); opacity: 1; }
+  26% { opacity: 0; }
   100% { transform: translate(115%, -50%); opacity: 0; }
 }
 @keyframes heroMove {
