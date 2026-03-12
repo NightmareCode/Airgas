@@ -447,21 +447,25 @@ document.addEventListener("DOMContentLoaded", function () {
   if (heroSection) {
     var totalFrames = 240;
     var animFolder = "assets/home_page_animation_optimized/";
-    var animImages = [];
     var animFrame = 1;
-    var animDirection = 1; // 1: forward, -1: backward
-    var fpsInterval = 50; // 20fps
+    var animDirection = 1;
+    var fpsInterval = 50;
     var lastTime = 0;
+    var lastBgSrc = "";
+    var frameLoader = new Image();
+    frameLoader.onload = function () {
+      if (frameLoader.naturalWidth > 0 && frameLoader.src !== lastBgSrc) {
+        heroSection.style.setProperty('--hero-bg', 'url("' + frameLoader.src + '")');
+        lastBgSrc = frameLoader.src;
+      }
+    };
+    frameLoader.onerror = function () {};
 
-    // Preload images
-    for (var i = 1; i <= totalFrames; i++) {
-      var img = new Image();
-      var num = i.toString().padStart(3, '0');
-      img.src = animFolder + "ezgif-frame-" + num + ".jpg";
-      animImages.push(img);
+    function frameUrl(n) {
+      var num = n.toString().padStart(3, "0");
+      return animFolder + "ezgif-frame-" + num + ".jpg";
     }
 
-    // Animation Loop
     function animate(currentTime) {
       requestAnimationFrame(animate);
 
@@ -471,15 +475,12 @@ document.addEventListener("DOMContentLoaded", function () {
       if (elapsed > fpsInterval) {
         lastTime = currentTime - (elapsed % fpsInterval);
 
-        var idx = animFrame - 1;
-        if (animImages[idx] && animImages[idx].complete) {
-          // Use CSS variable to update background
-          heroSection.style.setProperty('--hero-bg', 'url("' + animImages[idx].src + '")');
+        var nextUrl = frameUrl(animFrame);
+        if (nextUrl !== frameLoader.src) {
+          frameLoader.src = nextUrl;
         }
 
         animFrame += animDirection;
-
-        // Ping-pong logic
         if (animFrame >= totalFrames) {
           animFrame = totalFrames;
           animDirection = -1;
@@ -489,8 +490,13 @@ document.addEventListener("DOMContentLoaded", function () {
         }
       }
     }
-    
-    requestAnimationFrame(animate);
+
+    var probe = new Image();
+    probe.onload = function () {
+      if (probe.naturalWidth > 0) requestAnimationFrame(animate);
+    };
+    probe.onerror = function () {};
+    probe.src = frameUrl(2);
   }
 
   // Smooth scroll for sidebar filters
