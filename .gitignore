@@ -11,3 +11,6 @@ yarn-error.log*
 
 # Node modules
 node_modules/
+
+# Local temp exports
+.tmp_frame*.jpg

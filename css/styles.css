@@ -135,17 +135,6 @@ p { margin: 0 0 16px; color: var(--muted) }
   position: relative;
   overflow: hidden;
 }
-
-.hero:not(.hero-has-frames) {
-  background-position: 0 0, 0 0, 50% 50%;
-  animation: heroBgPan 18s ease-in-out infinite;
-}
-
-@keyframes heroBgPan {
-  0% { background-position: 0 0, 0 0, 48% 52%; }
-  50% { background-position: 0 0, 0 0, 56% 44%; }
-  100% { background-position: 0 0, 0 0, 48% 52%; }
-}
 .hero-inner { display: grid; grid-template-columns: 1fr; gap: 24px }
 .hero-content h1 { font-size: clamp(2.2rem, 4vw + 1rem, 3.2rem); line-height: 1.04; letter-spacing: -0.02em }
 .hero-content p { font-size: clamp(1rem, 0.6vw + 0.95rem, 1.1rem) }
@@ -215,7 +204,7 @@ p { margin: 0 0 16px; color: var(--muted) }
   transform: translateY(100%);
   transition: transform 0.5s ease-out;
   z-index: 0;
-  opacity: 0.35;
+  opacity: 0.2;
   pointer-events: none;
 }
 .btn-card:hover .hover-img {
@@ -337,66 +326,6 @@ p { margin: 0 0 16px; color: var(--muted) }
 .quote-card p { margin: 0 0 4px; font-size: .98rem; color: var(--text); font-weight: 600; letter-spacing: .01em }
 .quote-card .quote-meta { color: var(--muted); font-size: .86rem }
 .quote-card.switch { opacity: 0; transform: translateY(6px) scale(.99) }
-
-.hero-quotes-ticker {
-  margin-top: 18px;
-  width: 100%;
-  max-width: 600px;
-  height: 64px;
-  border-radius: 14px;
-  border: 1px solid rgba(255,255,255,.08);
-  background: rgba(13, 18, 24, 0.45);
-  backdrop-filter: blur(8px);
-  overflow: hidden;
-  position: relative;
-  pointer-events: auto;
-}
-
-.hero-quotes-track {
-  position: relative;
-  width: 100%;
-  height: 100%;
-}
-
-.hero-quote-item {
-  position: absolute;
-  left: 0;
-  top: 50%;
-  transform: translate(-115%, -50%);
-  width: calc(100% - 24px);
-  margin-left: 12px;
-  margin-right: 12px;
-  padding: 12px 14px;
-  border-radius: 12px;
-  border: 1px solid rgba(255,255,255,.08);
-  background: linear-gradient(180deg, rgba(13,18,24,.55) 0%, rgba(13,18,24,.45) 100%);
-  box-shadow: 0 6px 18px rgba(0,0,0,.25);
-  opacity: 0;
-  animation: heroQuoteLTR 20s linear infinite;
-  animation-delay: calc(var(--q-index, 0) * 5s);
-  will-change: transform, opacity;
-  pointer-events: none;
-}
-
-.hero-quote-item p {
-  margin: 0;
-  color: var(--text);
-  font-weight: 600;
-  font-size: 0.98rem;
-  line-height: 1.2;
-}
-
-.hero-quotes-ticker:hover .hero-quote-item {
-  animation-play-state: paused;
-}
-
-@keyframes heroQuoteLTR {
-  0% { transform: translate(-115%, -50%); opacity: 0; }
-  8% { opacity: 1; }
-  25% { transform: translate(115%, -50%); opacity: 1; }
-  26% { opacity: 0; }
-  100% { transform: translate(115%, -50%); opacity: 0; }
-}
 @keyframes heroMove {
   0% { transform: translateY(0) translateX(0) }
   50% { transform: translateY(-12px) translateX(12px) }
