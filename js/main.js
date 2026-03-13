@@ -445,7 +445,7 @@ document.addEventListener("DOMContentLoaded", function () {
   var heroSection = document.querySelector(".hero");
   if (heroSection) {
     var totalFrames = 240;
-    var animFolder = "assets/home_page_animation_optimized/";
+    var animFolder = "assets/HomepageAnimation/";
     var animImages = [];
     var animFrame = 1;
     var animDirection = 1; // 1: forward, -1: backward
@@ -456,7 +456,7 @@ document.addEventListener("DOMContentLoaded", function () {
     for (var i = 1; i <= totalFrames; i++) {
       var img = new Image();
       var num = i.toString().padStart(3, '0');
-      img.src = animFolder + "ezgif-frame-" + num + ".jpg";
+      img.src = animFolder + "ezgif-frame-" + num + ".png";
       animImages.push(img);
     }
 
