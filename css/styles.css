@@ -309,6 +309,14 @@ p { margin: 0 0 16px; color: var(--muted) }
   position: absolute;
   left: 0; right: 0; top: 0; bottom: 0;
   pointer-events: none;
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity .25s ease, transform .25s ease;
+  will-change: opacity, transform;
+}
+.hero-quotes.is-faded {
+  opacity: 0;
+  transform: translateY(-8px);
 }
 .quote-card {
   position: absolute;

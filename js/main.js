@@ -104,6 +104,18 @@ document.addEventListener("DOMContentLoaded", function () {
 
   var quoteWrap = document.querySelector(".hero-quotes");
   if (quoteWrap) {
+    var heroForQuotes = document.querySelector(".hero");
+    if (heroForQuotes) {
+      var heroQuotesObserver = new IntersectionObserver(function (entries) {
+        for (var i = 0; i < entries.length; i++) {
+          var e = entries[i];
+          if (e.intersectionRatio < 0.5) quoteWrap.classList.add("is-faded");
+          else quoteWrap.classList.remove("is-faded");
+        }
+      }, { threshold: [0, 0.25, 0.5, 0.75, 1] });
+      heroQuotesObserver.observe(heroForQuotes);
+    }
+
     var allCards = quoteWrap.querySelectorAll(".quote-card");
     var cards = Array.prototype.slice.call(allCards, 0, 4);
     for (var ci = 4; ci < allCards.length; ci++) {
