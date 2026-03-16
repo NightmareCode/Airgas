@@ -26,6 +26,18 @@ document.addEventListener("DOMContentLoaded", function () {
       closeMenu();
     });
   }
+
+  var trainingLinks = document.querySelectorAll('a[href*="training.html"]');
+  for (var t = 0; t < trainingLinks.length; t++) {
+    var a = trainingLinks[t];
+    var li = a.closest ? a.closest("li") : null;
+    if (li && li.parentNode) {
+      li.parentNode.removeChild(li);
+      continue;
+    }
+    if (a && a.parentNode) a.parentNode.removeChild(a);
+  }
+
   var contactForm = document.querySelector("form.contact-form-styled");
   if (contactForm) {
     var endpointMeta = document.querySelector('meta[name="contact-endpoint"]');
@@ -136,7 +148,7 @@ document.addEventListener("DOMContentLoaded", function () {
       { text: "Reliable supply from stock to site.", meta: "Competitive pricing • Rentals • Support" },
       { text: "Measured purity, measurable impact.", meta: "Specialty gases • Blends" },
       { text: "Fit to protect, tested to perform.", meta: "Mask fit • Breathing apparatus" },
-      { text: "Safety equipment that keeps teams compliant.", meta: "PPE • Detection • Training" },
+      { text: "Safety equipment that keeps teams compliant.", meta: "PPE • Detection • Support" },
       { text: "From refill to compliance — keep operations moving.", meta: "Refill • Testing • Calibration" }
     ];
     function pick(n) {
