@@ -100,7 +100,8 @@ document.addEventListener("DOMContentLoaded", function () {
   document.body.appendChild(backToTopBtn);
 
   window.addEventListener("scroll", function() {
-    if (window.scrollY > 150) {
+    var scrollTop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
+    if (scrollTop > 150) {
       backToTopBtn.classList.add("visible");
     } else {
       backToTopBtn.classList.remove("visible");

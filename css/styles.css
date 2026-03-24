@@ -23,8 +23,11 @@
   --radius-lg: 16px;
 }
 * { box-sizing: border-box }
-html, body { height: 100%; overflow-x: hidden; }
-html { background: var(--bg); overflow-x: hidden; }
+html { 
+  background: var(--bg); 
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
 body {
   margin: 0;
   font-family: -apple-system, system-ui, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, Arial, "Helvetica Neue", sans-serif;
@@ -1324,7 +1327,7 @@ a[href$="training.html"] { display: none }
   opacity: 0;
   visibility: hidden;
   transition: all 0.3s ease;
-  z-index: 1000;
+  z-index: 9999 !important;
 }
 
 .back-to-top.visible {
