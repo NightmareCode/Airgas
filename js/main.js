@@ -1,8 +1,4 @@
-if (window.location.pathname.includes('about.html')) {
-  window.location.replace('/index.html');
-}
-
-document.addEventListener("DOMContentLoaded", function () {
+document.addEventListener("DOMContentLoaded", function() {
   var toggle = document.querySelector(".nav-toggle");
   var list = document.querySelector(".nav-list");
   if (toggle && list) {
