@@ -23,8 +23,8 @@
   --radius-lg: 16px;
 }
 * { box-sizing: border-box }
-html, body { height: 100% }
-html { background: var(--bg) }
+html, body { height: 100%; overflow-x: hidden; }
+html { background: var(--bg); overflow-x: hidden; }
 body {
   margin: 0;
   font-family: -apple-system, system-ui, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, Arial, "Helvetica Neue", sans-serif;
@@ -38,6 +38,7 @@ body {
   -webkit-text-size-adjust: 100%;
   line-height: 1.6;
   letter-spacing: 0.01em;
+  overflow-x: hidden;
 }
 body::before {
   content: "";
@@ -406,7 +407,7 @@ a[href$="training.html"] { display: none }
   }
   .nav-list.is-open { display: flex; animation: slideDown .18s ease-out }
   .nav-list a { padding: 12px 14px; border-radius: 10px }
-  .cta-header { display: none; width: 100%; justify-content: center; margin-top: 8px }
+  .cta-header { display: none; width: 100%; justify-content: center; margin-top: 8px; white-space: normal !important; }
   .nav-list.is-open + .cta-header { display: inline-flex }
   
   /* Layout Stacking */
@@ -426,6 +427,14 @@ a[href$="training.html"] { display: none }
     padding-top: 30px; 
     min-height: auto; 
     padding-bottom: 40px; 
+  }
+  .hero-content {
+    padding: 24px !important;
+    min-height: auto !important;
+  }
+  .hero-content h1 {
+    font-size: 1.8rem !important;
+    min-height: auto !important;
   }
   .hero-actions .btn { flex-basis: 100%; }
   .cta-box > div .btn { flex-basis: 100%; }
@@ -1299,5 +1308,117 @@ a[href$="training.html"] { display: none }
 /* Enhancing the gradient background slightly to pop more */
 .hero::before {
   opacity: 0.6; /* Slight dim to let particles show */
+}
+
+/* --------------------------------------------------------- */
+/* MOBILE RESPONSIVE OVERRIDES (Consolidated)                */
+/* --------------------------------------------------------- */
+@media (max-width: 768px) {
+  /* Services Page Fixes */
+  .gas-row {
+    flex-direction: column !important;
+    gap: 30px !important;
+    padding: 30px 0 !important;
+  }
+  .gas-details-grid {
+    grid-template-columns: 1fr !important;
+    gap: 24px !important;
+  }
+  .gas-visual {
+    width: 100% !important;
+    flex-direction: row !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    margin-top: 10px !important;
+  }
+  .gas-image-placeholder, .gas-img {
+    width: 80px !important;
+    height: 80px !important;
+    margin-bottom: 0 !important;
+  }
+  .gas-symbol {
+    font-size: 2rem !important;
+  }
+  .gas-price {
+    margin-left: 15px !important;
+    flex: 1 !important;
+  }
+  .gas-price-btn {
+    width: 100% !important;
+    font-size: 0.85rem !important;
+  }
+
+  /* Products Page Fixes */
+  .branch-section {
+    padding: 20px !important;
+    margin-bottom: 40px !important;
+  }
+  .branch-title {
+    font-size: 1.5rem !important;
+    margin-bottom: 20px !important;
+    padding-bottom: 10px !important;
+    line-height: 1.3 !important;
+    word-break: break-word !important;
+  }
+  .brand-header {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 15px !important;
+    margin-bottom: 30px !important;
+  }
+  .brand-logo {
+    height: 40px !important;
+  }
+  .brand-info h3 {
+    font-size: 1.5rem !important;
+  }
+  .brand-info p {
+    font-size: 0.85rem !important;
+  }
+  .brand-header.no-logo .brand-info h3 {
+    font-size: 1.8rem !important;
+  }
+
+  /* Global Layout Stacking */
+  .grid.two, .grid.three, .grid.four, .cards-4, .cards-3, .cards-2 {
+    grid-template-columns: 1fr !important;
+    gap: 20px !important;
+  }
+  
+  /* Container Padding */
+  .container {
+    padding: 0 16px !important;
+  }
+
+  /* Typography */
+  h1 { font-size: 2.2rem !important; }
+  h2 { font-size: 1.8rem !important; }
+  h3 { font-size: 1.4rem !important; }
+  p { font-size: 0.95rem !important; }
+  .pros-list h4, .cons-list h4 {
+    white-space: normal !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .gas-visual {
+    flex-direction: column !important;
+    align-items: stretch !important;
+    gap: 15px !important;
+  }
+  .gas-price {
+    margin-left: 0 !important;
+  }
+  .gas-image-placeholder {
+    width: 100% !important;
+    height: 120px !important;
+  }
+}
+
+/* Enhancing the gradient background slightly to pop more */
+.hero-content {
+  background: rgba(13, 18, 24, 0.4);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
