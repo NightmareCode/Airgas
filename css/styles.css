@@ -1,4 +1,4 @@
-:root {
+﻿:root {
   --bg: #05080c;
   --surface: #10151c;
   --text: #e6e9ef;
@@ -731,7 +731,7 @@ a[href$="training.html"] { display: none }
 
 /* Brand-specific logo sizing derived from FFmpeg dimension scan */
 #industrial-gases .brand-logo { height: 52px; }
-#ppe .brand-logo { height: 68px; }          /* DrÃ¤ger: 500x500 */
+#ppe .brand-logo { height: 68px; }          /* Dräger: 500x500 */
 #msa-safety .brand-logo { height: 64px; }   /* MSA: 900x550 */
 #welding .brand-logo { height: 60px; }      /* ESAB: 690x362 */
 #aceweld .brand-logo { height: 68px; }      /* Aceweld: 400x400 */
@@ -1421,4 +1421,5 @@ a[href$="training.html"] { display: none }
   backdrop-filter: blur(12px);
   border: 1px solid rgba(255, 255, 255, 0.1);
 }
+
 
