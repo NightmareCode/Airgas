@@ -1,4 +1,27 @@
 document.addEventListener("DOMContentLoaded", function () {
+  // Back to Top Button Logic - Created early for reliability
+  var backToTopBtn = document.createElement("button");
+  backToTopBtn.className = "back-to-top";
+  backToTopBtn.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 15l-6-6-6 6"/></svg>';
+  backToTopBtn.setAttribute("aria-label", "Back to top");
+  document.body.appendChild(backToTopBtn);
+
+  function updateBackToTop() {
+    var scrollTop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
+    if (scrollTop > 150) {
+      backToTopBtn.classList.add("visible");
+    } else {
+      backToTopBtn.classList.remove("visible");
+    }
+  }
+
+  window.addEventListener("scroll", updateBackToTop, { passive: true });
+  updateBackToTop(); // Initial check
+
+  backToTopBtn.addEventListener("click", function() {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  });
+
   var toggle = document.querySelector(".nav-toggle");
   var list = document.querySelector(".nav-list");
   if (toggle && list) {
@@ -91,29 +114,6 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     });
   }
-
-  // Back to Top Button Logic
-  var backToTopBtn = document.createElement("button");
-  backToTopBtn.className = "back-to-top";
-  backToTopBtn.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 15l-6-6-6 6"/></svg>';
-  backToTopBtn.setAttribute("aria-label", "Back to top");
-  document.body.appendChild(backToTopBtn);
-
-  window.addEventListener("scroll", function() {
-    var scrollTop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
-    if (scrollTop > 150) {
-      backToTopBtn.classList.add("visible");
-    } else {
-      backToTopBtn.classList.remove("visible");
-    }
-  });
-
-  backToTopBtn.addEventListener("click", function() {
-    window.scrollTo({
-      top: 0,
-      behavior: "smooth"
-    });
-  });
 
   var quoteWrap = document.querySelector(".hero-quotes");
   if (quoteWrap) {

@@ -1313,41 +1313,48 @@ a[href$="training.html"] { display: none }
   position: fixed;
   bottom: 30px;
   right: 30px;
-  width: 46px;
-  height: 46px;
-  background: var(--primary);
-  color: #fff;
+  width: 50px;
+  height: 50px;
+  background: var(--primary) !important;
+  color: #fff !important;
   border: none;
   border-radius: 50%;
   cursor: pointer;
-  display: flex;
+  display: none; /* Hidden by default, toggled by JS */
   align-items: center;
   justify-content: center;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.3);
-  opacity: 0;
-  visibility: hidden;
-  transition: all 0.3s ease;
-  z-index: 9999 !important;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.5);
+  transition: transform 0.3s ease, background 0.3s ease;
+  z-index: 999999 !important;
+}
+
+.back-to-top svg {
+  width: 24px;
+  height: 24px;
+  stroke: currentColor;
 }
 
 .back-to-top.visible {
-  opacity: 1;
-  visibility: visible;
-  transform: translateY(0);
+  display: flex !important;
+  animation: backToTopFadeIn 0.3s ease;
+}
+
+@keyframes backToTopFadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
 }
 
 .back-to-top:hover {
-  background: var(--primary-700);
+  background: var(--primary-700) !important;
   transform: translateY(-5px);
-  box-shadow: 0 6px 20px rgba(0,0,0,0.4);
 }
 
 @media (max-width: 768px) {
   .back-to-top {
     bottom: 20px;
     right: 20px;
-    width: 40px;
-    height: 40px;
+    width: 44px;
+    height: 44px;
   }
 }
 
