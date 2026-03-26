@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SCBA Equipment | Airgas Technology Nilai</title>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../style.css">
+    <style>
+        .page-header {
+            padding: 120px 0 60px;
+            background: linear-gradient(to right, var(--bg-dark), rgba(21, 27, 41, 0.9));
+            text-align: center;
+            border-bottom: 1px solid var(--border-color);
+        }
+        .component-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        .component-card {
+            background: var(--bg-panel);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 2rem;
+            transition: transform var(--transition-smooth);
+            position: relative;
+            overflow: hidden;
+        }
+        .component-card:hover {
+            transform: translateY(-5px);
+            border-color: rgba(255, 255, 255, 0.2);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+        }
+        .component-icon {
+            font-size: 2.5rem;
+            color: var(--accent-orange);
+            margin-bottom: 1.5rem;
+        }
+        .component-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: var(--text-primary);
+        }
+        .component-card ul {
+            list-style: none;
+            color: var(--text-secondary);
+        }
+        .component-card li {
+            position: relative;
+            padding-left: 1.5rem;
+            margin-bottom: 0.5rem;
+            font-size: 0.95rem;
+        }
+        .component-card li::before {
+            content: '•';
+            position: absolute;
+            left: 0;
+            color: var(--accent-orange);
+            font-size: 1.2rem;
+        }
+        
+        .maintenance-section {
+            background: var(--bg-dark);
+            padding: var(--space-xl) 0;
+            border-top: 1px solid var(--border-color);
+        }
+        
+        .maintenance-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: center;
+        }
+        
+        .maintenance-list {
+            background: rgba(59, 130, 246, 0.05);
+            border: 1px solid rgba(59, 130, 246, 0.2);
+            border-radius: 12px;
+            padding: 2rem;
+        }
+
+        @media (max-width: 768px) {
+            .maintenance-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="../index.html" class="logo">
+                <img src="../assets/company_logo.png" alt="Airgas Technology Nilai Logo">
+                Airgas Technology
+            </a>
+            <button class="mobile-menu-btn" aria-label="Toggle menu">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+            <ul class="nav-links">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="scba.html" class="active">SCBA Equipment</a></li>
+                <li><a href="calibration.html">Gas Calibration</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <header class="page-header">
+        <div class="container fade-in-up">
+            <h1 class="hero-title">Self-Contained Breathing Apparatus <span class="text-accent">(SCBA)</span></h1>
+            <p class="hero-subtitle mx-auto">Providing autonomous breathable air in IDLH atmospheres. Built for extreme industrial, petrochemical, and firefighting conditions.</p>
+        </div>
+    </header>
+
+    <!-- SCBA Components -->
+    <section class="section">
+        <div class="container">
+            <div class="section-header fade-in-up">
+                <h2>System <span class="text-accent">Components</span></h2>
+                <p class="text-secondary">Explore the core elements of our positive pressure SCBA systems, engineered for maximum safety and ergonomic comfort.</p>
+            </div>
+
+            <div class="component-grid">
+                <!-- Lung Demand Valve -->
+                <div class="component-card animate-on-scroll" style="transition-delay: 0.1s;">
+                    <i class="fa-solid fa-lungs component-icon"></i>
+                    <h3>Zenith Lung Demand Valve</h3>
+                    <ul>
+                        <li>Positive pressure with automatic activation upon facepiece connection.</li>
+                        <li>By-pass button mode offering 450 l/min flow.</li>
+                        <li>Dual-axis rotation for easy hose positioning.</li>
+                        <li>Quick release via dual buttons.</li>
+                    </ul>
+                </div>
+
+                <!-- Pano Mask -->
+                <div class="component-card animate-on-scroll" style="transition-delay: 0.2s;">
+                    <i class="fa-solid fa-mask component-icon"></i>
+                    <h3>Pano Face Mask</h3>
+                    <ul>
+                        <li>Lightweight design (560g) for extended wear.</li>
+                        <li>Skirt and inner mask constructed from durable EPDM.</li>
+                        <li>Universal fit engineered for ASEAN face profiles.</li>
+                        <li>Wide 360-degree field of vision.</li>
+                    </ul>
+                </div>
+
+                <!-- Backplate -->
+                <div class="component-card animate-on-scroll" style="transition-delay: 0.3s;">
+                    <i class="fa-solid fa-vest component-icon"></i>
+                    <h3>Backplate & Harnesses</h3>
+                    <ul>
+                        <li>Ergonomically designed for professional firefighting.</li>
+                        <li>Flame retardant Polyaramid-Fibre Glass construction.</li>
+                        <li>EN137:2006 Type 2 compliant (self-extinguishing).</li>
+                        <li>Nomex/Kevlar cushioning with high visibility straps.</li>
+                    </ul>
+                </div>
+
+                <!-- Cylinder -->
+                <div class="component-card animate-on-scroll" style="transition-delay: 0.4s;">
+                    <i class="fa-solid fa-capsules component-icon"></i>
+                    <h3>Composite Cylinders</h3>
+                    <ul>
+                        <li>Lightweight carbon composite with aluminium liner.</li>
+                        <li>EN12245 approved with a 15-year shelf life.</li>
+                        <li>Built-in pressure gauge on the cylinder valve.</li>
+                        <li>Right hand wheel design protected by rubber caps.</li>
+                    </ul>
+                </div>
+
+                <!-- Gauge -->
+                <div class="component-card animate-on-scroll" style="transition-delay: 0.5s;">
+                    <i class="fa-solid fa-gauge-high component-icon"></i>
+                    <h3>Mechanical Gauge & Alarm</h3>
+                    <ul>
+                        <li>EN837-1 certified (Class 1.6 precision).</li>
+                        <li>Integrated whistle alarm in the handle (90 dB output).</li>
+                        <li>Triggers at 55 ± 5 Bar remaining.</li>
+                        <li>Dual units measurement (Bar & Mpa).</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Maintenance Section -->
+    <section class="maintenance-section">
+        <div class="container maintenance-grid">
+            <div class="animate-on-scroll">
+                <h2>SCBA <span class="text-accent">Maintenance & Testing</span></h2>
+                <p class="text-secondary" style="margin-bottom: 2rem;">Proper maintenance is critical for life-saving equipment. We offer comprehensive workshop services for SCBA gear.</p>
+                <div class="maintenance-list">
+                    <h3 style="margin-bottom: 1rem; color: var(--accent-blue);">Testing Capabilities</h3>
+                    <ul style="list-style-type: disc; padding-left: 1.5rem; color: var(--text-primary); line-height: 1.8;">
+                        <li>Visual inspections and posicheck verification.</li>
+                        <li>Cylinder hydraulic volumetric expansion testing.</li>
+                        <li>High and medium pressure leakage tests.</li>
+                        <li>Response pressure warning device calibration.</li>
+                        <li>Mask & Demand Valve leakage tests in positive/negative pressure.</li>
+                        <li>Cleaning, drying, relabeling, and gas refilling.</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="animate-on-scroll" style="text-align: center; transition-delay: 0.2s;">
+                <div style="background: var(--bg-panel); padding: 3rem; border-radius: 12px; border: 1px solid var(--border-color);">
+                    <i class="fa-solid fa-clipboard-check" style="font-size: 4rem; color: var(--accent-orange); margin-bottom: 1.5rem;"></i>
+                    <h3 style="margin-bottom: 1rem;">Ready to Equip Your Team?</h3>
+                    <p class="text-secondary" style="margin-bottom: 2rem;">Ensure maximum safety in IDLH environments with our trusted SCBA solutions.</p>
+                    <a href="mailto:enquiry@airgastechnology.com" class="btn btn-primary">
+                        Contact Us for Specifications <i class="fa-solid fa-envelope"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="../index.html" class="logo">
+                        <img src="../assets/company_logo.png" alt="Airgas Logo"> Airgas Technology
+                    </a>
+                    <p>Dedicated to delivering uncompromising safety through elite respiratory protection and precise gas calibration.</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Brands We Trust</h4>
+                    <ul>
+                        <li><a href="https://spasciani.com/en/product-category/breathing-apparatus/">Sekur Diablo</a></li>
+                        <li><a href="https://my.msasafety.com/">MSA Safety</a></li>
+                        <li><a href="https://www.draeger.com/">Dräger</a></li>
+                        <li><a href="https://www.3m.com.my/">3M Scott</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Internal Links</h4>
+                    <ul>
+                        <li><a href="scba.html" class="text-accent">SCBA Tech Specs</a></li>
+                        <li><a href="calibration.html">Calibration Services</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                &copy; 2026 Airgas Technology Nilai Sdn Bhd. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+    <!-- Custom JS -->
+    <script src="../script.js"></script>
+</body>
+</html>

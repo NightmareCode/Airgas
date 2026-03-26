@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gas Calibration | Airgas Technology Nilai</title>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../style.css">
+    <style>
+        .page-header {
+            padding: 120px 0 60px;
+            background: linear-gradient(to right, var(--bg-dark), rgba(21, 27, 41, 0.9));
+            text-align: center;
+            border-bottom: 1px solid var(--border-color);
+        }
+        .calibration-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+            margin-top: 3rem;
+        }
+        .text-block p {
+            font-size: 1.1rem;
+            color: var(--text-secondary);
+            margin-bottom: 1.5rem;
+            line-height: 1.8;
+        }
+        .benefits-list {
+            margin-top: 2rem;
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+        .benefit-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+        }
+        .benefit-icon {
+            color: var(--accent-orange);
+            font-size: 1.5rem;
+            margin-top: 0.2rem;
+        }
+        .benefit-text h4 {
+            font-size: 1.2rem;
+            margin-bottom: 0.25rem;
+        }
+        .benefit-text p {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+        }
+
+        .cta-card {
+            background: var(--bg-panel);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 3rem;
+            text-align: center;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+            position: relative;
+            overflow: hidden;
+        }
+        .cta-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: linear-gradient(90deg, var(--accent-orange), var(--accent-blue));
+        }
+
+        @media (max-width: 992px) {
+            .calibration-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="../index.html" class="logo">
+                <img src="../assets/company_logo.png" alt="Airgas Technology Nilai Logo">
+                Airgas Technology
+            </a>
+            <button class="mobile-menu-btn" aria-label="Toggle menu">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+            <ul class="nav-links">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="scba.html">SCBA Equipment</a></li>
+                <li><a href="calibration.html" class="active">Gas Calibration</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <header class="page-header">
+        <div class="container fade-in-up">
+            <h1 class="hero-title">Precision <span class="text-accent">Gas Calibration</span></h1>
+            <p class="hero-subtitle mx-auto">Ensuring absolute sensor accuracy because in toxic environments, close enough is never good enough.</p>
+        </div>
+    </header>
+
+    <!-- Calibration Info Section -->
+    <section class="section">
+        <div class="container">
+            <div class="calibration-grid">
+                
+                <div class="text-block fade-in-up">
+                    <h2>Why Regular Calibration is <span class="text-accent">Critical</span></h2>
+                    <p>
+                        In hazardous industrial, petrochemical, and confined-space environments, your gas detectors are the first line of defense against invisible threats like Hydrogen Sulfide (H2S), Carbon Monoxide (CO), and combustible gases (LEL). 
+                    </p>
+                    <p>
+                        Over time, sensors degrade due to exposure to extreme temperatures, humidity, airborne particulates, or cross-interference from other chemicals. Regular calibration ensures your portable and fixed gas detection systems react instantly and accurately to threatening thresholds.
+                    </p>
+
+                    <div class="benefits-list">
+                        <div class="benefit-item">
+                            <i class="fa-solid fa-flask benefit-icon"></i>
+                            <div class="benefit-text">
+                                <h4>Certified Calibration Gases</h4>
+                                <p>We utilize NIST-traceable calibration gas mixtures, ensuring unparalleled accuracy for multi-gas and single-gas detectors.</p>
+                            </div>
+                        </div>
+                        <div class="benefit-item">
+                            <i class="fa-solid fa-shield-halved benefit-icon"></i>
+                            <div class="benefit-text">
+                                <h4>Compliance & Certification</h4>
+                                <p>Our robust testing protocols meet local and international safety standards, providing you with documented certification of equipment reliability.</p>
+                            </div>
+                        </div>
+                        <div class="benefit-item">
+                            <i class="fa-solid fa-stopwatch benefit-icon"></i>
+                            <div class="benefit-text">
+                                <h4>Bump Testing & Maintenance</h4>
+                                <p>To prevent sensor drift and failure, we conduct comprehensive functionality checks (bump tests) and prompt sensor replacements when necessary.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="fade-in-up" style="animation-delay: 0.3s;">
+                    <div class="cta-card">
+                        <i class="fa-solid fa-satellite-dish" style="font-size: 5rem; color: var(--accent-blue); margin-bottom: 2rem;"></i>
+                        <h3 style="font-size: 1.8rem; margin-bottom: 1rem;">Trust Airgas Technology</h3>
+                        <p class="text-secondary" style="margin-bottom: 2.5rem; font-size: 1.1rem;">
+                            Don't compromise on worker safety. Partner with Airgas Technology Nilai for precise, timely, and certified gas detector calibration and turnaround services.
+                        </p>
+                        <a href="mailto:enquiry@airgastechnology.com" class="btn btn-primary" style="width: 100%;">
+                            Email Us for Service Updates <i class="fa-solid fa-envelope"></i>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="../index.html" class="logo">
+                        <img src="../assets/company_logo.png" alt="Airgas Logo"> Airgas Technology
+                    </a>
+                    <p>Dedicated to delivering uncompromising safety through elite respiratory protection and precise gas calibration.</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Brands We Trust</h4>
+                    <ul>
+                        <li><a href="https://spasciani.com/en/product-category/breathing-apparatus/">Sekur Diablo</a></li>
+                        <li><a href="https://my.msasafety.com/">MSA Safety</a></li>
+                        <li><a href="https://www.draeger.com/">Dräger</a></li>
+                        <li><a href="https://www.3m.com.my/">3M Scott</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Internal Links</h4>
+                    <ul>
+                        <li><a href="scba.html">SCBA Tech Specs</a></li>
+                        <li><a href="calibration.html" class="text-accent">Calibration Services</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                &copy; 2026 Airgas Technology Nilai Sdn Bhd. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+    <!-- Custom JS -->
+    <script src="../script.js"></script>
+</body>
+</html>
