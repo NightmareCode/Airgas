@@ -6,14 +6,20 @@
     <title>Services | Airgas Technology</title>
     <meta name="description" content="Professional industrial gas refill services, SCBA inspection, gas detector calibration, and hydrostatic cylinder testing in Johor and Nilai.">
     <meta name="keywords" content="Gas refill, SCBA inspection, Gas calibration, Cylinder testing, Hydro test, Johor, Nilai, Breathing air refill">
-    <link rel="stylesheet" href="../BossRequest/style.css?v=1.4">
+    <link rel="stylesheet" href="../BossRequest/style.css?v=1.5">
     <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css'>
 </head>
 <body>
+    <!-- Navigation -->
     <nav class="navbar">
         <div class="container">
-            <a href="../index.html" class="logo"><img src="../BossRequest/assets/company_logo.png" alt="Airgas Logo"> Airgas Technology</a>
-            <button class="mobile-menu-btn" aria-label="Toggle menu"><i class="fa-solid fa-bars"></i></button>
+            <a href="../index.html" class="logo">
+                <img src="../BossRequest/assets/company_logo.png" alt="Airgas Logo">
+                Airgas Technology
+            </a>
+            <button class="mobile-menu-btn" aria-label="Toggle menu">
+                <i class="fa-solid fa-bars"></i>
+            </button>
             <ul class="nav-links">
                 <li><a href="../index.html">Home</a></li>
                 <li><a href="about.html">About</a></li>
@@ -22,40 +28,182 @@
             </ul>
         </div>
     </nav>
+
     <main>
-        <section class="section">
+        <!-- Hero Section -->
+        <section class="section text-center">
             <div class="container">
                 <h1 class="hero-title">Our Services</h1>
                 <p class="hero-subtitle">Comprehensive industrial gas solutions, safety equipment servicing, and certified testing.</p>
             </div>
         </section>
+
+        <!-- Refill Section -->
         <section class="section">
             <div class="container">
                 <div class="refill-highlight">
-                    <h2>Cylinder Refill Services</h2>
-                    <p>Fast, reliable refill services for a wide range of industrial and specialty gases. Walk-in service available.</p>
+                    <h2 style="font-size: 2.5rem; margin-bottom: 1.5rem;">Cylinder Refill Services</h2>
+                    <p style="font-size: 1.2rem; color: #e2e8f0; margin-bottom: 2rem;">
+                        Need a gas cylinder refill? We provide fast, reliable refill services for cylinders up to 10 liters. Choose from our complete range of industrial and specialty gases!
+                    </p>
+                    <div class="product-showcase-grid" style="grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 2rem;">
+                        <div class="glass-box" style="padding: 1.5rem;">
+                            <h4 style="color: #94a3b8; margin-bottom: 0.5rem;">Turnaround Time</h4>
+                            <p style="font-size: 1.5rem; font-weight: 700; color: #fff;">5 - 30 Minutes</p>
+                        </div>
+                        <div class="glass-box" style="padding: 1.5rem;">
+                            <h4 style="color: #94a3b8; margin-bottom: 0.5rem;">Service Mode</h4>
+                            <p style="font-size: 1.2rem; font-weight: 600; color: #fff;">Walk-in Service</p>
+                        </div>
+                        <div class="glass-box" style="padding: 1.5rem;">
+                            <h4 style="color: #94a3b8; margin-bottom: 0.5rem;">Certifications</h4>
+                            <p style="font-size: 1.1rem; color: #fff;">Malaysian Standard Certified</p>
+                        </div>
+                    </div>
                 </div>
+            </div>
+        </section>
+
+        <!-- Gas List -->
+        <section class="section">
+            <div class="container">
                 <h2 class="section-title">Gas Types & Applications</h2>
                 <div class="gas-list-container">
+                    <!-- Breathing Air -->
                     <div class="gas-row">
-                        <div class="gas-info"><h3>Breathing Air (BA)</h3><p>Provides a safe air supply for SCBA and airline systems in hazardous environments.</p></div>
-                        <div class="gas-visual"><div class="gas-symbol">BA</div></div>
+                        <div class="gas-info">
+                            <h3>Breathing Air (BA)</h3>
+                            <p class="gas-short-desc">Clean, filtered compressed air for breathing systems and industrial use.</p>
+                            <div class="gas-details-grid">
+                                <div>
+                                    <h4>Industries</h4>
+                                    <p>Healthcare, Metal Fabrication, Water Treatment, Chemical Manufacturing, Aerospace.</p>
+                                </div>
+                                <div>
+                                    <h4>Why It's Important</h4>
+                                    <p>Provides a safe air supply for SCBA and airline systems in hazardous environments.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="gas-visual">
+                            <div class="gas-symbol">BA</div>
+                        </div>
                     </div>
+
+                    <!-- Nitrogen -->
                     <div class="gas-row">
-                        <div class="gas-info"><h3>Nitrogen (N₂)</h3><p>Prevents spoilage and contamination by displacing oxygen, extending shelf life and preventing oxidation.</p></div>
-                        <div class="gas-visual"><div class="gas-symbol">N₂</div></div>
+                        <div class="gas-info">
+                            <h3>Nitrogen (N₂)</h3>
+                            <p class="gas-short-desc">Inert gas used for purging, blanketing, and creating oxygen-free environments.</p>
+                            <div class="gas-details-grid">
+                                <div>
+                                    <h4>Industries</h4>
+                                    <p>Food & Beverage, Electronics, Pharmaceuticals, Oil & Gas, Chemical Processing.</p>
+                                </div>
+                                <div>
+                                    <h4>Why It's Important</h4>
+                                    <p>Prevents spoilage and contamination by displacing oxygen, extending shelf life.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="gas-visual">
+                            <div class="gas-symbol">N₂</div>
+                        </div>
+                    </div>
+
+                    <!-- Argon -->
+                    <div class="gas-row">
+                        <div class="gas-info">
+                            <h3>Argon (Ar)</h3>
+                            <p class="gas-short-desc">Noble gas primarily used as a shielding gas in welding and inert atmospheres.</p>
+                            <div class="gas-details-grid">
+                                <div>
+                                    <h4>Industries</h4>
+                                    <p>Metal Fabrication (TIG/MIG), Electronics, Research.</p>
+                                </div>
+                                <div>
+                                    <h4>Why It's Important</h4>
+                                    <p>Protects welds from atmospheric contamination, resulting in stronger, cleaner welds.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="gas-visual">
+                            <div class="gas-symbol">Ar</div>
+                        </div>
                     </div>
                 </div>
-                <h2 class="section-title" style="margin-top: 3rem;">Other Safety Services</h2>
+            </div>
+        </section>
+
+        <!-- Other Services -->
+        <section class="section">
+            <div class="container">
+                <h2 class="section-title">Other Safety Services</h2>
                 <div class="product-showcase-grid">
-                    <div class="premium-product-card"><div class="product-info"><h3>Safety Support & Fit Tests</h3><p>On-site support for gas detection, lifeline BA systems, and face mask fit tests.</p></div></div>
-                    <div class="premium-product-card"><div class="product-info"><h3>Equipment Rental</h3><p>Short and long-term rental for SCBA, EEBD, gas detectors, and more.</p></div></div>
-                    <div class="premium-product-card"><div class="product-info"><h3>Certified Cylinder Testing</h3><p>Hydrostatic testing, valve inspections, and integrity checks compliant with SIRIM and DOSH standards.</p></div></div>
+                    <div class="premium-product-card">
+                        <div class="product-brand-banner" style="background: rgba(56, 189, 248, 0.2); color: #38bdf8;">
+                            <i class="fa-solid fa-user-shield"></i> SAFETY SUPPORT
+                        </div>
+                        <div class="product-info" style="padding: 2.5rem;">
+                            <h3>Safety Support & Fit Tests</h3>
+                            <p>On-site support for gas detection, lifeline BA systems, and face mask fit tests to ensure maximum protection.</p>
+                        </div>
+                    </div>
+                    <div class="premium-product-card">
+                        <div class="product-brand-banner" style="background: rgba(249, 115, 22, 0.2); color: #f97316;">
+                            <i class="fa-solid fa-truck-ramp-box"></i> EQUIPMENT RENTAL
+                        </div>
+                        <div class="product-info" style="padding: 2.5rem;">
+                            <h3>Equipment Rental Services</h3>
+                            <p>Short-term and long-term rental options for SCBA, EEBD, fire extinguishers, and gas detectors.</p>
+                        </div>
+                    </div>
+                    <div class="premium-product-card">
+                        <div class="product-brand-banner" style="background: rgba(34, 197, 94, 0.2); color: #22c55e;">
+                            <i class="fa-solid fa-microscope"></i> CERTIFIED TESTING
+                        </div>
+                        <div class="product-info" style="padding: 2.5rem;">
+                            <h3>Certified Cylinder Testing</h3>
+                            <p>Hydrostatic testing and integrity checks for SCBA and industrial gas cylinders (SIRIM & DOSH compliant).</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
     </main>
-    <footer class="footer"><div class="container"><div class="footer-grid"><div class="footer-brand"><a href="../index.html" class="logo"><img src="../BossRequest/assets/company_logo.png" alt="Airgas Logo"> Airgas Technology</a><p>HQ: Pasir Gudang, Johor</p><p>Branch: Nilai, Negeri Sembilan</p></div><div class="footer-links"><h4>Contact</h4><ul><li><a href="mailto:airgas.safetyservice@gmail.com">airgas.safetyservice@gmail.com</a></li><li>Phone: 012-9155118</li></ul></div><div class="footer-links"><h4>Quick Links</h4><ul><li><a href="about.html">About</a></li><li><a href="services.html">Services</a></li><li><a href="contact.html">Contact</a></li></ul></div></div><div class="footer-bottom">&copy; 2026 Airgas Technology. All rights reserved.</div></div></footer>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="../index.html" class="logo">
+                        <img src="../BossRequest/assets/company_logo.png" alt="Airgas Logo"> Airgas Technology
+                    </a>
+                    <p>HQ: Pasir Gudang, Johor Bahru, Johor</p>
+                    <p>Branch: Nilai, Negeri Sembilan</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Contact</h4>
+                    <ul>
+                        <li><a href="mailto:airgas.safetyservice@gmail.com">airgas.safetyservice@gmail.com</a></li>
+                        <li>Phone: 012-9155118</li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                &copy; 2026 Airgas Technology. All rights reserved.
+            </div>
+        </div>
+    </footer>
     <script src="../BossRequest/script.js"></script>
 </body>
 </html>
