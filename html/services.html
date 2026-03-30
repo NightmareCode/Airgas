@@ -1,209 +1,454 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Services | Airgas Technology</title>
-    <meta name="description" content="Professional industrial gas refill services, SCBA inspection, gas detector calibration, and hydrostatic cylinder testing in Johor and Nilai.">
-    <meta name="keywords" content="Gas refill, SCBA inspection, Gas calibration, Cylinder testing, Hydro test, Johor, Nilai, Breathing air refill">
-    <link rel="stylesheet" href="../BossRequest/style.css?v=1.5">
-    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css'>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Services | Airgas Technology</title>
+<meta name="description" content="Professional industrial gas refill services, SCBA inspection, gas detector calibration, and hydrostatic cylinder testing in Johor and Nilai.">
+<meta name="keywords" content="Gas refill, SCBA inspection, Gas calibration, Cylinder testing, Hydro test, Johor, Nilai, Breathing air refill">
+<link rel="stylesheet" href="../css/styles.css?v=3.6">
 </head>
 <body>
-    <!-- Navigation -->
-    <nav class="navbar">
-        <div class="container">
-            <a href="../index.html" class="logo">
-                <img src="../BossRequest/assets/company_logo.png" alt="Airgas Logo">
-                Airgas Technology
-            </a>
-            <button class="mobile-menu-btn" aria-label="Toggle menu">
-                <i class="fa-solid fa-bars"></i>
-            </button>
-            <ul class="nav-links">
-                <li><a href="../index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="services.html" class="active">Services</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
+<header class="site-header">
+<div class="container header-inner">
+<a class="logo" href="../index.html">
+<img src="../assets/company_logo.png" alt="Airgas Technology logo">
+<span>Airgas Technology</span>
+</a>
+<nav class="nav" aria-label="Main">
+<button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+<span></span><span></span><span></span>
+</button>
+<ul class="nav-list">
+<li><a href="../index.html">Home</a></li>
+<li><a href="about.html">About</a></li>
+<li><a href="services.html" class="active">Services</a></li>
+<li><a href="contact.html">Contact</a></li>
+</ul>
+<a class="btn btn-primary cta-header" href="contact.html">Get A Quote</a>
+</nav>
+</div>
+</header>
+<main>
+<section class="page-hero">
+<div class="container">
+<h1>Services & Products</h1>
+<p>Comprehensive industrial gas solutions and cylinder refill services.</p>
+</div>
+</section>
+
+<section class="content">
+<div class="container">
+<!-- Refill Services Highlight -->
+<div class="card refill-highlight">
+  <h2 style="color: var(--primary);">Cylinder Refill Services</h2>
+  <p style="font-size: 1.1rem; color: var(--text);">Need a gas cylinder refill? We provide fast, reliable refill services for cylinders up to 10 liters. Choose from our complete range of industrial and specialty gases!</p>
+  
+  <div class="grid cards-3" style="margin-top: 32px;">
+    <div>
+      <h4 style="color: var(--muted);">Turnaround Time</h4>
+      <p class="stat-value">5 - 30 Minutes</p>
+    </div>
+    <div>
+      <h4 style="color: var(--muted);">Service Mode</h4>
+      <p style="font-weight: 600;">Walk-in Service</p>
+      <p style="font-size: 0.9rem;">Bring your empty cylinder to us.</p>
+    </div>
+    <div>
+      <h4 style="color: var(--muted);">Certifications</h4>
+      <p>Malaysian standard certifications & safety for oil and gas compliant.</p>
+    </div>
+  </div>
+
+  <div style="margin-top: 32px; background: rgba(0,0,0,0.2); padding: 24px; border-radius: 10px;">
+    <h3>Refill Pricing (Up to 10L)</h3>
+    <p style="font-size: 0.9rem; margin-bottom: 16px; color: #ffcc00; font-weight: 600;">* Helium refilling service is only available at HQ (Pasir Gudang).</p>
+    <div style="text-align: center; padding: 20px;">
+      <p style="font-size: 1.1rem; margin-bottom: 15px;">Please contact us for the latest refill pricing.</p>
+      <a href="contact.html" class="btn btn-primary">Get A Quote</a>
+    </div>
+  </div>
+</div>
+</div>
+</section>
+
+<section class="content">
+<div class="container">
+<h2 style="margin-bottom: 40px;">Gas Types & Applications</h2>
+
+<div class="gas-list-container">
+
+  <!-- Oxygen -->
+  <div class="gas-row">
+    <div class="gas-info">
+      <div class="gas-header-group">
+        <h3 class="gas-title">Breathing Air <span class="gas-code">BA</span></h3>
+        <p class="gas-short-desc">Clean, filtered compressed air for breathing systems and industrial use.</p>
+      </div>
+      <div class="gas-details-grid">
+        <div class="gas-detail-col">
+          <h4>Industries</h4>
+          <ul>
+            <li>Healthcare and hospitals</li>
+            <li>Metal fabrication and welding</li>
+            <li>Water treatment facilities</li>
+            <li>Chemical manufacturing</li>
+            <li>Aerospace</li>
+          </ul>
         </div>
-    </nav>
-
-    <main>
-        <!-- Hero Section -->
-        <section class="section text-center">
-            <div class="container">
-                <h1 class="hero-title">Our Services</h1>
-                <p class="hero-subtitle">Comprehensive industrial gas solutions, safety equipment servicing, and certified testing.</p>
-            </div>
-        </section>
-
-        <!-- Refill Section -->
-        <section class="section">
-            <div class="container">
-                <div class="refill-highlight">
-                    <h2 style="font-size: 2.5rem; margin-bottom: 1.5rem;">Cylinder Refill Services</h2>
-                    <p style="font-size: 1.2rem; color: #e2e8f0; margin-bottom: 2rem;">
-                        Need a gas cylinder refill? We provide fast, reliable refill services for cylinders up to 10 liters. Choose from our complete range of industrial and specialty gases!
-                    </p>
-                    <div class="product-showcase-grid" style="grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 2rem;">
-                        <div class="glass-box" style="padding: 1.5rem;">
-                            <h4 style="color: #94a3b8; margin-bottom: 0.5rem;">Turnaround Time</h4>
-                            <p style="font-size: 1.5rem; font-weight: 700; color: #fff;">5 - 30 Minutes</p>
-                        </div>
-                        <div class="glass-box" style="padding: 1.5rem;">
-                            <h4 style="color: #94a3b8; margin-bottom: 0.5rem;">Service Mode</h4>
-                            <p style="font-size: 1.2rem; font-weight: 600; color: #fff;">Walk-in Service</p>
-                        </div>
-                        <div class="glass-box" style="padding: 1.5rem;">
-                            <h4 style="color: #94a3b8; margin-bottom: 0.5rem;">Certifications</h4>
-                            <p style="font-size: 1.1rem; color: #fff;">Malaysian Standard Certified</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Gas List -->
-        <section class="section">
-            <div class="container">
-                <h2 class="section-title">Gas Types & Applications</h2>
-                <div class="gas-list-container">
-                    <!-- Breathing Air -->
-                    <div class="gas-row">
-                        <div class="gas-info">
-                            <h3>Breathing Air (BA)</h3>
-                            <p class="gas-short-desc">Clean, filtered compressed air for breathing systems and industrial use.</p>
-                            <div class="gas-details-grid">
-                                <div>
-                                    <h4>Industries</h4>
-                                    <p>Healthcare, Metal Fabrication, Water Treatment, Chemical Manufacturing, Aerospace.</p>
-                                </div>
-                                <div>
-                                    <h4>Why It's Important</h4>
-                                    <p>Provides a safe air supply for SCBA and airline systems in hazardous environments.</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="gas-visual">
-                            <div class="gas-symbol">BA</div>
-                        </div>
-                    </div>
-
-                    <!-- Nitrogen -->
-                    <div class="gas-row">
-                        <div class="gas-info">
-                            <h3>Nitrogen (N₂)</h3>
-                            <p class="gas-short-desc">Inert gas used for purging, blanketing, and creating oxygen-free environments.</p>
-                            <div class="gas-details-grid">
-                                <div>
-                                    <h4>Industries</h4>
-                                    <p>Food & Beverage, Electronics, Pharmaceuticals, Oil & Gas, Chemical Processing.</p>
-                                </div>
-                                <div>
-                                    <h4>Why It's Important</h4>
-                                    <p>Prevents spoilage and contamination by displacing oxygen, extending shelf life.</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="gas-visual">
-                            <div class="gas-symbol">N₂</div>
-                        </div>
-                    </div>
-
-                    <!-- Argon -->
-                    <div class="gas-row">
-                        <div class="gas-info">
-                            <h3>Argon (Ar)</h3>
-                            <p class="gas-short-desc">Noble gas primarily used as a shielding gas in welding and inert atmospheres.</p>
-                            <div class="gas-details-grid">
-                                <div>
-                                    <h4>Industries</h4>
-                                    <p>Metal Fabrication (TIG/MIG), Electronics, Research.</p>
-                                </div>
-                                <div>
-                                    <h4>Why It's Important</h4>
-                                    <p>Protects welds from atmospheric contamination, resulting in stronger, cleaner welds.</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="gas-visual">
-                            <div class="gas-symbol">Ar</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Other Services -->
-        <section class="section">
-            <div class="container">
-                <h2 class="section-title">Other Safety Services</h2>
-                <div class="product-showcase-grid">
-                    <div class="premium-product-card">
-                        <div class="product-brand-banner" style="background: rgba(56, 189, 248, 0.2); color: #38bdf8;">
-                            <i class="fa-solid fa-user-shield"></i> SAFETY SUPPORT
-                        </div>
-                        <div class="product-info" style="padding: 2.5rem;">
-                            <h3>Safety Support & Fit Tests</h3>
-                            <p>On-site support for gas detection, lifeline BA systems, and face mask fit tests to ensure maximum protection.</p>
-                        </div>
-                    </div>
-                    <div class="premium-product-card">
-                        <div class="product-brand-banner" style="background: rgba(249, 115, 22, 0.2); color: #f97316;">
-                            <i class="fa-solid fa-truck-ramp-box"></i> EQUIPMENT RENTAL
-                        </div>
-                        <div class="product-info" style="padding: 2.5rem;">
-                            <h3>Equipment Rental Services</h3>
-                            <p>Short-term and long-term rental options for SCBA, EEBD, fire extinguishers, and gas detectors.</p>
-                        </div>
-                    </div>
-                    <div class="premium-product-card">
-                        <div class="product-brand-banner" style="background: rgba(34, 197, 94, 0.2); color: #22c55e;">
-                            <i class="fa-solid fa-microscope"></i> CERTIFIED TESTING
-                        </div>
-                        <div class="product-info" style="padding: 2.5rem;">
-                            <h3>Certified Cylinder Testing</h3>
-                            <p>Hydrostatic testing and integrity checks for SCBA and industrial gas cylinders (SIRIM & DOSH compliant).</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-grid">
-                <div class="footer-brand">
-                    <a href="../index.html" class="logo">
-                        <img src="../BossRequest/assets/company_logo.png" alt="Airgas Logo"> Airgas Technology
-                    </a>
-                    <p>HQ: Pasir Gudang, Johor Bahru, Johor</p>
-                    <p>Branch: Nilai, Negeri Sembilan</p>
-                </div>
-                <div class="footer-links">
-                    <h4>Contact</h4>
-                    <ul>
-                        <li><a href="mailto:airgas.safetyservice@gmail.com">airgas.safetyservice@gmail.com</a></li>
-                        <li>Phone: 012-9155118</li>
-                    </ul>
-                </div>
-                <div class="footer-links">
-                    <h4>Quick Links</h4>
-                    <ul>
-                        <li><a href="about.html">About</a></li>
-                        <li><a href="services.html">Services</a></li>
-                        <li><a href="contact.html">Contact</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                &copy; 2026 Airgas Technology. All rights reserved.
-            </div>
+        <div class="gas-detail-col">
+          <h4>Why It's Important</h4>
+          <p>Breathing air provides a safe air supply for SCBA and airline systems in hazardous environments. Properly conditioned air also powers pneumatic tools and supports maintenance work and confined space operations.</p>
         </div>
-    </footer>
-    <script src="../BossRequest/script.js"></script>
+      </div>
+    </div>
+    <div class="gas-visual">
+      <div class="gas-image-placeholder">
+        <div class="gas-symbol">BA</div>
+      </div>
+      <div class="gas-price"><a href="contact.html#contact-form" class="btn btn-primary gas-price-btn">Contact for Price</a></div>
+    </div>
+  </div>
+
+  <!-- Nitrogen -->
+  <div class="gas-row">
+    <div class="gas-info">
+      <div class="gas-header-group">
+        <h3 class="gas-title">Nitrogen <span class="gas-code">N₂</span></h3>
+        <p class="gas-short-desc">Inert gas used for purging, blanketing, and creating oxygen-free environments.</p>
+      </div>
+      <div class="gas-details-grid">
+        <div class="gas-detail-col">
+          <h4>Industries</h4>
+          <ul>
+            <li>Food and beverage</li>
+            <li>Electronics manufacturing</li>
+            <li>Pharmaceutical production</li>
+            <li>Oil and gas</li>
+            <li>Chemical processing</li>
+          </ul>
+        </div>
+        <div class="gas-detail-col">
+          <h4>Why It's Important</h4>
+          <p>Nitrogen prevents spoilage and contamination by displacing oxygen. In food packaging, it extends shelf life. In electronics, it prevents oxidation during manufacturing.</p>
+        </div>
+      </div>
+    </div>
+    <div class="gas-visual">
+      <div class="gas-image-placeholder">
+        <div class="gas-symbol">N₂</div>
+      </div>
+      <div class="gas-price"><a href="contact.html#contact-form" class="btn btn-primary gas-price-btn">Contact for Price</a></div>
+    </div>
+  </div>
+
+  <!-- Argon -->
+  <div class="gas-row">
+    <div class="gas-info">
+      <div class="gas-header-group">
+        <h3 class="gas-title">Argon <span class="gas-code">Ar</span></h3>
+        <p class="gas-short-desc">Noble gas primarily used as a shielding gas in welding and inert atmospheres.</p>
+      </div>
+      <div class="gas-details-grid">
+        <div class="gas-detail-col">
+          <h4>Industries</h4>
+          <ul>
+            <li>Metal fabrication (TIG/MIG)</li>
+            <li>Specialty metals (titanium)</li>
+            <li>Electronics production</li>
+            <li>Light bulb manufacturing</li>
+            <li>Scientific research</li>
+          </ul>
+        </div>
+        <div class="gas-detail-col">
+          <h4>Why It's Important</h4>
+          <p>Argon's complete inertness protects welds from atmospheric contamination, resulting in stronger, cleaner welds. For specialty metals like titanium, argon shielding is absolutely necessary.</p>
+        </div>
+      </div>
+    </div>
+    <div class="gas-visual">
+      <div class="gas-image-placeholder">
+        <div class="gas-symbol">Ar</div>
+      </div>
+      <div class="gas-price"><a href="contact.html#contact-form" class="btn btn-primary gas-price-btn">Contact for Price</a></div>
+    </div>
+  </div>
+
+  <!-- Carbon Dioxide -->
+  <div class="gas-row">
+    <div class="gas-info">
+      <div class="gas-header-group">
+        <h3 class="gas-title">Carbon Dioxide <span class="gas-code">CO₂</span></h3>
+        <p class="gas-short-desc">Used for carbonation, refrigeration, pH control, and welding shielding.</p>
+      </div>
+      <div class="gas-details-grid">
+        <div class="gas-detail-col">
+          <h4>Industries</h4>
+          <ul>
+            <li>Food and beverage</li>
+            <li>Welding (MIG shielding)</li>
+            <li>Water treatment</li>
+            <li>Fire suppression systems</li>
+            <li>Greenhouses</li>
+          </ul>
+        </div>
+        <div class="gas-detail-col">
+          <h4>Why It's Important</h4>
+          <p>CO₂ gives beverages their fizz and is essential for food preservation as dry ice. In welding, it's a cost-effective shielding gas. Its ability to regulate pH makes it valuable in water treatment.</p>
+        </div>
+      </div>
+    </div>
+    <div class="gas-visual">
+      <div class="gas-image-placeholder">
+        <div class="gas-symbol">CO₂</div>
+      </div>
+      <div class="gas-price"><a href="contact.html#contact-form" class="btn btn-primary gas-price-btn">Contact for Price</a></div>
+    </div>
+  </div>
+
+  <!-- Helium -->
+  <div class="gas-row">
+    <div class="gas-info">
+      <div class="gas-header-group">
+        <h3 class="gas-title">Helium <span class="gas-code">He</span></h3>
+        <p style="color: #ffcc00; font-weight: 600; font-size: 0.8rem; margin-bottom: 8px;">* SERVICE ONLY AVAILABLE AT HQ (PASIR GUDANG)</p>
+        <p class="gas-short-desc">Used for leak detection, cooling, controlled atmospheres, and analytics.</p>
+      </div>
+      <div class="gas-details-grid">
+        <div class="gas-detail-col">
+          <h4>Industries</h4>
+          <ul>
+            <li>Healthcare (MRI machines)</li>
+            <li>Aerospace and aviation</li>
+            <li>Diving (mixed gases)</li>
+            <li>Manufacturing leak detection</li>
+            <li>Scientific research</li>
+          </ul>
+        </div>
+        <div class="gas-detail-col">
+          <h4>Why It's Important</h4>
+          <p>Helium is the only substance cold enough to cool superconducting magnets in MRI machines. Its small atomic size makes it perfect for detecting tiny leaks.</p>
+        </div>
+      </div>
+    </div>
+    <div class="gas-visual">
+      <div class="gas-image-placeholder">
+        <div class="gas-symbol">He</div>
+      </div>
+      <div class="gas-price"><a href="contact.html#contact-form" class="btn btn-primary gas-price-btn">Contact for Price</a></div>
+    </div>
+  </div>
+
+  <!-- Medical Oxygen -->
+  <div class="gas-row">
+    <div class="gas-info">
+      <div class="gas-header-group">
+        <h3 class="gas-title">Medical Oxygen <span class="gas-code">Med</span></h3>
+        <p class="gas-short-desc">Pharmaceutical-grade oxygen for patient therapy and life support.</p>
+      </div>
+      <div class="gas-details-grid">
+        <div class="gas-detail-col">
+          <h4>Industries</h4>
+          <ul>
+            <li>Hospitals and clinics</li>
+            <li>Emergency services</li>
+            <li>Home healthcare</li>
+            <li>Dental offices</li>
+            <li>Veterinary medicine</li>
+          </ul>
+        </div>
+        <div class="gas-detail-col">
+          <h4>Why It's Important</h4>
+          <p>Medical oxygen meets strict purity standards (typically 99.5%+) regulated by health authorities. It's essential for treating respiratory conditions, surgery support, and emergency resuscitation.</p>
+          <div style="margin-top: 15px;">
+            <a href="medical-oxygen.html" class="btn btn-secondary btn-sm">View Refill Specs</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="gas-visual">
+      <div class="gas-image-placeholder">
+        <div class="gas-symbol">Med</div>
+      </div>
+      <div class="gas-price"><a href="contact.html#contact-form" class="btn btn-primary gas-price-btn">Contact for Price</a></div>
+    </div>
+  </div>
+
+  <!-- Industrial Argon -->
+  <div class="gas-row">
+    <div class="gas-info">
+      <div class="gas-header-group">
+        <h3 class="gas-title">Industrial Argon <span class="gas-code">Ar</span></h3>
+        <p class="gas-short-desc">Ultra-pure argon gas for specialized welding and industrial processing applications.</p>
+      </div>
+      <div class="gas-details-grid">
+        <div class="gas-detail-col">
+          <h4>Specifications</h4>
+          <ul>
+            <li>99.999% Purity</li>
+            <li>Moisture < 2ppm</li>
+            <li>Stable arc shielding</li>
+          </ul>
+        </div>
+        <div class="gas-detail-col">
+          <h4>Applications</h4>
+          <p>Ideal for TIG & MIG welding, electronics manufacturing, and metal processing. Ensures high-quality welds and prevents oxidation.</p>
+          <div style="margin-top: 15px;">
+            <a href="argon-gas.html" class="btn btn-secondary btn-sm">View Refill Specs</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="gas-visual">
+      <div class="gas-image-placeholder">
+        <div class="gas-symbol">Ar</div>
+      </div>
+      <div class="gas-price"><a href="contact.html#contact-form" class="btn btn-primary gas-price-btn">Contact for Price</a></div>
+    </div>
+  </div>
+
+</div>
+</section>
+
+<!-- Comprehensive Maintenance Section (NEW) -->
+<section class="content" style="background: rgba(255,255,255,0.02);">
+<div class="container">
+  <h2 style="margin-bottom: 40px;">Professional Maintenance & Calibration</h2>
+  <div class="grid cards-3">
+    
+    <!-- SCBA Inspection -->
+    <a href="service-scba-inspection.html" class="card product-card" style="text-decoration: none; color: inherit;">
+      <div class="product-img" style="height: 200px;">
+        <img src="https://airgas.my/wp-content/uploads/2022/01/scba.jpg" alt="SCBA Inspection">
+      </div>
+      <div class="product-info">
+        <h3>SCBA & EEBD Inspection</h3>
+        <p>Complete inspection and service for Self-Contained Breathing Apparatus (SCBA) and Emergency Escape Breathing Devices (EEBD), including backplate checks and pneumatics testing.</p>
+        <span class="btn btn-secondary btn-sm" style="margin-top: auto;">Learn More</span>
+      </div>
+    </a>
+
+    <!-- Cylinder Testing -->
+    <a href="service-cylinder-testing.html" class="card product-card" style="text-decoration: none; color: inherit;">
+      <div class="product-img" style="height: 200px;">
+        <img src="https://airgas.my/wp-content/uploads/2022/04/448928-300x300.jpg" alt="Cylinder Hydro Test">
+      </div>
+      <div class="product-info">
+        <h3>Hydrostatic Cylinder Testing</h3>
+        <p>Certified hydrostatic testing and visual inspection for high-pressure gas cylinders to ensure structural integrity and compliance with DOSH standards.</p>
+        <span class="btn btn-secondary btn-sm" style="margin-top: auto;">Learn More</span>
+      </div>
+    </a>
+
+    <!-- Gas Detection Calibration -->
+    <a href="service-gas-calibration.html" class="card product-card" style="text-decoration: none; color: inherit;">
+      <div class="product-img" style="height: 200px;">
+        <img src="https://airgas.my/wp-content/uploads/2023/03/1000106891-300x300.jpg" alt="Gas Detector Calibration">
+      </div>
+      <div class="product-info">
+        <h3>Gas Detector Calibration</h3>
+        <p>Automated calibration and bump testing using the BW IntelliDoX system to ensure your gas detection instruments are accurate and reliable.</p>
+        <span class="btn btn-secondary btn-sm" style="margin-top: auto;">Learn More</span>
+      </div>
+    </a>
+
+    <!-- Compressor Maintenance -->
+    <a href="service-compressor-maintenance.html" class="card product-card" style="text-decoration: none; color: inherit;">
+      <div class="product-img" style="height: 200px;">
+        <img src="https://airgas.my/wp-content/uploads/2024/09/Screenshot-2024-09-11-221413-300x300.png" alt="Compressor Maintenance">
+      </div>
+      <div class="product-info">
+        <h3>Compressor Maintenance</h3>
+        <p>Full service for high-pressure breathing air compressors, including synthetic oil changes and filter replacements to maintain air purity.</p>
+        <span class="btn btn-secondary btn-sm" style="margin-top: auto;">Learn More</span>
+      </div>
+    </a>
+
+    <!-- Airline Escape Set -->
+    <a href="service-airline-system.html" class="card product-card" style="text-decoration: none; color: inherit;">
+      <div class="product-img" style="height: 200px;">
+        <img src="https://airgas.my/wp-content/uploads/2022/01/airline1-300x300.jpg" alt="Airline Escape Set Service">
+      </div>
+      <div class="product-info">
+        <h3>Airline System Service</h3>
+        <p>Maintenance for airline trolley systems and escape sets, ensuring valves, hoses, and masks are in optimal working condition.</p>
+        <span class="btn btn-secondary btn-sm" style="margin-top: auto;">Learn More</span>
+      </div>
+    </a>
+
+    <!-- CO2 Transfer -->
+    <a href="service-co2-refill.html" class="card product-card" style="text-decoration: none; color: inherit;">
+      <div class="product-img" style="height: 200px;">
+        <img src="https://airgas.my/wp-content/uploads/2022/01/co2-300x300.jpg" alt="CO2 Refilling">
+      </div>
+      <div class="product-info">
+        <h3>CO2 Refilling & Transfer</h3>
+        <p>High-pressure CO2 transfer system services for refilling fire extinguishers and industrial CO2 cylinders efficiently.</p>
+        <span class="btn btn-secondary btn-sm" style="margin-top: auto;">Learn More</span>
+      </div>
+    </a>
+
+  </div>
+</div>
+</section>
+
+<section class="content" style="border-top: 1px solid var(--border);">
+<div class="container">
+<h2>Other Safety Services</h2>
+<div class="grid cards-2">
+  <div class="card">
+    <h3>Safety Support & Fit Tests</h3>
+    <p>On-site support for gas detection, lifeline BA systems, chemical suit usage, and confined space entry procedures. We also provide face mask fit tests to ensure maximum respiratory protection.</p>
+  </div>
+  <div class="card">
+    <h3>Equipment Rental Services</h3>
+    <p>Short-term and long-term rental options for SCBA, EEBD, fire extinguishers, gas detectors, chemical suits, and air compressors. Ideal for project-based industrial work.</p>
+  </div>
+  <div class="card">
+    <h3>Certified Cylinder Testing</h3>
+    <p>Hydrostatic testing, valve inspections, and integrity checks for SCBA, EEBD, and industrial gas cylinders. Our capabilities include high-pressure hose tests, valve tests, and gas analysis to ensure equipment safety and reliability. Full compliance with SIRIM and DOSH Malaysia standards.</p>
+    <div style="margin-top: 15px;">
+      <a href="scba-testing.html" class="btn btn-secondary btn-sm">View Service Details</a>
+    </div>
+  </div>
+  <div class="card">
+    <h3>Medical Equipment Services</h3>
+    <p>Supply and maintenance of medical oxygen concentrators, compressors, and first aid room equipment for industrial and healthcare facilities.</p>
+  </div>
+</div>
+</div>
+</section>
+
+</main>
+<footer class="site-footer">
+<div class="container">
+<div class="footer-grid">
+<div>
+<div class="logo">Airgas Technology</div>
+<p>HQ: 19, Jalan Ekoperniagaan 3, Taman Kota Masai, 81700 Pasir Gudang, Johor Bahru, Johor</p>
+<p>Branch: 10053, Jalan BBN 1/3K, Putra Point, 71800, Nilai, Negeri Sembilan</p>
+</div>
+<div>
+<h4>Contact</h4>
+<p>Email: airgas.safetyservice@gmail.com</p>
+<p>Email: airgas.sales@gmail.com</p>
+<p>Phone: 012-9155118</p>
+</div>
+<div>
+<h4>Quick Links</h4>
+<ul class="footer-links">
+<li><a href="about.html">About</a></li>
+<li><a href="services.html">Services</a></li>
+<li><a href="contact.html">Contact</a></li>
+</ul>
+</div>
+</div>
+<p class="copyright">© Airgas Technology. All rights reserved.</p>
+</div>
+</footer>
+<script src="../js/main.js?v=1.2"></script>
 </body>
 </html>
+
+
+
