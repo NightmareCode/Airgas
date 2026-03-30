@@ -48,6 +48,29 @@ document.addEventListener('DOMContentLoaded', () => {
     const animatedElements = document.querySelectorAll('.animate-on-scroll');
     animatedElements.forEach(el => scrollObserver.observe(el));
 
+    // Back to Top Button Logic
+    const backToTopBtn = document.createElement("button");
+    backToTopBtn.className = "back-to-top";
+    backToTopBtn.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 15l-6-6-6 6"/></svg>';
+    backToTopBtn.setAttribute("aria-label", "Back to top");
+    document.body.appendChild(backToTopBtn);
+
+    function updateBackToTop() {
+        var scrollTop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
+        if (scrollTop > 150) {
+            backToTopBtn.classList.add("visible");
+        } else {
+            backToTopBtn.classList.remove("visible");
+        }
+    }
+
+    window.addEventListener("scroll", updateBackToTop, { passive: true });
+    updateBackToTop(); // Initial check
+
+    backToTopBtn.addEventListener("click", function() {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+    });
+
     // Navbar Scroll Effect
     const navbar = document.querySelector('.navbar');
     window.addEventListener('scroll', () => {
