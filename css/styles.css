@@ -29,10 +29,10 @@
   --font-body: 'Inter', sans-serif;
 
   /* Spacing */
-  --space-sm: 0.5rem;
-  --space-md: 1rem;
-  --space-lg: 2rem;
-  --space-xl: 4rem;
+  --space-sm: 0.75rem;
+  --space-md: 1.5rem;
+  --space-lg: 3rem;
+  --space-xl: 6rem;
 
   /* Transitions */
   --transition-fast: 0.2s cubic-bezier(0.4, 0, 0.2, 1);
@@ -73,11 +73,11 @@ main { flex: 1; }
 img { max-width: 100%; display: block }
 a { color: var(--text); text-decoration: none }
 ul { padding: 0; margin: 0; list-style: none }
-h1, h2, h3, h4, h5 { margin: 0 0 16px }
+h1, h2, h3, h4, h5 { margin: 0 0 2rem }
 h1 { font-size: clamp(2rem, 3.6vw + 1rem, 3rem); line-height: 1.08; letter-spacing: -0.02em }
 h2 { font-size: clamp(1.5rem, 2.2vw + 1rem, 2.2rem); line-height: 1.12; letter-spacing: -0.02em }
 h3 { font-size: clamp(1.15rem, 1vw + 1rem, 1.45rem); line-height: 1.18 }
-p { margin: 0 0 16px; color: var(--muted) }
+p { margin: 0 0 2rem; color: var(--muted) }
 .container { width: 100%; max-width: 1120px; margin: 0 auto; padding-left: max(18px, env(safe-area-inset-left, 0px)); padding-right: max(18px, env(safe-area-inset-right, 0px)) }
 .narrow { max-width: 860px }
 .content h2, .overview h2, .featured h2, .social-proof h2 { margin-bottom: 28px; margin-top: 68px }
@@ -253,7 +253,9 @@ p { margin: 0 0 16px; color: var(--muted) }
 .hero-actions { display: flex; gap: 12px; margin-top: 18px; flex-wrap: wrap }
 .hero-actions .btn { flex: 1 1 180px; text-align: center }
 .hero .btn-secondary { border-color: rgba(255,255,255,.4) }
-.overview, .featured, .social-proof, .content, .maps { padding: clamp(56px, 8vw, 100px) 0 }
+.section {
+  padding: var(--space-xl) 0;
+}
 .intro-split {
   /* background removed to inherit body gradient */
   padding: 80px 0 120px;
@@ -263,7 +265,13 @@ p { margin: 0 0 16px; color: var(--muted) }
 .intro-split::after {
   content: none;
 }
-.intro-inner { display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 40px; align-items: center }
+/* Service Split (Calibration Section) */
+.service-split {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8rem;
+  align-items: center;
+}
 .intro-copy .eyebrow { color: var(--primary); font-weight: 700; letter-spacing: .08em; text-transform: uppercase; margin-bottom: 12px }
 .intro-copy h2 { font-size: 2.6rem; line-height: 1.05; letter-spacing: -0.02em; margin-bottom: 20px }
 .intro-copy p { max-width: 640px }
