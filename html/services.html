@@ -11,23 +11,28 @@
 </head>
 <body>
     <!-- Navigation -->
-    <nav class="navbar">
-        <div class="container">
-            <a href="../index.html" class="logo">
-                <img src="../BossRequest/assets/company_logo.png" alt="Airgas Logo">
-                Airgas Technology
+    <header class="site-header">
+        <div class="container header-inner">
+            <a href="../index.html" class="logo-wrap">
+                <img src="../BossRequest/assets/company_logo.png" alt="Airgas Logo" class="logo-img">
+                <span class="logo-text">Airgas Technology</span>
             </a>
-            <button class="mobile-menu-btn" aria-label="Toggle menu">
-                <i class="fa-solid fa-bars"></i>
+            <button class="nav-toggle" aria-label="Toggle menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
             </button>
-            <ul class="nav-links">
-                <li><a href="../index.html">Home</a></li>
-                <li><a href="services.html" class="active">Services</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
+            <nav class="nav-wrap">
+                <ul class="nav-list">
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="services.html" class="active">Services</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+                <a href="contact.html" class="btn btn-primary nav-cta">Get A Quote</a>
+            </nav>
         </div>
-    </nav>
+    </header>
 <main>
 <section class="page-hero">
 <div class="container">
@@ -420,27 +425,28 @@
 
 </main>
     <!-- Footer -->
-    <footer class="footer">
+    <footer class="site-footer">
         <div class="container">
             <div class="footer-grid">
                 <div class="footer-brand">
-                    <a href="../index.html" class="logo">
-                        <img src="../BossRequest/assets/company_logo.png" alt="Airgas Logo"> Airgas Technology
+                    <a href="../index.html" class="logo-wrap">
+                        <img src="../BossRequest/assets/company_logo.png" alt="Airgas Logo" class="logo-img">
+                        <span class="logo-text">Airgas Technology</span>
                     </a>
-                    <p>HQ: 19, Jalan Ekoperniagaan 3, Taman Kota Masai, 81700 Pasir Gudang, Johor Bahru, Johor</p>
-                    <p>Branch: 10053, Jalan BBN 1/3K, Putra Point, 71800, Nilai, Negeri Sembilan</p>
+                    <p class="footer-desc">HQ: 19, Jalan Ekoperniagaan 3, Taman Kota Masai, 81700 Pasir Gudang, Johor Bahru, Johor</p>
+                    <p class="footer-desc">Branch: 10053, Jalan BBN 1/3K, Putra Point, 71800, Nilai, Negeri Sembilan</p>
                 </div>
-                <div class="footer-links">
-                    <h4>Contact</h4>
-                    <ul>
+                <div class="footer-section">
+                    <h4 class="footer-title">Contact</h4>
+                    <ul class="footer-links">
                         <li><a href="mailto:airgas.safetyservice@gmail.com">airgas.safetyservice@gmail.com</a></li>
                         <li><a href="mailto:airgas.sales@gmail.com">airgas.sales@gmail.com</a></li>
-                        <li>Phone: 012-9155118</li>
+                        <li><span class="footer-text">Phone: 012-9155118</span></li>
                     </ul>
                 </div>
-                <div class="footer-links">
-                    <h4>Quick Links</h4>
-                    <ul>
+                <div class="footer-section">
+                    <h4 class="footer-title">Quick Links</h4>
+                    <ul class="footer-links">
                         <li><a href="about.html">About</a></li>
                         <li><a href="services.html" class="active">Services</a></li>
                         <li><a href="contact.html">Contact</a></li>
@@ -448,11 +454,11 @@
                 </div>
             </div>
             <div class="footer-bottom">
-                &copy; 2026 Airgas Technology. All rights reserved.
+                <p class="copyright">&copy; 2026 Airgas Technology. All rights reserved.</p>
             </div>
         </div>
     </footer>
-<script src="../js/main.js?v=3.0"></script>
+<script src="../js/main.js?v=5.0"></script>
 </body>
 </html>
 
