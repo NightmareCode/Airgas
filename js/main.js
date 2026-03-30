@@ -24,29 +24,46 @@ document.addEventListener("DOMContentLoaded", function () {
 
   var toggle = document.querySelector(".nav-toggle");
   var list = document.querySelector(".nav-list");
+  
   if (toggle && list) {
+    // Create overlay if it doesn't exist
+    var overlay = document.querySelector(".menu-overlay");
+    if (!overlay) {
+      overlay = document.createElement("div");
+      overlay.className = "menu-overlay";
+      document.body.appendChild(overlay);
+    }
+
+    function openMenu() {
+      toggle.setAttribute("aria-expanded", "true");
+      list.classList.add("is-open");
+      overlay.classList.add("is-visible");
+      document.body.style.overflow = "hidden"; // Prevent scrolling
+    }
+
     function closeMenu() {
       toggle.setAttribute("aria-expanded", "false");
       list.classList.remove("is-open");
+      overlay.classList.remove("is-visible");
+      document.body.style.overflow = ""; // Restore scrolling
     }
 
     toggle.addEventListener("click", function (e) {
       e.stopPropagation();
       var isExpanded = toggle.getAttribute("aria-expanded") === "true";
-      toggle.setAttribute("aria-expanded", String(!isExpanded));
-      list.classList.toggle("is-open");
+      if (isExpanded) closeMenu();
+      else openMenu();
     });
+
+    overlay.addEventListener("click", closeMenu);
 
     list.addEventListener("click", function (e) {
       var target = e.target;
       if (target && target.tagName === "A") closeMenu();
     });
 
-    document.addEventListener("click", function (e) {
-      if (!list.classList.contains("is-open")) return;
-      var nav = toggle.closest(".nav");
-      if (nav && nav.contains(e.target)) return;
-      closeMenu();
+    document.addEventListener("keydown", function (e) {
+      if (e.key === "Escape") closeMenu();
     });
   }
 

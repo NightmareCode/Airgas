@@ -1,4 +1,4 @@
-:root {
+﻿:root {
   --bg: #05080c;
   --surface: #10151c;
   --text: #e6e9ef;
@@ -393,22 +393,60 @@ a[href$="training.html"] { display: none }
   .nav { position: relative; gap: 10px }
   .nav-toggle { display: inline-flex; align-items: center; justify-content: center }
   .nav-list {
-    display: none;
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: calc(100% + 10px);
-    padding: 10px;
-    border-radius: 14px;
-    border: 1px solid var(--border);
-    background: rgba(13, 18, 24, 0.92);
-    backdrop-filter: blur(10px);
+    display: flex;
+    position: fixed;
+    left: -100%;
+    top: 0;
+    width: 280px;
+    height: 100vh;
+    background: #0d1218;
     flex-direction: column;
-    align-items: stretch;
-    gap: 4px;
-    box-shadow: 0 18px 60px rgba(0,0,0,.55);
+    padding: 80px 24px;
+    gap: 10px;
+    transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    z-index: 1000;
+    box-shadow: 15px 0 50px rgba(0,0,0,0.6);
+    border-right: 1px solid var(--border);
+    visibility: hidden;
   }
-  .nav-list.is-open { display: flex; animation: slideDown .18s ease-out }
+  .nav-list.is-open {
+    transform: translateX(100%);
+    visibility: visible;
+  }
+  .nav-list a {
+    font-size: 1.1rem;
+    font-weight: 600;
+    padding: 14px 18px;
+    border-radius: 12px;
+    background: rgba(255,255,255,0.02);
+    border: 1px solid transparent;
+    transition: all 0.2s ease;
+  }
+  .nav-list a:hover, .nav-list a.active {
+    background: rgba(249, 115, 22, 0.1);
+    border-color: rgba(249, 115, 22, 0.2);
+    color: var(--primary);
+    transform: translateX(5px);
+  }
+  
+  /* Menu Overlay */
+  .menu-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.6);
+    backdrop-filter: blur(4px);
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.4s ease;
+    z-index: 999;
+  }
+  .menu-overlay.is-visible {
+    opacity: 1;
+    visibility: visible;
+  }
   .nav-list a { padding: 12px 14px; border-radius: 10px }
   .cta-header { display: none; width: 100%; justify-content: center; margin-top: 8px; white-space: normal !important; }
   .nav-list.is-open + .cta-header { display: inline-flex }

@@ -9,26 +9,30 @@
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="BossRequest/style.css?v=1.4">
+    <link rel="stylesheet" href="css/styles.css?v=3.7">
 </head>
 <body>
     <!-- Navigation -->
-    <nav class="navbar">
-        <div class="container">
-            <a href="index.html" class="logo">
-                <img src="BossRequest/assets/company_logo.png" alt="Airgas Logo"> Airgas Technology
+    <header class="site-header">
+        <div class="container header-inner">
+            <a class="logo" href="index.html">
+                <img src="assets/company_logo.png" alt="Airgas Technology logo">
+                <span>Airgas Technology</span>
             </a>
-            <button class="mobile-menu-btn" aria-label="Toggle menu">
-                <i class="fa-solid fa-bars"></i>
-            </button>
-            <ul class="nav-links">
-                <li><a href="index.html" class="active">Home</a></li>
-                <li><a href="html/about.html">About</a></li>
-                <li><a href="html/services.html">Services</a></li>
-                <li><a href="html/contact.html">Contact</a></li>
-            </ul>
+            <nav class="nav" aria-label="Main">
+                <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+                    <span></span><span></span><span></span>
+                </button>
+                <ul class="nav-list">
+                    <li><a href="index.html" class="active">Home</a></li>
+                    <li><a href="html/about.html">About</a></li>
+                    <li><a href="html/services.html">Services</a></li>
+                    <li><a href="html/contact.html">Contact</a></li>
+                </ul>
+                <a class="btn btn-primary cta-header" href="html/contact.html">Get A Quote</a>
+            </nav>
         </div>
-    </nav>
+    </header>
 
     
 
@@ -59,7 +63,7 @@
                     <div class="product-info">
                         <h3>Dräger SCBA</h3>
                         <p>World-renowned reliability with integrated communication systems. Designed for the most demanding firefighting and industrial applications.</p>
-                        <a href="BossRequest/pages/scba.html" class="btn btn-outline product-link" style="border-color: #f59e0b;">
+                        <a href="BossRequest/pages/scba.html" class="btn btn-secondary">
                             View Specifications <i class="fa-solid fa-arrow-right"></i>
                         </a>
                     </div>
@@ -76,7 +80,7 @@
                     <div class="product-info">
                         <h3>Gas Refill & Services</h3>
                         <p>Complete gas solutions including cylinder refills (Oxygen, Nitrogen, Argon, CO2), certified cylinder testing, and short-term equipment rental for your industrial projects.</p>
-                        <a href="html/services.html" class="btn btn-outline product-link" style="border-color: #38bdf8;">
+                        <a href="html/services.html" class="btn btn-secondary">
                             Explore Services <i class="fa-solid fa-arrow-right"></i>
                         </a>
                     </div>
@@ -92,8 +96,8 @@
                     </div>
                     <div class="product-info">
                         <h3>MSA Gas Calibrator</h3>
-                        <p>Automated test system for advanced gas calibration and bump testing. Ensuring your ALTAIR gas detectors are always compliant and ready.</p>
-                        <a href="https://my.msasafety.com/Portable-Gas-Detection/c/114?isLanding=true" class="btn btn-outline product-link" style="border-color: #10b981;" target="_blank">
+                        <p>Automated test system for advanced safety management. Provides simple, intelligent testing and calibration of ALTAIR gas detectors.</p>
+                        <a href="https://my.msasafety.com/Portable-Gas-Detection/c/114?isLanding=true" class="btn btn-secondary" target="_blank">
                             Official Website <i class="fa-solid fa-arrow-up-right-from-square"></i>
                         </a>
                     </div>
@@ -127,41 +131,39 @@
 
     
 
-    <!-- Custom JS -->
-    <script src="BossRequest/script.js"></script>
     <!-- Footer -->
-    <footer class="footer">
+    <footer class="site-footer">
         <div class="container">
             <div class="footer-grid">
                 <div class="footer-brand">
-                    <a href="index.html" class="logo">
-                        <img src="BossRequest/assets/company_logo.png" alt="Airgas Logo"> Airgas Technology
+                    <a class="logo" href="index.html">
+                        <img src="assets/company_logo.png" alt="Airgas Technology logo">
+                        <span>Airgas Technology</span>
                     </a>
-                    <p>HQ: 19, Jalan Ekoperniagaan 3, Taman Kota Masai, 81700 Pasir Gudang, Johor Bahru, Johor</p>
-                    <p>Branch: 10053, Jalan BBN 1/3K, Putra Point, 71800, Nilai, Negeri Sembilan</p>
+                    <p class="footer-desc">HQ: 19, Jalan Ekoperniagaan 3, Taman Kota Masai, 81700 Pasir Gudang, Johor Bahru, Johor</p>
+                    <p class="footer-desc">Branch: 10053, Jalan BBN 1/3K, Putra Point, 71800, Nilai, Negeri Sembilan</p>
                 </div>
-                <div class="footer-links">
+                <div>
                     <h4>Contact</h4>
-                    <ul>
+                    <ul class="footer-links">
                         <li><a href="mailto:airgas.safetyservice@gmail.com">airgas.safetyservice@gmail.com</a></li>
                         <li><a href="mailto:airgas.sales@gmail.com">airgas.sales@gmail.com</a></li>
-                        <li>Phone: 012-9155118</li>
+                        <li><span class="footer-text">Phone: 012-9155118</span></li>
                     </ul>
                 </div>
-                <div class="footer-links">
+                <div>
                     <h4>Quick Links</h4>
-                    <ul>
+                    <ul class="footer-links">
                         <li><a href="html/about.html">About</a></li>
                         <li><a href="html/services.html">Services</a></li>
                         <li><a href="html/contact.html">Contact</a></li>
                     </ul>
                 </div>
             </div>
-            <div class="footer-bottom">
-                &copy; 2026 Airgas Technology. All rights reserved.
-            </div>
+            <p class="copyright">© Airgas Technology. All rights reserved.</p>
         </div>
     </footer>
+    <script src="js/main.js?v=1.3"></script>
 </body>
 </html>
 
