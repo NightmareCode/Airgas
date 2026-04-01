@@ -1,22 +1,28 @@
-// Vanilla JavaScript for basic interactions if needed.
-
 document.addEventListener('DOMContentLoaded', () => {
-    // We can add any required interactivity here. 
-    // Example: A fade-in observer for scroll animations
-    
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
+    // Elegant reveal animation on scroll
+    const observerOptions = {
+        root: null,
+        rootMargin: '0px',
+        threshold: 0.1
+    };
+
+    const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach((entry, index) => {
             if (entry.isIntersecting) {
-                entry.target.classList.add('visible');
+                // Staggered delay for child elements based on their DOM position
+                setTimeout(() => {
+                    entry.target.classList.add('animate-in');
+                }, index * 50); // 50ms stagger
+                
+                // Once revealed, stop observing
+                observer.unobserve(entry.target);
             }
         });
-    }, { threshold: 0.1 });
+    }, observerOptions);
 
-    const cards = document.querySelectorAll('.product-card');
-    cards.forEach(card => {
-        // card.style.opacity = 0;
-        // observer.observe(card);
-    });
+    // Observe all categories and products
+    const animatedElements = document.querySelectorAll('.category-card, .product-card');
+    animatedElements.forEach(el => observer.observe(el));
 
-    console.log("Airgas Landing Page Local Initialization Complete.");
+    console.log("Modern Airgas initialization complete.");
 });
