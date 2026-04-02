@@ -431,10 +431,14 @@ img { display: block; max-width: 100%; }
   display: flex;
   align-items: center;
   justify-content: center;
+  width: 44px;
+  height: 26px;
 }
 .shield-brand-logo {
-  max-width: 48px;
-  max-height: 24px;
+  max-width: 100%;
+  max-height: 100%;
+  width: auto;
+  height: auto;
   object-fit: contain;
   transition: transform var(--duration) var(--ease-out);
 }
