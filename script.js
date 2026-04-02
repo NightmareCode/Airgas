@@ -100,6 +100,12 @@ document.addEventListener('DOMContentLoaded', () => {
         ? `href="${product.brandUrl}" target="_blank" rel="noopener"`
         : '';
 
+      const brandLinkName = product.brand ? product.brand.toLowerCase().replace(/ /g, "_").replace(/&/g, "and").replace(/ä/g, "a") : "";
+      const shieldLogo = product.brand 
+        ? `<img class="shield-brand-logo" src="assets/BrandLogo/${brandLinkName}.png" alt="${product.brand}" onerror="this.style.display='none'; this.nextElementSibling.style.display='inline-flex';" loading="lazy" />`
+        : '';
+      const shieldDisplay = product.brand ? 'style="display: none;"' : '';
+
       return `
         <${cardTag} ${linkAttrs} class="product-card" style="animation-delay: ${Math.min(i * 30, 600)}ms;">
           <div class="card-accent"></div>
@@ -115,7 +121,10 @@ document.addEventListener('DOMContentLoaded', () => {
                 ? `<span class="view-link">Visit Brand <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></span>`
                 : `<span class="view-link disabled">No Brand Link</span>`
               }
-              <span class="category-tag">${iconEmoji}</span>
+              <div class="shield-container">
+                ${shieldLogo}
+                <span class="category-tag" ${shieldDisplay}>${iconEmoji}</span>
+              </div>
             </div>
           </div>
         </${cardTag}>

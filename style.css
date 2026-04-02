@@ -427,6 +427,20 @@ img { display: block; max-width: 100%; }
   background: var(--border);
 }
 
+.shield-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.shield-brand-logo {
+  max-width: 48px;
+  max-height: 24px;
+  object-fit: contain;
+  transition: transform var(--duration) var(--ease-out);
+}
+.product-card:hover .shield-brand-logo {
+  transform: scale(1.1);
+}
 .product-icon {
   width: 56px;
   height: 56px;
