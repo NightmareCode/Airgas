@@ -108,9 +108,21 @@ document.addEventListener('DOMContentLoaded', () => {
         
       const sanitizedFilename = product.name.replace(/[^a-zA-Z0-9\s]/g, '').trim() + '.png';
       
+      const categoryFolders = {
+        'PPE for ERT': 'PPEForERT',
+        'PPE at Works': 'PPEAtWorks',
+        'Gases': 'Gases',
+        'Gas Equipment': 'GasEquipment',
+        'Personal Care': 'PersonalCare',
+        'Service & Maintenance': 'ServiceAndMaintenance',
+        'Welding Products': 'WeldingProducts'
+      };
+      
+      const folderName = categoryFolders[product.category];
       let iconAreaHtml = `<div class="product-icon">${initials}</div>`;
-      if (product.category === 'PPE for ERT') {
-        const imgSrc = `assets/PPEForERT/${sanitizedFilename}`;
+      
+      if (folderName) {
+        const imgSrc = `assets/${folderName}/${sanitizedFilename}`;
         // The onerror handler falls back to the text initials if the image failed to download or is named wrong
         iconAreaHtml = `
           <div class="product-image-container">
