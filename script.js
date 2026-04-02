@@ -28,18 +28,15 @@ document.addEventListener('DOMContentLoaded', () => {
     'Welding Products': '🔥'
   };
 
-  // ─── Fetch Products ───────────────────────────────────────
-  fetch('assets/products.json')
-    .then(res => res.json())
-    .then(data => {
-      allProducts = data.products;
-      updateCounts(data.products);
-      renderProducts();
-    })
-    .catch(err => {
-      console.error('Failed to load products:', err);
-      productGrid.innerHTML = '<p style="text-align:center;color:#94A3B8;padding:48px;">Unable to load products. Please try again.</p>';
-    });
+  // ─── Load Products from Global Data ─────────────────────
+  if (typeof PRODUCTS_DATA !== 'undefined' && PRODUCTS_DATA.products) {
+    allProducts = PRODUCTS_DATA.products;
+    updateCounts(allProducts);
+    renderProducts();
+  } else {
+    console.error('PRODUCTS_DATA not found. Make sure products.js is loaded.');
+    productGrid.innerHTML = '<p style="text-align:center;color:#94A3B8;padding:48px;">Unable to load products. Please try again.</p>';
+  }
 
   // ─── Update Tab Counts ────────────────────────────────────
   function updateCounts(products) {
