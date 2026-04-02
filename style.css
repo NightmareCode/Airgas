@@ -210,14 +210,10 @@ img { display: block; max-width: 100%; }
 /* Filter Tabs */
 .filter-tabs {
   display: flex;
+  flex-wrap: wrap;
   gap: 8px;
   margin-bottom: 24px;
-  overflow-x: auto;
-  padding-bottom: 8px;
-  -webkit-overflow-scrolling: touch;
-  scrollbar-width: none;
 }
-.filter-tabs::-webkit-scrollbar { display: none; }
 
 .filter-tab {
   display: inline-flex;
