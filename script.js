@@ -28,15 +28,21 @@ document.addEventListener('DOMContentLoaded', () => {
     'Welding Products': '🔥'
   };
 
-  // ─── Load Products from Global Data ─────────────────────
-  if (typeof PRODUCTS_DATA !== 'undefined' && PRODUCTS_DATA.products) {
-    allProducts = PRODUCTS_DATA.products;
-    updateCounts(allProducts);
-    renderProducts();
-  } else {
-    console.error('PRODUCTS_DATA not found. Make sure products.js is loaded.');
-    productGrid.innerHTML = '<p style="text-align:center;color:#94A3B8;padding:48px;">Unable to load products. Please try again.</p>';
-  }
+  // ─── Load Products from JSON Data ────────────────────────
+  fetch('assets/products.json')
+    .then(response => {
+      if (!response.ok) throw new Error('Network response was not ok');
+      return response.json();
+    })
+    .then(data => {
+      allProducts = data.products;
+      updateCounts(allProducts);
+      renderProducts();
+    })
+    .catch(error => {
+      console.error('Error loading products.json:', error);
+      productGrid.innerHTML = '<p style="text-align:center;color:#94A3B8;padding:48px;">Unable to load products. Please try again.</p>';
+    });
 
   // ─── Update Tab Counts ────────────────────────────────────
   function updateCounts(products) {
@@ -99,6 +105,19 @@ document.addEventListener('DOMContentLoaded', () => {
       const linkAttrs = hasBrandUrl
         ? `href="${product.brandUrl}" target="_blank" rel="noopener"`
         : '';
+        
+      const sanitizedFilename = product.name.replace(/[^a-zA-Z0-9\s]/g, '').trim() + '.png';
+      
+      let iconAreaHtml = `<div class="product-icon">${initials}</div>`;
+      if (product.category === 'PPE for ERT') {
+        const imgSrc = `assets/PPEForERT/${sanitizedFilename}`;
+        // The onerror handler falls back to the text initials if the image failed to download or is named wrong
+        iconAreaHtml = `
+          <div class="product-image-container">
+            <img src="${imgSrc}" class="product-real-image" alt="${product.name}" onerror="this.parentElement.outerHTML='<div class=\\\'product-icon\\\'>${initials}</div>'" loading="lazy" />
+          </div>
+        `;
+      }
 
       const brandLinkName = product.brand ? product.brand.toLowerCase().replace(/ /g, "_").replace(/&/g, "and").replace(/ä/g, "a") : "";
       const shieldLogo = product.brand 
@@ -110,7 +129,7 @@ document.addEventListener('DOMContentLoaded', () => {
         <${cardTag} ${linkAttrs} class="product-card" style="animation-delay: ${Math.min(i * 30, 600)}ms;">
           <div class="card-accent"></div>
           <div class="card-icon-area">
-            <div class="product-icon">${initials}</div>
+            ${iconAreaHtml}
           </div>
           <div class="card-body">
             <span class="product-badge">${product.category}</span>
@@ -215,4 +234,43 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   console.log('⚡ Airgas Technology catalog engine initialized.');
+  // ─── 3D Hover Tracking Effect ─────────────────────────────────
+  productGrid.addEventListener('mousemove', (e) => {
+    const card = e.target.closest('.product-card');
+    if (!card) return;
+    
+    // Only track cards that have the real image container
+    const imgContainer = card.querySelector('.product-image-container');
+    if (!imgContainer) return;
+    
+    const img = imgContainer.querySelector('.product-real-image');
+    if (!img) return;
+    
+    const rect = card.getBoundingClientRect();
+    const centerX = rect.left + rect.width / 2;
+    const centerY = rect.top + rect.height / 2;
+    
+    // Calculate movement (limit to ~12px max for subtle premium feel)
+    const moveX = ((e.clientX - centerX) / (rect.width / 2)) * 12;
+    const moveY = ((e.clientY - centerY) / (rect.height / 2)) * 12;
+    
+    img.style.transition = 'none'; // Overwrite CSS transition for instant tracking
+    img.style.transform = `translate(${moveX}px, ${moveY}px) scale(1.08)`;
+  });
+
+  productGrid.addEventListener('mouseout', (e) => {
+    const card = e.target.closest('.product-card');
+    if (!card) return;
+    
+    // Check if we actually left the card entirely and not just hovering over child elements
+    const related = e.relatedTarget;
+    if (!card.contains(related)) {
+      const img = card.querySelector('.product-real-image');
+      if (img) {
+        img.style.transition = ''; // Restore CSS smooth transition
+        img.style.transform = `translate(0, 0) scale(1)`;
+      }
+    }
+  });
+
 });
