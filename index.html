@@ -35,88 +35,51 @@
     </div>
   </nav>
 
+  <!-- Hero / Introduction Section -->
+  <header class="hero-intro">
+    <div class="container text-center">
+      <h1 class="main-title">Company Introduction</h1>
+      <p class="main-description">
+        Airgas Technology Sdn Bhd is a premier industrial resource in Malaysia, specializing in industrial and medical gases, high-quality safety equipment, and certified technical training. We provide a reliable one-stop center for safety and gas solutions, ensuring all products meet international standards including ANSI, CE, and EN.
+      </p>
+    </div>
+  </header>
+
   <!-- Product Catalog Section -->
   <section class="catalog-section" id="catalog">
     <div class="container">
-      <div class="catalog-header">
-        <div>
-          <h2 class="section-title">Product Catalog</h2>
-          <p class="section-subtitle">Explore our complete range of industrial safety solutions</p>
+      
+      <!-- Filter Tabs -->
+      <div class="filter-wrapper">
+        <div class="filter-tabs" id="filterTabs">
+          <button class="filter-tab active" data-industry="Confined Space">Confined Space</button>
+          <button class="filter-tab" data-industry="Oil and gas">Oil and gas</button>
+          <button class="filter-tab" data-industry="Welding">Welding</button>
+          <button class="filter-tab" data-industry="Gases">Gases</button>
+          <button class="filter-tab" data-industry="Gas Calibration">Gas Calibration</button>
+          <button class="filter-tab" data-industry="PPE">PPE</button>
         </div>
+      </div>
+
+      <!-- Industry Topic Info -->
+      <div class="industry-info" id="industryInfo">
+        <p id="industryDescription">Loading information...</p>
+      </div>
+
+      <!-- Search & Results Info -->
+      <div class="catalog-meta">
         <div class="search-wrapper">
           <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
-          <input type="text" id="searchInput" class="search-input" placeholder="Search products, brands..." autocomplete="off" />
+          <input type="text" id="searchInput" class="search-input" placeholder="Search products..." autocomplete="off" />
+        </div>
+        <div class="results-info" id="resultsInfo">
+          <span id="resultsCount"></span>
         </div>
       </div>
 
-      <!-- Filter Tabs -->
-      <div class="filter-tabs" id="filterTabs">
-        <button class="filter-tab active" data-category="all">
-          <span class="tab-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/></svg>
-          </span>
-          All
-          <span class="tab-count" id="countAll">0</span>
-        </button>
-        <button class="filter-tab" data-category="PPE for ERT">
-          <span class="tab-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-          </span>
-          PPE for ERT
-          <span class="tab-count" id="countERT">0</span>
-        </button>
-        <button class="filter-tab" data-category="PPE at Works">
-          <span class="tab-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
-          </span>
-          PPE at Works
-          <span class="tab-count" id="countWorks">0</span>
-        </button>
-        <button class="filter-tab" data-category="Gases">
-          <span class="tab-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 3h6v4H9z"/><path d="M7 7h10v14H7z"/></svg>
-          </span>
-          Gases
-          <span class="tab-count" id="countGases">0</span>
-        </button>
-        <button class="filter-tab" data-category="Gas Equipment">
-          <span class="tab-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="4"/></svg>
-          </span>
-          Gas Equipment
-          <span class="tab-count" id="countGasEquip">0</span>
-        </button>
-        <button class="filter-tab" data-category="Personal Care">
-          <span class="tab-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
-          </span>
-          Personal Care
-          <span class="tab-count" id="countPersonal">0</span>
-        </button>
-        <button class="filter-tab" data-category="Service & Maintenance">
-          <span class="tab-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
-          </span>
-          Service
-          <span class="tab-count" id="countService">0</span>
-        </button>
-        <button class="filter-tab" data-category="Welding Products">
-          <span class="tab-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
-          </span>
-          Welding
-          <span class="tab-count" id="countWelding">0</span>
-        </button>
-      </div>
-
-      <!-- Results Info -->
-      <div class="results-info" id="resultsInfo">
-        <span id="resultsCount">Loading products...</span>
-      </div>
-
-      <!-- Product Grid (rendered by JS) -->
-      <div class="product-grid" id="productGrid">
-        <!-- Cards will be dynamically injected here -->
+      <!-- Product Container (rendered by JS) -->
+      <div id="productContainer">
+        <!-- JS will inject subcategory headers and grids here -->
       </div>
 
       <!-- No Results State -->
@@ -131,70 +94,29 @@
   <!-- Contact Section -->
   <section class="contact-section" id="contact">
     <div class="container">
-      <div class="contact-header">
-        <h2 class="section-title">Get In Touch</h2>
-        <p class="section-subtitle">Reach out to our team for enquiries, quotations, and technical support</p>
+      <div class="contact-header text-center">
+        <h2 class="main-title" style="font-size: 2rem;">Get In Touch</h2>
+        <p class="main-description" style="font-size: 1rem;">Reach out to our team for enquiries, quotations, and technical support</p>
       </div>
 
       <div class="contact-grid">
         <!-- Office Locations -->
-        <div class="contact-card location-card">
-          <div class="contact-card-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-          </div>
+        <div class="contact-card">
           <h3>Show Room — Johor</h3>
           <p>No 19, Jalan Ekoperniagaan 3, Taman Kota Masai, 81700, Pasir Gudang, Johor, Malaysia</p>
         </div>
 
-        <div class="contact-card location-card">
-          <div class="contact-card-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-          </div>
+        <div class="contact-card">
           <h3>Workshop — Negeri Sembilan</h3>
           <p>297, Jalan 3/20, Kawasan Perindustrian Nilai 3, 71800, Nilai, Negeri Sembilan, Malaysia</p>
         </div>
 
         <!-- Contact Info -->
-        <div class="contact-card info-card">
-          <div class="contact-card-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-          </div>
+        <div class="contact-card">
           <h3>Phone & Email</h3>
-          <div class="contact-details">
-            <a href="tel:+60127125188" class="contact-detail-link">📱 +6012-712 5188</a>
-            <a href="tel:+6073865118" class="contact-detail-link">☎️ +607 386 5118</a>
-            <a href="mailto:airgas.sales@gmail.com" class="contact-detail-link">✉️ airgas.sales@gmail.com</a>
-          </div>
-        </div>
-
-        <!-- Team -->
-        <div class="contact-card team-card">
-          <div class="contact-card-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
-          </div>
-          <h3>Our Team</h3>
-          <div class="team-list">
-            <div class="team-member">
-              <span class="member-name">Pang BS</span>
-              <span class="member-role">Sales</span>
-              <a href="https://wa.me/60127125188" target="_blank" rel="noopener" class="wa-link">WhatsApp</a>
-            </div>
-            <div class="team-member">
-              <span class="member-name">Ms Tan</span>
-              <span class="member-role">Account</span>
-              <a href="https://wa.me/60127980719" target="_blank" rel="noopener" class="wa-link">WhatsApp</a>
-            </div>
-            <div class="team-member">
-              <span class="member-name">Miza</span>
-              <span class="member-role">Sales Admin</span>
-              <a href="https://wa.me/60177801118" target="_blank" rel="noopener" class="wa-link">WhatsApp</a>
-            </div>
-            <div class="team-member">
-              <span class="member-name">Lima</span>
-              <span class="member-role">Account</span>
-              <a href="https://wa.me/60177985118" target="_blank" rel="noopener" class="wa-link">WhatsApp</a>
-            </div>
-          </div>
+          <a href="tel:+60127125188" style="display:block; margin-bottom:8px;">📱 +6012-712 5188</a>
+          <a href="tel:+6073865118" style="display:block; margin-bottom:8px;">☎️ +607 386 5118</a>
+          <a href="mailto:airgas.sales@gmail.com" style="display:block;">✉️ airgas.sales@gmail.com</a>
         </div>
       </div>
     </div>
@@ -202,13 +124,13 @@
 
   <!-- Footer -->
   <footer class="footer">
-    <div class="container footer-inner">
+    <div class="container footer-content">
       <img src="assets/company_logo.png" alt="Airgas Technology Logo" class="footer-logo" />
       <p class="footer-text">&copy; 2026 Airgas Technology Sdn Bhd (405660D). All Rights Reserved.</p>
-      <div class="footer-links">
-        <a href="https://airgas.my/refund_returns/" target="_blank" rel="noopener">Returns Policy</a>
-        <a href="https://airgas.my/privacy-policy/" target="_blank" rel="noopener">Privacy</a>
-        <a href="https://airgas.my/terms-conditions/" target="_blank" rel="noopener">Terms</a>
+      <div class="footer-links" style="display:flex; gap:20px;">
+        <a href="https://airgas.my/refund_returns/" target="_blank" rel="noopener" class="footer-text">Returns Policy</a>
+        <a href="https://airgas.my/privacy-policy/" target="_blank" rel="noopener" class="footer-text">Privacy</a>
+        <a href="https://airgas.my/terms-conditions/" target="_blank" rel="noopener" class="footer-text">Terms</a>
       </div>
     </div>
   </footer>
