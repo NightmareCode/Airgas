@@ -25,13 +25,27 @@ while True:
                 name = decode_html(item.get("title", {}).get("rendered", ""))
                 link = item.get("link", "")
                 
-                # Try to get image
+                # Fetch featured media if possible
                 img_url = ""
                 yoast = item.get("yoast_head_json", {})
                 og_image = yoast.get("og_image", [])
                 if og_image and len(og_image) > 0:
                     img_url = og_image[0].get("url", "")
                 
+                # If yoast fails, check featured media
+                if not img_url:
+                    wp_featuredmedia = item.get("_links", {}).get("wp:featuredmedia", [])
+                    if wp_featuredmedia:
+                        media_url = wp_featuredmedia[0].get("href", "")
+                        if media_url:
+                            try:
+                                m_req = urllib.request.Request(media_url, headers={'User-Agent': 'Mozilla/5.0'})
+                                with urllib.request.urlopen(m_req) as m_resp:
+                                    m_data = json.loads(m_resp.read().decode('utf-8'))
+                                    img_url = m_data.get("source_url", "")
+                            except Exception:
+                                pass
+
                 # Assign industry based on simple keywords or cycle
                 ind = "Other industries"
                 lname = name.lower()

@@ -1,0 +1,93 @@
+AIRGAS TECHNOLOGY - PROJECT KNOWLEDGE BASE
+
+1. PROJECT OVERVIEW
+------------------
+The Airgas Technology Landing Page is a modern, high-performance single-page application (SPA) designed as a product catalog for industrial safety equipment and gas solutions in Malaysia. It uses a "Vanilla" tech stack (HTML/CSS/JS) for maximum speed and portability.
+
+2. CORE FILE ARCHITECTURE
+-----------------------
+- index.html: The structural foundation. Contains sections for navigation, the product catalog UI, contact information, and the footer.
+- style.css: A custom "Modern Industrial" design system. Features include:
+    * CSS variables for theme consistency.
+    * Responsive grid layouts (adaptive from desktop to small mobile).
+    * Sophisticated animations (staggered reveals, backdrop blurs, glassmorphism).
+- script.js: The application logic. Responsible for:
+    * Fetching and parsing 'assets/products.json'.
+    * Dynamic rendering of product cards.
+    * Real-time search and category filtering.
+    * Interactive 3D hover tracking on images.
+    * Mobile navigation toggle and scroll-based UI updates.
+- review.html: A developer tool for visual audits. It maps products to their images to check for naming errors or missing assets.
+
+3. DATA & ASSETS
+---------------
+- assets/products.json: The central data store. Contains arrays for categories, contact details (including WhatsApp numbers), and the full product list (id, name, category, brand, brandUrl).
+- assets/ (Category Folders): Images are organized into folders based on category names (e.g., 'PPEForERT', 'PPEAtWorks', 'Gases').
+- assets/BrandLogo/: Brand-specific logos used in the product cards.
+
+4. NAMING CONVENTIONS & WORKFLOWS
+-------------------------------
+- Product Images: Generated dynamically in JS.
+    * Logic: product_name -> remove non-alphanumeric -> trim -> .png
+    * Example: "MSA M1 SCBA" becomes "MSA M1 SCBA.png"
+- Brand Logos: lowercased_brand_name.png (with spaces to underscores).
+- Fallbacks: If an image fails to load, the UI automatically falls back to text-based initials.
+
+5. MAINTENANCE TOOLS (tools/ directory)
+--------------------------------------
+The project includes several Python-based automation scripts:
+- fetch_product_images.py: Automates the sourcing of missing product images.
+- image_trimmer.py: Removes transparent margins for cleaner UI display.
+- image_enhancer.py: Upscales or improves image quality.
+- fix_bad_images.py & fix_escape_hood.py: Targeted scripts for specific asset corrections.
+- bulk_download.py & image_downloader.py: Core utilities for handling external image requests.
+
+6. UI/UX FEATURES
+----------------
+- Staggered Reveal: Cards animate in sequence for a premium feel.
+- 3D Hover: Images follow the mouse cursor with subtle translation and scaling.
+- Search/Filter: Instant UI updates based on user input without page reloads.
+- Mobile Responsive: Custom breakpoints for tablets and small phones (grid switches to 2-columns).
+
+7. AIRGAS TECHNOLOGY (OFFICIAL WEBSITE) - PRODUCTS & SERVICES
+-----------------------------------------------------------
+Analyzed from https://airgas.my/
+
+PRODUCT CATEGORIES:
+- 1 PPE FOR ERT: Confined space detectors, PID sensors, airline escape sets, SCBAs, hazmat suits, etc.
+- 2 PPE AT WORKS: Safety glasses, ear protection, gloves, coveralls, fall protection, etc.
+- 3 GASES: Industrial gases (Oxygen, Acetylene, Nitrogen, Argon, CO2, Helium), refrigeration gases, calibration gases.
+- 4 GAS EQUIPMENT: Cylinders (47L, 50L, 10L), regulators, valves, hoses, connectors.
+- 5 TRAINING: Safety training for gas detectors, lifeline BA systems, chemical suits, confined space, and firefighting.
+- 6 PERSONAL CARE: Medical oxygen sets, medical air, concentrators, and related equipment.
+- 7 SERVICE AND MAINTENANCE: Hydro testing, SCBA/EEBD inspection, posicheck testing, and refills.
+- 8 HOME SAFETY: Specialized equipment for household protection.
+- 9 RENTAL OF EQUIPMENT: Short-term rental for SCBA, EEBD, gas detectors, fire extinguishers, chemical suits, etc.
+- 10 WELDING PRODUCTS: Inverter welding, MIG/TIG welding, electrodes, cutting/grinding disks.
+- 11 CLEANING: Industrial cleaning solutions and equipment.
+
+KEY SERVICES & EXPERTISE:
+- SCBA/EEBD Cylinder Inspection: Hydro testing (1.5x working pressure up to 450bar), visual tests (wall thickness, internal/external surfaces).
+- Breathing Apparatus Service: SCBA face mask and backplate inspection, Fit testing with POSICHECK, cleaning, and parts replacement.
+- Gas Refilling: Medical oxygen, medical air, nitrogen oxide, CO2 for firefighting, and industrial gases.
+- Firefighting Maintenance: Refilling, testing, and inspecting fire extinguishers, trolleys, and systems.
+- Rental Program: Cost-effective rental for expensive PPE (SCBA, Gas Detectors, chemical suits) for short-term projects.
+- Workshop & Training: Supply and training for workshop testing equipment and safety product usage (Gas detector, lifeline BA system, chemical suit, confined space, and firefighting).
+- Quality Standards: Products meet ANSI, CE, or EN standards.
+
+8. COMPANY BACKGROUND & SPECIALIZATION
+--------------------------------------
+Airgas Technology Sdn Bhd (Registration: 405660D) is a premier industrial resource in Malaysia, positioning itself as a "one-stop supply" center for safety and gas solutions.
+
+CORE SPECIALIZATIONS:
+- Industrial & Medical Gases: A key local supplier for Oxygen, Acetylene, Nitrogen, Argon, CO2, Helium, and refrigeration gases. They have a significant focus on Medical Breathing Air and Medical Oxygen (including equipment like concentrators and compressors).
+- Gas Equipment Distribution: Authorized distributor for high-quality components (valves, regulators, cylinders) sourced from Germany, Italy, Korea, and China.
+- Safety & PPE: Extensive range of Personal Protection Equipment (PPE) specifically for welders, chemical protection, and First Response Teams (FRT).
+- Firefighting Systems: Full lifecycle support for firefighting equipment, including media refilling (CO2, FM200, ABC Powder, AFFF Foam) and system inspections.
+- Strategic Rental Business: Specialized in renting high-cost equipment (SCBA, Gas Detectors, Life-line systems) to help clients manage costs for short-term projects.
+- Technical Workshop & Training: Unique capability in providing both the equipment and the certified training required for safety inspections and workshop operations.
+
+VALUE PROPOSITION:
+- Quality Assurance: Careful selection of products to meet international standards (ANSI, CE, EN).
+- Reliability: Market credibility built on technical expertise and a comprehensive inventory that allows them to cater to complex organizational needs across Malaysia.
+- Multiple Locations: Showroom in Johor (Pasir Gudang) and a specialized workshop in Negeri Sembilan (Nilai).
