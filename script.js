@@ -99,12 +99,23 @@ document.addEventListener('DOMContentLoaded', () => {
         card.className = 'product-card';
         
         const initials = product.name.split(' ').slice(0, 2).map(w => w[0] || '').join('').toUpperCase() || 'AG';
-        const fallbackUrl = `https://ui-avatars.com/api/?name=${initials}&background=F85A2B&color=fff&size=128`;
-        const imgSrc = product.imgUrl ? product.imgUrl : fallbackUrl;
+        const fallbackAvatar = `https://ui-avatars.com/api/?name=${initials}&background=F85A2B&color=fff&size=128`;
+        
+        // Industry-based folder path
+        const industryFolder = (product.industry || 'Other industries').replace(/\s+/g, '');
+        const sanitizedFilename = product.name.replace(/[^a-zA-Z0-9\s]/g, '').trim() + '.png';
+        const localSrc = `assets/${industryFolder}/${sanitizedFilename}`;
+        
+        // Priority: 1. Local industry folder, 2. Live imgUrl, 3. Avatar fallback
+        const mainImgSrc = localSrc; 
 
         card.innerHTML = `
           <div class="card-image-area">
-            <img src="${imgSrc}" class="product-img" alt="${product.name}" onerror="this.onerror=null; this.src='${fallbackUrl}'" loading="lazy" />
+            <img src="${mainImgSrc}" 
+                 class="product-img" 
+                 alt="${product.name}" 
+                 onerror="if(this.src !== '${product.imgUrl || ''}') { this.src='${product.imgUrl || fallbackAvatar}'; } else { this.src='${fallbackAvatar}'; this.onerror=null; }" 
+                 loading="lazy" />
           </div>
           <div class="card-content">
             <div class="product-brand">${product.brand || 'Airgas Technology'}</div>
