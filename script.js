@@ -98,27 +98,13 @@ document.addEventListener('DOMContentLoaded', () => {
         const card = document.createElement('div');
         card.className = 'product-card';
         
-        const sanitizedFilename = product.name.replace(/[^a-zA-Z0-9\s]/g, '').trim() + '.png';
-        const categoryFolders = {
-          'PPE for ERT': 'PPEForERT',
-          'PPE at Works': 'PPEAtWorks',
-          'Gases': 'Gases',
-          'Gas Equipment': 'GasEquipment',
-          'Personal Care': 'PersonalCare',
-          'Service & Maintenance': 'ServiceAndMaintenance',
-          'Welding Products': 'WeldingProducts'
-        };
-        const folderName = categoryFolders[product.category] || 'PPEAtWorks';
-        let imgSrc = `assets/${folderName}/${sanitizedFilename}`;
-        if (product.name.includes('Dräger')) {
-          imgSrc = `assets/${folderName}/${sanitizedFilename.replace('Drger', 'Dräger')}`;
-        }
-        
-        const initials = product.name.split(' ').slice(0, 2).map(w => w[0]).join('').toUpperCase();
+        const initials = product.name.split(' ').slice(0, 2).map(w => w[0] || '').join('').toUpperCase() || 'AG';
+        const fallbackUrl = `https://ui-avatars.com/api/?name=${initials}&background=F85A2B&color=fff&size=128`;
+        const imgSrc = product.imgUrl ? product.imgUrl : fallbackUrl;
 
         card.innerHTML = `
           <div class="card-image-area">
-            <img src="${imgSrc}" class="product-img" alt="${product.name}" onerror="this.onerror=null; this.src='https://ui-avatars.com/api/?name=${initials}&background=F85A2B&color=fff&size=128'" loading="lazy" />
+            <img src="${imgSrc}" class="product-img" alt="${product.name}" onerror="this.onerror=null; this.src='${fallbackUrl}'" loading="lazy" />
           </div>
           <div class="card-content">
             <div class="product-brand">${product.brand || 'Airgas Technology'}</div>

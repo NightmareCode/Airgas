@@ -43,2171 +43,3292 @@
   },
   "products": [
     {
-      "id": 1,
-      "name": "MSA PID Sensor 0-2000ppm eVx",
-      "category": "PPE for ERT",
-      "brand": "MSA Safety",
-      "brandUrl": "https://my.msasafety.com/",
-      "industry": "Gas Calibration",
-      "subCategory": "Detector",
-      "url": "https://airgas.my/product/msa-pid-sensor-0-2000ppm-evx/"
-    },
-    {
-      "id": 2,
-      "name": "Airline Facemask with Escape Set",
-      "category": "PPE for ERT",
-      "brand": "DPI Sekur",
-      "brandUrl": "https://www.sekur.com/en/",
-      "industry": "Confined Space",
-      "subCategory": "Mask",
-      "url": "https://airgas.my/product/airline-facemask-with-escape-set/"
-    },
-    {
-      "id": 3,
-      "name": "Airline System 50CFM Intrinsically Safe Breather Box",
-      "category": "PPE for ERT",
-      "brand": null,
-      "brandUrl": null,
-      "industry": "Confined Space",
+      "id": 5505,
+      "name": "motionSCOUT MSA 1",
+      "industry": "Other industries",
       "subCategory": "Equipment",
-      "url": "https://airgas.my/product/airline-system-50cfm-intrinsically-safe-breather-box/"
+      "url": "https://airgas.my/product/motionscout-msa/",
+      "imgUrl": "",
+      "brand": "Airgas Technology"
     },
     {
-      "id": 4,
-      "name": "Apollo Airline Trolley VTN 50LX2",
-      "category": "PPE for ERT",
-      "brand": "Apollo",
-      "brandUrl": null,
-      "industry": "Confined Space",
-      "subCategory": "Trolley",
-      "url": "https://airgas.my/product/apollo-airline-trolley-vtn-50lx2/"
+      "id": 5436,
+      "name": "MSA 10038560 MiniScape Escape Respirator,",
+      "industry": "Other industries",
+      "subCategory": "Mask",
+      "url": "https://airgas.my/product/msa-10038560-miniscape-escape-respirator/",
+      "imgUrl": "",
+      "brand": "Airgas Technology"
     },
     {
-      "id": 5,
-      "name": "Airline Trolley Breathing Air Sekur",
-      "category": "PPE for ERT",
-      "brand": "DPI Sekur",
-      "brandUrl": "https://www.sekur.com/en/",
-      "industry": "Confined Space",
-      "subCategory": "Trolley",
-      "url": "https://airgas.my/product/airline-trolley-breathing-air-sekur/"
-    },
-    {
-      "id": 6,
-      "name": "AlphaTec EVO Type CV Chemical Suit",
-      "category": "PPE for ERT",
-      "brand": "Ansell",
-      "brandUrl": "https://www.ansell.com/",
+      "id": 5434,
+      "name": "Cabinet for safety or fireman PPE",
       "industry": "Oil and gas",
-      "subCategory": "Protective Suit",
-      "url": "https://airgas.my/product/alphatec-evo-type-cv-chemical-suit/"
+      "subCategory": "Equipment",
+      "url": "https://airgas.my/product/cabinet-for-safety-or-fireman-ppe/",
+      "imgUrl": "",
+      "brand": "Airgas Technology"
     },
     {
-      "id": 7,
-      "name": "AlphaTec Light Type TR Chemical Suit",
-      "category": "PPE for ERT",
-      "brand": "Ansell",
-      "brandUrl": "https://www.ansell.com/",
+      "id": 5413,
+      "name": "Hand wheel for valve",
+      "industry": "Other industries",
+      "subCategory": "Equipment",
+      "url": "https://airgas.my/product/hand-wheel-for-valve/",
+      "imgUrl": "",
+      "brand": "Airgas Technology"
+    },
+    {
+      "id": 5409,
+      "name": "booth for fireman with Gore-Tex waterproof",
       "industry": "Oil and gas",
-      "subCategory": "Protective Suit",
-      "url": "https://airgas.my/product/alphatec-light-type-tr-chemical-suit/"
-    },
-    {
-      "id": 8,
-      "name": "AlphaTec SUPER Agents Protection Suit",
-      "category": "PPE for ERT",
-      "brand": "Ansell",
-      "brandUrl": "https://www.ansell.com/",
-      "industry": "Oil and gas",
-      "subCategory": "Protective Suit",
-      "url": "https://airgas.my/product/alphatec-super-agents-protection-suit/"
-    },
-    {
-      "id": 9,
-      "name": "AlphaTec Trainer Hazmat Chemical Suit",
-      "category": "PPE for ERT",
-      "brand": "Ansell",
-      "brandUrl": "https://www.ansell.com/",
-      "industry": "Oil and gas",
-      "subCategory": "Protective Suit",
-      "url": "https://airgas.my/product/alphatec-trainer-hazmat-chemical-suit/"
-    },
-    {
-      "id": 10,
-      "name": "ALTAIR 5X Pump Probe MSA",
-      "category": "PPE for ERT",
-      "brand": "MSA Safety",
-      "brandUrl": "https://my.msasafety.com/",
-      "industry": "Gas Calibration",
-      "subCategory": "Equipment",
-      "url": "https://airgas.my/product/altair-5x-pump-probe-msa/"
-    },
-    {
-      "id": 11,
-      "name": "ALTAIR 5X Multigas Detector",
-      "category": "PPE for ERT",
-      "brand": "MSA Safety",
-      "brandUrl": "https://my.msasafety.com/",
-      "industry": "Gas Calibration",
-      "subCategory": "Detector",
-      "url": "https://airgas.my/product/altair-5x-multigas-detector/"
-    },
-    {
-      "id": 12,
-      "name": "MSA PremAire Breathing Airline Escape Set",
-      "category": "PPE for ERT",
-      "brand": "MSA Safety",
-      "brandUrl": "https://my.msasafety.com/",
-      "industry": "Confined Space",
-      "subCategory": "Equipment",
-      "url": "https://airgas.my/product/msa-premaire-breathing-airline-escape-set/"
-    },
-    {
-      "id": 13,
-      "name": "MSA AirCart Breathing Airline Trolley",
-      "category": "PPE for ERT",
-      "brand": "MSA Safety",
-      "brandUrl": "https://my.msasafety.com/",
-      "industry": "Confined Space",
-      "subCategory": "Trolley",
-      "url": "https://airgas.my/product/msa-aircart-breathing-airline-trolley/"
-    },
-    {
-      "id": 14,
-      "name": "BW Gas Alert Max XT II Confined Space Detector",
-      "category": "PPE for ERT",
-      "brand": "Honeywell",
-      "brandUrl": "https://sps.honeywell.com/",
-      "industry": "Gas Calibration",
-      "subCategory": "Detector",
-      "url": "https://airgas.my/product/bw-gas-alert-max-xt-ii-confined-space-detector/"
-    },
-    {
-      "id": 15,
-      "name": "Chemical Protection AlphaTec Super Type CV",
-      "category": "PPE for ERT",
-      "brand": "Ansell",
-      "brandUrl": "https://www.ansell.com/",
-      "industry": "Confined Space",
-      "subCategory": "Head Protection",
-      "url": "https://airgas.my/product/chemical-protection-alphatec-super-type-cv/"
-    },
-    {
-      "id": 16,
-      "name": "FR Ranger Flame Resistant Coverall",
-      "category": "PPE for ERT",
-      "brand": null,
-      "brandUrl": null,
-      "industry": "Confined Space",
-      "subCategory": "Protective Suit",
-      "url": "https://airgas.my/product/fr-ranger-flame-resistant-coverall/"
-    },
-    {
-      "id": 17,
-      "name": "CTS Composite Cylinder Type 4 Lightweight 7L",
-      "category": "PPE for ERT",
-      "brand": "CTS",
-      "brandUrl": null,
-      "industry": "Confined Space",
-      "subCategory": "Cylinder",
-      "url": "https://airgas.my/product/cts-composite-cylinder-type-4-lightweight-7l/"
-    },
-    {
-      "id": 18,
-      "name": "CTS Lightweight Type 4 Cylinder 9L",
-      "category": "PPE for ERT",
-      "brand": "CTS",
-      "brandUrl": null,
-      "industry": "Confined Space",
-      "subCategory": "Cylinder",
-      "url": "https://airgas.my/product/cts-lightweight-type-4-cylinder-9l/"
-    },
-    {
-      "id": 19,
-      "name": "DIABLO AMIANTE DPI Sekur Breathing Device",
-      "category": "PPE for ERT",
-      "brand": "DPI Sekur",
-      "brandUrl": "https://www.sekur.com/en/",
-      "industry": "Confined Space",
-      "subCategory": "Equipment",
-      "url": "https://airgas.my/product/diablo-amiante-dpi-sekur-breathing-device/"
-    },
-    {
-      "id": 20,
-      "name": "DPI Sekur IDEA CBRN Full Face Mask",
-      "category": "PPE for ERT",
-      "brand": "DPI Sekur",
-      "brandUrl": "https://www.sekur.com/en/",
-      "industry": "Confined Space",
-      "subCategory": "Mask",
-      "url": "https://airgas.my/product/dpi-sekur-idea-cbrn-full-face-mask/"
-    },
-    {
-      "id": 21,
-      "name": "DPI Sekur M21 Full Face Mask",
-      "category": "PPE for ERT",
-      "brand": "DPI Sekur",
-      "brandUrl": "https://www.sekur.com/en/",
-      "industry": "Confined Space",
-      "subCategory": "Mask",
-      "url": "https://airgas.my/product/dpi-sekur-m21-full-face-mask/"
-    },
-    {
-      "id": 22,
-      "name": "DPI Sekur Full Face Mask C701",
-      "category": "PPE for ERT",
-      "brand": "DPI Sekur",
-      "brandUrl": "https://www.sekur.com/en/",
-      "industry": "Confined Space",
-      "subCategory": "Mask",
-      "url": "https://airgas.my/product/dpi-sekur-full-face-mask-c701/"
-    },
-    {
-      "id": 23,
-      "name": "DPI Sekur Full Face Mask C702",
-      "category": "PPE for ERT",
-      "brand": "DPI Sekur",
-      "brandUrl": "https://www.sekur.com/en/",
-      "industry": "Confined Space",
-      "subCategory": "Mask",
-      "url": "https://airgas.my/product/dpi-sekur-full-face-mask-c702/"
-    },
-    {
-      "id": 24,
-      "name": "Dr\u00c3\u00a4ger Saver CF Compressed Air Escape Device",
-      "category": "PPE for ERT",
-      "brand": "Dr\u00c3\u00a4ger",
-      "brandUrl": "https://www.draeger.com/",
-      "industry": "Confined Space",
-      "subCategory": "Equipment",
-      "url": "https://airgas.my/product/dr-ger-saver-cf-compressed-air-escape-device/"
-    },
-    {
-      "id": 25,
-      "name": "EEBD Sekur Emergency Escape Device",
-      "category": "PPE for ERT",
-      "brand": "DPI Sekur",
-      "brandUrl": "https://www.sekur.com/en/",
-      "industry": "Confined Space",
-      "subCategory": "EEBD",
-      "url": "https://airgas.my/product/eebd-sekur-emergency-escape-device/"
-    },
-    {
-      "id": 26,
-      "name": "EFV Excess Flow Valve SanOSub Italy",
-      "category": "PPE for ERT",
-      "brand": "SanOSub",
-      "brandUrl": null,
-      "industry": "Confined Space",
-      "subCategory": "Valve",
-      "url": "https://airgas.my/product/efv-excess-flow-valve-sanosub-italy/"
-    },
-    {
-      "id": 27,
-      "name": "EFV Excess Flow Valve VTI with Sinterfilter",
-      "category": "PPE for ERT",
-      "brand": "VTI",
-      "brandUrl": null,
-      "industry": "Confined Space",
-      "subCategory": "Valve",
-      "url": "https://airgas.my/product/efv-excess-flow-valve-vti-with-sinterfilter/"
-    },
-    {
-      "id": 28,
-      "name": "AVEC Escape Hood",
-      "category": "PPE for ERT",
-      "brand": "AVEC",
-      "brandUrl": null,
-      "industry": "Confined Space",
-      "subCategory": "Hood",
-      "url": "https://airgas.my/product/avec-escape-hood/"
-    },
-    {
-      "id": 29,
-      "name": "PoliBlitz ABEK 15 Sekur Emergency Respirator",
-      "category": "PPE for ERT",
-      "brand": "DPI Sekur",
-      "brandUrl": "https://www.sekur.com/en/",
-      "industry": "Confined Space",
-      "subCategory": "Equipment",
-      "url": "https://airgas.my/product/poliblitz-abek-15-sekur-emergency-respirator/"
-    },
-    {
-      "id": 30,
-      "name": "Filters A2B2P3 R D NBC DIRIN 500",
-      "category": "PPE for ERT",
-      "brand": "DPI Sekur",
-      "brandUrl": "https://www.sekur.com/en/",
-      "industry": "Confined Space",
-      "subCategory": "Filter",
-      "url": "https://airgas.my/product/filters-a2b2p3-r-d-nbc-dirin-500/"
-    },
-    {
-      "id": 31,
-      "name": "FireFighting Suit Jacket and Trouser",
-      "category": "PPE for ERT",
-      "brand": null,
-      "brandUrl": null,
-      "industry": "Confined Space",
-      "subCategory": "Protective Suit",
-      "url": "https://airgas.my/product/firefighting-suit-jacket-and-trouser/"
-    },
-    {
-      "id": 32,
-      "name": "Harvik Fireman Boot",
-      "category": "PPE for ERT",
-      "brand": "Harvik",
-      "brandUrl": "https://www.harvikboots.com/",
-      "industry": "Confined Space",
       "subCategory": "Boots",
-      "url": "https://airgas.my/product/harvik-fireman-boot/"
+      "url": "https://airgas.my/product/booth-for-fireman-with-gore-tex-waterproof/",
+      "imgUrl": "",
+      "brand": "Airgas Technology"
     },
     {
-      "id": 33,
-      "name": "DuPont Nomex Fireman Fighting Suit (SW Brand)",
-      "category": "PPE for ERT",
-      "brand": "DuPont",
-      "brandUrl": "https://www.dupont.com/",
-      "industry": "Confined Space",
-      "subCategory": "Protective Suit",
-      "url": "https://airgas.my/product/dupont-nomex-fireman-fighting-suit-sw-brand/"
-    },
-    {
-      "id": 34,
-      "name": "DuPont Kevlar Fireman Glove (SW Brand)",
-      "category": "PPE for ERT",
-      "brand": "DuPont",
-      "brandUrl": "https://www.dupont.com/",
-      "industry": "Confined Space",
-      "subCategory": "Gloves",
-      "url": "https://airgas.my/product/dupont-kevlar-fireman-glove-sw-brand/"
-    },
-    {
-      "id": 35,
-      "name": "Fireman Hoods",
-      "category": "PPE for ERT",
-      "brand": null,
-      "brandUrl": null,
-      "industry": "Confined Space",
-      "subCategory": "Hood",
-      "url": "https://airgas.my/product/fireman-hoods/"
-    },
-    {
-      "id": 36,
-      "name": "Fireman Suit",
-      "category": "PPE for ERT",
-      "brand": null,
-      "brandUrl": null,
-      "industry": "Confined Space",
-      "subCategory": "Protective Suit",
-      "url": "https://airgas.my/product/fireman-suit/"
-    },
-    {
-      "id": 37,
-      "name": "Flash Light for MSA Fireman Helmet",
-      "category": "PPE for ERT",
-      "brand": "MSA Safety",
-      "brandUrl": "https://my.msasafety.com/",
-      "industry": "Confined Space",
-      "subCategory": "Head Protection",
-      "url": "https://airgas.my/product/flash-light-for-msa-fireman-helmet/"
-    },
-    {
-      "id": 38,
-      "name": "Fresh Air Hose Breathing Apparatus A-Type 10M (DPI Sekur)",
-      "category": "PPE for ERT",
-      "brand": "DPI Sekur",
-      "brandUrl": "https://www.sekur.com/en/",
-      "industry": "Confined Space",
+      "id": 5408,
+      "name": "DSU distress signal unit",
+      "industry": "Other industries",
       "subCategory": "Equipment",
-      "url": "https://airgas.my/product/fresh-air-hose-breathing-apparatus-a-type-10m-dpi-sekur/"
+      "url": "https://airgas.my/product/dsu-distress-signal-unit/",
+      "imgUrl": "",
+      "brand": "Airgas Technology"
     },
     {
-      "id": 39,
-      "name": "Fresh Air Hose Breathing Apparatus A-Type Blower (DPI Sekur)",
-      "category": "PPE for ERT",
-      "brand": "DPI Sekur",
-      "brandUrl": "https://www.sekur.com/en/",
-      "industry": "Confined Space",
+      "id": 5400,
+      "name": "Cylinder seamless Steel 5L",
+      "industry": "Other industries",
+      "subCategory": "Cylinder",
+      "url": "https://airgas.my/product/cylinder-seamless-steel-5l/",
+      "imgUrl": "",
+      "brand": "Airgas Technology"
+    },
+    {
+      "id": 5395,
+      "name": "racking for 16 cylinder , pallet",
+      "industry": "Other industries",
+      "subCategory": "Cylinder",
+      "url": "https://airgas.my/product/racking-for-16-cylinder-pallet/",
+      "imgUrl": "",
+      "brand": "Airgas Technology"
+    },
+    {
+      "id": 5394,
+      "name": "manifold 16 cylinder",
+      "industry": "Other industries",
+      "subCategory": "Cylinder",
+      "url": "https://airgas.my/product/manifold-16-cylinder/",
+      "imgUrl": "",
+      "brand": "Airgas Technology"
+    },
+    {
+      "id": 5385,
+      "name": "shower & eyewash with plastic bowl",
+      "industry": "Other industries",
       "subCategory": "Equipment",
-      "url": "https://airgas.my/product/fresh-air-hose-breathing-apparatus-a-type-blower-dpi-sekur/"
+      "url": "https://airgas.my/product/shower-eyewash-with-plastic-bowl/",
+      "imgUrl": "",
+      "brand": "Airgas Technology"
     },
     {
-      "id": 40,
-      "name": "Fresh Air Hose Apparatus A-Type with Blower (DPI Sekur)",
-      "category": "PPE for ERT",
-      "brand": "DPI Sekur",
-      "brandUrl": "https://www.sekur.com/en/",
-      "industry": "Confined Space",
-      "subCategory": "Equipment",
-      "url": "https://airgas.my/product/fresh-air-hose-apparatus-a-type-with-blower-dpi-sekur/"
-    },
-    {
-      "id": 41,
-      "name": "Fresh Air Hose Apparatus A-Type with Filter (DPI Sekur)",
-      "category": "PPE for ERT",
-      "brand": "DPI Sekur",
-      "brandUrl": "https://www.sekur.com/en/",
-      "industry": "Confined Space",
-      "subCategory": "Filter",
-      "url": "https://airgas.my/product/fresh-air-hose-apparatus-a-type-with-filter-dpi-sekur/"
-    },
-    {
-      "id": 42,
-      "name": "Full Face Mask P500 Vienna",
-      "category": "PPE for ERT",
-      "brand": "DPI Sekur",
-      "brandUrl": "https://www.sekur.com/en/",
-      "industry": "Confined Space",
-      "subCategory": "Mask",
-      "url": "https://airgas.my/product/full-face-mask-p500-vienna/"
-    },
-    {
-      "id": 43,
-      "name": "Full Face Mask SFERA (DPI Sekur)",
-      "category": "PPE for ERT",
-      "brand": "DPI Sekur",
-      "brandUrl": "https://www.sekur.com/en/",
-      "industry": "Confined Space",
-      "subCategory": "Mask",
-      "url": "https://airgas.my/product/full-face-mask-sfera-dpi-sekur/"
-    },
-    {
-      "id": 44,
-      "name": "AVEC CM6 Full Facemask Butyl",
-      "category": "PPE for ERT",
-      "brand": "AVEC",
-      "brandUrl": null,
-      "industry": "Confined Space",
-      "subCategory": "Mask",
-      "url": "https://airgas.my/product/avec-cm6-full-facemask-butyl/"
-    },
-    {
-      "id": 45,
-      "name": "Gas Detector 4 Gases ISc",
-      "category": "PPE for ERT",
-      "brand": "Industrial Scientific",
-      "brandUrl": "https://www.indsci.com/",
-      "industry": "Gas Calibration",
-      "subCategory": "Detector",
-      "url": "https://airgas.my/product/gas-detector-4-gases-isc/"
-    },
-    {
-      "id": 46,
-      "name": "Gas Detector Single H2S T40 II Rattler (Industrial Scientific)",
-      "category": "PPE for ERT",
-      "brand": "Industrial Scientific",
-      "brandUrl": "https://www.indsci.com/",
-      "industry": "Gas Calibration",
-      "subCategory": "Detector",
-      "url": "https://airgas.my/product/gas-detector-single-h2s-t40-ii-rattler-industrial-scientific/"
-    },
-    {
-      "id": 47,
-      "name": "ToxiRAE Pro BW Single Gas Detector",
-      "category": "PPE for ERT",
-      "brand": "Honeywell RAE",
-      "brandUrl": "https://sps.honeywell.com/",
-      "industry": "Gas Calibration",
-      "subCategory": "Detector",
-      "url": "https://airgas.my/product/toxirae-pro-bw-single-gas-detector/"
-    },
-    {
-      "id": 48,
-      "name": "Fireman Glove",
-      "category": "PPE for ERT",
-      "brand": null,
-      "brandUrl": null,
-      "industry": "Confined Space",
-      "subCategory": "Gloves",
-      "url": "https://airgas.my/product/fireman-glove/"
-    },
-    {
-      "id": 49,
-      "name": "GVS Elipse ABEK1 RD Half Face Mask",
-      "category": "PPE for ERT",
-      "brand": "GVS",
-      "brandUrl": "https://www.gvs.com/",
-      "industry": "Confined Space",
-      "subCategory": "Mask",
-      "url": "https://airgas.my/product/gvs-elipse-abek1-rd-half-face-mask/"
-    },
-    {
-      "id": 50,
-      "name": "GVS Elipse ABEK1P3 RD Half Face Mask",
-      "category": "PPE for ERT",
-      "brand": "GVS",
-      "brandUrl": "https://www.gvs.com/",
-      "industry": "Confined Space",
-      "subCategory": "Mask",
-      "url": "https://airgas.my/product/gvs-elipse-abek1p3-rd-half-face-mask/"
-    },
-    {
-      "id": 51,
-      "name": "AVEC Half Facemask Butyl",
-      "category": "PPE for ERT",
-      "brand": "AVEC",
-      "brandUrl": null,
-      "industry": "Confined Space",
-      "subCategory": "Mask",
-      "url": "https://airgas.my/product/avec-half-facemask-butyl/"
-    },
-    {
-      "id": 52,
-      "name": "Elvex Dielectric Multi-Position Earmuff",
-      "category": "PPE for ERT",
-      "brand": "Elvex",
-      "brandUrl": "https://www.elvex.com/",
-      "industry": "Confined Space",
-      "subCategory": "Hearing Protection",
-      "url": "https://airgas.my/product/elvex-dielectric-multi-position-earmuff/"
-    },
-    {
-      "id": 53,
-      "name": "Honeywell Full Body Harness MB9000",
-      "category": "PPE for ERT",
-      "brand": "Honeywell",
-      "brandUrl": "https://sps.honeywell.com/",
-      "industry": "Confined Space",
-      "subCategory": "Fall Protection",
-      "url": "https://airgas.my/product/honeywell-full-body-harness-mb9000/"
-    },
-    {
-      "id": 54,
-      "name": "Honeywell T8000 Type II SCBA",
-      "category": "PPE for ERT",
-      "brand": "Honeywell",
-      "brandUrl": "https://sps.honeywell.com/",
-      "industry": "Confined Space",
-      "subCategory": "SCBA",
-      "url": "https://airgas.my/product/honeywell-t8000-type-ii-scba/"
-    },
-    {
-      "id": 55,
-      "name": "Globestock Load Arrest",
-      "category": "PPE for ERT",
-      "brand": "Globestock",
-      "brandUrl": "https://www.globestock.co.uk/",
-      "industry": "Confined Space",
-      "subCategory": "Equipment",
-      "url": "https://airgas.my/product/globestock-load-arrest/"
-    },
-    {
-      "id": 56,
-      "name": "Mobile Foam Unit 120L Fire Extinguisher Trolley",
-      "category": "PPE for ERT",
-      "brand": null,
-      "brandUrl": null,
-      "industry": "Confined Space",
-      "subCategory": "Trolley",
-      "url": "https://airgas.my/product/mobile-foam-unit-120l-fire-extinguisher-trolley/"
-    },
-    {
-      "id": 57,
-      "name": "MSA S-CAP Hood",
-      "category": "PPE for ERT",
-      "brand": "MSA Safety",
-      "brandUrl": "https://my.msasafety.com/",
-      "industry": "Confined Space",
-      "subCategory": "Hood",
-      "url": "https://airgas.my/product/msa-s-cap-hood/"
-    },
-    {
-      "id": 58,
-      "name": "Honeywell BW Ultra Multi-Gas Detector",
-      "category": "PPE for ERT",
-      "brand": "Honeywell",
-      "brandUrl": "https://sps.honeywell.com/",
-      "industry": "Gas Calibration",
-      "subCategory": "Detector",
-      "url": "https://airgas.my/product/honeywell-bw-ultra-multi-gas-detector/"
-    },
-    {
-      "id": 59,
-      "name": "PAB Fire Helmet HT04",
-      "category": "PPE for ERT",
-      "brand": "PAB",
-      "brandUrl": null,
-      "industry": "Confined Space",
-      "subCategory": "Head Protection",
-      "url": "https://airgas.my/product/pab-fire-helmet-ht04/"
-    },
-    {
-      "id": 60,
-      "name": "Honeywell PAPR Blower Set with HEPA",
-      "category": "PPE for ERT",
-      "brand": "Honeywell",
-      "brandUrl": "https://sps.honeywell.com/",
-      "industry": "Confined Space",
-      "subCategory": "Equipment",
-      "url": "https://airgas.my/product/honeywell-papr-blower-set-with-hepa/"
-    },
-    {
-      "id": 61,
-      "name": "Respiratory Protection Filter ABEK2 DIRIN 230 Sekur",
-      "category": "PPE for ERT",
-      "brand": "DPI Sekur",
-      "brandUrl": "https://www.sekur.com/en/",
-      "industry": "Confined Space",
-      "subCategory": "Filter",
-      "url": "https://airgas.my/product/respiratory-protection-filter-abek2-dirin-230-sekur/"
-    },
-    {
-      "id": 62,
-      "name": "Sample Line Probe for ALTAIR 5X MSA",
-      "category": "PPE for ERT",
-      "brand": "MSA Safety",
-      "brandUrl": "https://my.msasafety.com/",
-      "industry": "Gas Calibration",
-      "subCategory": "Equipment",
-      "url": "https://airgas.my/product/sample-line-probe-for-altair-5x-msa/"
-    },
-    {
-      "id": 63,
-      "name": "SCBA Carry Box",
-      "category": "PPE for ERT",
-      "brand": null,
-      "brandUrl": null,
-      "industry": "Confined Space",
-      "subCategory": "SCBA",
-      "url": "https://airgas.my/product/scba-carry-box/"
-    },
-    {
-      "id": 64,
-      "name": "SCBA Composite Cylinder 6.8L 300bar",
-      "category": "PPE for ERT",
-      "brand": null,
-      "brandUrl": null,
-      "industry": "Confined Space",
-      "subCategory": "SCBA",
-      "url": "https://airgas.my/product/scba-composite-cylinder-6-8l-300bar/"
-    },
-    {
-      "id": 65,
-      "name": "MSA M1 SCBA",
-      "category": "PPE for ERT",
-      "brand": "MSA Safety",
-      "brandUrl": "https://my.msasafety.com/",
-      "industry": "Confined Space",
-      "subCategory": "SCBA",
-      "url": "https://airgas.my/product/msa-m1-scba/"
-    },
-    {
-      "id": 66,
-      "name": "SCBA Valve Repair Kit",
-      "category": "PPE for ERT",
-      "brand": null,
-      "brandUrl": null,
-      "industry": "Confined Space",
-      "subCategory": "SCBA",
-      "url": "https://airgas.my/product/scba-valve-repair-kit/"
-    },
-    {
-      "id": 67,
-      "name": "SCBA Valve SanOSub 300bar M18",
-      "category": "PPE for ERT",
-      "brand": "SanOSub",
-      "brandUrl": null,
-      "industry": "Confined Space",
-      "subCategory": "SCBA",
-      "url": "https://airgas.my/product/scba-valve-sanosub-300bar-m18/"
-    },
-    {
-      "id": 68,
-      "name": "DPI Sekur SCBA Type 2",
-      "category": "PPE for ERT",
-      "brand": "DPI Sekur",
-      "brandUrl": "https://www.sekur.com/en/",
-      "industry": "Confined Space",
-      "subCategory": "SCBA",
-      "url": "https://airgas.my/product/dpi-sekur-scba-type-2/"
-    },
-    {
-      "id": 69,
-      "name": "Sekur Escape esCAPe Wall Mount",
-      "category": "PPE for ERT",
-      "brand": "DPI Sekur",
-      "brandUrl": "https://www.sekur.com/en/",
-      "industry": "Confined Space",
-      "subCategory": "Equipment",
-      "url": "https://airgas.my/product/sekur-escape-escape-wall-mount/"
-    },
-    {
-      "id": 70,
-      "name": "Stretcher Double Fold",
-      "category": "PPE for ERT",
-      "brand": null,
-      "brandUrl": null,
-      "industry": "Confined Space",
-      "subCategory": "Equipment",
-      "url": "https://airgas.my/product/stretcher-double-fold/"
-    },
-    {
-      "id": 71,
-      "name": "Trellcover 3-Finger Glove",
-      "category": "PPE for ERT",
-      "brand": "Trelleborg",
-      "brandUrl": "https://www.trelleborg.com/",
-      "industry": "Confined Space",
-      "subCategory": "Gloves",
-      "url": "https://airgas.my/product/trellcover-3-finger-glove/"
-    },
-    {
-      "id": 72,
-      "name": "Globestock Tripod",
-      "category": "PPE for ERT",
-      "brand": "Globestock",
-      "brandUrl": "https://www.globestock.co.uk/",
-      "industry": "Confined Space",
-      "subCategory": "Confined Space Entry",
-      "url": "https://airgas.my/product/globestock-tripod/"
-    },
-    {
-      "id": 73,
-      "name": "MSA TRIPOD Fall Protection Set (Winch + Rescuer)",
-      "category": "PPE for ERT",
-      "brand": "MSA Safety",
-      "brandUrl": "https://my.msasafety.com/",
-      "industry": "Confined Space",
-      "subCategory": "Confined Space Entry",
-      "url": "https://airgas.my/product/msa-tripod-fall-protection-set-winch-rescuer/"
-    },
-    {
-      "id": 74,
-      "name": "Trolley Airline System",
-      "category": "PPE for ERT",
-      "brand": null,
-      "brandUrl": null,
-      "industry": "Confined Space",
-      "subCategory": "Trolley",
-      "url": "https://airgas.my/product/trolley-airline-system/"
-    },
-    {
-      "id": 75,
-      "name": "MSA V-FORM Full Body Safety Harness",
-      "category": "PPE for ERT",
-      "brand": "MSA Safety",
-      "brandUrl": "https://my.msasafety.com/",
-      "industry": "Confined Space",
-      "subCategory": "Fall Protection",
-      "url": "https://airgas.my/product/msa-v-form-full-body-safety-harness/"
-    },
-    {
-      "id": 76,
-      "name": "Shell Water Detector Capsules",
-      "category": "PPE for ERT",
-      "brand": "Shell",
-      "brandUrl": "https://www.shell.com/",
+      "id": 5383,
+      "name": "fireman suit frypro X series",
       "industry": "Oil and gas",
+      "subCategory": "Protective Suit",
+      "url": "https://airgas.my/product/fireman-suit-frypro-x-series/",
+      "imgUrl": "",
+      "brand": "Airgas Technology"
+    },
+    {
+      "id": 5375,
+      "name": "Rescue kits Miller QuickPick #3382",
+      "industry": "Other industries",
+      "subCategory": "Equipment",
+      "url": "https://airgas.my/product/rescue-kits-miller-quickpick/",
+      "imgUrl": "",
+      "brand": "Airgas Technology"
+    },
+    {
+      "id": 5370,
+      "name": "Cylinder acetylene DA, 10L mini",
+      "industry": "Other industries",
+      "subCategory": "Cylinder",
+      "url": "https://airgas.my/product/cylinder-acetylene-da-10l-mini/",
+      "imgUrl": "",
+      "brand": "Airgas Technology"
+    },
+    {
+      "id": 5369,
+      "name": "Red Wing 2541 Men\u2019s SuperSole\u00ae X 9-inch Pull-On Boot",
+      "industry": "Other industries",
+      "subCategory": "Boots",
+      "url": "https://airgas.my/product/red-wing-2541-mens-supersole-x-9-inch-pull-on-boot/",
+      "imgUrl": "",
+      "brand": "Airgas Technology"
+    },
+    {
+      "id": 5364,
+      "name": "Racking pallet cylinder DNV",
+      "industry": "Other industries",
+      "subCategory": "Cylinder",
+      "url": "https://airgas.my/product/racking-pallet-cylinder-dnv/",
+      "imgUrl": "",
+      "brand": "Airgas Technology"
+    },
+    {
+      "id": 5359,
+      "name": "aluminium cylinder 10.0L",
+      "industry": "Other industries",
+      "subCategory": "Cylinder",
+      "url": "https://airgas.my/product/aluminium-cylinder-10-0l/",
+      "imgUrl": "",
+      "brand": "Airgas Technology"
+    },
+    {
+      "id": 5357,
+      "name": "aluminium cylinder 4.6L",
+      "industry": "Other industries",
+      "subCategory": "Cylinder",
+      "url": "https://airgas.my/product/aluminium-cylinder-4-6l/",
+      "imgUrl": "",
+      "brand": "Airgas Technology"
+    },
+    {
+      "id": 5355,
+      "name": "aluminium cylinder 2.9L",
+      "industry": "Other industries",
+      "subCategory": "Cylinder",
+      "url": "https://airgas.my/product/aluminium-cylinder-2-9l/",
+      "imgUrl": "",
+      "brand": "Airgas Technology"
+    },
+    {
+      "id": 5353,
+      "name": "SEITRON Single Gas Portable GasDetector",
+      "industry": "Confined Space",
       "subCategory": "Detector",
-      "url": "https://airgas.my/product/shell-water-detector-capsules/"
+      "url": "https://airgas.my/product/seitron-single-gas-portable-gasdetector/",
+      "imgUrl": "",
+      "brand": "Airgas Technology"
     },
-
     {
-      "id": 77,
-      "name": "Globestock Winch",
-      "category": "PPE for ERT",
-      "brand": "Globestock",
-      "brandUrl": "https://www.globestock.co.uk/",
+      "id": 5349,
+      "name": "SEITRON Multi-Gas Portable GasDetector, 4 gas sensors: O2 Longlife, CO,H2S, LEL (CH4).",
       "industry": "Confined Space",
-      "subCategory": "Confined Space Entry",
-      "url": "https://airgas.my/product/globestock-winch/"
+      "subCategory": "Detector",
+      "url": "https://airgas.my/product/seitron-multi-gas-portable-gasdetector-4-gas-sensors-o2-longlife-coh2s-lel-ch4/",
+      "imgUrl": "",
+      "brand": "Airgas Technology"
     },
     {
-      "id": 78,
-      "name": "MSA Workman Rescuer (Confined Space)",
-      "category": "PPE for ERT",
-      "brand": "MSA Safety",
-      "brandUrl": "https://my.msasafety.com/",
+      "id": 5346,
+      "name": "H-10 PRO Refrigerant Leak Detector , BACHARACH MSA",
       "industry": "Confined Space",
-      "subCategory": "Confined Space Entry",
-      "url": "https://airgas.my/product/msa-workman-rescuer-confined-space/"
+      "subCategory": "Detector",
+      "url": "https://airgas.my/product/h-10-pro-refrigerant-leak-detector-bacharach-msa/",
+      "imgUrl": "",
+      "brand": "Airgas Technology"
     },
     {
-      "id": 79,
-      "name": "MSA Workman Winch (Confined Space)",
-      "category": "PPE for ERT",
-      "brand": "MSA Safety",
-      "brandUrl": "https://my.msasafety.com/",
-      "industry": "Confined Space",
-      "subCategory": "Confined Space Entry",
-      "url": "https://airgas.my/product/msa-workman-winch-confined-space/"
-    },
-    {
-      "id": 80,
-      "name": "1.8M Y-Lanyard with Energy Absorber",
-      "category": "PPE at Works",
-      "brand": "Karam",
-      "brandUrl": "https://www.karam.in/",
-      "industry": "PPE",
-      "subCategory": "Fall Protection",
-      "url": "https://airgas.my/product/1-8m-y-lanyard-with-energy-absorber/"
-    },
-    {
-      "id": 81,
-      "name": "AlphaTec Disposable Coverall 2000 Standard Model III",
-      "category": "PPE at Works",
-      "brand": "Ansell",
-      "brandUrl": "https://www.ansell.com/",
-      "industry": "PPE",
-      "subCategory": "Protective Suit",
-      "url": "https://airgas.my/product/alphatec-disposable-coverall-2000-standard-model-iii/"
-    },
-    {
-      "id": 82,
-      "name": "Anti Impact Cut Resistant Glove",
-      "category": "PPE at Works",
-      "brand": null,
-      "brandUrl": null,
-      "industry": "PPE",
-      "subCategory": "Gloves",
-      "url": "https://airgas.my/product/anti-impact-cut-resistant-glove/"
-    },
-    {
-      "id": 83,
-      "name": "Portwest Antistatic PU Fingertip Glove A198",
-      "category": "PPE at Works",
-      "brand": "Portwest",
-      "brandUrl": "https://www.portwest.com/",
-      "industry": "PPE",
-      "subCategory": "Gloves",
-      "url": "https://airgas.my/product/portwest-antistatic-pu-fingertip-glove-a198/"
-    },
-    {
-      "id": 84,
-      "name": "Atlas Safety Glasses Anti-Fog SG200CAF",
-      "category": "PPE at Works",
-      "brand": null,
-      "brandUrl": null,
-      "industry": "PPE",
-      "subCategory": "Eye Protection",
-      "url": "https://airgas.my/product/atlas-safety-glasses-anti-fog-sg200caf/"
-    },
-    {
-      "id": 85,
-      "name": "Chem-Pro Unlined Nitrile Gloves GNU2218",
-      "category": "PPE at Works",
-      "brand": null,
-      "brandUrl": null,
-      "industry": "PPE",
-      "subCategory": "Gloves",
-      "url": "https://airgas.my/product/chem-pro-unlined-nitrile-gloves-gnu2218/"
-    },
-    {
-      "id": 86,
-      "name": "Delta Plus Large Volume Cap Mount Earmuffs",
-      "category": "PPE at Works",
-      "brand": "Delta Plus",
-      "brandUrl": "https://www.deltaplus.com/",
-      "industry": "PPE",
-      "subCategory": "Hearing Protection",
-      "url": "https://airgas.my/product/delta-plus-large-volume-cap-mount-earmuffs/"
-    },
-    {
-      "id": 87,
-      "name": "Honeywell DuraFit Ear Plug Reusable Corded",
-      "category": "PPE at Works",
-      "brand": "Honeywell",
-      "brandUrl": "https://sps.honeywell.com/",
-      "industry": "PPE",
-      "subCategory": "Hearing Protection",
-      "url": "https://airgas.my/product/honeywell-durafit-ear-plug-reusable-corded/"
-    },
-    {
-      "id": 88,
-      "name": "Honeywell EasyFit Disposable Ear Plugs HP101",
-      "category": "PPE at Works",
-      "brand": "Honeywell",
-      "brandUrl": "https://sps.honeywell.com/",
-      "industry": "PPE",
-      "subCategory": "Hearing Protection",
-      "url": "https://airgas.my/product/honeywell-easyfit-disposable-ear-plugs-hp101/"
-    },
-    {
-      "id": 89,
-      "name": "Ansell HyFlex ESD Protection Glove 48-135",
-      "category": "PPE at Works",
-      "brand": "Ansell",
-      "brandUrl": "https://www.ansell.com/",
-      "industry": "PPE",
-      "subCategory": "Gloves",
-      "url": "https://airgas.my/product/ansell-hyflex-esd-protection-glove-48-135/"
-    },
-    {
-      "id": 90,
-      "name": "Portwest High Impact Glove A721",
-      "category": "PPE at Works",
-      "brand": "Portwest",
-      "brandUrl": "https://www.portwest.com/",
-      "industry": "PPE",
-      "subCategory": "Gloves",
-      "url": "https://airgas.my/product/portwest-high-impact-glove-a721/"
-    },
-    {
-      "id": 91,
-      "name": "Kermel Fabric Coverall",
-      "category": "PPE at Works",
-      "brand": "Kermel",
-      "brandUrl": "https://www.kermel.com/",
-      "industry": "PPE",
-      "subCategory": "Protective Suit",
-      "url": "https://airgas.my/product/kermel-fabric-coverall/"
-    },
-    {
-      "id": 92,
-      "name": "Lifting Belt Economy ERGBS07",
-      "category": "PPE at Works",
-      "brand": null,
-      "brandUrl": null,
-      "industry": "PPE",
+      "id": 5341,
+      "name": "Self-Rescue Hood for aggressive chemicals protection, SRH-30, DPI-Sekur Italy, 43390310",
+      "industry": "Oil and gas",
       "subCategory": "Equipment",
-      "url": "https://airgas.my/product/lifting-belt-economy-ergbs07/"
+      "url": "https://airgas.my/product/self-rescue-hood-for-aggressive-chemicals-protection-srh-30-dpi-sekur-italy-43390310/",
+      "imgUrl": "",
+      "brand": "Airgas Technology"
     },
     {
-      "id": 93,
-      "name": "Top Glove 3-Ply Face Mask",
-      "category": "PPE at Works",
-      "brand": "Top Glove",
-      "brandUrl": "https://www.topglove.com/",
-      "industry": "PPE",
+      "id": 5323,
+      "name": "Cylinder hydraulic expansion test control unit \u2013 Hydrotest",
+      "industry": "Other industries",
+      "subCategory": "Cylinder",
+      "url": "https://airgas.my/product/cylinder-hydraulic-expansion-test-control-unit-hydrotest/",
+      "imgUrl": "",
+      "brand": "Airgas Technology"
+    },
+    {
+      "id": 5319,
+      "name": "MSA EEBD escape hood, S-cap. 3L cylinder #3312",
+      "industry": "Confined Space",
+      "subCategory": "Cylinder",
+      "url": "https://airgas.my/product/msa-eebd-escape-hood-s-cap-3l-cylinder/",
+      "imgUrl": "",
+      "brand": "Airgas Technology"
+    },
+    {
+      "id": 5315,
+      "name": "EEDB 15m china",
+      "industry": "Other industries",
+      "subCategory": "Equipment",
+      "url": "https://airgas.my/product/eedb-15m-china/",
+      "imgUrl": "",
+      "brand": "Airgas Technology"
+    },
+    {
+      "id": 5311,
+      "name": "airline auto switch SWOT with escape mask 15 minutes DPI Sekur",
+      "industry": "Other industries",
       "subCategory": "Mask",
-      "url": "https://airgas.my/product/top-glove-3-ply-face-mask/"
+      "url": "https://airgas.my/product/airline-auto-switch-swot-with-escape-mask-15-minutes-dpi-sekur/",
+      "imgUrl": "",
+      "brand": "Airgas Technology"
     },
     {
-      "id": 94,
-      "name": "Chemical Resistant Flocklined Nitrile Gloves GNF1513",
-      "category": "PPE at Works",
-      "brand": null,
-      "brandUrl": null,
-      "industry": "PPE",
-      "subCategory": "Gloves",
-      "url": "https://airgas.my/product/chemical-resistant-flocklined-nitrile-gloves-gnf1513/"
+      "id": 5306,
+      "name": "Battery Charges for Msa Gas detector model ALTAIR 4X and 5X, 10092936,",
+      "industry": "Confined Space",
+      "subCategory": "Detector",
+      "url": "https://airgas.my/product/battery-charges-for-msa-gas-detector-model-4x-and-5x-10092936/",
+      "imgUrl": "",
+      "brand": "Airgas Technology"
     },
     {
-      "id": 95,
-      "name": "MSA ChinStrap for V-Gard Helmet",
-      "category": "PPE at Works",
-      "brand": "MSA Safety",
-      "brandUrl": "https://my.msasafety.com/",
-      "industry": "PPE",
-      "subCategory": "Head Protection",
-      "url": "https://airgas.my/product/msa-chinstrap-for-v-gard-helmet/"
-    },
-    {
-      "id": 96,
-      "name": "MSA V-Gard Full Brim Safety Hat with Fas-Trac",
-      "category": "PPE at Works",
-      "brand": "MSA Safety",
-      "brandUrl": "https://my.msasafety.com/",
-      "industry": "PPE",
-      "subCategory": "Head Protection",
-      "url": "https://airgas.my/product/msa-v-gard-full-brim-safety-hat-with-fas-trac/"
-    },
-    {
-      "id": 97,
-      "name": "DuPont Nomex IIIA Coverall",
-      "category": "PPE at Works",
-      "brand": "DuPont",
-      "brandUrl": "https://www.dupont.com/",
-      "industry": "PPE",
-      "subCategory": "Protective Suit",
-      "url": "https://airgas.my/product/dupont-nomex-iiia-coverall/"
-    },
-    {
-      "id": 98,
-      "name": "DuPont Nomex IIIA Pants",
-      "category": "PPE at Works",
-      "brand": "DuPont",
-      "brandUrl": "https://www.dupont.com/",
-      "industry": "PPE",
+      "id": 5281,
+      "name": "AlphaTec Light Type TR",
+      "industry": "Other industries",
       "subCategory": "Equipment",
-      "url": "https://airgas.my/product/dupont-nomex-iiia-pants/"
+      "url": "https://airgas.my/product/alphatec-light-type-tr/",
+      "imgUrl": "",
+      "brand": "Airgas Technology"
     },
     {
-      "id": 99,
-      "name": "PE with Rubber Base Traffic Cone",
-      "category": "PPE at Works",
-      "brand": null,
-      "brandUrl": null,
-      "industry": "PPE",
+      "id": 5276,
+      "name": "Ammonia gas in 500kgs Tank a#1115",
+      "industry": "Oil and gas",
       "subCategory": "Equipment",
-      "url": "https://airgas.my/product/pe-with-rubber-base-traffic-cone/"
+      "url": "https://airgas.my/product/ammonia-gas-in-500kgs-tank/",
+      "imgUrl": "",
+      "brand": "Airgas Technology"
     },
     {
-      "id": 100,
-      "name": "Portwest BizTex Coverall Type 5/6 ST40",
-      "category": "PPE at Works",
-      "brand": "Portwest",
-      "brandUrl": "https://www.portwest.com/",
-      "industry": "PPE",
-      "subCategory": "Protective Suit",
-      "url": "https://airgas.my/product/portwest-biztex-coverall-type-5-6-st40/"
-    },
-    {
-      "id": 101,
-      "name": "Portwest BZ12 Bizweld Flame Resistant Cape Hood",
-      "category": "PPE at Works",
-      "brand": "Portwest",
-      "brandUrl": "https://www.portwest.com/",
-      "industry": "PPE",
-      "subCategory": "Hood",
-      "url": "https://airgas.my/product/portwest-bz12-bizweld-flame-resistant-cape-hood/"
-    },
-    {
-      "id": 102,
-      "name": "PPE Blue Coverall Set",
-      "category": "PPE at Works",
-      "brand": null,
-      "brandUrl": null,
-      "industry": "PPE",
-      "subCategory": "Protective Suit",
-      "url": "https://airgas.my/product/ppe-blue-coverall-set/"
-    },
-    {
-      "id": 103,
-      "name": "Proban Coverall",
-      "category": "PPE at Works",
-      "brand": null,
-      "brandUrl": null,
-      "industry": "PPE",
-      "subCategory": "Protective Suit",
-      "url": "https://airgas.my/product/proban-coverall/"
-    },
-    {
-      "id": 104,
-      "name": "Proguard Advantage I Safety Helmet (Ratchet System)",
-      "category": "PPE at Works",
-      "brand": "Proguard",
-      "brandUrl": null,
-      "industry": "PPE",
-      "subCategory": "Head Protection",
-      "url": "https://airgas.my/product/proguard-advantage-i-safety-helmet-ratchet-system/"
-    },
-    {
-      "id": 105,
-      "name": "Pyrovatek Coverall",
-      "category": "PPE at Works",
-      "brand": null,
-      "brandUrl": null,
-      "industry": "PPE",
-      "subCategory": "Protective Suit",
-      "url": "https://airgas.my/product/pyrovatek-coverall/"
-    },
-    {
-      "id": 106,
-      "name": "GVS Replacement Filters Elipse ABEK1 RD SPR489",
-      "category": "PPE at Works",
-      "brand": "GVS",
-      "brandUrl": "https://www.gvs.com/",
-      "industry": "PPE",
-      "subCategory": "Filter",
-      "url": "https://airgas.my/product/gvs-replacement-filters-elipse-abek1-rd-spr489/"
-    },
-    {
-      "id": 107,
-      "name": "GVS Replacement Filters Elipse ABEK1P3 RD SPR492",
-      "category": "PPE at Works",
-      "brand": "GVS",
-      "brandUrl": "https://www.gvs.com/",
-      "industry": "PPE",
-      "subCategory": "Filter",
-      "url": "https://airgas.my/product/gvs-replacement-filters-elipse-abek1p3-rd-spr492/"
-    },
-    {
-      "id": 108,
-      "name": "Safety Glass SIRIM SG500CAF",
-      "category": "PPE at Works",
-      "brand": null,
-      "brandUrl": null,
-      "industry": "PPE",
+      "id": 5253,
+      "name": "Load arrest by GLOBESTOCK UK",
+      "industry": "Other industries",
       "subCategory": "Equipment",
-      "url": "https://airgas.my/product/safety-glass-sirim-sg500caf/"
+      "url": "https://airgas.my/product/load-arrest-by-globestock-uk/",
+      "imgUrl": "",
+      "brand": "Airgas Technology"
     },
     {
-      "id": 109,
-      "name": "Safety Glasses / Goggles",
-      "category": "PPE at Works",
-      "brand": null,
-      "brandUrl": null,
-      "industry": "PPE",
-      "subCategory": "Eye Protection",
-      "url": "https://airgas.my/product/safety-glasses-goggles/"
+      "id": 5210,
+      "name": "Winch by GLOBESTOCK UK",
+      "industry": "Confined Space",
+      "subCategory": "Equipment",
+      "url": "https://airgas.my/product/winch-by-globestock-uk/",
+      "imgUrl": "",
+      "brand": "Airgas Technology"
     },
     {
-      "id": 110,
-      "name": "Portwest Safety Gloves A197",
-      "category": "PPE at Works",
-      "brand": "Portwest",
-      "brandUrl": "https://www.portwest.com/",
-      "industry": "PPE",
-      "subCategory": "Gloves",
-      "url": "https://airgas.my/product/portwest-safety-gloves-a197/"
+      "id": 5233,
+      "name": "Tripod by GLOBESTOCK UK",
+      "industry": "Confined Space",
+      "subCategory": "Equipment",
+      "url": "https://airgas.my/product/tripod-by-globestock-uk/",
+      "imgUrl": "",
+      "brand": "Airgas Technology"
     },
     {
-      "id": 111,
+      "id": 5224,
+      "name": "Pulleys model by GLOBESTOCK UK",
+      "industry": "Other industries",
+      "subCategory": "Equipment",
+      "url": "https://airgas.my/product/pulleys-model-by-globestock-uk/",
+      "imgUrl": "",
+      "brand": "Airgas Technology"
+    },
+    {
+      "id": 5213,
+      "name": "Karabiners model by GLOBESTOCK UK",
+      "industry": "Other industries",
+      "subCategory": "Equipment",
+      "url": "https://airgas.my/product/karabiners-model-by-globestock-uk/",
+      "imgUrl": "",
+      "brand": "Airgas Technology"
+    },
+    {
+      "id": 5203,
+      "name": "TRIPOD Fall Protection set, Hook, Pully, Workman Winch, Workman Rescuer MSA brand",
+      "industry": "Confined Space",
+      "subCategory": "Equipment",
+      "url": "https://airgas.my/product/tripod-fall-protection-set-hook-pully-workman-winch-workman-rescuer-msa-brand/",
+      "imgUrl": "",
+      "brand": "Airgas Technology"
+    },
+    {
+      "id": 5197,
+      "name": "Valve* for O2, Ar, N2, hand wheel,  BS3, QF40A China. MPRV",
+      "industry": "Other industries",
+      "subCategory": "Equipment",
+      "url": "https://airgas.my/product/valve-for-o2-ar-n2-hand-wheel-bs3-qf40a-china-mprv/",
+      "imgUrl": "",
+      "brand": "Airgas Technology"
+    },
+    {
+      "id": 5194,
+      "name": "carry box for EEBD 580mm x 300mm x 170mm @ 2.7kgs",
+      "industry": "Confined Space",
+      "subCategory": "Equipment",
+      "url": "https://airgas.my/product/carry-box-for-eebd-580mm-x-300mm-x-170mm-2-7kgs/",
+      "imgUrl": "",
+      "brand": "Airgas Technology"
+    },
+    {
+      "id": 5174,
+      "name": "MSA ALTAIR 5X, Case Assembly\r\nlower case with label \u2013 (Part No. 10114809) part",
+      "industry": "Other industries",
+      "subCategory": "Equipment",
+      "url": "https://airgas.my/product/msa-altair-5x-case-assemblylower-case-with-label-part-no-10114809-part/",
+      "imgUrl": "",
+      "brand": "Airgas Technology"
+    },
+    {
+      "id": 5169,
+      "name": "MSA ALTAIR 5X, Case Assembly upper case with label \u2013 (Part No. 10114853) part",
+      "industry": "Other industries",
+      "subCategory": "Equipment",
+      "url": "https://airgas.my/product/msa-altair-5x-case-assembly-upper-case-with-label-part-no-10114853-part/",
+      "imgUrl": "",
+      "brand": "Airgas Technology"
+    },
+    {
+      "id": 5159,
+      "name": "SCBA set China RHZKF",
+      "industry": "Confined Space",
+      "subCategory": "SCBA",
+      "url": "https://airgas.my/product/scba-set-china-rhzkf/",
+      "imgUrl": "",
+      "brand": "Airgas Technology"
+    },
+    {
+      "id": 5153,
+      "name": "Hornung HP Hose *",
+      "industry": "Other industries",
+      "subCategory": "Equipment",
+      "url": "https://airgas.my/product/hornung-hp-hose/",
+      "imgUrl": "",
+      "brand": "Airgas Technology"
+    },
+    {
+      "id": 5120,
+      "name": "Regulator High pressure. suitable for N2, Ar. etc",
+      "industry": "Oil and gas",
+      "subCategory": "Protective Suit",
+      "url": "https://airgas.my/product/regulator-high-pressure-suitable-for-n2-ar-etc/",
+      "imgUrl": "",
+      "brand": "Airgas Technology"
+    },
+    {
+      "id": 5111,
+      "name": "Full synthetic for HP breathing air Compressor, 4509001, Oil L&W , 1L / unit, #3443",
+      "industry": "Oil and gas",
+      "subCategory": "Equipment",
+      "url": "https://airgas.my/product/full-synthetic-for-hp-breathing-air-compressor-4509001-oil-lw-1l-unit-3443/",
+      "imgUrl": "",
+      "brand": "Airgas Technology"
+    },
+    {
+      "id": 5099,
+      "name": "Fireman Helmet china",
+      "industry": "Oil and gas",
+      "subCategory": "Equipment",
+      "url": "https://airgas.my/product/fireman-helmet-china/",
+      "imgUrl": "",
+      "brand": "Airgas Technology"
+    },
+    {
+      "id": 5088,
+      "name": "Valve* for O2, Ar, N2, hand wheel,  BS3, Daito, MPRV",
+      "industry": "Other industries",
+      "subCategory": "Equipment",
+      "url": "https://airgas.my/product/valve-for-o2-ar-n2-hand-wheel-bs3-daito-mprv/",
+      "imgUrl": "",
+      "brand": "Airgas Technology"
+    },
+    {
+      "id": 5081,
+      "name": "valve* for O2, N2. QF-42, WP200bar, G5/8, E25, hand wheel",
+      "industry": "Other industries",
+      "subCategory": "Equipment",
+      "url": "https://airgas.my/product/valve-for-o2-n2-qf-42-wp200bar-g5-8-e25-hand-wheel/",
+      "imgUrl": "",
+      "brand": "Airgas Technology"
+    },
+    {
+      "id": 5075,
+      "name": "valve* for acetylene QF-36D, China",
+      "industry": "Other industries",
+      "subCategory": "Equipment",
+      "url": "https://airgas.my/product/valve-for-hydrogen-qf-36d-china/",
+      "imgUrl": "",
+      "brand": "Airgas Technology"
+    },
+    {
+      "id": 5066,
+      "name": "valve* for O2, N2, Ar, E25, spindle key, Daito",
+      "industry": "Other industries",
+      "subCategory": "Equipment",
+      "url": "https://airgas.my/product/valve-for-o2-n2-ar-e25-spindle-key-daito/",
+      "imgUrl": "",
+      "brand": "Airgas Technology"
+    },
+    {
+      "id": 5061,
+      "name": "valve* for acetylene. E25, Daito",
+      "industry": "Other industries",
+      "subCategory": "Equipment",
+      "url": "https://airgas.my/product/valve-for-acetylene-e25-daito/",
+      "imgUrl": "",
+      "brand": "Airgas Technology"
+    },
+    {
+      "id": 5052,
+      "name": "valve* for Oxygen, top entry, E25, spindle key open, BS3 connection, Daito",
+      "industry": "Other industries",
+      "subCategory": "Equipment",
+      "url": "https://airgas.my/product/valve-for-oxygen-top-entry-e25-spindle-key-open-bs3-connection-daito/",
+      "imgUrl": "",
+      "brand": "Airgas Technology"
+    },
+    {
+      "id": 5035,
+      "name": "valve* Pin Index E18 MO2. Daito",
+      "industry": "Other industries",
+      "subCategory": "Equipment",
+      "url": "https://airgas.my/product/valve-pin-index-e18-o2-daito/",
+      "imgUrl": "",
+      "brand": "Airgas Technology"
+    },
+    {
+      "id": 5026,
+      "name": "valve* Pin Index M18",
+      "industry": "Other industries",
+      "subCategory": "Equipment",
+      "url": "https://airgas.my/product/valve-pin-index-m18/",
+      "imgUrl": "",
+      "brand": "Airgas Technology"
+    },
+    {
+      "id": 5021,
+      "name": "valve* pin index Daito E25 for MO2",
+      "industry": "Other industries",
+      "subCategory": "Equipment",
+      "url": "https://airgas.my/product/valve-pin-index-daito-e25/",
+      "imgUrl": "",
+      "brand": "Airgas Technology"
+    },
+    {
+      "id": 5015,
+      "name": "MSA Helmet fireman Cairns\u00ae 660C Metro\u2122 Composite",
+      "industry": "Oil and gas",
+      "subCategory": "Equipment",
+      "url": "https://airgas.my/product/msa-helmet-fireman-cairns-660c-metro-composite/",
+      "imgUrl": "",
+      "brand": "Airgas Technology"
+    },
+    {
+      "id": 5011,
+      "name": "MSA Elastic ChinStrap for V-Gard Helmet, 2 points 10171104",
+      "industry": "Other industries",
+      "subCategory": "Equipment",
+      "url": "https://airgas.my/product/msa-elastic-chin-strap-2-points-10171104/",
+      "imgUrl": "",
+      "brand": "Airgas Technology"
+    },
+    {
+      "id": 4983,
+      "name": "Fireman GLOVE, SW brand, 3 layer, DuPont Fiber Glass Kevlar Lining fpr cut Protection Waterproof, 100% Genuine DuPont Non Flammable Thread",
+      "industry": "Oil and gas",
+      "subCategory": "Equipment",
+      "url": "https://airgas.my/product/fireman-glove-sw-brand-3-layer-dupont-fiber-glass-kevlar-lining-fpr-cut-protection-waterproof-100-genuine-dupont-non-flammable-thread/",
+      "imgUrl": "",
+      "brand": "Airgas Technology"
+    },
+    {
+      "id": 4980,
+      "name": "Fireman HOOD, Dupont Nomext Flame Resistant, SW brand",
+      "industry": "Oil and gas",
+      "subCategory": "Equipment",
+      "url": "https://airgas.my/product/fireman-hood-dupont-nomext-flame-resistant-sw-brand/",
+      "imgUrl": "",
+      "brand": "Airgas Technology"
+    },
+    {
+      "id": 4978,
+      "name": "Fireman FIGHTING SUIT ,with DuPont\u2122 NOMEX\u00ae, an inherently heat-resistant and flame-resistant, designed to react in an emergency. tested to EN 469 by BTTG (UK) and NFPA 1971 by (USA) for compliance with the Int fire safety standard,  SW brand.",
+      "industry": "Oil and gas",
+      "subCategory": "Protective Suit",
+      "url": "https://airgas.my/product/fireman-fighting-suit-with-dupont-nomex-an-inherently-heat-resistant-and-flame-resistant-designed-to-react-in-an-emergency-tested-to-en-469-by-bttg-uk-and-nfpa-1971-by-usa-for-c/",
+      "imgUrl": "",
+      "brand": "Airgas Technology"
+    },
+    {
+      "id": 4976,
+      "name": "MSA ChinStrap for V-Gard Helmet, 4 points 10124238",
+      "industry": "Other industries",
+      "subCategory": "Equipment",
+      "url": "https://airgas.my/product/msa-chin-strap-4-points/",
+      "imgUrl": "",
+      "brand": "Airgas Technology"
+    },
+    {
+      "id": 4968,
+      "name": "Hydro Test Unit volumetric measuring",
+      "industry": "Other industries",
+      "subCategory": "Equipment",
+      "url": "https://airgas.my/product/hydro-test-unit-volumetric-measuring/",
+      "imgUrl": "",
+      "brand": "Airgas Technology"
+    },
+    {
+      "id": 4962,
+      "name": "T DOCK",
+      "industry": "Other industries",
+      "subCategory": "Equipment",
+      "url": "https://airgas.my/product/t-dock/",
+      "imgUrl": "",
+      "brand": "Airgas Technology"
+    },
+    {
+      "id": 4954,
+      "name": "MSA Voyager Safety Glasses 10065849 \u2013 Size Universal \u2013 02288 SPECTACLES, VOYAGER, CLEAR, ANTI-FOG",
+      "industry": "Other industries",
+      "subCategory": "Equipment",
+      "url": "https://airgas.my/product/msa-voyager-safety-glasses-10065849-size-universal-02288-spectacles-voyager-clear-anti-fog/",
+      "imgUrl": "",
+      "brand": "Airgas Technology"
+    },
+    {
+      "id": 4951,
+      "name": "valve* for nitro oxide N2O, E25 pin index, Daito",
+      "industry": "Other industries",
+      "subCategory": "Equipment",
+      "url": "https://airgas.my/product/valve-for-nitro-oxide-n2o-e25-pin-index-daito/",
+      "imgUrl": "",
+      "brand": "Airgas Technology"
+    },
+    {
+      "id": 4949,
+      "name": "Drager PSS 3000 SCBA with FPS 7000 facemask and composite cylinder",
+      "industry": "Confined Space",
+      "subCategory": "Mask",
+      "url": "https://airgas.my/product/drager-pss-3000-scba-with-fps-7000-facemask-and-composite-cylinder/",
+      "imgUrl": "",
+      "brand": "Airgas Technology"
+    },
+    {
+      "id": 4947,
+      "name": "Drager Saver PP 15 Fabric D/C Compressed Air Escape Device 3363825",
+      "industry": "Other industries",
+      "subCategory": "Equipment",
+      "url": "https://airgas.my/product/drager-saver-pp-compressed-air-escape-device/",
+      "imgUrl": "",
+      "brand": "Airgas Technology"
+    },
+    {
+      "id": 4944,
+      "name": "Drager Saver CF Compressed Air Escape Device with Hood 3363826",
+      "industry": "Other industries",
+      "subCategory": "Equipment",
+      "url": "https://airgas.my/product/drager-saver-cf-compressed-air-escape-device/",
+      "imgUrl": "",
+      "brand": "Airgas Technology"
+    },
+    {
+      "id": 4942,
+      "name": "Hearing Protection Verishield Dielectric1035203, VS100DH, Helmet",
+      "industry": "Other industries",
+      "subCategory": "Equipment",
+      "url": "https://airgas.my/product/hearing-protection-verishield-dielectric1035203/",
+      "imgUrl": "",
+      "brand": "Airgas Technology"
+    },
+    {
+      "id": 4939,
+      "name": "SKY ARMOUR 1551 SUSPENSION TRAUMA STRAPS; (2EA/PKT)",
+      "industry": "Other industries",
+      "subCategory": "Equipment",
+      "url": "https://airgas.my/product/sky-armour-1551-suspension-trauma-straps-2ea-pkt/",
+      "imgUrl": "",
+      "brand": "Airgas Technology"
+    },
+    {
+      "id": 4937,
+      "name": "PANO CL3+ full-face mask positive pressure Honeywell 1710650",
+      "industry": "Other industries",
+      "subCategory": "Mask",
+      "url": "https://airgas.my/product/pano-cl3-full-face-mask-positive-pressure-honeywell-1710650/",
+      "imgUrl": "",
+      "brand": "Airgas Technology"
+    },
+    {
+      "id": 4911,
+      "name": "Valve CGA330 SS 316L M25 China",
+      "industry": "Other industries",
+      "subCategory": "Equipment",
+      "url": "https://airgas.my/product/valve-cga330-ss-316l-m25-china/",
+      "imgUrl": "",
+      "brand": "Airgas Technology"
+    },
+    {
+      "id": 4900,
+      "name": "MSA GALAXY\u00ae GX2 Automated Test System . automated calibration Docking",
+      "industry": "Other industries",
+      "subCategory": "Equipment",
+      "url": "https://airgas.my/product/msa-galaxy-gx2-automated-test-system-automated-calibration-docking/",
+      "imgUrl": "",
+      "brand": "Airgas Technology"
+    },
+    {
+      "id": 4898,
+      "name": "Valve BS3, MPRV 200bar , sanosub Italy with E25 connection",
+      "industry": "Other industries",
+      "subCategory": "Equipment",
+      "url": "https://airgas.my/product/valve-bs3-mprv-200bar-sanosub-italy-with-e25-connection/",
+      "imgUrl": "",
+      "brand": "Airgas Technology"
+    },
+    {
+      "id": 4785,
+      "name": "T40 II Rattler\u2122 Portable Single Gas Monitor and T-Dock\u2122  IR",
+      "industry": "Oil and gas",
+      "subCategory": "Equipment",
+      "url": "https://airgas.my/product/t40-ii-rattler-portable-single-gas-monitor-and-t-dock-ir/",
+      "imgUrl": "",
+      "brand": "Airgas Technology"
+    },
+    {
+      "id": 4887,
+      "name": "ear protection Honeywell",
+      "industry": "Other industries",
+      "subCategory": "Equipment",
+      "url": "https://airgas.my/product/ear-protection-honeywell/",
+      "imgUrl": "",
+      "brand": "Airgas Technology"
+    },
+    {
+      "id": 4880,
+      "name": "Valve BS3 300bar E25 Cavagna",
+      "industry": "Other industries",
+      "subCategory": "Equipment",
+      "url": "https://airgas.my/product/valve-bs3-300bar-e25-cavagna/",
+      "imgUrl": "",
+      "brand": "Airgas Technology"
+    },
+    {
+      "id": 4876,
+      "name": "BW gas detector micro slip Gas Alert 4 gas, Honeywell",
+      "industry": "Confined Space",
+      "subCategory": "Detector",
+      "url": "https://airgas.my/product/bw-gas-detector-micro-slip-gas-alert-4-gas/",
+      "imgUrl": "",
+      "brand": "Airgas Technology"
+    },
+    {
+      "id": 4865,
+      "name": "10242735 SENSOR, PID, 0-2000ppm, eVx, PKGD. MSA",
+      "industry": "Other industries",
+      "subCategory": "Detector",
+      "url": "https://airgas.my/product/10242735-sensor-pid-0-2000ppm-evx-pkgd-msa/",
+      "imgUrl": "",
+      "brand": "Airgas Technology"
+    },
+    {
+      "id": 4860,
+      "name": "Argon Gas",
+      "industry": "Oil and gas",
+      "subCategory": "Equipment",
+      "url": "https://airgas.my/product/argon-gas/",
+      "imgUrl": "",
+      "brand": "Airgas Technology"
+    },
+    {
+      "id": 4859,
+      "name": "MX4 gas detector IS",
+      "industry": "Confined Space",
+      "subCategory": "Detector",
+      "url": "https://airgas.my/product/mx4-gas-detector-is/",
+      "imgUrl": "",
+      "brand": "Airgas Technology"
+    },
+    {
+      "id": 4857,
+      "name": "Fenzy Xpro SCBA Honeywell",
+      "industry": "Confined Space",
+      "subCategory": "SCBA",
+      "url": "https://airgas.my/product/fenzy-xpro-scba-honeywell/",
+      "imgUrl": "",
+      "brand": "Airgas Technology"
+    },
+    {
+      "id": 4849,
+      "name": "propane gas",
+      "industry": "Oil and gas",
+      "subCategory": "Equipment",
+      "url": "https://airgas.my/product/propane-gas/",
+      "imgUrl": "",
+      "brand": "Airgas Technology"
+    },
+    {
+      "id": 4841,
+      "name": "DuPont\u2122 Tychem\u00ae 2000",
+      "industry": "Other industries",
+      "subCategory": "Equipment",
+      "url": "https://airgas.my/product/dupont-tychem-2000/",
+      "imgUrl": "",
+      "brand": "Airgas Technology"
+    },
+    {
+      "id": 4839,
+      "name": "FENZY  Bio-S-Cap 15 minutes EEBD 3L 200B Steel/composite cylinder P/N 1815732 / 1815746 Honeywell",
+      "industry": "Confined Space",
+      "subCategory": "Cylinder",
+      "url": "https://airgas.my/product/fenzy-bioscape-eebd-3l-200b-steel-composite-cylinder-p-n-1815732-1815746-honeywell/",
+      "imgUrl": "",
+      "brand": "Airgas Technology"
+    },
+    {
+      "id": 4826,
+      "name": "Half Facemask AVEC butyl",
+      "industry": "Other industries",
+      "subCategory": "Mask",
+      "url": "https://airgas.my/product/half-facemask-avec-butyl/",
+      "imgUrl": "",
+      "brand": "Airgas Technology"
+    },
+    {
+      "id": 4819,
+      "name": "Helmet for Fireman PAB fire Compact",
+      "industry": "Oil and gas",
+      "subCategory": "Equipment",
+      "url": "https://airgas.my/product/helmet-for-fireman-pab-fire-compact-2/",
+      "imgUrl": "",
+      "brand": "Airgas Technology"
+    },
+    {
+      "id": 4812,
+      "name": "Helmet for Fireman PAB HT05",
+      "industry": "Oil and gas",
+      "subCategory": "Equipment",
+      "url": "https://airgas.my/product/helmet-for-fireman-pab-ht05/",
+      "imgUrl": "",
+      "brand": "Airgas Technology"
+    },
+    {
+      "id": 4805,
+      "name": "airline trolley Apollo JR VTN",
+      "industry": "Other industries",
+      "subCategory": "Equipment",
+      "url": "https://airgas.my/product/vtn-airline-trolley-apollo-jr/",
+      "imgUrl": "",
+      "brand": "Airgas Technology"
+    },
+    {
+      "id": 4772,
+      "name": "MSA Helmet Earmuff, V-Gard\u00ae Cap Mounted Hearing Protection 10190357",
+      "industry": "Other industries",
+      "subCategory": "Equipment",
+      "url": "https://airgas.my/product/4772/",
+      "imgUrl": "",
+      "brand": "Airgas Technology"
+    },
+    {
+      "id": 4770,
+      "name": "MSA Sound Control Earmuff SH for Full Brim Hat (NRR 25 dBA) 10129327",
+      "industry": "Other industries",
+      "subCategory": "Equipment",
+      "url": "https://airgas.my/product/msa-sound-control-earmuff-sh-for-full-brim-hat-nrr-25-dba-10129327/",
+      "imgUrl": "",
+      "brand": "Airgas Technology"
+    },
+    {
+      "id": 4763,
+      "name": "explosion proof flood light 100w to 240w",
+      "industry": "Other industries",
+      "subCategory": "Equipment",
+      "url": "https://airgas.my/product/explosion-proof-flood-light-100w-to-240w/",
+      "imgUrl": "",
+      "brand": "Airgas Technology"
+    },
+    {
+      "id": 4757,
+      "name": "Self-Retracting Lifeline MSA V-TEC\u2122, V-TEC SRL, 6 M (20 Ft.), Galvanized Cable, 63210-00AEU,",
+      "industry": "Maritime",
+      "subCategory": "Equipment",
+      "url": "https://airgas.my/product/self-retracting-lifeline-msa-v-tec-v-tec-srl-6-m-20-ft-galvanized-cable-63210-00aeu/",
+      "imgUrl": "",
+      "brand": "Airgas Technology"
+    },
+    {
+      "id": 4755,
+      "name": "LW service kit LW 230/280/320 E/ES/EC mit (c/w) ACD",
+      "industry": "Other industries",
+      "subCategory": "Equipment",
+      "url": "https://airgas.my/product/lw-service-kit-lw-230-280-320-e-es-ec-mit-c-w-acd/",
+      "imgUrl": "",
+      "brand": "Airgas Technology"
+    },
+    {
+      "id": 4752,
+      "name": "valve C10 VE",
+      "industry": "Other industries",
+      "subCategory": "Equipment",
+      "url": "https://airgas.my/product/valve-c10-ve/",
+      "imgUrl": "",
+      "brand": "Airgas Technology"
+    },
+    {
+      "id": 4748,
+      "name": "Hose for high pressure 200bar , 1M , SS304",
+      "industry": "Other industries",
+      "subCategory": "Equipment",
+      "url": "https://airgas.my/product/hose-for-high-pressure-200bar-1m-ss304/",
+      "imgUrl": "",
+      "brand": "Airgas Technology"
+    },
+    {
+      "id": 4744,
+      "name": "Regulator Single Stage stainless steel VE",
+      "industry": "Other industries",
+      "subCategory": "Equipment",
+      "url": "https://airgas.my/product/regulator-single-stage-stainless-steel-ve/",
+      "imgUrl": "",
+      "brand": "Airgas Technology"
+    },
+    {
+      "id": 4737,
+      "name": "Regulator Double Stage stainless steel VE.",
+      "industry": "Other industries",
+      "subCategory": "Equipment",
+      "url": "https://airgas.my/product/double-stage-stainless-steel-regulator-ve/",
+      "imgUrl": "",
+      "brand": "Airgas Technology"
+    },
+    {
+      "id": 4725,
+      "name": "Gas detector, ALTAIR 2X",
+      "industry": "Confined Space",
+      "subCategory": "Detector",
+      "url": "https://airgas.my/product/gas-detector-altair-2x/",
+      "imgUrl": "",
+      "brand": "Airgas Technology"
+    },
+    {
+      "id": 4719,
+      "name": "MSAHelmet Fireman Gallet F1XF",
+      "industry": "Oil and gas",
+      "subCategory": "Equipment",
+      "url": "https://airgas.my/product/msa-helmet-for-fireman/",
+      "imgUrl": "",
+      "brand": "Airgas Technology"
+    },
+    {
+      "id": 4700,
+      "name": "Trolley for gas cylinder 40L to 50L, carry 2 cylinder",
+      "industry": "Oil and gas",
+      "subCategory": "Cylinder",
+      "url": "https://airgas.my/product/trolley-for-gas-cylinder-40l-to-50l-carry-2-cylinder/",
+      "imgUrl": "",
+      "brand": "Airgas Technology"
+    },
+    {
+      "id": 4694,
+      "name": "PAPR Honeywell Blower set  with head top and HEPA , PA701HE , PA7HE , PA911",
+      "industry": "Other industries",
+      "subCategory": "Equipment",
+      "url": "https://airgas.my/product/papr-honeywell-blower-set-with-head-top-and-hepa-pa701he/",
+      "imgUrl": "",
+      "brand": "Airgas Technology"
+    },
+    {
+      "id": 4686,
+      "name": "cylinder steel for EEBD 3L 200bar",
+      "industry": "Confined Space",
+      "subCategory": "Cylinder",
+      "url": "https://airgas.my/product/cylinder-steel-for-eebd-3l-200bar/",
+      "imgUrl": "",
+      "brand": "Airgas Technology"
+    },
+    {
+      "id": 4683,
+      "name": "WORKMAN WINCH MSA confined space products",
+      "industry": "Confined Space",
+      "subCategory": "Equipment",
+      "url": "https://airgas.my/product/workman-winch-msa-confined-space-products/",
+      "imgUrl": "",
+      "brand": "Airgas Technology"
+    },
+    {
+      "id": 4681,
+      "name": "Workman Rescuer MSA confined space products",
+      "industry": "Confined Space",
+      "subCategory": "Equipment",
+      "url": "https://airgas.my/product/workman-rescuer-msa-confined-space-products/",
+      "imgUrl": "",
+      "brand": "Airgas Technology"
+    },
+    {
+      "id": 4673,
+      "name": "compressed seamless cylinder 300bar",
+      "industry": "Other industries",
+      "subCategory": "Cylinder",
+      "url": "https://airgas.my/product/compressed-seamless-cylinder-300bar/",
+      "imgUrl": "",
+      "brand": "Airgas Technology"
+    },
+    {
+      "id": 4670,
+      "name": "pressure gauge SCBA for DIABLO IND sekur# 42000245",
+      "industry": "Confined Space",
+      "subCategory": "SCBA",
+      "url": "https://airgas.my/product/pressure-gauge-scba-for-diablo-ind-sekur-42000245/",
+      "imgUrl": "",
+      "brand": "Airgas Technology"
+    },
+    {
+      "id": 4664,
+      "name": "Valve CGA330 cavagna stainless steel 316 E25",
+      "industry": "Other industries",
+      "subCategory": "Equipment",
+      "url": "https://airgas.my/product/valve-cga330-cavagna-stainless-steel-316-e25/",
+      "imgUrl": "",
+      "brand": "Airgas Technology"
+    },
+    {
+      "id": 4655,
+      "name": "scuba cylinder aluminum",
+      "industry": "Other industries",
+      "subCategory": "Cylinder",
+      "url": "https://airgas.my/product/scuba-cylinder-aluminum/",
+      "imgUrl": "",
+      "brand": "Airgas Technology"
+    },
+    {
+      "id": 4652,
+      "name": "LW cylinder for BA storage #1012",
+      "industry": "Other industries",
+      "subCategory": "Cylinder",
+      "url": "https://airgas.my/product/lw-cylinder-for-ba-storage/",
+      "imgUrl": "",
+      "brand": "Airgas Technology"
+    },
+    {
+      "id": 4647,
+      "name": "MSA V-Gard\u00ae Hard Hat Cap Style Fastrac III Suspension, China",
+      "industry": "Other industries",
+      "subCategory": "Equipment",
+      "url": "https://airgas.my/product/msa-v-gard-hard-hat-cap-style/",
+      "imgUrl": "",
+      "brand": "Airgas Technology"
+    },
+    {
+      "id": 4644,
+      "name": "Hornung -D3/4 dome pressure regulator",
+      "industry": "Other industries",
+      "subCategory": "Equipment",
+      "url": "https://airgas.my/product/hornung-d3-4-dome-pressure-regulator/",
+      "imgUrl": "",
+      "brand": "Airgas Technology"
+    },
+    {
+      "id": 4635,
+      "name": "Hornung -PID3/4 dome pressure regulator",
+      "industry": "Other industries",
+      "subCategory": "Equipment",
+      "url": "https://airgas.my/product/hornung-pid3-4-dome-pressure-regulator/",
+      "imgUrl": "",
+      "brand": "Airgas Technology"
+    },
+    {
+      "id": 4627,
+      "name": "Hornung -ODR1 on demand flow regulator",
+      "industry": "Other industries",
+      "subCategory": "Equipment",
+      "url": "https://airgas.my/product/hornung-odr1-on-demand-flow-regulator/",
+      "imgUrl": "",
+      "brand": "Airgas Technology"
+    },
+    {
+      "id": 4620,
+      "name": "Hornung -HP 105 precision cylinder regulator",
+      "industry": "Other industries",
+      "subCategory": "Cylinder",
+      "url": "https://airgas.my/product/hornung-hp-105-precision-cylinder-regulator/",
+      "imgUrl": "",
+      "brand": "Airgas Technology"
+    },
+    {
+      "id": 4612,
+      "name": "Hornung -F1 fine filter 20u",
+      "industry": "Other industries",
+      "subCategory": "Equipment",
+      "url": "https://airgas.my/product/hornung-f1-fine-filter-20u/",
+      "imgUrl": "",
+      "brand": "Airgas Technology"
+    },
+    {
+      "id": 4605,
+      "name": "Ultra Elite PS-MAXX Full FaceMask rubber headharness MSA 3490006 suitable for airXpress SCBA sets",
+      "industry": "Confined Space",
+      "subCategory": "Mask",
+      "url": "https://airgas.my/product/ultra-elite-ps-maxx-full-face-mask-rubber-headharness-msa-3490006/",
+      "imgUrl": "",
+      "brand": "Airgas Technology"
+    },
+    {
+      "id": 4603,
+      "name": "BW IntelliDoX Docking System1 IntelliDoX docking station for BW MaxXTII #DX-MAXXT. enabler kit, NA version #DX-ENBL-UK",
+      "industry": "Other industries",
+      "subCategory": "Equipment",
+      "url": "https://airgas.my/product/bw-intellidox-docking-system1-intellidox-docking-station-for-bw-maxxtii/",
+      "imgUrl": "",
+      "brand": "Airgas Technology"
+    },
+    {
+      "id": 4595,
+      "name": "V-FORM\u2122 full body Safety Harness MSA 10205340",
+      "industry": "Other industries",
+      "subCategory": "Equipment",
+      "url": "https://airgas.my/product/v-form-full-body-safety-harness-msa-10205340/",
+      "imgUrl": "",
+      "brand": "Airgas Technology"
+    },
+    {
+      "id": 4592,
+      "name": "Ethylene Gas C2H4",
+      "industry": "Oil and gas",
+      "subCategory": "Equipment",
+      "url": "https://airgas.my/product/ethylene-gas-c2h4/",
+      "imgUrl": "",
+      "brand": "Airgas Technology"
+    },
+    {
+      "id": 4586,
+      "name": "Frame for MSA Helmet , V-Gard, ET, for Slotted Caps 10115821 & 10115836",
+      "industry": "Other industries",
+      "subCategory": "Equipment",
+      "url": "https://airgas.my/product/frame-v-gard-et-for-slotted-caps-msa-10115821-10115836/",
+      "imgUrl": "",
+      "brand": "Airgas Technology"
+    },
+    {
+      "id": 4584,
+      "name": "SCBA DPI SEKUR Diablo Advance",
+      "industry": "Confined Space",
+      "subCategory": "SCBA",
+      "url": "https://airgas.my/product/scba-dpi-sekur-diablo-advance/",
+      "imgUrl": "",
+      "brand": "Airgas Technology"
+    },
+    {
+      "id": 4574,
+      "name": "PAB fireman Helmet HT04 interior Basket and lining, Inner Harness 951000001",
+      "industry": "Oil and gas",
+      "subCategory": "Equipment",
+      "url": "https://airgas.my/product/inner-pab-helmet-basket-and-lining/",
+      "imgUrl": "",
+      "brand": "Airgas Technology"
+    },
+    {
+      "id": 4568,
+      "name": "Flash LIGHT for fireman attached MSA helmet",
+      "industry": "Oil and gas",
+      "subCategory": "Equipment",
+      "url": "https://airgas.my/product/flash-light-for-fireman-attached-helmet/",
+      "imgUrl": "",
+      "brand": "Airgas Technology"
+    },
+    {
+      "id": 4560,
+      "name": "Krypton Kr Gas",
+      "industry": "Oil and gas",
+      "subCategory": "Equipment",
+      "url": "https://airgas.my/product/krypton-kr-gas/",
+      "imgUrl": "",
+      "brand": "Airgas Technology"
+    },
+    {
+      "id": 4554,
+      "name": "sample line PROBE for ALTAIR 5X MSA airgas#003252",
+      "industry": "Oil and gas",
+      "subCategory": "Equipment",
+      "url": "https://airgas.my/product/sample-line-probe-airline-for-altair-5x-msa-2/",
+      "imgUrl": "",
+      "brand": "Airgas Technology"
+    },
+    {
+      "id": 4551,
+      "name": "ALTAIR 5X Pump probe,  msa#10152668. airgas#003253",
+      "industry": "Oil and gas",
+      "subCategory": "Equipment",
+      "url": "https://airgas.my/product/sample-line-probe-airline-for-altair-5x-msa10040664-airgas003252/",
+      "imgUrl": "",
+      "brand": "Airgas Technology"
+    },
+    {
+      "id": 4547,
+      "name": "Composite cylinder 6.8L HONEYWELL T8000 SCBA, valve with gauge, 157mm diameter,  WP 300bar,  thread M18*1.5. #3053",
+      "industry": "Confined Space",
+      "subCategory": "Cylinder",
+      "url": "https://airgas.my/product/composite-cylinder-6-8l-honeywell-brand-for-scba-c-w-valve-with-gauge-157mm-diameter-wp-300bar-thread-m181-5-3053/",
+      "imgUrl": "",
+      "brand": "Airgas Technology"
+    },
+    {
+      "id": 4545,
+      "name": "MEDIUM DUTY 15MIL 13\u2033  CHEMICAL RESISTANT FLOCKLINED NITRILE(GNF1513)",
+      "industry": "Oil and gas",
+      "subCategory": "Equipment",
+      "url": "https://airgas.my/product/medium-duty-15mil-13-chemical-resistant-flocklined-nitrilegnf1513/",
+      "imgUrl": "",
+      "brand": "Airgas Technology"
+    },
+    {
+      "id": 4543,
+      "name": "Atlas Safety Glassed Anti-FlgSG200CAF",
+      "industry": "Other industries",
+      "subCategory": "Equipment",
+      "url": "https://airgas.my/product/atlas-safety-glassed-anti-flgsg200caf/",
+      "imgUrl": "",
+      "brand": "Airgas Technology"
+    },
+    {
+      "id": 4541,
+      "name": "Safety Vest-SV4R4KZO(2x Horizontal + 2x Vertical Silver T/C Reglective Tape)",
+      "industry": "Other industries",
+      "subCategory": "Equipment",
+      "url": "https://airgas.my/product/safety-vest-sv4r4kzo2x-horizontal-2x-vertical-silver-t-c-reglective-tape/",
+      "imgUrl": "",
+      "brand": "Airgas Technology"
+    },
+    {
+      "id": 4535,
+      "name": "ANTI IMPACT CUT RESISTANT GLOVE",
+      "industry": "Other industries",
+      "subCategory": "Equipment",
+      "url": "https://airgas.my/product/anti-impact-cut-resistant-glove/",
+      "imgUrl": "",
+      "brand": "Airgas Technology"
+    },
+    {
+      "id": 4533,
+      "name": "Lifting Belt Economi ERGBS07",
+      "industry": "Other industries",
+      "subCategory": "Equipment",
+      "url": "https://airgas.my/product/lifting-belt-economi-ergbs07/",
+      "imgUrl": "",
+      "brand": "Airgas Technology"
+    },
+    {
+      "id": 4531,
+      "name": "PE WITH RUBBER BASE TRAFFIC CONE",
+      "industry": "Other industries",
+      "subCategory": "Equipment",
+      "url": "https://airgas.my/product/pe-with-rubber-base-traffic-cone/",
+      "imgUrl": "",
+      "brand": "Airgas Technology"
+    },
+    {
+      "id": 4526,
+      "name": "PORTWEST BZ12 Bizweld Flame Resistant Cape Hood",
+      "industry": "Oil and gas",
+      "subCategory": "Equipment",
+      "url": "https://airgas.my/product/portwest-bz12-bizweld-flame-resistant-cape-hood/",
+      "imgUrl": "",
+      "brand": "Airgas Technology"
+    },
+    {
+      "id": 4522,
+      "name": "EasyFit Disposable Ear Plugs Uncorded,Tapered ShapeHP101",
+      "industry": "Other industries",
+      "subCategory": "Equipment",
+      "url": "https://airgas.my/product/easyfit-disposable-ear-plugs-uncordedtapered-shapehp101/",
+      "imgUrl": "",
+      "brand": "Airgas Technology"
+    },
+    {
+      "id": 4517,
+      "name": "PROGUARD Advantage I Safety Helmet Ratchet System",
+      "industry": "Other industries",
+      "subCategory": "Equipment",
+      "url": "https://airgas.my/product/proguard-advantage-i-safety-helmet-ratchet-system/",
+      "imgUrl": "",
+      "brand": "Airgas Technology"
+    },
+    {
+      "id": 4514,
+      "name": "filters A2B2P3 R D NBC DIRIN 500",
+      "industry": "Other industries",
+      "subCategory": "Equipment",
+      "url": "https://airgas.my/product/filters-a2b2p3-r-d-nbc-dirin-500/",
+      "imgUrl": "",
+      "brand": "Airgas Technology"
+    },
+    {
+      "id": 4512,
+      "name": "respiratory protection filter ABEK2 DIRIN 230 SEKUR",
+      "industry": "Other industries",
+      "subCategory": "Mask",
+      "url": "https://airgas.my/product/respiratory-protection-filter-abek2-dirin-230-sekur/",
+      "imgUrl": "",
+      "brand": "Airgas Technology"
+    },
+    {
+      "id": 4505,
+      "name": "Safety Glass SIRIM ( SG500CAF )",
+      "industry": "Other industries",
+      "subCategory": "Equipment",
+      "url": "https://airgas.my/product/safety-glass-sirim-sg500caf/",
+      "imgUrl": "",
+      "brand": "Airgas Technology"
+    },
+    {
+      "id": 4503,
+      "name": "High Impact Glove -PORTWEST Brand (A721Y1R )",
+      "industry": "Other industries",
+      "subCategory": "Equipment",
+      "url": "https://airgas.my/product/high-impact-glove-portwest-brand-a721y1r/",
+      "imgUrl": "",
+      "brand": "Airgas Technology"
+    },
+    {
+      "id": 4499,
+      "name": "MSA ChinStrap for V-Gard Helmet, 2 points ( 88128)",
+      "industry": "Other industries",
+      "subCategory": "Equipment",
+      "url": "https://airgas.my/product/msa-chin-strap-88128/",
+      "imgUrl": "",
+      "brand": "Airgas Technology"
+    },
+    {
+      "id": 4495,
+      "name": "Chem- Pro GNU2218 22mil 18\u2033 Unlined Nitrile Gloves",
+      "industry": "Other industries",
+      "subCategory": "Equipment",
+      "url": "https://airgas.my/product/chem-pro-gnu2218-22mil-18-unlined-nitrile-gloves/",
+      "imgUrl": "",
+      "brand": "Airgas Technology"
+    },
+    {
+      "id": 4493,
       "name": "Safety Goggle Anti Fog Clear Lens",
-      "category": "PPE at Works",
-      "brand": null,
-      "brandUrl": null,
-      "industry": "PPE",
-      "subCategory": "Eye Protection",
-      "url": "https://airgas.my/product/safety-goggle-anti-fog-clear-lens/"
-    },
-    {
-      "id": 112,
-      "name": "Safety Vest SV4R4KZO Reflective Tape",
-      "category": "PPE at Works",
-      "brand": null,
-      "brandUrl": null,
-      "industry": "PPE",
+      "industry": "Other industries",
       "subCategory": "Equipment",
-      "url": "https://airgas.my/product/safety-vest-sv4r4kzo-reflective-tape/"
+      "url": "https://airgas.my/product/safety-goggle-anti-fog-clear-lens/",
+      "imgUrl": "",
+      "brand": "Airgas Technology"
     },
     {
-      "id": 113,
-      "name": "Seitron Multi-Gas Portable Detector (4-Gas)",
-      "category": "PPE at Works",
-      "brand": "Seitron",
-      "brandUrl": "https://www.seitron.com/",
-      "industry": "PPE",
+      "id": 4489,
+      "name": "cylinder aluminium 3L , 200bar, for escape set",
+      "industry": "Other industries",
+      "subCategory": "Cylinder",
+      "url": "https://airgas.my/product/cylinder-aluminium-3l-200bar-for-escape-set/",
+      "imgUrl": "",
+      "brand": "Airgas Technology"
+    },
+    {
+      "id": 4487,
+      "name": "DELTA PLUS Large Volume Cap Mount Earmuffs",
+      "industry": "Other industries",
+      "subCategory": "Equipment",
+      "url": "https://airgas.my/product/delta-plus-large-volume-cap-mount-earmuffs/",
+      "imgUrl": "",
+      "brand": "Airgas Technology"
+    },
+    {
+      "id": 4481,
+      "name": "Glove HyFlex Electrostatic Dischange Protection 48- 135",
+      "industry": "Other industries",
+      "subCategory": "Equipment",
+      "url": "https://airgas.my/product/glove-hyflex-electrostatic-dischange-protection-48-135/",
+      "imgUrl": "",
+      "brand": "Airgas Technology"
+    },
+    {
+      "id": 4475,
+      "name": "Antistatic PU fingertip Glove A198 PortWest003222",
+      "industry": "Other industries",
+      "subCategory": "Equipment",
+      "url": "https://airgas.my/product/antistatic-pu-finger-glove-a198-portwest003222/",
+      "imgUrl": "",
+      "brand": "Airgas Technology"
+    },
+    {
+      "id": 4472,
+      "name": "Multigas Detector , MSA, ALTAIR\u00ae 4XR 10178560",
+      "industry": "Confined Space",
       "subCategory": "Detector",
-      "url": "https://airgas.my/product/seitron-multi-gas-portable-detector-4-gas/"
+      "url": "https://airgas.my/product/multigas-detector-msa-altair-4xr/",
+      "imgUrl": "",
+      "brand": "Airgas Technology"
     },
     {
-      "id": 114,
-      "name": "Teho Medical Examination Glove (Powder-Free)",
-      "category": "PPE at Works",
-      "brand": "Teho",
-      "brandUrl": null,
-      "industry": "PPE",
-      "subCategory": "Gloves",
-      "url": "https://airgas.my/product/teho-medical-examination-glove-powder-free/"
-    },
-    {
-      "id": 115,
-      "name": "Cylinder 80L 300bar",
-      "category": "Gases",
-      "brand": null,
-      "brandUrl": null,
-      "industry": "Gases",
-      "subCategory": "Cylinder",
-      "url": "https://airgas.my/product/cylinder-80l-300bar/"
-    },
-    {
-      "id": 116,
-      "name": "CO2 Fire Fighting Cylinder 68L (45kg CO2)",
-      "category": "Gases",
-      "brand": null,
-      "brandUrl": null,
-      "industry": "Gases",
-      "subCategory": "Cylinder",
-      "url": "https://airgas.my/product/co2-fire-fighting-cylinder-68l-45kg-co2/"
-    },
-    {
-      "id": 117,
-      "name": "Ammonia Gas NH3",
-      "category": "Gases",
-      "brand": null,
-      "brandUrl": null,
-      "industry": "Gases",
+      "id": 4453,
+      "name": "1.8M Y-LANYAR WITH ENERGY ABSORBER/003180",
+      "industry": "Other industries",
       "subCategory": "Equipment",
-      "url": "https://airgas.my/product/ammonia-gas-nh3/"
+      "url": "https://airgas.my/product/1-8m-y-lanyar-with-energy-absorber-003180/",
+      "imgUrl": "",
+      "brand": "Airgas Technology"
     },
     {
-      "id": 118,
-      "name": "Helox Breathing Gas",
-      "category": "Gases",
-      "brand": null,
-      "brandUrl": null,
-      "industry": "Gases",
+      "id": 4451,
+      "name": "manifold system for breathing air training modules",
+      "industry": "Other industries",
       "subCategory": "Equipment",
-      "url": "https://airgas.my/product/helox-breathing-gas/"
+      "url": "https://airgas.my/product/manifold-system-for-breathing-air-training-modules/",
+      "imgUrl": "",
+      "brand": "Airgas Technology"
     },
     {
-      "id": 119,
-      "name": "Medical Breathing Air",
-      "category": "Gases",
-      "brand": null,
-      "brandUrl": null,
-      "industry": "Gases",
+      "id": 4444,
+      "name": "valve* BS3 top entry for O2, N2, Ar, He",
+      "industry": "Other industries",
       "subCategory": "Equipment",
-      "url": "https://airgas.my/product/medical-breathing-air/"
+      "url": "https://airgas.my/product/valve-bs3-top-entry-for-o2-n2-ar-he/",
+      "imgUrl": "",
+      "brand": "Airgas Technology"
     },
     {
-      "id": 120,
-      "name": "Hydrogen Gas H2 Cylinder with QF-30A Valve",
-      "category": "Gases",
-      "brand": null,
-      "brandUrl": null,
-      "industry": "Gases",
+      "id": 4440,
+      "name": "Regulator HORNUNG HD 250 FL outlet pressure 1 to 100bar",
+      "industry": "Other industries",
+      "subCategory": "Equipment",
+      "url": "https://airgas.my/product/regulator-hornung-hd-250-fl-outlet-pressure-1-to-100bar/",
+      "imgUrl": "",
+      "brand": "Airgas Technology"
+    },
+    {
+      "id": 4429,
+      "name": "Valve* for QF-5, 200bar for Breathing Air",
+      "industry": "Other industries",
+      "subCategory": "Equipment",
+      "url": "https://airgas.my/product/valve-for-qf-5/",
+      "imgUrl": "",
+      "brand": "Airgas Technology"
+    },
+    {
+      "id": 4411,
+      "name": "Spot 3999",
+      "industry": "Other industries",
+      "subCategory": "Equipment",
+      "url": "https://airgas.my/product/spot-3999/",
+      "imgUrl": "",
+      "brand": "Airgas Technology"
+    },
+    {
+      "id": 4408,
+      "name": "Plasma Cutting CMAX 85\nV-FOCUS TECHNOLOGY",
+      "industry": "Other industries",
+      "subCategory": "Equipment",
+      "url": "https://airgas.my/product/product-3/",
+      "imgUrl": "",
+      "brand": "Airgas Technology"
+    },
+    {
+      "id": 4404,
+      "name": "AustCorp SA5500i Advance\nProcesses :\nMIG / Flux-Cored / DC TIG / Stick / Arc Gouging",
+      "industry": "Other industries",
+      "subCategory": "Equipment",
+      "url": "https://airgas.my/product/austcorp-sa5000i-advance/",
+      "imgUrl": "",
+      "brand": "Airgas Technology"
+    },
+    {
+      "id": 4397,
+      "name": "Rack and manifold for 16 Cylinders bundle / pallet",
+      "industry": "Other industries",
       "subCategory": "Cylinder",
-      "url": "https://airgas.my/product/hydrogen-gas-h2-cylinder-with-qf-30a-valve/"
+      "url": "https://airgas.my/product/rack-for-16-cylinders-bundle/",
+      "imgUrl": "",
+      "brand": "Airgas Technology"
     },
     {
-      "id": 121,
-      "name": "Compressed Oxygen O2",
-      "category": "Gases",
-      "brand": null,
-      "brandUrl": null,
-      "industry": "Gases",
+      "id": 4355,
+      "name": "MSA V-Gard US Full Brim Safety Hats/w Fas-Trac Suspension 475369",
+      "industry": "Other industries",
       "subCategory": "Equipment",
-      "url": "https://airgas.my/product/compressed-oxygen-o2/"
+      "url": "https://airgas.my/product/msa-v-gard-full-brim-safety-hats-w-fas-trac-suspension003209/",
+      "imgUrl": "",
+      "brand": "Airgas Technology"
     },
     {
-      "id": 122,
-      "name": "Helium Balloon Gas 13L Disposable Cylinder (50pcs)",
-      "category": "Gases",
-      "brand": null,
-      "brandUrl": null,
-      "industry": "Gases",
+      "id": 4336,
+      "name": "Breathing Airline escape set, MSA, PremAire Combination with 2L composite cylinder, #10222823",
+      "industry": "Other industries",
       "subCategory": "Cylinder",
-      "url": "https://airgas.my/product/helium-balloon-gas-13l-disposable-cylinder-50pcs/"
+      "url": "https://airgas.my/product/breathing-airline-escape-set-msa-premaire-combination-with-2l-composite-cylinder-10222823/",
+      "imgUrl": "",
+      "brand": "Airgas Technology"
     },
     {
-      "id": 123,
-      "name": "Helium Balloon Gas Disposable Aerosol Can",
-      "category": "Gases",
-      "brand": null,
-      "brandUrl": null,
-      "industry": "Gases",
+      "id": 4334,
+      "name": "Breathing Airline Trolley, MSA, AirCart, 4 unit 6.8L composite cylinder,  hose 2 x 10 Meter, #10222630",
+      "industry": "Other industries",
+      "subCategory": "Cylinder",
+      "url": "https://airgas.my/product/breathing-airline-trolley-msa-aircart-4-unit-6-8l-composite-cylinder-hose-2-x-10-meter-10222630/",
+      "imgUrl": "",
+      "brand": "Airgas Technology"
+    },
+    {
+      "id": 4324,
+      "name": "fireman Hoods Hongkong",
+      "industry": "Oil and gas",
       "subCategory": "Equipment",
-      "url": "https://airgas.my/product/helium-balloon-gas-disposable-aerosol-can/"
+      "url": "https://airgas.my/product/portwest-biztex-microporous-coverall-type-5-6-st40/",
+      "imgUrl": "",
+      "brand": "Airgas Technology"
     },
     {
-      "id": 124,
-      "name": "Medical Oxygen 47L Full Set",
-      "category": "Gases",
-      "brand": null,
-      "brandUrl": null,
-      "industry": "Gases",
-      "subCategory": "Equipment",
-      "url": "https://airgas.my/product/medical-oxygen-47l-full-set/"
-    },
-    {
-      "id": 125,
-      "name": "Regulator Imper Piston (High Flow / High Pressure)",
-      "category": "Gases",
-      "brand": null,
-      "brandUrl": null,
-      "industry": "Gases",
-      "subCategory": "Regulator",
-      "url": "https://airgas.my/product/regulator-imper-piston-high-flow-high-pressure/"
-    },
-    {
-      "id": 126,
-      "name": "SCBA Valve K632 300Bar E17 with 45\u00c2\u00b0 Gauge",
-      "category": "Gases",
-      "brand": null,
-      "brandUrl": null,
-      "industry": "Gases",
-      "subCategory": "SCBA",
-      "url": "https://airgas.my/product/scba-valve-k632-300bar-e17-with-45-gauge/"
-    },
-    {
-      "id": 127,
-      "name": "SCBA Valve K632 300Bar M18 with 90\u00c2\u00b0 Gauge",
-      "category": "Gases",
-      "brand": null,
-      "brandUrl": null,
-      "industry": "Gases",
-      "subCategory": "SCBA",
-      "url": "https://airgas.my/product/scba-valve-k632-300bar-m18-with-90-gauge/"
-    },
-    {
-      "id": 128,
-      "name": "SCBA Valve K44 E17 300Bar",
-      "category": "Gases",
-      "brand": null,
-      "brandUrl": null,
-      "industry": "Gases",
-      "subCategory": "SCBA",
-      "url": "https://airgas.my/product/scba-valve-k44-e17-300bar/"
-    },
-    {
-      "id": 129,
-      "name": "Aluminum 10L Medical Oxygen Cylinder with Trolley Set",
-      "category": "Personal Care",
-      "brand": null,
-      "brandUrl": null,
-      "industry": "Gases",
-      "subCategory": "Cylinder",
-      "url": "https://airgas.my/product/aluminum-10l-medical-oxygen-cylinder-with-trolley-set/"
-    },
-    {
-      "id": 130,
-      "name": "Medical Oxygen Set 2.9L Aluminium Cylinder with Case",
-      "category": "Personal Care",
-      "brand": null,
-      "brandUrl": null,
-      "industry": "Gases",
-      "subCategory": "Cylinder",
-      "url": "https://airgas.my/product/medical-oxygen-set-2-9l-aluminium-cylinder-with-case/"
-    },
-    {
-      "id": 131,
-      "name": "SCBA / EEBD Cylinder Hydro Testing & Inspection Service",
-      "category": "Service & Maintenance",
-      "brand": null,
-      "brandUrl": null,
+      "id": 4281,
+      "name": "Water detector capsules SHELL",
       "industry": "Confined Space",
-      "subCategory": "SCBA",
-      "url": "https://airgas.my/product/scba-eebd-cylinder-hydro-testing-inspection-service/"
+      "subCategory": "Detector",
+      "url": "https://airgas.my/product/water-detector-capsules-shell/",
+      "imgUrl": "",
+      "brand": "Airgas Technology"
     },
     {
-      "id": 132,
-      "name": "Airline Escape Set Service with Posicheck Test",
-      "category": "Service & Maintenance",
-      "brand": null,
-      "brandUrl": null,
-      "industry": "Gases",
+      "id": 4275,
+      "name": "Safety Gloves EST-1PCS PORTWEST A197",
+      "industry": "Other industries",
       "subCategory": "Equipment",
-      "url": "https://airgas.my/product/airline-escape-set-service-with-posicheck-test/"
+      "url": "https://airgas.my/product/safety-gloves-est-5pcs-portwest-a197/",
+      "imgUrl": "",
+      "brand": "Airgas Technology"
     },
     {
-      "id": 133,
-      "name": "EEBD Set Service (Hood Inspection, Refill, Valve Test)",
-      "category": "Service & Maintenance",
-      "brand": null,
-      "brandUrl": null,
-      "industry": "Confined Space",
-      "subCategory": "EEBD",
-      "url": "https://airgas.my/product/eebd-set-service-hood-inspection-refill-valve-test/"
-    },
-    {
-      "id": 134,
-      "name": "SCBA Backplate Inspection Service",
-      "category": "Service & Maintenance",
-      "brand": null,
-      "brandUrl": null,
-      "industry": "Confined Space",
-      "subCategory": "SCBA",
-      "url": "https://airgas.my/product/scba-backplate-inspection-service/"
-    },
-    {
-      "id": 135,
-      "name": "SCBA Face Mask & Backplate Inspection with Posicheck",
-      "category": "Service & Maintenance",
-      "brand": null,
-      "brandUrl": null,
-      "industry": "Confined Space",
-      "subCategory": "SCBA",
-      "url": "https://airgas.my/product/scba-face-mask-backplate-inspection-with-posicheck/"
-    },
-    {
-      "id": 136,
-      "name": "BW IntelliDoX Docking System for MaxXT II",
-      "category": "Service & Maintenance",
-      "brand": "Honeywell",
-      "brandUrl": "https://sps.honeywell.com/",
-      "industry": "Gas Calibration",
+      "id": 4273,
+      "name": "DuraFit Ear Plug Reusable/ Corded with Casing",
+      "industry": "Other industries",
       "subCategory": "Equipment",
-      "url": "https://airgas.my/product/bw-intellidox-docking-system-for-maxxt-ii/"
+      "url": "https://airgas.my/product/ear-plug-reusable-corded-with-casing/",
+      "imgUrl": "",
+      "brand": "Airgas Technology"
     },
     {
-      "id": 137,
-      "name": "CO2 Transfer System Pump 100/D1 High Pressure",
-      "category": "Service & Maintenance",
-      "brand": null,
-      "brandUrl": null,
-      "industry": "Gas Calibration",
+      "id": 4269,
+      "name": "Safety Glasses/Google",
+      "industry": "Other industries",
       "subCategory": "Equipment",
-      "url": "https://airgas.my/product/co2-transfer-system-pump-100-d1-high-pressure/"
+      "url": "https://airgas.my/product/safety-glasses-google/",
+      "imgUrl": "",
+      "brand": "Airgas Technology"
     },
     {
-      "id": 138,
-      "name": "Cylinder Hydraulic Expansion Test Unit (Hydrotest)",
-      "category": "Service & Maintenance",
-      "brand": null,
-      "brandUrl": null,
-      "industry": "Gases",
+      "id": 4264,
+      "name": "KX3 Drawstring Combat Trouser",
+      "industry": "Other industries",
+      "subCategory": "Equipment",
+      "url": "https://airgas.my/product/kx3-drawstring-combat-trouser/",
+      "imgUrl": "",
+      "brand": "Airgas Technology"
+    },
+    {
+      "id": 4260,
+      "name": "PPE BLUE",
+      "industry": "Other industries",
+      "subCategory": "Equipment",
+      "url": "https://airgas.my/product/ppe-blue/",
+      "imgUrl": "",
+      "brand": "Airgas Technology"
+    },
+    {
+      "id": 4256,
+      "name": "Airline system 50CFM intrinsically safe breather box #003175",
+      "industry": "Other industries",
+      "subCategory": "Equipment",
+      "url": "https://airgas.my/product/airline-system-50cfm-intrinsically-safe-breather-box/",
+      "imgUrl": "",
+      "brand": "Airgas Technology"
+    },
+    {
+      "id": 4254,
+      "name": "LW compressor Safety Valve 330bar P/N: 001816",
+      "industry": "Other industries",
+      "subCategory": "Equipment",
+      "url": "https://airgas.my/product/lw-compressor-safety-valve-330bar-p-n-001816/",
+      "imgUrl": "",
+      "brand": "Airgas Technology"
+    },
+    {
+      "id": 4252,
+      "name": "Gas of Hydrogen H2 Cylinder and valve QF-30A",
+      "industry": "Oil and gas",
       "subCategory": "Cylinder",
-      "url": "https://airgas.my/product/cylinder-hydraulic-expansion-test-unit-hydrotest/"
+      "url": "https://airgas.my/product/gas-of-hydrogen-h2/",
+      "imgUrl": "",
+      "brand": "Airgas Technology"
     },
     {
-      "id": 139,
-      "name": "L&W Full Synthetic Oil for HP Breathing Air Compressor",
-      "category": "Service & Maintenance",
-      "brand": "L&W Compressor",
-      "brandUrl": "https://www.lw-compressors.com/",
-      "industry": "Gases",
-      "subCategory": "Compressor",
-      "url": "https://airgas.my/product/l-w-full-synthetic-oil-for-hp-breathing-air-compressor/"
-    },
-    {
-      "id": 140,
-      "name": "L&W Compressor 100E",
-      "category": "Service & Maintenance",
-      "brand": "L&W Compressor",
-      "brandUrl": "https://www.lw-compressors.com/",
-      "industry": "Gases",
-      "subCategory": "Compressor",
-      "url": "https://airgas.my/product/l-w-compressor-100e/"
-    },
-    {
-      "id": 141,
-      "name": "L&W Compressor Safety Valve 330bar",
-      "category": "Service & Maintenance",
-      "brand": "L&W Compressor",
-      "brandUrl": "https://www.lw-compressors.com/",
-      "industry": "Gases",
-      "subCategory": "Compressor",
-      "url": "https://airgas.my/product/l-w-compressor-safety-valve-330bar/"
-    },
-    {
-      "id": 142,
-      "name": "L&W Cylinder for BA Storage",
-      "category": "Service & Maintenance",
-      "brand": "L&W Compressor",
-      "brandUrl": "https://www.lw-compressors.com/",
-      "industry": "Gases",
-      "subCategory": "Cylinder",
-      "url": "https://airgas.my/product/l-w-cylinder-for-ba-storage/"
-    },
-    {
-      "id": 143,
-      "name": "L&W Service Kit for LW 230/280/320",
-      "category": "Service & Maintenance",
-      "brand": "L&W Compressor",
-      "brandUrl": "https://www.lw-compressors.com/",
-      "industry": "Gases",
-      "subCategory": "Equipment",
-      "url": "https://airgas.my/product/l-w-service-kit-for-lw-230-280-320/"
-    },
-    {
-      "id": 144,
-      "name": "MSA Galaxy GX2 Automated Test System",
-      "category": "Service & Maintenance",
-      "brand": "MSA Safety",
-      "brandUrl": "https://my.msasafety.com/",
-      "industry": "Gas Calibration",
-      "subCategory": "Equipment",
-      "url": "https://airgas.my/product/msa-galaxy-gx2-automated-test-system/"
-    },
-    {
-      "id": 145,
-      "name": "Honeywell Posicheck SCBA Mask Test Equipment",
-      "category": "Service & Maintenance",
-      "brand": "Honeywell",
-      "brandUrl": "https://sps.honeywell.com/",
-      "industry": "Confined Space",
-      "subCategory": "SCBA",
-      "url": "https://airgas.my/product/honeywell-posicheck-scba-mask-test-equipment/"
-    },
-    {
-      "id": 146,
-      "name": "Powder ABC Refilling Machine for Fire Extinguisher",
-      "category": "Service & Maintenance",
-      "brand": null,
-      "brandUrl": null,
-      "industry": "Gases",
-      "subCategory": "Equipment",
-      "url": "https://airgas.my/product/powder-abc-refilling-machine-for-fire-extinguisher/"
-    },
-    {
-      "id": 147,
-      "name": "Respirator Examination Instrument (Posicheck)",
-      "category": "Service & Maintenance",
-      "brand": null,
-      "brandUrl": null,
-      "industry": "Gas Calibration",
-      "subCategory": "Equipment",
-      "url": "https://airgas.my/product/respirator-examination-instrument-posicheck/"
-    },
-    {
-      "id": 148,
-      "name": "ARC Welding Machine ARC 250",
-      "category": "Welding Products",
-      "brand": null,
-      "brandUrl": null,
-      "industry": "Welding",
-      "subCategory": "Welding Machine",
-      "url": "https://airgas.my/product/arc-welding-machine-arc-250/"
-    },
-    {
-      "id": 149,
-      "name": "AustCorp SA5000i MIG Welding Machine",
-      "category": "Welding Products",
-      "brand": "AustCorp",
-      "brandUrl": "https://www.austcorpinternational.com/",
-      "industry": "Welding",
-      "subCategory": "Welding Machine",
-      "url": "https://airgas.my/product/austcorp-sa5000i-mig-welding-machine/"
-    },
-    {
-      "id": 150,
-      "name": "AustCorp SA5500i Advance Multi-Process Welder",
-      "category": "Welding Products",
-      "brand": "AustCorp",
-      "brandUrl": "https://www.austcorpinternational.com/",
-      "industry": "Welding",
-      "subCategory": "Welding Machine",
-      "url": "https://airgas.my/product/austcorp-sa5500i-advance-multi-process-welder/"
-    },
-    {
-      "id": 151,
-      "name": "AustCorp VT-201S Advance TIG Welder",
-      "category": "Welding Products",
-      "brand": "AustCorp",
-      "brandUrl": "https://www.austcorpinternational.com/",
-      "industry": "Welding",
-      "subCategory": "Welding Machine",
-      "url": "https://airgas.my/product/austcorp-vt-201s-advance-tig-welder/"
-    },
-    {
-      "id": 152,
-      "name": "Cable Connector",
-      "category": "Welding Products",
-      "brand": null,
-      "brandUrl": null,
-      "industry": "Welding",
-      "subCategory": "Equipment",
-      "url": "https://airgas.my/product/cable-connector/"
-    },
-    {
-      "id": 153,
-      "name": "CASTARC 150N Electrode (Machinable) 2.6mm / 3.2mm",
-      "category": "Welding Products",
-      "brand": null,
-      "brandUrl": null,
-      "industry": "Welding",
-      "subCategory": "Equipment",
-      "url": "https://airgas.my/product/castarc-150n-electrode-machinable-2-6mm-3-2mm/"
-    },
-    {
-      "id": 154,
-      "name": "Chiyoda Welding Gauge HJC-40S",
-      "category": "Welding Products",
-      "brand": "Chiyoda",
-      "brandUrl": "https://chiyoda-seiki.co.jp/en/",
-      "industry": "Welding",
-      "subCategory": "Equipment",
-      "url": "https://airgas.my/product/chiyoda-welding-gauge-hjc-40s/"
-    },
-    {
-      "id": 155,
-      "name": "Chiyoda Welding Gauge HJC-40A",
-      "category": "Welding Products",
-      "brand": "Chiyoda",
-      "brandUrl": "https://chiyoda-seiki.co.jp/en/",
-      "industry": "Welding",
-      "subCategory": "Equipment",
-      "url": "https://airgas.my/product/chiyoda-welding-gauge-hjc-40a/"
-    },
-    {
-      "id": 156,
-      "name": "Cotton Gloves",
-      "category": "Welding Products",
-      "brand": null,
-      "brandUrl": null,
-      "industry": "Welding",
-      "subCategory": "Gloves",
-      "url": "https://airgas.my/product/cotton-gloves/"
-    },
-    {
-      "id": 157,
-      "name": "Cutting Disk",
-      "category": "Welding Products",
-      "brand": null,
-      "brandUrl": null,
-      "industry": "Welding",
-      "subCategory": "Equipment",
-      "url": "https://airgas.my/product/cutting-disk/"
-    },
-    {
-      "id": 158,
-      "name": "Europower NAC-8002 80L Industrial Vacuum Cleaner",
-      "category": "Welding Products",
-      "brand": "Europower",
-      "brandUrl": null,
-      "industry": "Welding",
-      "subCategory": "Equipment",
-      "url": "https://airgas.my/product/europower-nac-8002-80l-industrial-vacuum-cleaner/"
-    },
-    {
-      "id": 159,
-      "name": "Fitter Glove",
-      "category": "Welding Products",
-      "brand": null,
-      "brandUrl": null,
-      "industry": "Welding",
-      "subCategory": "Gloves",
-      "url": "https://airgas.my/product/fitter-glove/"
-    },
-    {
-      "id": 160,
-      "name": "Garden Sprayer 5L",
-      "category": "Welding Products",
-      "brand": null,
-      "brandUrl": null,
-      "industry": "Welding",
-      "subCategory": "Equipment",
-      "url": "https://airgas.my/product/garden-sprayer-5l/"
-    },
-    {
-      "id": 161,
-      "name": "Welding Glove 14 inch",
-      "category": "Welding Products",
-      "brand": null,
-      "brandUrl": null,
-      "industry": "Welding",
-      "subCategory": "Gloves",
-      "url": "https://airgas.my/product/welding-glove-14-inch/"
-    },
-    {
-      "id": 162,
-      "name": "Adjustable Welding Helmet",
-      "category": "Welding Products",
-      "brand": null,
-      "brandUrl": null,
-      "industry": "Welding",
-      "subCategory": "Head Protection",
-      "url": "https://airgas.my/product/adjustable-welding-helmet/"
-    },
-    {
-      "id": 163,
-      "name": "JASIC TIG Welding Machine TIG250S",
-      "category": "Welding Products",
-      "brand": "JASIC",
-      "brandUrl": "https://www.jasic.com/",
-      "industry": "Welding",
-      "subCategory": "Welding Machine",
-      "url": "https://airgas.my/product/jasic-tig-welding-machine-tig250s/"
-    },
-    {
-      "id": 164,
-      "name": "LICOTA Tools Set",
-      "category": "Welding Products",
-      "brand": "LICOTA",
-      "brandUrl": null,
-      "industry": "Welding",
-      "subCategory": "Equipment",
-      "url": "https://airgas.my/product/licota-tools-set/"
-    },
-    {
-      "id": 165,
-      "name": "MB15 MIG Torch 4M (Yellow Handle) Complete",
-      "category": "Welding Products",
-      "brand": null,
-      "brandUrl": null,
-      "industry": "Welding",
-      "subCategory": "Welding Torch",
-      "url": "https://airgas.my/product/mb15-mig-torch-4m-yellow-handle-complete/"
-    },
-    {
-      "id": 166,
-      "name": "MB15 MIG Torch Complete 3M/4M/5M",
-      "category": "Welding Products",
-      "brand": null,
-      "brandUrl": null,
-      "industry": "Welding",
-      "subCategory": "Welding Torch",
-      "url": "https://airgas.my/product/mb15-mig-torch-complete-3m-4m-5m/"
-    },
-    {
-      "id": 167,
-      "name": "MB24 MIG Torch Complete",
-      "category": "Welding Products",
-      "brand": null,
-      "brandUrl": null,
-      "industry": "Welding",
-      "subCategory": "Welding Torch",
-      "url": "https://airgas.my/product/mb24-mig-torch-complete/"
-    },
-    {
-      "id": 168,
-      "name": "YMH Z-MIG 200 MIG Welding Machine",
-      "category": "Welding Products",
-      "brand": "YMH",
-      "brandUrl": null,
-      "industry": "Welding",
-      "subCategory": "Welding Machine",
-      "url": "https://airgas.my/product/ymh-z-mig-200-mig-welding-machine/"
-    },
-    {
-      "id": 169,
-      "name": "NJSTAR Air Compressor 150L 3HP",
-      "category": "Welding Products",
-      "brand": "NJSTAR",
-      "brandUrl": null,
-      "industry": "Welding",
-      "subCategory": "Compressor",
-      "url": "https://airgas.my/product/njstar-air-compressor-150l-3hp/"
-    },
-    {
-      "id": 170,
-      "name": "NJSTAR Auto Darkening Welding Helmet NJS 777",
-      "category": "Welding Products",
-      "brand": "NJSTAR",
-      "brandUrl": null,
-      "industry": "Welding",
-      "subCategory": "Head Protection",
-      "url": "https://airgas.my/product/njstar-auto-darkening-welding-helmet-njs-777/"
-    },
-    {
-      "id": 171,
-      "name": "Paint Brush Nylon 1.5 inch",
-      "category": "Welding Products",
-      "brand": null,
-      "brandUrl": null,
-      "industry": "Welding",
-      "subCategory": "Equipment",
-      "url": "https://airgas.my/product/paint-brush-nylon-1-5-inch/"
-    },
-    {
-      "id": 172,
-      "name": "Pana Type 350 MIG Torch (Euro Fitting) 3M/4M/5M",
-      "category": "Welding Products",
-      "brand": null,
-      "brandUrl": null,
-      "industry": "Welding",
-      "subCategory": "Welding Torch",
-      "url": "https://airgas.my/product/pana-type-350-mig-torch-euro-fitting-3m-4m-5m/"
-    },
-    {
-      "id": 173,
-      "name": "Pana Type 350 MIG Torch (Japan Fitting) 3M/4M/5M",
-      "category": "Welding Products",
-      "brand": null,
-      "brandUrl": null,
-      "industry": "Welding",
-      "subCategory": "Welding Torch",
-      "url": "https://airgas.my/product/pana-type-350-mig-torch-japan-fitting-3m-4m-5m/"
-    },
-    {
-      "id": 174,
-      "name": "Pana Type 500 MIG Torch (Euro Fitting) 3M/4M/5M",
-      "category": "Welding Products",
-      "brand": null,
-      "brandUrl": null,
-      "industry": "Welding",
-      "subCategory": "Welding Torch",
-      "url": "https://airgas.my/product/pana-type-500-mig-torch-euro-fitting-3m-4m-5m/"
-    },
-    {
-      "id": 175,
-      "name": "Pana Type 500 MIG Torch (Japan Fitting) 3M/4M/5M",
-      "category": "Welding Products",
-      "brand": null,
-      "brandUrl": null,
-      "industry": "Welding",
-      "subCategory": "Welding Torch",
-      "url": "https://airgas.my/product/pana-type-500-mig-torch-japan-fitting-3m-4m-5m/"
-    },
-    {
-      "id": 176,
-      "name": "CMAX 85 Plasma Cutter (V-Focus Technology)",
-      "category": "Welding Products",
-      "brand": null,
-      "brandUrl": null,
-      "industry": "Welding",
-      "subCategory": "Equipment",
-      "url": "https://airgas.my/product/cmax-85-plasma-cutter-v-focus-technology/"
-    },
-    {
-      "id": 177,
-      "name": "Portable Electrode Oven Ace Weld 5kg",
-      "category": "Welding Products",
-      "brand": null,
-      "brandUrl": null,
-      "industry": "Welding",
-      "subCategory": "Equipment",
-      "url": "https://airgas.my/product/portable-electrode-oven-ace-weld-5kg/"
-    },
-    {
-      "id": 178,
-      "name": "Sand Paper Abrasive 230mm x 280mm (A4)",
-      "category": "Welding Products",
-      "brand": null,
-      "brandUrl": null,
-      "industry": "Welding",
-      "subCategory": "Equipment",
-      "url": "https://airgas.my/product/sand-paper-abrasive-230mm-x-280mm-a4/"
-    },
-    {
-      "id": 179,
-      "name": "Spot Welding Machine 3999",
-      "category": "Welding Products",
-      "brand": null,
-      "brandUrl": null,
-      "industry": "Welding",
-      "subCategory": "Welding Machine",
-      "url": "https://airgas.my/product/spot-welding-machine-3999/"
-    },
-    {
-      "id": 180,
-      "name": "Tape Measure",
-      "category": "Welding Products",
-      "brand": null,
-      "brandUrl": null,
-      "industry": "Welding",
-      "subCategory": "Equipment",
-      "url": "https://airgas.my/product/tape-measure/"
-    },
-    {
-      "id": 181,
-      "name": "TIG Torch WP17-2-25",
-      "category": "Welding Products",
-      "brand": null,
-      "brandUrl": null,
-      "industry": "Welding",
-      "subCategory": "Welding Torch",
-      "url": "https://airgas.my/product/tig-torch-wp17-2-25/"
-    },
-    {
-      "id": 182,
-      "name": "Valve Opener Spinner Key",
-      "category": "Welding Products",
-      "brand": null,
-      "brandUrl": null,
-      "industry": "Welding",
-      "subCategory": "Valve",
-      "url": "https://airgas.my/product/valve-opener-spinner-key/"
-    },
-    {
-      "id": 183,
-      "name": "Ventilator Blower Fan",
-      "category": "Welding Products",
-      "brand": null,
-      "brandUrl": null,
-      "industry": "Welding",
-      "subCategory": "Equipment",
-      "url": "https://airgas.my/product/ventilator-blower-fan/"
-    },
-    {
-      "id": 184,
-      "name": "Kemppi S 400R Hi Arc Welding Machine",
-      "category": "Welding Products",
-      "brand": "Kemppi",
-      "brandUrl": "https://www.kemppi.com/",
-      "industry": "Welding",
-      "subCategory": "Welding Machine",
-      "url": "https://airgas.my/product/kemppi-s-400r-hi-arc-welding-machine/"
-    },
-    {
-      "id": 185,
-      "name": "Welichi MIG Welding Machine",
-      "category": "Welding Products",
-      "brand": "Welichi",
-      "brandUrl": null,
-      "industry": "Welding",
-      "subCategory": "Welding Machine",
-      "url": "https://airgas.my/product/welichi-mig-welding-machine/"
-    },
-    {
-      "id": 186,
-      "name": "Welding Shield Screen Protection",
-      "category": "Welding Products",
-      "brand": null,
-      "brandUrl": null,
-      "industry": "Welding",
-      "subCategory": "Equipment",
-      "url": "https://airgas.my/product/welding-shield-screen-protection/"
-    },
-    {
-      "id": 187,
-      "name": "WS MMA 165 Inverter Welding Machine",
-      "category": "Welding Products",
-      "brand": null,
-      "brandUrl": null,
-      "industry": "Welding",
-      "subCategory": "Welding Machine",
-      "url": "https://airgas.my/product/ws-mma-165-inverter-welding-machine/"
-    },
-    {
-      "id": 188,
-      "name": "Airline Auto Switch SWOT with Escape Mask 15 Min (DPI Sekur)",
-      "category": "Gas Equipment",
-      "brand": "DPI Sekur",
-      "brandUrl": "https://www.sekur.com/en/",
-      "industry": "Gases",
+      "id": 4248,
+      "name": "Full Facemask AVEC CM6 butyl",
+      "industry": "Other industries",
       "subCategory": "Mask",
-      "url": "https://airgas.my/product/airline-auto-switch-swot-with-escape-mask-15-min-dpi-sekur/"
+      "url": "https://airgas.my/product/full-facemask-avec/",
+      "imgUrl": "",
+      "brand": "Airgas Technology"
     },
     {
-      "id": 189,
-      "name": "Aluminium Cylinder 10.0L",
-      "category": "Gas Equipment",
-      "brand": null,
-      "brandUrl": null,
-      "industry": "Gases",
-      "subCategory": "Cylinder",
-      "url": "https://airgas.my/product/aluminium-cylinder-10-0l/"
-    },
-    {
-      "id": 190,
-      "name": "Aluminium Cylinder 2.9L",
-      "category": "Gas Equipment",
-      "brand": null,
-      "brandUrl": null,
-      "industry": "Gases",
-      "subCategory": "Cylinder",
-      "url": "https://airgas.my/product/aluminium-cylinder-2-9l/"
-    },
-    {
-      "id": 191,
-      "name": "Aluminium Cylinder 4.6L",
-      "category": "Gas Equipment",
-      "brand": null,
-      "brandUrl": null,
-      "industry": "Gases",
-      "subCategory": "Cylinder",
-      "url": "https://airgas.my/product/aluminium-cylinder-4-6l/"
-    },
-    {
-      "id": 192,
-      "name": "Argon Gas Cylinder",
-      "category": "Gas Equipment",
-      "brand": null,
-      "brandUrl": null,
-      "industry": "Gases",
-      "subCategory": "Cylinder",
-      "url": "https://airgas.my/product/argon-gas-cylinder/"
-    },
-    {
-      "id": 193,
-      "name": "BS3 Chrome Plated Safety Regulator #4026",
-      "category": "Gas Equipment",
-      "brand": null,
-      "brandUrl": null,
-      "industry": "Gas Calibration",
-      "subCategory": "Regulator",
-      "url": "https://airgas.my/product/bs3-chrome-plated-safety-regulator-4026/"
-    },
-    {
-      "id": 194,
-      "name": "BS4 Chrome Plated Regulator #4006",
-      "category": "Gas Equipment",
-      "brand": null,
-      "brandUrl": null,
-      "industry": "Gas Calibration",
-      "subCategory": "Regulator",
-      "url": "https://airgas.my/product/bs4-chrome-plated-regulator-4006/"
-    },
-    {
-      "id": 195,
-      "name": "BS15 Chrome Plated Regulator #4008",
-      "category": "Gas Equipment",
-      "brand": null,
-      "brandUrl": null,
-      "industry": "Gas Calibration",
-      "subCategory": "Regulator",
-      "url": "https://airgas.my/product/bs15-chrome-plated-regulator-4008/"
-    },
-    {
-      "id": 196,
-      "name": "Bullnose for BS8 Connection CO2 #0737",
-      "category": "Gas Equipment",
-      "brand": null,
-      "brandUrl": null,
-      "industry": "Gases",
+      "id": 4238,
+      "name": "escape hood AVEC",
+      "industry": "Other industries",
       "subCategory": "Equipment",
-      "url": "https://airgas.my/product/bullnose-for-bs8-connection-co2-0737/"
+      "url": "https://airgas.my/product/escape-hood/",
+      "imgUrl": "",
+      "brand": "Airgas Technology"
     },
     {
-      "id": 197,
-      "name": "Bullnose for BS3 Connection (O2, Ar, He, N2)",
-      "category": "Gas Equipment",
-      "brand": null,
-      "brandUrl": null,
-      "industry": "Gases",
-      "subCategory": "Equipment",
-      "url": "https://airgas.my/product/bullnose-for-bs3-connection-o2-ar-he-n2/"
-    },
-    {
-      "id": 198,
-      "name": "Bullnose for BS4 Connection (Acetylene DA)",
-      "category": "Gas Equipment",
-      "brand": null,
-      "brandUrl": null,
-      "industry": "Gases",
-      "subCategory": "Equipment",
-      "url": "https://airgas.my/product/bullnose-for-bs4-connection-acetylene-da/"
-    },
-    {
-      "id": 199,
-      "name": "C-10 Brass Regulator (India) #4001",
-      "category": "Gas Equipment",
-      "brand": null,
-      "brandUrl": null,
-      "industry": "Gas Calibration",
-      "subCategory": "Regulator",
-      "url": "https://airgas.my/product/c-10-brass-regulator-india-4001/"
-    },
-    {
-      "id": 200,
-      "name": "C-10 SS Regulator (China) #4003",
-      "category": "Gas Equipment",
-      "brand": null,
-      "brandUrl": null,
-      "industry": "Gas Calibration",
-      "subCategory": "Regulator",
-      "url": "https://airgas.my/product/c-10-ss-regulator-china-4003/"
-    },
-    {
-      "id": 201,
-      "name": "CGA 320 19E Connector #4010",
-      "category": "Gas Equipment",
-      "brand": null,
-      "brandUrl": null,
-      "industry": "Gas Calibration",
-      "subCategory": "Equipment",
-      "url": "https://airgas.my/product/cga-320-19e-connector-4010/"
-    },
-    {
-      "id": 202,
-      "name": "Cabinet for Safety or Fireman PPE",
-      "category": "Gas Equipment",
-      "brand": null,
-      "brandUrl": null,
-      "industry": "Gases",
-      "subCategory": "Equipment",
-      "url": "https://airgas.my/product/cabinet-for-safety-or-fireman-ppe/"
-    },
-    {
-      "id": 203,
-      "name": "CO2 Regulator with Heater",
-      "category": "Gas Equipment",
-      "brand": null,
-      "brandUrl": null,
-      "industry": "Gas Calibration",
-      "subCategory": "Regulator",
-      "url": "https://airgas.my/product/co2-regulator-with-heater/"
-    },
-    {
-      "id": 204,
-      "name": "Compressed Air Regulator",
-      "category": "Gas Equipment",
-      "brand": null,
-      "brandUrl": null,
-      "industry": "Gas Calibration",
-      "subCategory": "Regulator",
-      "url": "https://airgas.my/product/compressed-air-regulator/"
-    },
-    {
-      "id": 205,
-      "name": "Gas Cylinder Trolley (Single Cylinder)",
-      "category": "Gas Equipment",
-      "brand": null,
-      "brandUrl": null,
-      "industry": "Gases",
+      "id": 4228,
+      "name": "cylinder aluminium for CO2 SODA 0.6L",
+      "industry": "Other industries",
       "subCategory": "Cylinder",
-      "url": "https://airgas.my/product/gas-cylinder-trolley-single-cylinder/"
+      "url": "https://airgas.my/product/co2-soda/",
+      "imgUrl": "",
+      "brand": "Airgas Technology"
     },
     {
-      "id": 206,
-      "name": "Gas Cylinder Trolley (Double Cylinder)",
-      "category": "Gas Equipment",
-      "brand": null,
-      "brandUrl": null,
-      "industry": "Gases",
-      "subCategory": "Cylinder",
-      "url": "https://airgas.my/product/gas-cylinder-trolley-double-cylinder/"
-    },
-    {
-      "id": 207,
-      "name": "Gas Hose Assembly (Oxygen / Acetylene)",
-      "category": "Gas Equipment",
-      "brand": null,
-      "brandUrl": null,
-      "industry": "Gases",
+      "id": 4222,
+      "name": "fresh air hose breathing apparatuses A-Type 10M Fresh Air Light Duty Hose Sekur DPI 44370508 #003154",
+      "industry": "Other industries",
       "subCategory": "Equipment",
-      "url": "https://airgas.my/product/gas-hose-assembly-oxygen-acetylene/"
+      "url": "https://airgas.my/product/fresh-air-hose-breathing-apparatuses-a-type-10m-fresh-air-light-duty-hose-sekur-dpi-44370508/",
+      "imgUrl": "",
+      "brand": "Airgas Technology"
     },
     {
-      "id": 208,
-      "name": "Gas Cylinder Rack Storage",
-      "category": "Gas Equipment",
-      "brand": null,
-      "brandUrl": null,
-      "industry": "Gases",
-      "subCategory": "Cylinder",
-      "url": "https://airgas.my/product/gas-cylinder-rack-storage/"
-    },
-    {
-      "id": 209,
-      "name": "MSA Battery Charger for ALTAIR 4X/5X #10092936",
-      "category": "Gas Equipment",
-      "brand": "MSA Safety",
-      "brandUrl": "https://my.msasafety.com/",
-      "industry": "Gases",
+      "id": 4218,
+      "name": "fresh air hose breathing apparatuses A-Type with Filter Sekur DPI 44370504 #003155",
+      "industry": "Other industries",
       "subCategory": "Equipment",
-      "url": "https://airgas.my/product/msa-battery-charger-for-altair-4x-5x-10092936/"
+      "url": "https://airgas.my/product/fresh-air-hose-breathing-apparatuses-a-type-with-filter-sekur-dpi-copy-copy/",
+      "imgUrl": "",
+      "brand": "Airgas Technology"
     },
     {
-      "id": 210,
-      "name": "Flashback Arrestor (Oxygen Side)",
-      "category": "Gas Equipment",
-      "brand": null,
-      "brandUrl": null,
-      "industry": "Gas Calibration",
+      "id": 4217,
+      "name": "fresh air hose breathing apparatuses A-Type with BLOWER Sekur DPI 44370505 #003156",
+      "industry": "Other industries",
       "subCategory": "Equipment",
-      "url": "https://airgas.my/product/flashback-arrestor-oxygen-side/"
+      "url": "https://airgas.my/product/fresh-air-hose-breathing-apparatuses-a-type-with-filter-sekur-dpi-copy/",
+      "imgUrl": "",
+      "brand": "Airgas Technology"
     },
     {
-      "id": 211,
-      "name": "Flashback Arrestor (Fuel Side)",
-      "category": "Gas Equipment",
-      "brand": null,
-      "brandUrl": null,
-      "industry": "Gas Calibration",
+      "id": 4211,
+      "name": "Helium Balloon Gas with 47L/150bar compressed cylinder",
+      "industry": "Oil and gas",
+      "subCategory": "Cylinder",
+      "url": "https://airgas.my/product/helium-balloon-gas-with-47l-150bar-compressed-cylinder/",
+      "imgUrl": "",
+      "brand": "Airgas Technology"
+    },
+    {
+      "id": 4206,
+      "name": "Helium Balloon Gas with refilled cylinder for 125pcs",
+      "industry": "Oil and gas",
+      "subCategory": "Cylinder",
+      "url": "https://airgas.my/product/helium-balloon-gas-with-refilled-cylinder-for-125pcs/",
+      "imgUrl": "",
+      "brand": "Airgas Technology"
+    },
+    {
+      "id": 4200,
+      "name": "Helium Balloon Gas with 4 disposable aerosol can for 5 pcs of balloon",
+      "industry": "Oil and gas",
       "subCategory": "Equipment",
-      "url": "https://airgas.my/product/flashback-arrestor-fuel-side/"
+      "url": "https://airgas.my/product/helium-balloon-gas-with-disposable-aerosol-can/",
+      "imgUrl": "",
+      "brand": "Airgas Technology"
     },
     {
-      "id": 212,
-      "name": "Nitrogen Gas N2 Cylinder",
-      "category": "Gas Equipment",
-      "brand": null,
-      "brandUrl": null,
-      "industry": "Gases",
+      "id": 4191,
+      "name": "Regulator for Helium Balloon Gas",
+      "industry": "Oil and gas",
+      "subCategory": "Equipment",
+      "url": "https://airgas.my/product/regulator-balloon-gas/",
+      "imgUrl": "",
+      "brand": "Airgas Technology"
+    },
+    {
+      "id": 4151,
+      "name": "MSA S-CAP Hood 10064644",
+      "industry": "Other industries",
+      "subCategory": "Equipment",
+      "url": "https://airgas.my/product/msa-s-cap-hood/",
+      "imgUrl": "",
+      "brand": "Airgas Technology"
+    },
+    {
+      "id": 4150,
+      "name": "SCBA MSA M1 #",
+      "industry": "Confined Space",
+      "subCategory": "SCBA",
+      "url": "https://airgas.my/product/scba-msa-m1/",
+      "imgUrl": "",
+      "brand": "Airgas Technology"
+    },
+    {
+      "id": 4145,
+      "name": "SCBA MSA AirXpress 2 fire",
+      "industry": "Confined Space",
+      "subCategory": "SCBA",
+      "url": "https://airgas.my/product/scba-msa-airxpress-2-fire/",
+      "imgUrl": "",
+      "brand": "Airgas Technology"
+    },
+    {
+      "id": 4120,
+      "name": "Nomex IIIA PANS 003165",
+      "industry": "Other industries",
+      "subCategory": "Equipment",
+      "url": "https://airgas.my/product/product/",
+      "imgUrl": "",
+      "brand": "Airgas Technology"
+    },
+    {
+      "id": 4111,
+      "name": "Regulator Hornung Diaphragm shut-off valve HP500 stainless steel",
+      "industry": "Other industries",
+      "subCategory": "Equipment",
+      "url": "https://airgas.my/product/regulator-hornung-diaphragm-shut-off-valve-hp500-stainless-steel/",
+      "imgUrl": "",
+      "brand": "Airgas Technology"
+    },
+    {
+      "id": 4092,
+      "name": "Sekur Escape esCAPe c/attacco muro 43390302",
+      "industry": "Other industries",
+      "subCategory": "Equipment",
+      "url": "https://airgas.my/product/sekur-escape-escape/",
+      "imgUrl": "",
+      "brand": "Airgas Technology"
+    },
+    {
+      "id": 4077,
+      "name": "Proban Coverall 003166",
+      "industry": "Other industries",
+      "subCategory": "Protective Suit",
+      "url": "https://airgas.my/product/orange-coverall/",
+      "imgUrl": "",
+      "brand": "Airgas Technology"
+    },
+    {
+      "id": 4068,
+      "name": "cylinder welded 1.5L disposable",
+      "industry": "Other industries",
       "subCategory": "Cylinder",
-      "url": "https://airgas.my/product/nitrogen-gas-n2-cylinder/"
+      "url": "https://airgas.my/product/cylinder-welded-1-5l/",
+      "imgUrl": "",
+      "brand": "Airgas Technology"
     },
     {
-      "id": 213,
-      "name": "Oxygen Regulator with Flow Meter (Medical)",
-      "category": "Gas Equipment",
-      "brand": null,
-      "brandUrl": null,
-      "industry": "Gas Calibration",
-      "subCategory": "Regulator",
-      "url": "https://airgas.my/product/oxygen-regulator-with-flow-meter-medical/"
+      "id": 4044,
+      "name": "Kermel Fabric Coverall 003162",
+      "industry": "Other industries",
+      "subCategory": "Protective Suit",
+      "url": "https://airgas.my/product/kermel-fabric-coverall/",
+      "imgUrl": "",
+      "brand": "Airgas Technology"
     },
     {
-      "id": 214,
-      "name": "Acetylene Gas DA Cylinder",
-      "category": "Gas Equipment",
-      "brand": null,
-      "brandUrl": null,
-      "industry": "Gases",
+      "id": 3997,
+      "name": "Pyrovatek Coverall 003164",
+      "industry": "Other industries",
+      "subCategory": "Protective Suit",
+      "url": "https://airgas.my/product/pyrovatek/",
+      "imgUrl": "",
+      "brand": "Airgas Technology"
+    },
+    {
+      "id": 3996,
+      "name": "Nomex  IIIA Coverall 003163",
+      "industry": "Other industries",
+      "subCategory": "Protective Suit",
+      "url": "https://airgas.my/product/nomex-iiia-coverall/",
+      "imgUrl": "",
+      "brand": "Airgas Technology"
+    },
+    {
+      "id": 3990,
+      "name": "Valve for SCUBA",
+      "industry": "Other industries",
+      "subCategory": "Equipment",
+      "url": "https://airgas.my/product/valve-for-scuba/",
+      "imgUrl": "",
+      "brand": "Airgas Technology"
+    },
+    {
+      "id": 3977,
+      "name": "Sekur navy EEBD low pressure spiral hose SNC 43716012, #003149",
+      "industry": "Confined Space",
+      "subCategory": "Equipment",
+      "url": "https://airgas.my/product/sekur-navy-eebd-low-pressure-spiral-hose-43716012/",
+      "imgUrl": "",
+      "brand": "Airgas Technology"
+    },
+    {
+      "id": 3976,
+      "name": "valve* for Breathing Air. QF-2A, WP150bar. E25",
+      "industry": "Other industries",
+      "subCategory": "Equipment",
+      "url": "https://airgas.my/product/valve-qf-2a/",
+      "imgUrl": "",
+      "brand": "Airgas Technology"
+    },
+    {
+      "id": 3973,
+      "name": "valve* for CO2, QF-2A8, 150bar  China",
+      "industry": "Other industries",
+      "subCategory": "Equipment",
+      "url": "https://airgas.my/product/valve-for-co2-qf-2a8/",
+      "imgUrl": "",
+      "brand": "Airgas Technology"
+    },
+    {
+      "id": 3967,
+      "name": "DPI Sekur M21 FULL FACE MASK 4240-15-0159508",
+      "industry": "Other industries",
+      "subCategory": "Mask",
+      "url": "https://airgas.my/product/dpi-sekur-m21-cbrn-full-face-mask/",
+      "imgUrl": "",
+      "brand": "Airgas Technology"
+    },
+    {
+      "id": 3964,
+      "name": "DPI Sekur IDEA CBRN FULL FACE MASK",
+      "industry": "Other industries",
+      "subCategory": "Mask",
+      "url": "https://airgas.my/product/dpi-sekur-idea-cbrn-full-face-mask/",
+      "imgUrl": "",
+      "brand": "Airgas Technology"
+    },
+    {
+      "id": 3959,
+      "name": "DPI Sekur new full face mask C702, 43335002B",
+      "industry": "Other industries",
+      "subCategory": "Mask",
+      "url": "https://airgas.my/product/dpi-sekur-new-full-face-mask-c-702/",
+      "imgUrl": "",
+      "brand": "Airgas Technology"
+    },
+    {
+      "id": 3912,
+      "name": "Regulator Hornung ED 06 (Catridge pressure regulator) #",
+      "industry": "Other industries",
+      "subCategory": "Equipment",
+      "url": "https://airgas.my/product/16-hornung-ed-06-catridge-pressure-regulator/",
+      "imgUrl": "",
+      "brand": "Airgas Technology"
+    },
+    {
+      "id": 3909,
+      "name": "Hornung HP 603 ( Pigtail optional with cv) #",
+      "industry": "Other industries",
+      "subCategory": "Equipment",
+      "url": "https://airgas.my/product/19-hornung-hp-603-pigtail-optional-with-cv/",
+      "imgUrl": "",
+      "brand": "Airgas Technology"
+    },
+    {
+      "id": 3906,
+      "name": "Regulator Hornung HP 250 Frontline",
+      "industry": "Other industries",
+      "subCategory": "Equipment",
+      "url": "https://airgas.my/product/18-hornung-hp-250-frontline/",
+      "imgUrl": "",
+      "brand": "Airgas Technology"
+    },
+    {
+      "id": 3903,
+      "name": "Regulator Hornung EV 12 (Top valve)",
+      "industry": "Other industries",
+      "subCategory": "Equipment",
+      "url": "https://airgas.my/product/17-hornung-ev-12-top-valve/",
+      "imgUrl": "",
+      "brand": "Airgas Technology"
+    },
+    {
+      "id": 3900,
+      "name": "Regulator Hornung HP 550 #",
+      "industry": "Other industries",
+      "subCategory": "Equipment",
+      "url": "https://airgas.my/product/15-hornung-hp-556/",
+      "imgUrl": "",
+      "brand": "Airgas Technology"
+    },
+    {
+      "id": 3898,
+      "name": "Regulator HORNUNG D 1 1/2 (Dome pressure regulator) #",
+      "industry": "Other industries",
+      "subCategory": "Equipment",
+      "url": "https://airgas.my/product/14-hornung-d-1-1-2-dome-pressure-regulator/",
+      "imgUrl": "",
+      "brand": "Airgas Technology"
+    },
+    {
+      "id": 3895,
+      "name": "Regulator Hornung HP312*",
+      "industry": "Other industries",
+      "subCategory": "Equipment",
+      "url": "https://airgas.my/product/13-hornung-hp-312/",
+      "imgUrl": "",
+      "brand": "Airgas Technology"
+    },
+    {
+      "id": 3890,
+      "name": "Regulator HORNUNG HP 602 (Metal hose optional with CV)",
+      "industry": "Other industries",
+      "subCategory": "Equipment",
+      "url": "https://airgas.my/product/12-hornung-hp-602-metal-hose-optional-with-cv/",
+      "imgUrl": "",
+      "brand": "Airgas Technology"
+    },
+    {
+      "id": 3888,
+      "name": "Regulator Hornung HP101 #",
+      "industry": "Other industries",
+      "subCategory": "Equipment",
+      "url": "https://airgas.my/product/11-hornung-hp-101/",
+      "imgUrl": "",
+      "brand": "Airgas Technology"
+    },
+    {
+      "id": 3885,
+      "name": "Regulator Hornung HP401",
+      "industry": "Other industries",
+      "subCategory": "Equipment",
+      "url": "https://airgas.my/product/10-hornung-hp-401/",
+      "imgUrl": "",
+      "brand": "Airgas Technology"
+    },
+    {
+      "id": 3882,
+      "name": "Regulator Hornung HP 253 #",
+      "industry": "Other industries",
+      "subCategory": "Equipment",
+      "url": "https://airgas.my/product/9-hornung-hp-253/",
+      "imgUrl": "",
+      "brand": "Airgas Technology"
+    },
+    {
+      "id": 3878,
+      "name": "Regulatpr Hornung HP350*",
+      "industry": "Other industries",
+      "subCategory": "Equipment",
+      "url": "https://airgas.my/product/8-hornung-hp-350/",
+      "imgUrl": "",
+      "brand": "Airgas Technology"
+    },
+    {
+      "id": 3875,
+      "name": "Regulator Hornung HP 102",
+      "industry": "Other industries",
+      "subCategory": "Equipment",
+      "url": "https://airgas.my/product/7-hornung-hp-102/",
+      "imgUrl": "",
+      "brand": "Airgas Technology"
+    },
+    {
+      "id": 3872,
+      "name": "Regulator Hornung EF 12 Metering Valve",
+      "industry": "Other industries",
+      "subCategory": "Equipment",
+      "url": "https://airgas.my/product/6-hornung-ef-12-metering-valve/",
+      "imgUrl": "",
+      "brand": "Airgas Technology"
+    },
+    {
+      "id": 3869,
+      "name": "Line pressure Regulator Hornung HP 302",
+      "industry": "Other industries",
+      "subCategory": "Equipment",
+      "url": "https://airgas.my/product/5-hornung-hp-302/",
+      "imgUrl": "",
+      "brand": "Airgas Technology"
+    },
+    {
+      "id": 3866,
+      "name": "Regulator Hornung FR 1 \u2013 Precision pressure regulator",
+      "industry": "Other industries",
+      "subCategory": "Equipment",
+      "url": "https://airgas.my/product/4-hornung-fr-1-precision-pressure-regulator/",
+      "imgUrl": "",
+      "brand": "Airgas Technology"
+    },
+    {
+      "id": 3863,
+      "name": "Regulator Hornung HP104",
+      "industry": "Other industries",
+      "subCategory": "Equipment",
+      "url": "https://airgas.my/product/3-hornung-hp-104/",
+      "imgUrl": "",
+      "brand": "Airgas Technology"
+    },
+    {
+      "id": 3860,
+      "name": "Regulator Hornung HP 450 Frontline #",
+      "industry": "Other industries",
+      "subCategory": "Equipment",
+      "url": "https://airgas.my/product/2-hornung-hp-450-frontline/",
+      "imgUrl": "",
+      "brand": "Airgas Technology"
+    },
+    {
+      "id": 3857,
+      "name": "Regulator Hornung HP100 #",
+      "industry": "Other industries",
+      "subCategory": "Equipment",
+      "url": "https://airgas.my/product/1-hornung-hp-100/",
+      "imgUrl": "",
+      "brand": "Airgas Technology"
+    },
+    {
+      "id": 3852,
+      "name": "valve* for QF-42, WP150bar, BS3 brass with E25, for medical oxygen",
+      "industry": "Other industries",
+      "subCategory": "Equipment",
+      "url": "https://airgas.my/product/valve-bs3-brass-with-e25/",
+      "imgUrl": "",
+      "brand": "Airgas Technology"
+    },
+    {
+      "id": 3845,
+      "name": "** Services for Airline Escape set with Face Mask fit test with POSICHECK, test including LD valve, first reducing valve,  pressure hose, gauge  and whistle. auto switch valve *cert AS22 #003145",
+      "industry": "Other industries",
+      "subCategory": "Mask",
+      "url": "https://airgas.my/product/services-for-airline-escape-set-with-face-mask-fit-test-with-posicheck-test-including-ld-valve-first-reducing-valve-pressure-hose-gauge-and-whistle-auto-switch-valve-cert-as22-003145/",
+      "imgUrl": "",
+      "brand": "Airgas Technology"
+    },
+    {
+      "id": 3844,
+      "name": "** Services for EEBD set, hood inspection, refill B.air, valve test, hose,  *cert AS23 #003023",
+      "industry": "Confined Space",
+      "subCategory": "Equipment",
+      "url": "https://airgas.my/product/services-for-eebd-set-hood-inspection-refill-b-air-valve-test-hose-cert-as23-003023/",
+      "imgUrl": "",
+      "brand": "Airgas Technology"
+    },
+    {
+      "id": 3843,
+      "name": "** Services for SCBA backplate inspection, first reducing valve, pressure gauge, hoses,  whistle, cleaning. *cert AS22 #003007",
+      "industry": "Confined Space",
+      "subCategory": "SCBA",
+      "url": "https://airgas.my/product/services-for-scba-backplate-inspection-first-reducing-valve-pressure-gauge-hoses-whistle-cleaning-cert-as22-003007/",
+      "imgUrl": "",
+      "brand": "Airgas Technology"
+    },
+    {
+      "id": 3842,
+      "name": "** Services for SCBA Face Mask and backplate inspection, Fit test with POSICHECK, test including LD valve, first reducing valve,  pressure hose, gauge  and whistle . *cert AS22 #000010",
+      "industry": "Confined Space",
+      "subCategory": "Mask",
+      "url": "https://airgas.my/product/services-for-scba-face-mask-and-backplate-inspection-fit-test-with-posicheck-test-including-ld-valve-first-reducing-valve-pressure-hose-gauge-and-whistle-cert-as22/",
+      "imgUrl": "",
+      "brand": "Airgas Technology"
+    },
+    {
+      "id": 3841,
+      "name": "** Services and inspection CYLINDER for SCBA  / EEBD,  Hydro Testing, 1.5times from working pressure to 450bar,  Visual test including weight check,  cylinder wall thickness,  internal and external surfaces condition,  valve tread. *cert AS11 #000008",
+      "industry": "Confined Space",
       "subCategory": "Cylinder",
-      "url": "https://airgas.my/product/acetylene-gas-da-cylinder/"
+      "url": "https://airgas.my/product/services-and-inspection-cylinder-for-scba-eebd-hydro-testing-1-5times-from-working-pressure-to-450bar-visual-test-including-weight-check-cylinder-wall-thickness-internal-and-external-su/",
+      "imgUrl": "",
+      "brand": "Airgas Technology"
     },
     {
-      "id": 215,
-      "name": "Gas Cutting Torch Set (Oxy-Acetylene)",
-      "category": "Gas Equipment",
-      "brand": null,
-      "brandUrl": null,
-      "industry": "Gases",
-      "subCategory": "Welding Torch",
-      "url": "https://airgas.my/product/gas-cutting-torch-set-oxy-acetylene/"
+      "id": 3840,
+      "name": "medical Oxygen set with 2.9L aluminium Cylinder and case",
+      "industry": "Other industries",
+      "subCategory": "Cylinder",
+      "url": "https://airgas.my/product/medical-oxygen-set-with-2-9l-aluminium-cylinder-and-case/",
+      "imgUrl": "",
+      "brand": "Airgas Technology"
+    },
+    {
+      "id": 3769,
+      "name": "Cylinder 2L with CO2 gas for Aquarium #3018",
+      "industry": "Oil and gas",
+      "subCategory": "Cylinder",
+      "url": "https://airgas.my/product/cylinder-2l-with-co2-gas-for-aquarium-3018/",
+      "imgUrl": "",
+      "brand": "Airgas Technology"
+    },
+    {
+      "id": 3766,
+      "name": "Seal washer for CGA870 for Pin index Regulator",
+      "industry": "Other industries",
+      "subCategory": "Equipment",
+      "url": "https://airgas.my/product/seal-washer-for-cga870-for-pin-index-regulator/",
+      "imgUrl": "",
+      "brand": "Airgas Technology"
+    },
+    {
+      "id": 3761,
+      "name": "ALTAIR\u00ae 5X Multigas Detector",
+      "industry": "Confined Space",
+      "subCategory": "Detector",
+      "url": "https://airgas.my/product/altair-5x-multigas-detector/",
+      "imgUrl": "",
+      "brand": "Airgas Technology"
+    },
+    {
+      "id": 3745,
+      "name": "stretcher double fold #3134",
+      "industry": "Other industries",
+      "subCategory": "Equipment",
+      "url": "https://airgas.my/product/stretcher-double-fold/",
+      "imgUrl": "",
+      "brand": "Airgas Technology"
+    },
+    {
+      "id": 3743,
+      "name": "Posicheck SCBA Mask test equipment Honeywell #3141",
+      "industry": "Confined Space",
+      "subCategory": "Mask",
+      "url": "https://airgas.my/product/posi3-posicheck-scba-test-equipment-honeywell/",
+      "imgUrl": "",
+      "brand": "Airgas Technology"
+    },
+    {
+      "id": 3741,
+      "name": "valve CGA330 SS 304 25E, VTI K48-107, Germany #4011",
+      "industry": "Other industries",
+      "subCategory": "Equipment",
+      "url": "https://airgas.my/product/valve-cga330-stainless-steel-25e-vti-k48-107-germany/",
+      "imgUrl": "",
+      "brand": "Airgas Technology"
+    },
+    {
+      "id": 3736,
+      "name": "valve BS 341-15, 3/8bsp, wp 200bar, 25E, body brass chrome plated, Italy",
+      "industry": "Other industries",
+      "subCategory": "Equipment",
+      "url": "https://airgas.my/product/valve-bs-341-15-3-8bsp-wp-200bar-25e/",
+      "imgUrl": "",
+      "brand": "Airgas Technology"
+    },
+    {
+      "id": 3730,
+      "name": "Coverall for FR Ranger flame resistant",
+      "industry": "Oil and gas",
+      "subCategory": "Protective Suit",
+      "url": "https://airgas.my/product/coverall-for-fr-ranger-flame-resistant/",
+      "imgUrl": "",
+      "brand": "Airgas Technology"
+    },
+    {
+      "id": 3727,
+      "name": "bullnose for BS4 connection, Acetylene DA ,",
+      "industry": "Other industries",
+      "subCategory": "Equipment",
+      "url": "https://airgas.my/product/bullnose-for-bs4-connection-acetylene-da/",
+      "imgUrl": "",
+      "brand": "Airgas Technology"
+    },
+    {
+      "id": 3721,
+      "name": "bullnose for BS3 connection, O2, Ar, He, N2, ..",
+      "industry": "Other industries",
+      "subCategory": "Equipment",
+      "url": "https://airgas.my/product/bullnose-for-bs3-connection-o2-ar-he/",
+      "imgUrl": "",
+      "brand": "Airgas Technology"
+    },
+    {
+      "id": 3716,
+      "name": "bullnose for BS 8 connection,CO2 #0737",
+      "industry": "Other industries",
+      "subCategory": "Equipment",
+      "url": "https://airgas.my/product/bullnose-for-bs-8-connectionco2-0737/",
+      "imgUrl": "",
+      "brand": "Airgas Technology"
+    },
+    {
+      "id": 3698,
+      "name": "valve CGA 330 25E (brass) Italy #4027",
+      "industry": "Other industries",
+      "subCategory": "Equipment",
+      "url": "https://airgas.my/product/cga-330-25e-brass-4027/",
+      "imgUrl": "",
+      "brand": "Airgas Technology"
+    },
+    {
+      "id": 3693,
+      "name": "BS3 Chrome Plated (Safety) #4026",
+      "industry": "Other industries",
+      "subCategory": "Equipment",
+      "url": "https://airgas.my/product/bs3-chrome-plated-safety-4026/",
+      "imgUrl": "",
+      "brand": "Airgas Technology"
+    },
+    {
+      "id": 3688,
+      "name": "G5/8 #4024",
+      "industry": "Other industries",
+      "subCategory": "Equipment",
+      "url": "https://airgas.my/product/g5-8-4024/",
+      "imgUrl": "",
+      "brand": "Airgas Technology"
+    },
+    {
+      "id": 3683,
+      "name": "G5/8/BS3 #4023",
+      "industry": "Other industries",
+      "subCategory": "Equipment",
+      "url": "https://airgas.my/product/g5-8-bs3-4023/",
+      "imgUrl": "",
+      "brand": "Airgas Technology"
+    },
+    {
+      "id": 3678,
+      "name": "CGA 510 #4016",
+      "industry": "Other industries",
+      "subCategory": "Equipment",
+      "url": "https://airgas.my/product/cga-510-4016/",
+      "imgUrl": "",
+      "brand": "Airgas Technology"
+    },
+    {
+      "id": 3673,
+      "name": "G5/8LH/BS3 (GCE) #4015",
+      "industry": "Other industries",
+      "subCategory": "Equipment",
+      "url": "https://airgas.my/product/g5-8lh-bs3-gce/",
+      "imgUrl": "",
+      "brand": "Airgas Technology"
+    },
+    {
+      "id": 3667,
+      "name": "CGA 660 25E #4014",
+      "industry": "Other industries",
+      "subCategory": "Equipment",
+      "url": "https://airgas.my/product/cga-660-25e-4014/",
+      "imgUrl": "",
+      "brand": "Airgas Technology"
+    },
+    {
+      "id": 3663,
+      "name": "CGA 330 19E #4013",
+      "industry": "Other industries",
+      "subCategory": "Equipment",
+      "url": "https://airgas.my/product/cga-330-19e-4013/",
+      "imgUrl": "",
+      "brand": "Airgas Technology"
+    },
+    {
+      "id": 3655,
+      "name": "CGA 320 19E #4010",
+      "industry": "Other industries",
+      "subCategory": "Equipment",
+      "url": "https://airgas.my/product/cga-320-19e-4010/",
+      "imgUrl": "",
+      "brand": "Airgas Technology"
+    },
+    {
+      "id": 3651,
+      "name": "CGA 320 25E #4009",
+      "industry": "Other industries",
+      "subCategory": "Equipment",
+      "url": "https://airgas.my/product/cga-320-25e-4009/",
+      "imgUrl": "",
+      "brand": "Airgas Technology"
+    },
+    {
+      "id": 3647,
+      "name": "BS15 Chrome Plated #4008",
+      "industry": "Other industries",
+      "subCategory": "Equipment",
+      "url": "https://airgas.my/product/bs15-chrome-plated-4008/",
+      "imgUrl": "",
+      "brand": "Airgas Technology"
+    },
+    {
+      "id": 3643,
+      "name": "valve BS8 Sanosub italy Chrome Plated #4007",
+      "industry": "Other industries",
+      "subCategory": "Equipment",
+      "url": "https://airgas.my/product/bs8-chrome-plated-4007/",
+      "imgUrl": "",
+      "brand": "Airgas Technology"
+    },
+    {
+      "id": 3639,
+      "name": "BS4 Chrome Plated #4006",
+      "industry": "Other industries",
+      "subCategory": "Equipment",
+      "url": "https://airgas.my/product/bs4-chrome-plated-4006/",
+      "imgUrl": "",
+      "brand": "Airgas Technology"
+    },
+    {
+      "id": 3635,
+      "name": "valve BS3 Sanosub italy chrome plated #4004",
+      "industry": "Other industries",
+      "subCategory": "Equipment",
+      "url": "https://airgas.my/product/bs3-chrome-plated/",
+      "imgUrl": "",
+      "brand": "Airgas Technology"
+    },
+    {
+      "id": 3631,
+      "name": "C-10 ss (China) #4003",
+      "industry": "Other industries",
+      "subCategory": "Equipment",
+      "url": "https://airgas.my/product/c-10-ss-china-4003/",
+      "imgUrl": "",
+      "brand": "Airgas Technology"
+    },
+    {
+      "id": 3628,
+      "name": "C-10 Brass (India) #4001",
+      "industry": "Other industries",
+      "subCategory": "Equipment",
+      "url": "https://airgas.my/product/c-10-brass-india-4001/",
+      "imgUrl": "",
+      "brand": "Airgas Technology"
+    },
+    {
+      "id": 3625,
+      "name": "C-10 ss (India) #4002",
+      "industry": "Other industries",
+      "subCategory": "Equipment",
+      "url": "https://airgas.my/product/c-10-ss-india-4001/",
+      "imgUrl": "",
+      "brand": "Airgas Technology"
+    },
+    {
+      "id": 3594,
+      "name": "AlphaTec disposcoverall 2000 standard model III",
+      "industry": "Other industries",
+      "subCategory": "Protective Suit",
+      "url": "https://airgas.my/product/alphatec-disposcoverall-2000-standard-model-iii/",
+      "imgUrl": "",
+      "brand": "Airgas Technology"
+    },
+    {
+      "id": 3575,
+      "name": "Gas detector ToxiRAE Pro BW single gas as O2, CO, Nh2, etc",
+      "industry": "Confined Space",
+      "subCategory": "Detector",
+      "url": "https://airgas.my/product/gas-detector-toxirae-pro-bw-single-gas-as-o2-co-nh2-etc/",
+      "imgUrl": "",
+      "brand": "Airgas Technology"
+    },
+    {
+      "id": 3573,
+      "name": "Cylinder 45L for Gas Breathing Air lifeboat",
+      "industry": "Maritime",
+      "subCategory": "Cylinder",
+      "url": "https://airgas.my/product/gas-breathing-air/",
+      "imgUrl": "",
+      "brand": "Airgas Technology"
+    },
+    {
+      "id": 3562,
+      "name": "Gas for Helox breathing gas",
+      "industry": "Oil and gas",
+      "subCategory": "Equipment",
+      "url": "https://airgas.my/product/helox-breathing-gas/",
+      "imgUrl": "",
+      "brand": "Airgas Technology"
+    },
+    {
+      "id": 3558,
+      "name": "Fire Hose type 3",
+      "industry": "Oil and gas",
+      "subCategory": "Equipment",
+      "url": "https://airgas.my/product/fire-hose-type-3/",
+      "imgUrl": "",
+      "brand": "Airgas Technology"
+    },
+    {
+      "id": 3548,
+      "name": "SCBA Carry Box 1064",
+      "industry": "Confined Space",
+      "subCategory": "SCBA",
+      "url": "https://airgas.my/product/scba-carry-box/",
+      "imgUrl": "",
+      "brand": "Airgas Technology"
+    },
+    {
+      "id": 3523,
+      "name": "TIG Torch WP17-2-25",
+      "industry": "Other industries",
+      "subCategory": "Equipment",
+      "url": "https://airgas.my/product/tig-torch-wp17-2-25-m16-x-1-5-female/",
+      "imgUrl": "",
+      "brand": "Airgas Technology"
+    },
+    {
+      "id": 3521,
+      "name": "Respirator Examination Instrument mask posicheck",
+      "industry": "Other industries",
+      "subCategory": "Mask",
+      "url": "https://airgas.my/product/respirator-examination-instrument-mask-posicheck/",
+      "imgUrl": "",
+      "brand": "Airgas Technology"
+    },
+    {
+      "id": 3516,
+      "name": "MIG Torch Aceweld MB 24",
+      "industry": "Other industries",
+      "subCategory": "Equipment",
+      "url": "https://airgas.my/product/aceweld-mb-24-mig-torch/",
+      "imgUrl": "",
+      "brand": "Airgas Technology"
+    },
+    {
+      "id": 3512,
+      "name": "PANA TYPE 500 MIG TORCH [Japan Fitting]  3M/ 4M/ 5M",
+      "industry": "Other industries",
+      "subCategory": "Equipment",
+      "url": "https://airgas.my/product/pana-type-500-mig-torch-japan-fitting-3m-4m-5m/",
+      "imgUrl": "",
+      "brand": "Airgas Technology"
+    },
+    {
+      "id": 3497,
+      "name": "Portable Electrode Oven-Ace Weld 5kg",
+      "industry": "Other industries",
+      "subCategory": "Equipment",
+      "url": "https://airgas.my/product/portable-electrode-oven-ace-weld-5kg/",
+      "imgUrl": "",
+      "brand": "Airgas Technology"
+    },
+    {
+      "id": 3493,
+      "name": "Replacement Filters Elipse ABEK1P3 RD GVS SPR492",
+      "industry": "Other industries",
+      "subCategory": "Equipment",
+      "url": "https://airgas.my/product/replacement-filters-elipse-abek1p3-rd-gvs-spr492/",
+      "imgUrl": "",
+      "brand": "Airgas Technology"
+    },
+    {
+      "id": 3491,
+      "name": "Half face Mask with replacement filters Elipse ABEK1P3 RD GVS SPR490 491",
+      "industry": "Other industries",
+      "subCategory": "Mask",
+      "url": "https://airgas.my/product/half-face-mask-with-replacement-filters-elipse-abek1p3-rd-gvs-spr490-491/",
+      "imgUrl": "",
+      "brand": "Airgas Technology"
+    },
+    {
+      "id": 3473,
+      "name": "MB24 MIG TORCH COMPLETE",
+      "industry": "Other industries",
+      "subCategory": "Equipment",
+      "url": "https://airgas.my/product/mb24-mig-torch-complete/",
+      "imgUrl": "",
+      "brand": "Airgas Technology"
+    },
+    {
+      "id": 3451,
+      "name": "fresh air hose breathing apparatuses A-Type BLOWER Sekur DPI 44370506 #003157",
+      "industry": "Other industries",
+      "subCategory": "Equipment",
+      "url": "https://airgas.my/product/fresh-air-hose-breathing-apparatuses-sekur-dpi/",
+      "imgUrl": "",
+      "brand": "Airgas Technology"
+    },
+    {
+      "id": 3448,
+      "name": "DIABLO AMIANTE sekur DPI breathing devices with external compressed air supply",
+      "industry": "Other industries",
+      "subCategory": "Equipment",
+      "url": "https://airgas.my/product/diablo-amiante-breathing-devices-with-external-compressed-air-supply/",
+      "imgUrl": "",
+      "brand": "Airgas Technology"
+    },
+    {
+      "id": 3444,
+      "name": "full face mask SFERA Sekur DPI",
+      "industry": "Other industries",
+      "subCategory": "Mask",
+      "url": "https://airgas.my/product/full-face-mask-sfera-sekur-dpi/",
+      "imgUrl": "",
+      "brand": "Airgas Technology"
+    },
+    {
+      "id": 3441,
+      "name": "MB15 MIG TORCH 4METER (YELLOW HANDLE) COMPLETE",
+      "industry": "Other industries",
+      "subCategory": "Equipment",
+      "url": "https://airgas.my/product/mb15-mig-torch-4meter-yellow-handle-complete/",
+      "imgUrl": "",
+      "brand": "Airgas Technology"
+    },
+    {
+      "id": 3439,
+      "name": "MB15 MIG TORCH COMPLETE 3M/4M/5M",
+      "industry": "Other industries",
+      "subCategory": "Equipment",
+      "url": "https://airgas.my/product/mb15-mig-torch-4meter-complete/",
+      "imgUrl": "",
+      "brand": "Airgas Technology"
+    },
+    {
+      "id": 3432,
+      "name": "PANA TYPE 500 MIG TORCH [EURO FITTING]  3M/ 4M/ 5M",
+      "industry": "Other industries",
+      "subCategory": "Equipment",
+      "url": "https://airgas.my/product/pana-type-500-mig-torch-3-meter-euro-fitting/",
+      "imgUrl": "",
+      "brand": "Airgas Technology"
+    },
+    {
+      "id": 3429,
+      "name": "PANA TYPE 350 MIG TORCH [JAPAN FITTING] 3M/4M/5M",
+      "industry": "Other industries",
+      "subCategory": "Equipment",
+      "url": "https://airgas.my/product/pana-type-350-mig-torch-4-meter-japan-fitting/",
+      "imgUrl": "",
+      "brand": "Airgas Technology"
+    },
+    {
+      "id": 3427,
+      "name": "fireman suit",
+      "industry": "Oil and gas",
+      "subCategory": "Protective Suit",
+      "url": "https://airgas.my/product/fireman-suit/",
+      "imgUrl": "",
+      "brand": "Airgas Technology"
+    },
+    {
+      "id": 3419,
+      "name": "PANA TYPE 350 MIG TORCH [EURO FITTING] 3M/4M/5M",
+      "industry": "Other industries",
+      "subCategory": "Equipment",
+      "url": "https://airgas.my/product/pana-type-350-mig-torch-5meter-euro-fitting/",
+      "imgUrl": "",
+      "brand": "Airgas Technology"
+    },
+    {
+      "id": 3406,
+      "name": "gas detector single H2S T40 II Rattler InS",
+      "industry": "Confined Space",
+      "subCategory": "Detector",
+      "url": "https://airgas.my/product/gas-detector-single-h2s-t40-rattler/",
+      "imgUrl": "",
+      "brand": "Airgas Technology"
+    },
+    {
+      "id": 3402,
+      "name": "CASTARC 150N Electrode (MACHINABLE) 2.6mm/ 3.2MM",
+      "industry": "Other industries",
+      "subCategory": "Equipment",
+      "url": "https://airgas.my/product/castarc-150n-machinable-2-6mm/",
+      "imgUrl": "",
+      "brand": "Airgas Technology"
+    },
+    {
+      "id": 3396,
+      "name": "EUROPOWER NAC-8002 80L Industrial Vacuum Cleaner Wet & Dry",
+      "industry": "Other industries",
+      "subCategory": "Equipment",
+      "url": "https://airgas.my/product/europower-nac-8002-80l-industrial-vacuum-cleaner-wet-dry/",
+      "imgUrl": "",
+      "brand": "Airgas Technology"
+    },
+    {
+      "id": 3393,
+      "name": "Welding Sheild Screen Protection Dust",
+      "industry": "Other industries",
+      "subCategory": "Equipment",
+      "url": "https://airgas.my/product/welding-sheild-screen-protection-dust/",
+      "imgUrl": "",
+      "brand": "Airgas Technology"
+    },
+    {
+      "id": 3386,
+      "name": "Tape Measure",
+      "industry": "Other industries",
+      "subCategory": "Equipment",
+      "url": "https://airgas.my/product/tape-measure/",
+      "imgUrl": "",
+      "brand": "Airgas Technology"
+    },
+    {
+      "id": 3381,
+      "name": "Paint brush Berus Cat Nylon 1 1/2inch",
+      "industry": "Other industries",
+      "subCategory": "Equipment",
+      "url": "https://airgas.my/product/paint-brush-berus-cat-nylon-1-1-2inch/",
+      "imgUrl": "",
+      "brand": "Airgas Technology"
+    },
+    {
+      "id": 3379,
+      "name": "SAND PAPER Abrasive Paper Size: 230mm X 280mm (A4 size)",
+      "industry": "Other industries",
+      "subCategory": "Equipment",
+      "url": "https://airgas.my/product/sand-paper-abrasive-paper-size-230mm-x-280mm-a4-size/",
+      "imgUrl": "",
+      "brand": "Airgas Technology"
+    },
+    {
+      "id": 3377,
+      "name": "Teho Medical Examination Glove \u2013 No Powder/Powderless Glove",
+      "industry": "Other industries",
+      "subCategory": "Equipment",
+      "url": "https://airgas.my/product/teho-medical-examination-glove-no-powder-powderless-glove/",
+      "imgUrl": "",
+      "brand": "Airgas Technology"
+    },
+    {
+      "id": 3375,
+      "name": "Helium Balloon Gas with 13L disposable cylinder for 50pcs",
+      "industry": "Oil and gas",
+      "subCategory": "Cylinder",
+      "url": "https://airgas.my/product/disposable-helium-balloon-30pcs-supershape-balloons-tank-balloons-gas-west-malaysia-only/",
+      "imgUrl": "",
+      "brand": "Airgas Technology"
+    },
+    {
+      "id": 3368,
+      "name": "NJSTAR AUTO DARKENING WELDING HELMET NJS 777",
+      "industry": "Other industries",
+      "subCategory": "Equipment",
+      "url": "https://airgas.my/product/njstar-auto-darkening-welding-helmet-njs-777/",
+      "imgUrl": "",
+      "brand": "Airgas Technology"
+    },
+    {
+      "id": 3363,
+      "name": "WELDING MACHINE WELICHI  ( MIG)",
+      "industry": "Other industries",
+      "subCategory": "Equipment",
+      "url": "https://airgas.my/product/welding-machine-welichi-mig/",
+      "imgUrl": "",
+      "brand": "Airgas Technology"
+    },
+    {
+      "id": 3361,
+      "name": "JASIC TIG Welding Machine TIG250S (w127)(pre-order)",
+      "industry": "Other industries",
+      "subCategory": "Equipment",
+      "url": "https://airgas.my/product/jasic-tig-welding-machine-tig250s-w127pre-order/",
+      "imgUrl": "",
+      "brand": "Airgas Technology"
+    },
+    {
+      "id": 3359,
+      "name": "Austcorp VT- 201S Advance",
+      "industry": "Other industries",
+      "subCategory": "Equipment",
+      "url": "https://airgas.my/product/austcorp-vt-201s-advance/",
+      "imgUrl": "",
+      "brand": "Airgas Technology"
+    },
+    {
+      "id": 3357,
+      "name": "ARC Welding Machine ARC 250",
+      "industry": "Other industries",
+      "subCategory": "Equipment",
+      "url": "https://airgas.my/product/arc-welding-machine-arc-250/",
+      "imgUrl": "",
+      "brand": "Airgas Technology"
+    },
+    {
+      "id": 3353,
+      "name": "ARC 150 WELDING MACHINE FULLMETAL",
+      "industry": "Other industries",
+      "subCategory": "Equipment",
+      "url": "https://airgas.my/product/arc-150-welding-machine-fullmetal/",
+      "imgUrl": "",
+      "brand": "Airgas Technology"
+    },
+    {
+      "id": 3346,
+      "name": "MIG WELDING MACHINE Brand : YMH Z-MIG 200",
+      "industry": "Other industries",
+      "subCategory": "Equipment",
+      "url": "https://airgas.my/product/mig-welding-machine-brand-ymh-z-mig-200/",
+      "imgUrl": "",
+      "brand": "Airgas Technology"
+    },
+    {
+      "id": 3343,
+      "name": "NJSTAR AIR COMPRESSOR 150L 3HP",
+      "industry": "Other industries",
+      "subCategory": "Equipment",
+      "url": "https://airgas.my/product/njstar-air-compressor-150l-3hp/",
+      "imgUrl": "",
+      "brand": "Airgas Technology"
+    },
+    {
+      "id": 3339,
+      "name": "Welding Machine Hi Arc KEMPPI S 400R",
+      "industry": "Other industries",
+      "subCategory": "Equipment",
+      "url": "https://airgas.my/product/welding-machine-hi-arc-kemppi-s-400r/",
+      "imgUrl": "",
+      "brand": "Airgas Technology"
+    },
+    {
+      "id": 3336,
+      "name": "VENTILATOR BLOWER FAN",
+      "industry": "Other industries",
+      "subCategory": "Equipment",
+      "url": "https://airgas.my/product/ventilator-blower-fan/",
+      "imgUrl": "",
+      "brand": "Airgas Technology"
+    },
+    {
+      "id": 3329,
+      "name": "AustCorp SA5000i\nProcesses :\nMIG / Stick / DC Tig / Flux-Cored",
+      "industry": "Other industries",
+      "subCategory": "Equipment",
+      "url": "https://airgas.my/product/auscorp-sa-5000-i-igbt-mig-welding-machine/",
+      "imgUrl": "",
+      "brand": "Airgas Technology"
+    },
+    {
+      "id": 3324,
+      "name": "WS MMA 165 INVERTER WELDING MACHINE",
+      "industry": "Other industries",
+      "subCategory": "Equipment",
+      "url": "https://airgas.my/product/ws-mma-165-inverter-welding-machine/",
+      "imgUrl": "",
+      "brand": "Airgas Technology"
+    },
+    {
+      "id": 3322,
+      "name": "Replacement Filters Elipse ABEK1 RD GVS SPR489",
+      "industry": "Other industries",
+      "subCategory": "Equipment",
+      "url": "https://airgas.my/product/replacement-filters-elipse-abek1-rd/",
+      "imgUrl": "",
+      "brand": "Airgas Technology"
+    },
+    {
+      "id": 3319,
+      "name": "Half face Mask with replacement filters Elipse ABEK1 RD GVS SPR487 488",
+      "industry": "Other industries",
+      "subCategory": "Mask",
+      "url": "https://airgas.my/product/half-face-mask-with-replacement-filters-elipse-abek1-rd/",
+      "imgUrl": "",
+      "brand": "Airgas Technology"
+    },
+    {
+      "id": 3318,
+      "name": "Hearing Protection Elvex DIELECTRIC MULTI-POSITION EARMUFF",
+      "industry": "Other industries",
+      "subCategory": "Equipment",
+      "url": "https://airgas.my/product/hearing-protection-elvex/",
+      "imgUrl": "",
+      "brand": "Airgas Technology"
+    },
+    {
+      "id": 3313,
+      "name": "Fitter Glove",
+      "industry": "Other industries",
+      "subCategory": "Equipment",
+      "url": "https://airgas.my/product/fitter-glove/",
+      "imgUrl": "",
+      "brand": "Airgas Technology"
+    },
+    {
+      "id": 3309,
+      "name": "Glove for Welding 14\u2033",
+      "industry": "Other industries",
+      "subCategory": "Equipment",
+      "url": "https://airgas.my/product/14-welding-glove/",
+      "imgUrl": "",
+      "brand": "Airgas Technology"
+    },
+    {
+      "id": 3304,
+      "name": "COTTON GLOVES",
+      "industry": "Other industries",
+      "subCategory": "Equipment",
+      "url": "https://airgas.my/product/cotton-gloves/",
+      "imgUrl": "",
+      "brand": "Airgas Technology"
+    },
+    {
+      "id": 3301,
+      "name": "PORTWEST BIZTEX COVERALL TYPE 5/6 ST40WHREXXXL 003183",
+      "industry": "Other industries",
+      "subCategory": "Protective Suit",
+      "url": "https://airgas.my/product/coverall-type-5-6-disposable-biztex-micro-60g/",
+      "imgUrl": "",
+      "brand": "Airgas Technology"
+    },
+    {
+      "id": 3294,
+      "name": "GARDEN SPRAYER (5L)",
+      "industry": "Other industries",
+      "subCategory": "Equipment",
+      "url": "https://airgas.my/product/garden-sprayer-5l/",
+      "imgUrl": "",
+      "brand": "Airgas Technology"
+    },
+    {
+      "id": 3290,
+      "name": "Helmet for welding adjustable type",
+      "industry": "Other industries",
+      "subCategory": "Equipment",
+      "url": "https://airgas.my/product/adjustable-welding-helmet/",
+      "imgUrl": "",
+      "brand": "Airgas Technology"
+    },
+    {
+      "id": 3285,
+      "name": "Regulator imper piston for high flow and high pressure",
+      "industry": "Other industries",
+      "subCategory": "Equipment",
+      "url": "https://airgas.my/product/regulator-imper-piston-for-high-flow-and-high-pressure/",
+      "imgUrl": "",
+      "brand": "Airgas Technology"
+    },
+    {
+      "id": 3284,
+      "name": "GAS of oxygen O2",
+      "industry": "Oil and gas",
+      "subCategory": "Equipment",
+      "url": "https://airgas.my/product/compressed-oxygen-o2-with-10l-150bar-cylinder/",
+      "imgUrl": "",
+      "brand": "Airgas Technology"
+    },
+    {
+      "id": 3280,
+      "name": "Cylinder seamless type 47L 150bar",
+      "industry": "Other industries",
+      "subCategory": "Cylinder",
+      "url": "https://airgas.my/product/compressed-oxygen-with-cylinder-47l-150bar/",
+      "imgUrl": "",
+      "brand": "Airgas Technology"
+    },
+    {
+      "id": 3256,
+      "name": "Powder ABC Refilling machine for fire extinguisher",
+      "industry": "Oil and gas",
+      "subCategory": "Equipment",
+      "url": "https://airgas.my/product/powder-abc-refilling-machine-for-fire-extinguisher-2/",
+      "imgUrl": "",
+      "brand": "Airgas Technology"
+    },
+    {
+      "id": 3269,
+      "name": "CO2 K Valve",
+      "industry": "Other industries",
+      "subCategory": "Equipment",
+      "url": "https://airgas.my/product/co2-k-valve/",
+      "imgUrl": "",
+      "brand": "Airgas Technology"
+    },
+    {
+      "id": 3266,
+      "name": "AlphaTec Trainer Hazmat Chemical suit",
+      "industry": "Oil and gas",
+      "subCategory": "Protective Suit",
+      "url": "https://airgas.my/product/alphatec-trainer-chemical-suit/",
+      "imgUrl": "",
+      "brand": "Airgas Technology"
+    },
+    {
+      "id": 3263,
+      "name": "Mobile foam unit 120L fire extinguisher on trolley",
+      "industry": "Oil and gas",
+      "subCategory": "Equipment",
+      "url": "https://airgas.my/product/mobile-foam-fire-extinguisher-on-trolley/",
+      "imgUrl": "",
+      "brand": "Airgas Technology"
+    },
+    {
+      "id": 3261,
+      "name": "Cylinder 80L 300bar",
+      "industry": "Other industries",
+      "subCategory": "Cylinder",
+      "url": "https://airgas.my/product/cylinder-80l-300bar/",
+      "imgUrl": "",
+      "brand": "Airgas Technology"
+    },
+    {
+      "id": 3259,
+      "name": "Cylinder CO2 fire fighting 68L for 45kg co2 K2 valve",
+      "industry": "Oil and gas",
+      "subCategory": "Cylinder",
+      "url": "https://airgas.my/product/cylinder-co2-fire-fighting-68l-for-45kg-co2/",
+      "imgUrl": "",
+      "brand": "Airgas Technology"
+    },
+    {
+      "id": 3255,
+      "name": "valve opener spinner key",
+      "industry": "Other industries",
+      "subCategory": "Equipment",
+      "url": "https://airgas.my/product/valve-opener-spinner-key/",
+      "imgUrl": "",
+      "brand": "Airgas Technology"
+    },
+    {
+      "id": 3251,
+      "name": "LICOTA \u2013 Tools Set",
+      "industry": "Other industries",
+      "subCategory": "Equipment",
+      "url": "https://airgas.my/product/licota-tools-set/",
+      "imgUrl": "",
+      "brand": "Airgas Technology"
+    },
+    {
+      "id": 3248,
+      "name": "CHIYODA welding gauge\nModel : HJC-40S",
+      "industry": "Other industries",
+      "subCategory": "Equipment",
+      "url": "https://airgas.my/product/chiyoda-welding-gaugemodel-hjc-40s/",
+      "imgUrl": "",
+      "brand": "Airgas Technology"
+    },
+    {
+      "id": 3245,
+      "name": "CHIYODA welding gaugeModel : HJC-40A",
+      "industry": "Other industries",
+      "subCategory": "Equipment",
+      "url": "https://airgas.my/product/chiyoda-welding-gaugemodel-hjc-40a/",
+      "imgUrl": "",
+      "brand": "Airgas Technology"
+    },
+    {
+      "id": 3238,
+      "name": "AlphaTec EVO type CV",
+      "industry": "Other industries",
+      "subCategory": "Equipment",
+      "url": "https://airgas.my/product/alphatec-evo-type-cv/",
+      "imgUrl": "",
+      "brand": "Airgas Technology"
+    },
+    {
+      "id": 3235,
+      "name": "cable connector",
+      "industry": "Other industries",
+      "subCategory": "Equipment",
+      "url": "https://airgas.my/product/cable-connector/",
+      "imgUrl": "",
+      "brand": "Airgas Technology"
+    },
+    {
+      "id": 3226,
+      "name": "DPI Sekur new full face mask C701, 43335000O",
+      "industry": "Other industries",
+      "subCategory": "Mask",
+      "url": "https://airgas.my/product/dpi-presents-new-full-face-mask-c-701/",
+      "imgUrl": "",
+      "brand": "Airgas Technology"
+    },
+    {
+      "id": 3208,
+      "name": "Cylinder for CTS lightweight type 4 cylinder 9L",
+      "industry": "Other industries",
+      "subCategory": "Cylinder",
+      "url": "https://airgas.my/product/cts-lightweight-type-4-cylinder-9l/",
+      "imgUrl": "",
+      "brand": "Airgas Technology"
+    },
+    {
+      "id": 3207,
+      "name": "SCBA Valve repair kit",
+      "industry": "Confined Space",
+      "subCategory": "SCBA",
+      "url": "https://airgas.my/product/scba-valve-repair-kit/",
+      "imgUrl": "",
+      "brand": "Airgas Technology"
+    },
+    {
+      "id": 3205,
+      "name": "EFV Exces Flow Valve from SanOSub Italy #1053",
+      "industry": "Other industries",
+      "subCategory": "Equipment",
+      "url": "https://airgas.my/product/valve-protection-tube-efv-san-o-sub/",
+      "imgUrl": "",
+      "brand": "Airgas Technology"
+    },
+    {
+      "id": 3202,
+      "name": "SCBA K632 300Bar M18 with 90\u00b0 degree gauge \u2013 1015",
+      "industry": "Confined Space",
+      "subCategory": "SCBA",
+      "url": "https://airgas.my/product/scba-k632-300bar-m18-with-90-degree-gauge/",
+      "imgUrl": "",
+      "brand": "Airgas Technology"
+    },
+    {
+      "id": 3197,
+      "name": "SCBA K44 200Bar E17 \u2013 1046",
+      "industry": "Confined Space",
+      "subCategory": "SCBA",
+      "url": "https://airgas.my/product/scba-k44-200bar-e17/",
+      "imgUrl": "",
+      "brand": "Airgas Technology"
+    },
+    {
+      "id": 3193,
+      "name": "SCBA K632 200Bar E17 with 45\u00b0 degree gauge \u2013 1047",
+      "industry": "Confined Space",
+      "subCategory": "SCBA",
+      "url": "https://airgas.my/product/scba-k632-200bar-e17-with-45-degree-gauge/",
+      "imgUrl": "",
+      "brand": "Airgas Technology"
+    },
+    {
+      "id": 3188,
+      "name": "SCBA K632 300Bar E17 with 45\u00b0 degree gauge \u2013 1048",
+      "industry": "Confined Space",
+      "subCategory": "SCBA",
+      "url": "https://airgas.my/product/scba-k632-300bar-e17-with-45-degree-gauge/",
+      "imgUrl": "",
+      "brand": "Airgas Technology"
+    },
+    {
+      "id": 3183,
+      "name": "valve for SCBA K44 E17 300Bar \u2013 1169",
+      "industry": "Confined Space",
+      "subCategory": "SCBA",
+      "url": "https://airgas.my/product/scba-k44-e17-300bar/",
+      "imgUrl": "",
+      "brand": "Airgas Technology"
+    },
+    {
+      "id": 3179,
+      "name": "SCBA K632 300bar m18 with 45\u00b0degree gauge \u2013 1070",
+      "industry": "Confined Space",
+      "subCategory": "SCBA",
+      "url": "https://airgas.my/product/scba-k632-300bar-m18-with-45degree-gauge/",
+      "imgUrl": "",
+      "brand": "Airgas Technology"
+    },
+    {
+      "id": 3174,
+      "name": "SCBA K632 200bar M18 with 45\u00b0degree gauge \u2013 1049",
+      "industry": "Confined Space",
+      "subCategory": "SCBA",
+      "url": "https://airgas.my/product/scba-k632-200bar-m18-with-45degree-gauge/",
+      "imgUrl": "",
+      "brand": "Airgas Technology"
+    },
+    {
+      "id": 3169,
+      "name": "SCBA valve Sanosub 300bar m18 \u2013 1087",
+      "industry": "Confined Space",
+      "subCategory": "SCBA",
+      "url": "https://airgas.my/product/scba-valve-sanosub-300bar-m18/",
+      "imgUrl": "",
+      "brand": "Airgas Technology"
+    },
+    {
+      "id": 3165,
+      "name": "SCBA VTI valve K44 300bar m18 \u2013 1108",
+      "industry": "Confined Space",
+      "subCategory": "SCBA",
+      "url": "https://airgas.my/product/scba-vti-valve-k44-300bar-m18/",
+      "imgUrl": "",
+      "brand": "Airgas Technology"
+    },
+    {
+      "id": 3105,
+      "name": "Circular sawing machine",
+      "industry": "Other industries",
+      "subCategory": "Equipment",
+      "url": "https://airgas.my/product/circular-sawing-machine/",
+      "imgUrl": "",
+      "brand": "Airgas Technology"
+    },
+    {
+      "id": 3141,
+      "name": "cutting disk",
+      "industry": "Other industries",
+      "subCategory": "Equipment",
+      "url": "https://airgas.my/product/cutting-disk/",
+      "imgUrl": "",
+      "brand": "Airgas Technology"
+    },
+    {
+      "id": 3134,
+      "name": "mask 3 play top glove",
+      "industry": "Other industries",
+      "subCategory": "Mask",
+      "url": "https://airgas.my/product/mask-3-play-top-glove/",
+      "imgUrl": "",
+      "brand": "Airgas Technology"
+    },
+    {
+      "id": 2702,
+      "name": "Airline Trolley Breathing Air Sekur",
+      "industry": "Other industries",
+      "subCategory": "Equipment",
+      "url": "https://airgas.my/product/airline-trolley-breathing-air-sekur/",
+      "imgUrl": "",
+      "brand": "Airgas Technology"
+    },
+    {
+      "id": 2689,
+      "name": "Chemical Protection Alphatec Super Type CV",
+      "industry": "Oil and gas",
+      "subCategory": "Equipment",
+      "url": "https://airgas.my/product/chemical-protection-alphatec-super-type-cv/",
+      "imgUrl": "",
+      "brand": "Airgas Technology"
+    },
+    {
+      "id": 2686,
+      "name": "BW Gas Alert Max XT II (for Confined Space ) gas detector",
+      "industry": "Confined Space",
+      "subCategory": "Detector",
+      "url": "https://airgas.my/product/bw-gas-alert-max-xt-ii-for-confined-space-gas-detector/",
+      "imgUrl": "",
+      "brand": "Airgas Technology"
+    },
+    {
+      "id": 2684,
+      "name": "filter type emergency Respirator for Escape devices poliblitz abek 15 sekur (1083) 43390230",
+      "industry": "Other industries",
+      "subCategory": "Mask",
+      "url": "https://airgas.my/product/respirator-for-escape/",
+      "imgUrl": "",
+      "brand": "Airgas Technology"
+    },
+    {
+      "id": 2681,
+      "name": "FireMan boot Harvik",
+      "industry": "Oil and gas",
+      "subCategory": "Boots",
+      "url": "https://airgas.my/product/fireman-boot-harvik/",
+      "imgUrl": "",
+      "brand": "Airgas Technology"
+    },
+    {
+      "id": 2679,
+      "name": "CO2 Transfer system pump 100/D1 High Pressure refilling unit #3150",
+      "industry": "Other industries",
+      "subCategory": "Equipment",
+      "url": "https://airgas.my/product/co2-transfer-system/",
+      "imgUrl": "",
+      "brand": "Airgas Technology"
+    },
+    {
+      "id": 2678,
+      "name": "CTS composite cylinder type 4 light weight 7L",
+      "industry": "Other industries",
+      "subCategory": "Cylinder",
+      "url": "https://airgas.my/product/composite-cylinder-type-4-light-weight/",
+      "imgUrl": "",
+      "brand": "Airgas Technology"
+    },
+    {
+      "id": 2677,
+      "name": "Gas for Ammonia Gas NH3",
+      "industry": "Oil and gas",
+      "subCategory": "Equipment",
+      "url": "https://airgas.my/product/ammonia-gas-nh3/",
+      "imgUrl": "",
+      "brand": "Airgas Technology"
+    },
+    {
+      "id": 2676,
+      "name": "EFV Excess Flow Valve VTI with sinterfilter brass #1120",
+      "industry": "Other industries",
+      "subCategory": "Equipment",
+      "url": "https://airgas.my/product/vti-excess-flow-valve/",
+      "imgUrl": "",
+      "brand": "Airgas Technology"
+    },
+    {
+      "id": 2671,
+      "name": "airline trolley Apollo VTN 50LX2",
+      "industry": "Other industries",
+      "subCategory": "Equipment",
+      "url": "https://airgas.my/product/apollo-airline-trolley/",
+      "imgUrl": "",
+      "brand": "Airgas Technology"
+    },
+    {
+      "id": 2670,
+      "name": "Airline facemask with escape set #1099",
+      "industry": "Other industries",
+      "subCategory": "Mask",
+      "url": "https://airgas.my/product/airline-facemask-with-escape-set/",
+      "imgUrl": "",
+      "brand": "Airgas Technology"
+    },
+    {
+      "id": 2666,
+      "name": "Gas Detector 4 gases ISc",
+      "industry": "Confined Space",
+      "subCategory": "Detector",
+      "url": "https://airgas.my/product/gas-detector-4-gases-is/",
+      "imgUrl": "",
+      "brand": "Airgas Technology"
+    },
+    {
+      "id": 2665,
+      "name": "Honeywell T8000 TYPE II SCBA #1068",
+      "industry": "Confined Space",
+      "subCategory": "SCBA",
+      "url": "https://airgas.my/product/honeywell-t8000-type-ii-scba/",
+      "imgUrl": "",
+      "brand": "Airgas Technology"
+    },
+    {
+      "id": 2664,
+      "name": "Honeywell Full Body Harness MB9000 +MB9007",
+      "industry": "Other industries",
+      "subCategory": "Equipment",
+      "url": "https://airgas.my/product/honeywell-full-body-harness-mb9-mb9007/",
+      "imgUrl": "",
+      "brand": "Airgas Technology"
+    },
+    {
+      "id": 2662,
+      "name": "EEBD Sekur Emergency Escape device 1071",
+      "industry": "Confined Space",
+      "subCategory": "Equipment",
+      "url": "https://airgas.my/product/eebd-sekur-emergency-escape-device/",
+      "imgUrl": "",
+      "brand": "Airgas Technology"
+    },
+    {
+      "id": 2661,
+      "name": "Medical Oxygen 47L full set",
+      "industry": "Other industries",
+      "subCategory": "Equipment",
+      "url": "https://airgas.my/product/medical-oxygen-47l-full-set/",
+      "imgUrl": "",
+      "brand": "Airgas Technology"
+    },
+    {
+      "id": 2688,
+      "name": "Multi-Gas Detector Honeywell BW Ultra",
+      "industry": "Confined Space",
+      "subCategory": "Detector",
+      "url": "https://airgas.my/product/multi-gas-detector-honeywell-bw-ultra/",
+      "imgUrl": "",
+      "brand": "Airgas Technology"
+    },
+    {
+      "id": 2685,
+      "name": "LW Compressor 100E",
+      "industry": "Other industries",
+      "subCategory": "Equipment",
+      "url": "https://airgas.my/product/lw-compressor-100e/",
+      "imgUrl": "",
+      "brand": "Airgas Technology"
+    },
+    {
+      "id": 2683,
+      "name": "Glove for Fireman",
+      "industry": "Oil and gas",
+      "subCategory": "Equipment",
+      "url": "https://airgas.my/product/glove-for-fireman/",
+      "imgUrl": "",
+      "brand": "Airgas Technology"
+    },
+    {
+      "id": 2682,
+      "name": "FireFighting Suit jacket and trouser for fireman",
+      "industry": "Oil and gas",
+      "subCategory": "Protective Suit",
+      "url": "https://airgas.my/product/firefighting-suit/",
+      "imgUrl": "",
+      "brand": "Airgas Technology"
+    },
+    {
+      "id": 2680,
+      "name": "PAB fire Helmet HT04",
+      "industry": "Oil and gas",
+      "subCategory": "Equipment",
+      "url": "https://airgas.my/product/pab-fire-helmet-ht04/",
+      "imgUrl": "",
+      "brand": "Airgas Technology"
+    },
+    {
+      "id": 2675,
+      "name": "TRELLCOVER GLOVE 3-Finger",
+      "industry": "Other industries",
+      "subCategory": "Equipment",
+      "url": "https://airgas.my/product/trellcover-glove-3-finger/",
+      "imgUrl": "",
+      "brand": "Airgas Technology"
+    },
+    {
+      "id": 2674,
+      "name": "GAS for Medical Breathing Air",
+      "industry": "Oil and gas",
+      "subCategory": "Equipment",
+      "url": "https://airgas.my/product/medical-breathing-air/",
+      "imgUrl": "",
+      "brand": "Airgas Technology"
+    },
+    {
+      "id": 2673,
+      "name": "AlphaTec SUPER agents protection",
+      "industry": "Other industries",
+      "subCategory": "Equipment",
+      "url": "https://airgas.my/product/alphatec-super-agents-protection/",
+      "imgUrl": "",
+      "brand": "Airgas Technology"
+    },
+    {
+      "id": 2672,
+      "name": "Full Face Mask P500 \u2013 Vienna",
+      "industry": "Other industries",
+      "subCategory": "Mask",
+      "url": "https://airgas.my/product/full-face-mask-p500-vienna/",
+      "imgUrl": "",
+      "brand": "Airgas Technology"
+    },
+    {
+      "id": 2669,
+      "name": "Trolley Airline system #3135",
+      "industry": "Other industries",
+      "subCategory": "Equipment",
+      "url": "https://airgas.my/product/trolley-airline-system/",
+      "imgUrl": "",
+      "brand": "Airgas Technology"
+    },
+    {
+      "id": 2668,
+      "name": "SCBA Composite cylinder 6.8L 300bar",
+      "industry": "Confined Space",
+      "subCategory": "Cylinder",
+      "url": "https://airgas.my/product/scba-composite-cylinder-6-8l-300bar/",
+      "imgUrl": "",
+      "brand": "Airgas Technology"
+    },
+    {
+      "id": 2667,
+      "name": "SEKUR DPI SCBA type 2",
+      "industry": "Confined Space",
+      "subCategory": "SCBA",
+      "url": "https://airgas.my/product/sekur-dpi-scba-type-2/",
+      "imgUrl": "",
+      "brand": "Airgas Technology"
+    },
+    {
+      "id": 2663,
+      "name": "Cylinder for Aluminum 10L Medical Oxygen with Trolley Set",
+      "industry": "Other industries",
+      "subCategory": "Cylinder",
+      "url": "https://airgas.my/product/portable-8l-aluminum-cylinder-medical-oxygen-trolley-set/",
+      "imgUrl": "",
+      "brand": "Airgas Technology"
     }
   ],
   "industries": [
     "Confined Space",
+    "Maritime",
     "Oil and gas",
-    "Welding",
-    "Gases",
-    "Gas Calibration",
-    "PPE"
+    "Other industries"
   ],
   "industryDescriptions": {
-    "Confined Space": "Safe solutions for hazardous environments",
-    "Oil and gas": "Robust equipment for energy sectors",
-    "Welding": "High-quality tools for precision welding",
-    "Gases": "Reliable gas supply and storage solutions",
-    "Gas Calibration": "Precise calibration for gas detection",
-    "PPE": "Essential protection for every worker"
+    "Confined Space": "Specialized equipment for safe confined space entry and rescue.",
+    "Maritime": "Marine safety and life-saving appliances.",
+    "Oil and gas": "Heavy-duty protection and gas equipment for the energy sector.",
+    "Other industries": "General industrial safety, welding, and maintenance products."
   }
 }
