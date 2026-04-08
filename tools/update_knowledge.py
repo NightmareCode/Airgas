@@ -3,53 +3,69 @@ import re
 
 def get_brand(name):
     name_upper = name.upper()
-    # Ordered by specificity/importance
-    brands = [
-        ("ALPHATEC", "AlphaTec"),
-        ("ANSELL", "Ansell"),
-        ("MSA", "MSA Safety"),
-        ("DPI SEKUR", "DPI Sekur"),
-        ("HONEYWELL", "Honeywell"),
-        ("PORTWEST", "Portwest"),
-        ("DUPONT", "DuPont"),
-        ("TYVEK", "Tyvek"),
-        ("GLOBESTOCK", "Globestock"),
-        ("GVS", "GVS"),
-        ("AUSTCORP", "AustCorp"),
-        ("INDUSTRIAL SCIENTIFIC", "Industrial Scientific"),
-        ("L&W", "L&W Compressor"),
-        ("KARAM", "Karam"),
-        ("DELTA PLUS", "Delta Plus"),
-        ("KERMEL", "Kermel"),
-        ("TOP GLOVE", "Top Glove"),
-        ("SEITRON", "Seitron"),
-        ("DRÄGER", "Dräger"),
-        ("DRAGER", "Dräger"),
-        ("HARVIK", "Harvik"),
-        ("ELVEX", "Elvex"),
-        ("TRELLEBORG", "Trelleborg"),
-        ("SHELL", "Shell"),
-        ("CHIYODA", "Chiyoda"),
-        ("JASIC", "JASIC"),
-        ("KEMPPI", "Kemppi"),
-        ("PAB", "PAB"),
-        ("AVEC", "AVEC"),
-        ("BW", "BW Technologies"),
-        ("RAE", "RAE Systems"),
-        ("HORNUNG", "Hornung"),
-        ("NJSTAR", "NJSTAR"),
-        ("CAVAGNA", "Cavagna"),
-        ("SANOSUB", "Sanosub"),
-        ("VTI", "VTI"),
-        ("LICOTA", "Licota"),
-        ("YMH", "YMH"),
-        ("WELICHI", "Welichi")
+    
+    brand_map = {
+        "MSA Safety": ["MSA", "ALTAIR", "GALAXY GX2", "CAIRNS", "V-GARD", "VOYAGER", "V-FORM", "WORKMAN", "ULTRA ELITE", "PREMAIRE", "MINISCAPE", "S-CAP", "MOTIONSCOUT"],
+        "DPI Sekur": ["SEKUR", "DIABLO", "SFERA", "C701", "C702", "M21", "IDEA CBRN", "DIRIN", "POLIBLITZ", "ESCAP E", "SNC", "SWOT"],
+        "Honeywell": ["HONEYWELL", "FENZY", "BW", "MICROCLIP", "MAX XT", "INTELLIDOX", "VERISHIELD", "DURAFIT", "EASYFIT", "POSICHECK", "PANO CL3", "MB9000", "MB9007", "PA701HE", "PA7HE", "PA911"],
+        "Ansell": ["ANSELL", "ALPHATEC", "HYFLEX", "CHEM PRO", "GAMMEX", "MICRO-TOUCH"],
+        "Dräger": ["DRAGER", "DRÄGER", "PSS 3000", "FPS 7000", "SAVER CF", "SAVER PP"],
+        "Portwest": ["PORTWEST", "BIZTEX", "BIZWELD", "KX3", "A197", "A198", "A721"],
+        "DuPont": ["DUPONT", "NOMEX", "TYVEK", "TYCHEM", "KEVLAR"],
+        "Globestock": ["GLOBESTOCK"],
+        "GVS": ["GVS", "ELIPSE"],
+        "Industrial Scientific": ["INDUSTRIAL SCIENTIFIC", "ISC", "T40 II", "MX4", "RATTLER"],
+        "RAE Systems": ["RAE SYSTEMS", "TOXIRAE"],
+        "Seitron": ["SEITRON"],
+        "Shell": ["SHELL"],
+        "Harvik": ["HARVIK"],
+        "Elvex": ["ELVEX"],
+        "Kemppi": ["KEMPPI"],
+        "JASIC": ["JASIC"],
+        "L&W Compressor": ["L&W", "LW", "LENHARDT"],
+        "Chiyoda": ["CHIYODA"],
+        "Karam": ["KARAM"],
+        "Delta Plus": ["DELTA PLUS"],
+        "Kermel": ["KERMEL"],
+        "Top Glove": ["TOP GLOVE"],
+        "Trelleborg": ["TRELLEBORG", "TRELLCOVER"],
+        "Frypro": ["FRYPRO", "FRPRO"],
+        "Proban": ["PROBAN"],
+        "Red Wing": ["RED WING"],
+        "PAB": ["PAB"],
+        "AVEC": ["AVEC"],
+        "AustCorp": ["AUSTCORP"],
+        "Hornung": ["HORNUNG"],
+        "NJSTAR": ["NJSTAR"],
+        "Cavagna": ["CAVAGNA"],
+        "Sanosub": ["SANOSUB"],
+        "VTI": ["VTI"],
+        "Licota": ["LICOTA"],
+        "YMH": ["YMH"],
+        "Welichi": ["WELICHI"]
+    }
+
+    # Brands that often don't have word boundaries (prefixes)
+    NO_BOUNDARY = ["MSA", "BW", "LW", "PAB", "VTI"]
+
+    ordered_brands = [
+        "MSA Safety", "DPI Sekur", "Honeywell", "Ansell", "Dräger", "Portwest",
+        "DuPont", "Globestock", "GVS", "Industrial Scientific", "RAE Systems",
+        "Seitron", "Shell", "Harvik", "Elvex", "Kemppi", "JASIC", "L&W Compressor",
+        "Chiyoda", "Karam", "Delta Plus", "Kermel", "Top Glove", "Trelleborg",
+        "Frypro", "Proban", "Red Wing", "PAB", "AVEC", "AustCorp", "Hornung",
+        "NJSTAR", "Cavagna", "Sanosub", "VTI", "Licota", "YMH", "Welichi"
     ]
     
-    for key, display in brands:
-        if key in name_upper:
-            return display
-            
+    for bname in ordered_brands:
+        keywords = brand_map[bname]
+        for k in keywords:
+            if k in NO_BOUNDARY:
+                if k in name_upper: return bname
+            else:
+                pattern = rf"\b{re.escape(k)}\b" if len(k) < 4 else re.escape(k)
+                if re.search(pattern, name_upper): return bname
+                
     return "Airgas Technology"
 
 def main():
