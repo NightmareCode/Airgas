@@ -94,15 +94,16 @@ document.addEventListener('DOMContentLoaded', () => {
       const grid = document.createElement('div');
       grid.className = 'product-grid';
 
-      groups[subCat].forEach(product => {
+      groups[subCat].forEach((product, index) => {
         const card = document.createElement('div');
         card.className = 'product-card';
+        card.style.animationDelay = `${index * 0.05}s`;
         
         const initials = product.name.split(' ').slice(0, 2).map(w => w[0] || '').join('').toUpperCase() || 'AG';
         const fallbackAvatar = `https://ui-avatars.com/api/?name=${initials}&background=F85A2B&color=fff&size=128`;
         
         // Industry-based folder path
-        const industryFolder = (product.industry || 'Other industries').replace(/\s+/g, '');
+        const industryFolder = (product.original_industry || product.industry || 'Other industries').replace(/\s+/g, '');
         const sanitizedFilename = product.name.replace(/[^a-zA-Z0-9\s]/g, '').trim() + '.png';
         const localSrc = `assets/${industryFolder}/${sanitizedFilename}`;
         
