@@ -103,8 +103,8 @@ document.addEventListener('DOMContentLoaded', () => {
         const fallbackAvatar = `https://ui-avatars.com/api/?name=${initials}&background=F85A2B&color=fff&size=128`;
         
         // Industry-based folder path
-        const industryFolder = (product.original_industry || product.industry || 'Other industries').replace(/\s+/g, '');
-        const sanitizedFilename = product.name.replace(/[^a-zA-Z0-9\s]/g, '').trim() + '.png';
+        const industryFolder = (product.industry || 'Other industries').replace(/\s+/g, '').replace('&', 'and');
+        const sanitizedFilename = product.name.replace(/[^a-zA-Z0-9\s]/g, '').trim().substring(0, 100).trim() + '.png';
         const localSrc = `assets/${industryFolder}/${sanitizedFilename}`;
         
         // Priority: 1. Local industry folder, 2. Live imgUrl, 3. Avatar fallback
