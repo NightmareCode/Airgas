@@ -4,18 +4,17 @@ import re
 def get_new_category(name, old_cat):
     name_lower = name.lower()
     
-    # Priority 1: Services & Maintenance
-    if any(k in name_lower for k in ['service', 'inspection', 'hydro test', 'testing', 'refill', 'calibration', 'calibration service', 'maintenance']):
+    # Priority 1: Services & Maintenance (Technical services, tests, certification)
+    if any(k in name_lower for k in ['service', 'inspection', 'hydro test', 'testing', 'refill', 'calibration', 'maintenance', 'repair']):
         return 'Services & Maintenance'
     
     # Priority 2: Gas Calibration (Specialized sensors/gases for calibration)
-    if any(k in name_lower for k in ['sensor', 'calibration gas', 'gas mixture', 'isobutylene', 'multi gas', 'single gas', 'h2s', 'co2', 'o2', 'lel']):
-        if 'detector' not in name_lower: # If it's just the sensor/gas
+    if any(k in name_lower for k in ['calibration gas', 'gas mixture', 'isobutylene', 'multi gas', 'single gas', 'h2s', 'co2', 'o2', 'lel', 'span gas']):
+        if 'detector' not in name_lower:
              return 'Gas Calibration'
-        # Detectors might go to Confined Space depending on context
-        
+    
     # Priority 3: Confined Space (SCBA, EEBD, Gas Detectors, Life-lines, Tripods)
-    if any(k in name_lower for k in ['scba', 'eebd', 'detector', 'tripod', 'winch', 'escape', 'lifeline', 'confined', 'distress', 'cairns', 'altair', 'max xt', 'gasalert']):
+    if any(k in name_lower for k in ['scba', 'eebd', 'detector', 'tripod', 'winch', 'escape', 'lifeline', 'confined', 'distress', 'cairns', 'altair', 'max xt', 'gasalert', 'mask fit test']):
         return 'Confined Space'
         
     # Priority 4: Welding (Machines, Electrodes, Gauges, Welding products)
@@ -23,7 +22,10 @@ def get_new_category(name, old_cat):
         return 'Welding'
         
     # Priority 5: Industrial & Medical Gases (The gases themselves, cylinders, regulators)
-    if any(k in name_lower for k in ['gas cylinder', 'argon', 'nitrogen', 'oxygen', 'helium', 'helox', 'ammonia', 'compressed air', 'co2', 'acetylene', 'regulator', 'valve', 'bullnose', 'trolley', 'rack']):
+    if any(k in name_lower for k in ['cylinder', 'gas', 'argon', 'nitrogen', 'oxygen', 'helium', 'helox', 'ammonia', 'compressed air', 'co2', 'acetylene', 'regulator', 'valve', 'bullnose', 'trolley', 'rack', 'manifold', 'filling system', 'pump']):
+        if any(k in name_lower for k in ['scba', 'eebd', 'escape']): # If it's for SCBA/EEBD, it might be Confined Space, but usually cylinders are equipment
+            if 'service' not in name_lower:
+                return 'Gases & Equipment'
         return 'Gases & Equipment'
         
     # Priority 6: Maritime & Offshore
@@ -31,14 +33,14 @@ def get_new_category(name, old_cat):
         return 'Maritime & Offshore'
 
     # Priority 7: Oil & Gas / Chemical Protection (Chemical suits, Fireman PPE)
-    if any(k in name_lower for k in ['suit', 'fireman', 'nomex', 'kermel', 'chemical', 'hazmat', 'fire fighting', 'frypro', 'heat resistant']):
+    if any(k in name_lower for k in ['suit', 'fireman', 'nomex', 'kermel', 'chemical', 'hazmat', 'fire fighting', 'frypro', 'heat resistant', 'frypro']):
         return 'Oil & Gas'
         
     # Priority 8: PPE (Personal Protective Equipment)
-    if any(k in name_lower for k in ['glove', 'helmet', 'glasses', 'goggle', 'ear plug', 'earmuff', 'mask', 'coverall', 'vest', 'cone', 'lanyard', 'safety glass', 'boot', 'shoes', 'lifting belt']):
+    if any(k in name_lower for k in ['glove', 'helmet', 'glasses', 'goggle', 'ear plug', 'earmuff', 'mask', 'coverall', 'vest', 'cone', 'lanyard', 'safety glass', 'boot', 'shoes', 'lifting belt', 'elbow']):
         return 'PPE'
         
-    # Fallback to current categorization if available
+    # Default to generic category mapping if none of the above matches
     if 'Oil and gas' in old_cat or 'Oilandgas' in old_cat: return 'Oil & Gas'
     if 'Maritime' in old_cat: return 'Maritime & Offshore'
     if 'Confined' in old_cat: return 'Confined Space'
@@ -53,11 +55,8 @@ def main():
         data = json.load(f)
         
     for p in data.get('products', []):
-        old_cat = p.get('industry', 'Other industries')
-        # Keep original_industry if it exists, otherwise use current industry
-        orig = p.get('original_industry', old_cat)
-        p['original_industry'] = orig
-        p['industry'] = get_new_category(p['name'], orig)
+        old_cat = p.get('original_industry', p.get('industry', 'Other industries'))
+        p['industry'] = get_new_category(p['name'], old_cat)
         
     # Update industry descriptions
     data['industryDescriptions'] = {
