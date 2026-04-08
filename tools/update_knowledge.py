@@ -1,141 +1,141 @@
 import json
 import re
 
-def get_industries(name, brand, current_industry):
-    name_lower = name.lower()
-    brand_lower = brand.lower()
+def get_brand(name):
+    name_upper = name.upper()
+    # Ordered by specificity/importance
+    brands = [
+        ("ALPHATEC", "AlphaTec"),
+        ("ANSELL", "Ansell"),
+        ("MSA", "MSA Safety"),
+        ("DPI SEKUR", "DPI Sekur"),
+        ("HONEYWELL", "Honeywell"),
+        ("PORTWEST", "Portwest"),
+        ("DUPONT", "DuPont"),
+        ("TYVEK", "Tyvek"),
+        ("GLOBESTOCK", "Globestock"),
+        ("GVS", "GVS"),
+        ("AUSTCORP", "AustCorp"),
+        ("INDUSTRIAL SCIENTIFIC", "Industrial Scientific"),
+        ("L&W", "L&W Compressor"),
+        ("KARAM", "Karam"),
+        ("DELTA PLUS", "Delta Plus"),
+        ("KERMEL", "Kermel"),
+        ("TOP GLOVE", "Top Glove"),
+        ("SEITRON", "Seitron"),
+        ("DRÄGER", "Dräger"),
+        ("DRAGER", "Dräger"),
+        ("HARVIK", "Harvik"),
+        ("ELVEX", "Elvex"),
+        ("TRELLEBORG", "Trelleborg"),
+        ("SHELL", "Shell"),
+        ("CHIYODA", "Chiyoda"),
+        ("JASIC", "JASIC"),
+        ("KEMPPI", "Kemppi"),
+        ("PAB", "PAB"),
+        ("AVEC", "AVEC"),
+        ("BW", "BW Technologies"),
+        ("RAE", "RAE Systems"),
+        ("HORNUNG", "Hornung"),
+        ("NJSTAR", "NJSTAR"),
+        ("CAVAGNA", "Cavagna"),
+        ("SANOSUB", "Sanosub"),
+        ("VTI", "VTI"),
+        ("LICOTA", "Licota"),
+        ("YMH", "YMH"),
+        ("WELICHI", "Welichi")
+    ]
     
-    industries = set()
-    
-    # 1. Confined Space
-    if any(k in name_lower for k in ['scba', 'eebd', 'detector', 'tripod', 'winch', 'escape', 'lifeline', 'confined', 'distress', 'blower', 'ventilator', 'harness', 'lanyard', 'rescue', 'altair', 'gasalert', 'rattler', 'toxirae', 'multigas', 'single gas']):
-        industries.add('Confined Space')
-        
-    # 2. Oil & Gas
-    if any(k in name_lower for k in ['chemical', 'hazmat', 'flame', 'fire', 'nomex', 'kermel', 'frypro', 'suit', 'coverall', 'hood', 'boot', 'glove', 'helmet', 'gas', 'cylinder', 'regulator', 'valve', 'oil', 'synthetic', 'hp compressor', 'explosion proof', 'light']):
-        if 'welding' not in name_lower: # filter out generic welding
-            industries.add('Oil & Gas')
+    for key, display in brands:
+        if key in name_upper:
+            return display
             
-    # 3. Welding
-    if any(k in name_lower for k in ['weld', 'electrode', 'arc ', 'arc 150', 'arc 250', 'mig', 'tig', 'gouging', 'cutting torch', 'chiyoda', 'jasic', 'kemppi', 'welding machine', 'welding gauge', 'welding helmet', 'welding shield']):
-        industries.add('Welding')
-        
-    # 4. Gases & Equipment
-    if any(k in name_lower for k in ['cylinder', 'gas', 'argon', 'nitrogen', 'oxygen', 'helium', 'helox', 'ammonia', 'compressed air', 'co2', 'acetylene', 'regulator', 'valve', 'bullnose', 'trolley', 'rack', 'manifold', 'filling system', 'pump', 'compressor', 'hose', 'washer']):
-        industries.add('Gases & Equipment')
-        
-    # 5. Gas Calibration
-    if any(k in name_lower for k in ['calibration', 'span gas', 'mixture', 'zero gas', 'isobutylene', 'h2s', 'co2', 'o2', 'lel', 'sensor', 'pid', 'bump test', 'docking', 'galaxy gx2', 'intellidox', 'tdock']):
-        industries.add('Gas Calibration')
-        
-    # 6. PPE
-    if any(k in name_lower for k in ['glove', 'helmet', 'glasses', 'goggle', 'ear plug', 'earmuff', 'mask', 'coverall', 'vest', 'cone', 'lanyard', 'safety glass', 'boot', 'shoes', 'lifting belt', 'elbow', 'knee', 'protection', 'face shield', 'jacket', 'trouser', 'combat', 'drawstring', 'cotton', 'examination', 'nitrile', 'hyflex', 'esd', 'antistatic', 'biztex', 'bizweld', 'vgard', 'voyager', 'verishield', 'vform', 'trauma strap']):
-        industries.add('PPE')
-        
-    # 7. Services & Maintenance
-    if any(k in name_lower for k in ['service', 'inspection', 'hydro test', 'testing', 'refill', 'calibration', 'maintenance', 'repair', 'kit', 'spare', 'replacement', 'cert', 'as11', 'as22', 'as23', 'posicheck', 'test equipment', 'instrument']):
-        industries.add('Services & Maintenance')
-        
-    # 8. Maritime & Offshore
-    # Most of Airgas products are suitable for marine/offshore if they are safety related
-    # Specifically: breathing apparatus, gas detection, fire protection, marine gases
-    if any(k in name_lower for k in ['marine', 'maritime', 'ship', 'vessel', 'lifeboat', 'offshore', 'rig', 'deck', 'bunker', 'solas', 'med', 'navy', 'dnv', 'abs', 'lloyds', 'galvanized cable', 'srh-30']):
-        industries.add('Maritime & Offshore')
-    
-    # Breathing and detection are ALWAYS marine/offshore relevant
-    if 'Confined Space' in industries:
-        industries.add('Maritime & Offshore')
-    if 'Oil & Gas' in industries:
-        industries.add('Maritime & Offshore')
-    if 'Gases & Equipment' in industries and any(k in name_lower for k in ['oxygen', 'acetylene', 'nitrogen', 'argon', 'cylinder', 'regulator']):
-        industries.add('Maritime & Offshore')
-
-    # Fallback to current if empty
-    if not industries:
-        industries.add('PPE')
-        
-    return sorted(list(industries))
+    return "Airgas Technology"
 
 def main():
     with open('assets/products.json', 'r', encoding='utf-8') as f:
         data = json.load(f)
         
     for p in data['products']:
-        p['industries'] = get_industries(p['name'], p.get('brand', ''), p.get('industry', 'PPE'))
-        # We can remove the old 'industry' field or keep it for now
-        # I'll keep it as the "primary" one for backwards compat or logic
-        if p['industries']:
-            p['industry'] = p['industries'][0]
+        # Fix Brand
+        p['brand'] = get_brand(p['name'])
             
-    # Add Sub-Category Knowledge
+    # Compact Industry Descriptions
+    data['industryDescriptions'] = {
+        'Confined Space': 'Safety gear for restricted entry: SCBA, detectors, and rescue systems.',
+        'Oil & Gas': 'Heavy-duty protection: chemical suits, FR gear, and energy-sector gas tools.',
+        'Welding': 'Professional welding: machines, electrodes, and high-precision accessories.',
+        'Gases & Equipment': 'Gas solutions: industrial/medical gases, cylinders, and high-pressure regulators.',
+        'Gas Calibration': 'Measurement precision: calibration gases and specialized detection sensors.',
+        'PPE': 'Workplace protection: safety helmets, gloves, eyewear, and high-vis apparel.',
+        'Services & Maintenance': 'Technical support: hydro testing, certification, and equipment calibration.',
+        'Maritime & Offshore': 'Marine safety: shipboard survival gear and offshore breathing apparatus.'
+    }
+
+    # Compact Sub-Category Knowledge
     data['subCategoryKnowledge'] = {
         "Gas Detection": {
-            "title": "What is Gas Detection?",
+            "title": "Gas Detection Essentials",
             "points": [
-                "Definition: Systems used to identify and measure concentrations of hazardous gases (toxic, flammable, or oxygen-depleting) in real-time.",
-                "Purpose: Protects workers from acute poisoning (e.g., CO, H2S) and prevents explosions by detecting gases before they reach combustible limits.",
-                "Importance: Acts as an 'early warning system' in environments where hazards are invisible, odorless, and potentially fatal.",
-                "Key Uses: Essential for confined space entry, leak detection in pipelines, and continuous area monitoring in chemical plants."
+                "Identifies toxic, flammable, or oxygen-deficient hazards in real-time.",
+                "Early warning system prevents poisoning and combustible accidents.",
+                "Critical for confined spaces, pipelines, and industrial area monitoring."
             ]
         },
         "Respiratory Protection": {
-            "title": "Why is Respiratory Protection Critical?",
+            "title": "Respiratory Safety",
             "points": [
-                "Last Line of Defense: Used when airborne hazards (dust, mists, toxic gases) cannot be fully removed through ventilation or engineering.",
-                "Prevention of Chronic Illness: Protects against long-term diseases like silicosis, asbestosis, and occupational asthma.",
-                "Immediate Survival: SCBA and EEBD systems provide clean air in oxygen-deficient or IDLH (Immediately Dangerous to Life or Health) atmospheres.",
-                "Compliance: Strict adherence to international standards ensures equipment reliability during critical emergencies."
+                "The 'last line of defense' against airborne dust, mists, and toxic gases.",
+                "Prevents chronic lung diseases and immediate oxygen-deficiency risks.",
+                "Includes SCBA, EEBD, and filtered respirators for IDLH environments."
             ]
         },
         "Technical Services": {
-            "title": "The Role of Specialized Maintenance",
+            "title": "Expert Maintenance",
             "points": [
-                "Equipment Reliability: Services like SCBA hydrostatic testing ensure that high-pressure cylinders can safely hold breathable air without risk of rupture.",
-                "Accuracy: Regular gas detector calibration resets sensors to ensure they correctly report dangerous gas levels despite environmental 'drift'.",
-                "Compliance & Certification: Mandatory testing (DOT, NFPA, OSHA) provides the documentation required for legal and safety audits.",
-                "Risk Mitigation: Proactive maintenance identifies aging equipment before it fails, preventing catastrophic workplace accidents."
+                "Hydro testing verifies cylinder strength; calibration ensures sensor accuracy.",
+                "Complies with DOT, NFPA, and OSHA standards for safety certification.",
+                "Reduces operational risk by identifying equipment failure before it happens."
             ]
         },
         "Welding Equipment": {
-            "title": "Precision and Safety in Welding",
+            "title": "Industrial Welding",
             "points": [
-                "Advanced Technology: Modern MIG/TIG/ARC systems allow for high-precision joining of thin materials and heavy structural steel.",
-                "Environmental Control: Includes specialized shielding gases (Argon, CO2) to protect welds from atmospheric contamination.",
-                "Fume Management: Proper equipment must be paired with ventilation to protect operators from toxic metal particulates.",
-                "Thermal Protection: Essential for managing extreme UV radiation and molten metal splashes common in heavy fabrication."
+                "Premium ARC/MIG/TIG systems for high-precision structural joining.",
+                "Shielding gases protect welds from atmospheric contamination.",
+                "Pairs with FR gear and ventilation to manage UV and toxic fume hazards."
             ]
         },
         "Gas Storage": {
-            "title": "Safe Handling of Compressed Gases",
+            "title": "Safe Gas Handling",
             "points": [
-                "Structural Integrity: Cylinders are designed to safely contain gases at pressures up to 300 bar (4500 psi).",
-                "Segregation: Proper storage involves separating oxidizers (Oxygen) from flammable gases (Acetylene) by at least 20 feet.",
-                "Stability: Racks and manifolds prevent cylinders from tipping, which can turn a damaged valve into a high-velocity projectile.",
-                "Environmental Safety: Well-ventilated storage prevents the accumulation of heavy gases that could displace oxygen in low-lying areas."
+                "Heavy-duty cylinders and valves designed for pressures up to 300 bar.",
+                "Requires strict segregation of oxidizers and flammable gases for safety.",
+                "Racks and manifolds provide stability to prevent tipping and valve damage."
             ]
         },
         "Body Protection": {
-            "title": "Shielding the Workforce",
+            "title": "Full Body Shielding",
             "points": [
-                "Chemical Barriers: Hazmat suits and resistant coveralls prevent skin absorption of corrosive toxins and systemic poisoning.",
-                "Thermal Shields: Flame-resistant (FR) gear protects against flash fires and electric arcs in extreme energy environments.",
-                "Physical Protection: Heavy-duty fabrics mitigate risks of abrasions, lacerations, and physical trauma from falling objects.",
-                "Productivity: High-quality PPE reduces 'safety-related anxiety', allowing workers to focus on high-precision tasks with confidence."
+                "Chemical and flame-resistant suits prevent skin absorption and burns.",
+                "Protects against abrasions, impacts, and environmental thermal stress.",
+                "Essential for worker confidence and productivity in high-risk zones."
             ]
         },
         "General Equipment": {
-            "title": "Supporting Industrial Workflows",
+            "title": "Site Safety Basics",
             "points": [
-                "Essential Tools: High-visibility vests, safety cones, and specialized kits that form the foundation of a safe work site.",
-                "Versatility: Products designed to meet the broad safety needs of construction, manufacturing, and general maintenance.",
-                "Ergonomics: Lifting belts and supports reduce physical strain and long-term musculoskeletal injuries.",
-                "Site Management: Traffic and zone control equipment ensures safe movement of personnel and vehicles."
+                "Foundational tools: high-vis vests, safety cones, and specialized kits.",
+                "Broad utility across construction, shipping, and manufacturing sectors.",
+                "Ergonomic designs reduce physical strain and workplace injuries."
             ]
         }
     }
     
     with open('assets/products.json', 'w', encoding='utf-8') as f:
         json.dump(data, f, indent=2)
+
+    print("Updated brands and compacted all descriptions.")
 
 if __name__ == '__main__':
     main()
