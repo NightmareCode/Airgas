@@ -155,12 +155,56 @@ img { display: block; max-width: 100%; }
   font-family: 'Space Grotesk', sans-serif;
   font-size: 1.5rem;
   font-weight: 700;
-  margin-bottom: 32px;
+  margin-bottom: 24px;
   color: var(--ink);
   text-transform: uppercase;
   letter-spacing: 0.05em;
   border-left: 4px solid var(--primary);
   padding-left: 16px;
+}
+
+/* Knowledge Box */
+.knowledge-box {
+  background: #fdfdfd;
+  border: 1px solid #edf2f7;
+  border-radius: var(--radius-lg);
+  padding: 24px;
+  margin-bottom: 40px;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+}
+.knowledge-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 16px;
+  color: var(--primary);
+}
+.knowledge-icon { width: 24px; height: 24px; }
+.knowledge-header h3 {
+  font-size: 1.15rem;
+  font-weight: 700;
+  font-family: 'Space Grotesk', sans-serif;
+  color: var(--ink);
+}
+.knowledge-points {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 16px;
+}
+.knowledge-points li {
+  font-size: 0.95rem;
+  color: var(--ink-secondary);
+  position: relative;
+  padding-left: 24px;
+  line-height: 1.5;
+}
+.knowledge-points li::before {
+  content: '→';
+  position: absolute;
+  left: 0;
+  color: var(--primary);
+  font-weight: 700;
 }
 
 @keyframes fadeInUp {

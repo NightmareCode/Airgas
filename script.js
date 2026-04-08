@@ -15,6 +15,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   let allProducts = [];
   let industryDescriptions = {};
+  let subCategoryKnowledge = {};
   let activeIndustry = 'Confined Space';
   let searchQuery = '';
 
@@ -27,6 +28,7 @@ document.addEventListener('DOMContentLoaded', () => {
     .then(data => {
       allProducts = data.products;
       industryDescriptions = data.industryDescriptions || {};
+      subCategoryKnowledge = data.subCategoryKnowledge || {};
       updateIndustryInfo();
       renderProducts();
     })
@@ -46,7 +48,8 @@ document.addEventListener('DOMContentLoaded', () => {
   // ─── Filter & Group Logic ─────────────────────────────────
   function getFilteredAndGroupedProducts() {
     const filtered = allProducts.filter(product => {
-      const matchesIndustry = product.industry === activeIndustry;
+      // Support for new multiple industries structure
+      const matchesIndustry = (product.industries && product.industries.includes(activeIndustry)) || (product.industry === activeIndustry);
       const matchesSearch = searchQuery === '' ||
         product.name.toLowerCase().includes(searchQuery) ||
         (product.brand && product.brand.toLowerCase().includes(searchQuery));
@@ -55,7 +58,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const groups = {};
     filtered.forEach(product => {
-      const sub = product.subCategory || 'General Products';
+      const sub = product.subCategory || 'General Equipment';
       if (!groups[sub]) groups[sub] = [];
       groups[sub].push(product);
     });
@@ -91,6 +94,23 @@ document.addEventListener('DOMContentLoaded', () => {
       title.textContent = subCat;
       section.appendChild(title);
 
+      // Add Sub-Category Knowledge
+      const knowledge = subCategoryKnowledge[subCat];
+      if (knowledge) {
+        const knowledgeBox = document.createElement('div');
+        knowledgeBox.className = 'knowledge-box';
+        knowledgeBox.innerHTML = `
+          <div class="knowledge-header">
+            <svg class="knowledge-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 16v-4M12 8h.01M22 12c0 5.523-4.477 10-10 10S2 17.523 2 12 6.477 2 12 2s10 4.477 10 10z" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <h3>${knowledge.title}</h3>
+          </div>
+          <ul class="knowledge-points">
+            ${knowledge.points.map(point => `<li>${point}</li>`).join('')}
+          </ul>
+        `;
+        section.appendChild(knowledgeBox);
+      }
+
       const grid = document.createElement('div');
       grid.className = 'product-grid';
 
@@ -103,11 +123,12 @@ document.addEventListener('DOMContentLoaded', () => {
         const fallbackAvatar = `https://ui-avatars.com/api/?name=${initials}&background=F85A2B&color=fff&size=128`;
         
         // Industry-based folder path
-        const industryFolder = (product.industry || 'Other industries').replace(/\s+/g, '').replace('&', 'and');
+        // Use primary industry for folder mapping
+        const primaryIndustry = (product.industries && product.industries[0]) || product.industry || 'PPE';
+        const industryFolder = primaryIndustry.replace(/\s+/g, '').replace('&', 'and');
         const sanitizedFilename = product.name.replace(/[^a-zA-Z0-9\s]/g, '').trim().substring(0, 100).trim() + '.png';
         const localSrc = `assets/${industryFolder}/${sanitizedFilename}`;
         
-        // Priority: 1. Local industry folder, 2. Live imgUrl, 3. Avatar fallback
         const mainImgSrc = localSrc; 
 
         card.innerHTML = `
