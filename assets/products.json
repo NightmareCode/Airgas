@@ -178,8 +178,7 @@
       "subCategory": "General Equipment",
       "industries": [
         "Confined Space",
-        "Maritime & Offshore",
-        "Services & Maintenance"
+        "Maritime & Offshore"
       ]
     },
     {
@@ -342,12 +341,10 @@
       "url": "https://airgas.my/product/cylinder-hydraulic-expansion-test-control-unit-hydrotest/",
       "imgUrl": "https://airgas.my/wp-content/uploads/2025/03/Screenshot-2025-03-27-095906.png",
       "brand": "Airgas Technology",
-      "industry": "Gases & Equipment",
-      "subCategory": "Gas Storage",
+      "industry": "PPE",
+      "subCategory": "Technical Services",
       "industries": [
-        "Gases & Equipment",
-        "Maritime & Offshore",
-        "Oil & Gas"
+        "PPE"
       ]
     },
     {
@@ -886,10 +883,10 @@
       "url": "https://airgas.my/product/hydro-test-unit-volumetric-measuring/",
       "imgUrl": "https://airgas.my/wp-content/uploads/2024/05/Screenshot-2024-05-24-214701.png",
       "brand": "Airgas Technology",
-      "industry": "Services & Maintenance",
+      "industry": "PPE",
       "subCategory": "Technical Services",
       "industries": [
-        "Services & Maintenance"
+        "PPE"
       ]
     },
     {
@@ -1044,11 +1041,10 @@
       "url": "https://airgas.my/product/msa-galaxy-gx2-automated-test-system-automated-calibration-docking/",
       "imgUrl": "https://airgas.my/wp-content/uploads/2023/12/Screenshot-2023-12-19-153448.png",
       "brand": "MSA Safety",
-      "industry": "Gas Calibration",
+      "industry": "PPE",
       "subCategory": "Technical Services",
       "industries": [
-        "Gas Calibration",
-        "Services & Maintenance"
+        "PPE"
       ]
     },
     {
@@ -1347,10 +1343,10 @@
       "url": "https://airgas.my/product/lw-service-kit-lw-230-280-320-e-es-ec-mit-c-w-acd/",
       "imgUrl": "",
       "brand": "L&W Compressor",
-      "industry": "Services & Maintenance",
+      "industry": "PPE",
       "subCategory": "Technical Services",
       "industries": [
-        "Services & Maintenance"
+        "PPE"
       ]
     },
     {
@@ -1702,8 +1698,7 @@
       "industry": "Gas Calibration",
       "subCategory": "General Equipment",
       "industries": [
-        "Gas Calibration",
-        "Services & Maintenance"
+        "Gas Calibration"
       ]
     },
     {
@@ -2574,12 +2569,9 @@
       "url": "https://airgas.my/product/helium-balloon-gas-with-refilled-cylinder-for-125pcs/",
       "imgUrl": "https://airgas.my/wp-content/uploads/2022/10/ballon-airgas-3-scaled.jpg",
       "brand": "Airgas Technology",
-      "industry": "Gases & Equipment",
-      "subCategory": "Gas Storage",
+      "industry": "Services & Maintenance",
+      "subCategory": "Technical Services",
       "industries": [
-        "Gases & Equipment",
-        "Maritime & Offshore",
-        "Oil & Gas",
         "Services & Maintenance"
       ]
     },
@@ -3178,14 +3170,9 @@
       "url": "https://airgas.my/product/services-for-airline-escape-set-with-face-mask-fit-test-with-posicheck-test-including-ld-valve-first-reducing-valve-pressure-hose-gauge-and-whistle-auto-switch-valve-cert-as22-003145/",
       "imgUrl": "https://airgas.my/wp-content/uploads/2022/01/airline1.jpg",
       "brand": "Honeywell",
-      "industry": "Confined Space",
-      "subCategory": "Respiratory Protection",
+      "industry": "Services & Maintenance",
+      "subCategory": "Technical Services",
       "industries": [
-        "Confined Space",
-        "Gases & Equipment",
-        "Maritime & Offshore",
-        "Oil & Gas",
-        "PPE",
         "Services & Maintenance"
       ]
     },
@@ -3196,13 +3183,9 @@
       "url": "https://airgas.my/product/services-for-eebd-set-hood-inspection-refill-b-air-valve-test-hose-cert-as23-003023/",
       "imgUrl": "https://airgas.my/wp-content/uploads/2022/01/eebd-sekur.jpg",
       "brand": "Airgas Technology",
-      "industry": "Confined Space",
+      "industry": "Services & Maintenance",
       "subCategory": "Technical Services",
       "industries": [
-        "Confined Space",
-        "Gases & Equipment",
-        "Maritime & Offshore",
-        "Oil & Gas",
         "Services & Maintenance"
       ]
     },
@@ -3213,13 +3196,9 @@
       "url": "https://airgas.my/product/services-for-scba-backplate-inspection-first-reducing-valve-pressure-gauge-hoses-whistle-cleaning-cert-as22-003007/",
       "imgUrl": "https://airgas.my/wp-content/uploads/2022/01/scba.jpg",
       "brand": "Airgas Technology",
-      "industry": "Confined Space",
+      "industry": "Services & Maintenance",
       "subCategory": "Technical Services",
       "industries": [
-        "Confined Space",
-        "Gases & Equipment",
-        "Maritime & Offshore",
-        "Oil & Gas",
         "Services & Maintenance"
       ]
     },
@@ -3230,14 +3209,9 @@
       "url": "https://airgas.my/product/services-for-scba-face-mask-and-backplate-inspection-fit-test-with-posicheck-test-including-ld-valve-first-reducing-valve-pressure-hose-gauge-and-whistle-cert-as22/",
       "imgUrl": "https://airgas.my/wp-content/uploads/2022/05/Screenshot-2022-05-10-164134.jpg",
       "brand": "Honeywell",
-      "industry": "Confined Space",
-      "subCategory": "Respiratory Protection",
+      "industry": "Services & Maintenance",
+      "subCategory": "Technical Services",
       "industries": [
-        "Confined Space",
-        "Gases & Equipment",
-        "Maritime & Offshore",
-        "Oil & Gas",
-        "PPE",
         "Services & Maintenance"
       ]
     },
@@ -3248,13 +3222,9 @@
       "url": "https://airgas.my/product/services-and-inspection-cylinder-for-scba-eebd-hydro-testing-1-5times-from-working-pressure-to-450bar-visual-test-including-weight-check-cylinder-wall-thickness-internal-and-external-su/",
       "imgUrl": "https://airgas.my/wp-content/uploads/2022/04/448928.jpg",
       "brand": "Airgas Technology",
-      "industry": "Confined Space",
-      "subCategory": "Gas Storage",
+      "industry": "Services & Maintenance",
+      "subCategory": "Technical Services",
       "industries": [
-        "Confined Space",
-        "Gases & Equipment",
-        "Maritime & Offshore",
-        "Oil & Gas",
         "Services & Maintenance"
       ]
     },
@@ -3346,8 +3316,7 @@
       "industries": [
         "Confined Space",
         "Maritime & Offshore",
-        "PPE",
-        "Services & Maintenance"
+        "PPE"
       ]
     },
     {
@@ -3778,8 +3747,7 @@
       "industry": "PPE",
       "subCategory": "Respiratory Protection",
       "industries": [
-        "PPE",
-        "Services & Maintenance"
+        "PPE"
       ]
     },
     {
@@ -3828,10 +3796,10 @@
       "url": "https://airgas.my/product/replacement-filters-elipse-abek1p3-rd-gvs-spr492/",
       "imgUrl": "https://airgas.my/wp-content/uploads/2022/05/Screenshot-2022-05-06-170635.jpg",
       "brand": "GVS",
-      "industry": "Services & Maintenance",
+      "industry": "PPE",
       "subCategory": "General Equipment",
       "industries": [
-        "Services & Maintenance"
+        "PPE"
       ]
     },
     {
@@ -3844,8 +3812,7 @@
       "industry": "PPE",
       "subCategory": "Respiratory Protection",
       "industries": [
-        "PPE",
-        "Services & Maintenance"
+        "PPE"
       ]
     },
     {
@@ -4272,10 +4239,10 @@
       "url": "https://airgas.my/product/replacement-filters-elipse-abek1-rd/",
       "imgUrl": "https://airgas.my/wp-content/uploads/2022/04/Screenshot-2022-05-06-165432.jpg",
       "brand": "GVS",
-      "industry": "Services & Maintenance",
+      "industry": "PPE",
       "subCategory": "General Equipment",
       "industries": [
-        "Services & Maintenance"
+        "PPE"
       ]
     },
     {
@@ -4288,8 +4255,7 @@
       "industry": "PPE",
       "subCategory": "Respiratory Protection",
       "industries": [
-        "PPE",
-        "Services & Maintenance"
+        "PPE"
       ]
     },
     {
@@ -4444,12 +4410,10 @@
       "url": "https://airgas.my/product/powder-abc-refilling-machine-for-fire-extinguisher-2/",
       "imgUrl": "https://airgas.my/wp-content/uploads/2022/04/Screenshot-2022-04-18-145222.jpg",
       "brand": "Airgas Technology",
-      "industry": "Maritime & Offshore",
-      "subCategory": "General Equipment",
+      "industry": "PPE",
+      "subCategory": "Technical Services",
       "industries": [
-        "Maritime & Offshore",
-        "Oil & Gas",
-        "Services & Maintenance"
+        "PPE"
       ]
     },
     {
@@ -4643,14 +4607,10 @@
       "url": "https://airgas.my/product/scba-valve-repair-kit/",
       "imgUrl": "https://airgas.my/wp-content/uploads/2022/03/658988.jpg",
       "brand": "Airgas Technology",
-      "industry": "Confined Space",
-      "subCategory": "General Equipment",
+      "industry": "PPE",
+      "subCategory": "Technical Services",
       "industries": [
-        "Confined Space",
-        "Gases & Equipment",
-        "Maritime & Offshore",
-        "Oil & Gas",
-        "Services & Maintenance"
+        "PPE"
       ]
     },
     {
@@ -4921,12 +4881,10 @@
       "url": "https://airgas.my/product/co2-transfer-system/",
       "imgUrl": "https://airgas.my/wp-content/uploads/2022/01/co2.jpg",
       "brand": "Airgas Technology",
-      "industry": "Gas Calibration",
-      "subCategory": "General Equipment",
+      "industry": "PPE",
+      "subCategory": "Technical Services",
       "industries": [
-        "Gas Calibration",
-        "Gases & Equipment",
-        "Services & Maintenance"
+        "PPE"
       ]
     },
     {
