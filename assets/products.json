@@ -74,7 +74,7 @@
       "imgUrl": "",
       "brand": "Airgas Technology",
       "industry": "Maritime & Offshore",
-      "subCategory": "Footwear",
+      "subCategory": "Body Protection",
       "industries": [
         "Maritime & Offshore",
         "Oil & Gas",
@@ -115,7 +115,7 @@
       "name": "racking for 16 cylinder , pallet",
       "description": "",
       "url": "https://airgas.my/product/racking-for-16-cylinder-pallet/",
-      "imgUrl": "",
+      "imgUrl": "assets/GasesandEquipment/racking for 16 cylinder  pallet.png",
       "brand": "Airgas Technology",
       "industry": "Gases & Equipment",
       "subCategory": "Gas Storage",
@@ -158,7 +158,7 @@
       "name": "fireman suit frypro X series",
       "description": "the products catalogue 1 the drawings",
       "url": "https://airgas.my/product/fireman-suit-frypro-x-series/",
-      "imgUrl": "https://airgas.my/wp-content/uploads/2025/05/1000680293.jpg",
+      "imgUrl": "https://airgas.my/wp-content/uploads/2025/05/1000680299.jpg",
       "brand": "Frypro",
       "industry": "Maritime & Offshore",
       "subCategory": "Body Protection",
@@ -204,7 +204,7 @@
       "imgUrl": "https://airgas.my/wp-content/uploads/2025/04/1000034125.jpg",
       "brand": "Red Wing",
       "industry": "Maritime & Offshore",
-      "subCategory": "Footwear",
+      "subCategory": "Body Protection",
       "industries": [
         "Maritime & Offshore",
         "Oil & Gas",
@@ -339,12 +339,12 @@
       "name": "Cylinder hydraulic expansion test control unit \u2013 Hydrotest",
       "description": "The WIN72 unit is useful to determine the residual, volumetric expansion of the cylinder under test pressure control....",
       "url": "https://airgas.my/product/cylinder-hydraulic-expansion-test-control-unit-hydrotest/",
-      "imgUrl": "https://airgas.my/wp-content/uploads/2025/03/Screenshot-2025-03-27-095906.png",
+      "imgUrl": "assets/ServicesandMaintenance/Hydro Test Unit volumetric measuring.png",
       "brand": "Airgas Technology",
-      "industry": "PPE",
+      "industry": "Services & Maintenance",
       "subCategory": "Technical Services",
       "industries": [
-        "PPE"
+        "Services & Maintenance"
       ]
     },
     {
@@ -611,7 +611,7 @@
       "imgUrl": "https://airgas.my/wp-content/uploads/2024/09/1000409663.jpg",
       "brand": "Airgas Technology",
       "industry": "Gases & Equipment",
-      "subCategory": "Body Protection",
+      "subCategory": "Gas Storage",
       "industries": [
         "Gases & Equipment",
         "Maritime & Offshore",
@@ -841,7 +841,7 @@
       "imgUrl": "https://airgas.my/wp-content/uploads/2024/07/Screenshot-2024-07-23-192144.png",
       "brand": "DuPont",
       "industry": "Maritime & Offshore",
-      "subCategory": "General Equipment",
+      "subCategory": "Body Protection",
       "industries": [
         "Maritime & Offshore",
         "Oil & Gas"
@@ -881,12 +881,12 @@
       "name": "Hydro Test Unit volumetric measuring",
       "description": "Hydro test unit, Movable high pressure test unit for measuring the volumetric with digital scale 1 g resolution, with...",
       "url": "https://airgas.my/product/hydro-test-unit-volumetric-measuring/",
-      "imgUrl": "https://airgas.my/wp-content/uploads/2024/05/Screenshot-2024-05-24-214701.png",
+      "imgUrl": "assets/ServicesandMaintenance/Hydro Test Unit volumetric measuring.png",
       "brand": "Airgas Technology",
-      "industry": "PPE",
+      "industry": "Services & Maintenance",
       "subCategory": "Technical Services",
       "industries": [
-        "PPE"
+        "Services & Maintenance"
       ]
     },
     {
@@ -967,7 +967,7 @@
       "name": "Drager Saver CF Compressed Air Escape Device with Hood 3363826",
       "description": "products catalog",
       "url": "https://airgas.my/product/drager-saver-cf-compressed-air-escape-device/",
-      "imgUrl": "",
+      "imgUrl": "assets/ConfinedSpace/Drager Saver CF Compressed Air Escape Device with Hood 3363826.png",
       "brand": "Dr\u00e4ger",
       "industry": "Confined Space",
       "subCategory": "General Equipment",
@@ -986,7 +986,7 @@
       "imgUrl": "https://airgas.my/wp-content/uploads/2024/02/Screenshot-2024-02-08-071039.png",
       "brand": "Honeywell",
       "industry": "Maritime & Offshore",
-      "subCategory": "General Equipment",
+      "subCategory": "Hearing Protection",
       "industries": [
         "Maritime & Offshore",
         "Oil & Gas",
@@ -1039,12 +1039,12 @@
       "name": "MSA GALAXY\u00ae GX2 Automated Test System . automated calibration Docking",
       "description": "MSA Galaxy GX2 provides automated calibration of MSA ALTAIR Gas Detector fleet Simplicity counts with the MSA GALAXY\u00ae...",
       "url": "https://airgas.my/product/msa-galaxy-gx2-automated-test-system-automated-calibration-docking/",
-      "imgUrl": "https://airgas.my/wp-content/uploads/2023/12/Screenshot-2023-12-19-153448.png",
+      "imgUrl": "assets/ServicesandMaintenance/MSA GALAXY GX2 Automated Test System  automated calibration Docking.png",
       "brand": "MSA Safety",
-      "industry": "PPE",
+      "industry": "Services & Maintenance",
       "subCategory": "Technical Services",
       "industries": [
-        "PPE"
+        "Services & Maintenance"
       ]
     },
     {
@@ -1086,7 +1086,7 @@
       "imgUrl": "https://airgas.my/wp-content/uploads/2023/12/1000151509-scaled.jpg",
       "brand": "Honeywell",
       "industry": "PPE",
-      "subCategory": "General Equipment",
+      "subCategory": "Hearing Protection",
       "industries": [
         "PPE"
       ]
@@ -1303,7 +1303,7 @@
       "imgUrl": "https://airgas.my/wp-content/uploads/2023/10/Screenshot-2023-10-10-105545.png",
       "brand": "MSA Safety",
       "industry": "PPE",
-      "subCategory": "General Equipment",
+      "subCategory": "Hearing Protection",
       "industries": [
         "PPE"
       ]
@@ -1341,12 +1341,12 @@
       "name": "LW service kit LW 230/280/320 E/ES/EC mit (c/w) ACD",
       "description": "Service Kit 1000 hours Service Kit contains below mentioned parts: 2 x 002123 \u2013 Sinter filter (water separator 1st +...",
       "url": "https://airgas.my/product/lw-service-kit-lw-230-280-320-e-es-ec-mit-c-w-acd/",
-      "imgUrl": "",
+      "imgUrl": "assets/ServicesandMaintenance/LW service kit LW 230280320 EESEC mit cw ACD.png",
       "brand": "L&W Compressor",
-      "industry": "PPE",
+      "industry": "Services & Maintenance",
       "subCategory": "Technical Services",
       "industries": [
-        "PPE"
+        "Services & Maintenance"
       ]
     },
     {
@@ -2330,7 +2330,7 @@
       "imgUrl": "https://airgas.my/wp-content/uploads/2022/12/1000907190.jpg",
       "brand": "Airgas Technology",
       "industry": "Maritime & Offshore",
-      "subCategory": "General Equipment",
+      "subCategory": "Body Protection",
       "industries": [
         "Maritime & Offshore",
         "Oil & Gas"
@@ -2399,7 +2399,7 @@
       "imgUrl": "https://airgas.my/wp-content/uploads/2022/11/10900.jpg",
       "brand": "Portwest",
       "industry": "PPE",
-      "subCategory": "General Equipment",
+      "subCategory": "Body Protection",
       "industries": [
         "PPE"
       ]
@@ -2567,12 +2567,14 @@
       "name": "Helium Balloon Gas with refilled cylinder for 125pcs",
       "description": "Helium Balloon gas with 10L cylinder cylinder vol. 10L pressure filling . 100bar Helium balloon gas content : 1000L N...",
       "url": "https://airgas.my/product/helium-balloon-gas-with-refilled-cylinder-for-125pcs/",
-      "imgUrl": "https://airgas.my/wp-content/uploads/2022/10/ballon-airgas-3-scaled.jpg",
+      "imgUrl": "assets/ServicesandMaintenance/Helium Balloon Gas with refilled cylinder for 125pcs.png",
       "brand": "Airgas Technology",
-      "industry": "Services & Maintenance",
-      "subCategory": "Technical Services",
+      "industry": "Gases & Equipment",
+      "subCategory": "General Equipment",
       "industries": [
-        "Services & Maintenance"
+        "Gases & Equipment",
+        "Maritime & Offshore",
+        "Oil & Gas"
       ]
     },
     {
@@ -2656,7 +2658,7 @@
       "imgUrl": "https://airgas.my/wp-content/uploads/2022/10/1000001442-scaled.jpg",
       "brand": "DuPont",
       "industry": "Maritime & Offshore",
-      "subCategory": "General Equipment",
+      "subCategory": "Body Protection",
       "industries": [
         "Maritime & Offshore",
         "Oil & Gas"
@@ -3168,7 +3170,7 @@
       "name": "** Services for Airline Escape set with Face Mask fit test with POSICHECK, test including LD valve, first reducing valve,  pressure hose, gauge  and whistle. auto switch valve *cert AS22 #003145",
       "description": "** Services for Airline Escape set with Face Mask fit test with POSICHECK, test including LD valve, first reducing va...",
       "url": "https://airgas.my/product/services-for-airline-escape-set-with-face-mask-fit-test-with-posicheck-test-including-ld-valve-first-reducing-valve-pressure-hose-gauge-and-whistle-auto-switch-valve-cert-as22-003145/",
-      "imgUrl": "https://airgas.my/wp-content/uploads/2022/01/airline1.jpg",
+      "imgUrl": "assets/ServicesandMaintenance/Services for Airline Escape set with Face Mask fit test with POSICHECK test including LD valve first.png",
       "brand": "Airgas Technology",
       "industry": "Services & Maintenance",
       "subCategory": "Technical Services",
@@ -3181,7 +3183,7 @@
       "name": "** Services for EEBD set, hood inspection, refill B.air, valve test, hose,  *cert AS23 #003023",
       "description": "** Services for EEBD set, hood inspection, refill Breathing air, valve test, hose, *cert AS23",
       "url": "https://airgas.my/product/services-for-eebd-set-hood-inspection-refill-b-air-valve-test-hose-cert-as23-003023/",
-      "imgUrl": "https://airgas.my/wp-content/uploads/2022/01/eebd-sekur.jpg",
+      "imgUrl": "assets/ServicesandMaintenance/Services for EEBD set hood inspection refill Bair valve test hose  cert AS23 003023.png",
       "brand": "Airgas Technology",
       "industry": "Services & Maintenance",
       "subCategory": "Technical Services",
@@ -3194,7 +3196,7 @@
       "name": "** Services for SCBA backplate inspection, first reducing valve, pressure gauge, hoses,  whistle, cleaning. *cert AS22 #003007",
       "description": "** Services for SCBA backplate inspection, first reducing valve, pressure gauge, hoses, whistle, cleaning. *cert AS22",
       "url": "https://airgas.my/product/services-for-scba-backplate-inspection-first-reducing-valve-pressure-gauge-hoses-whistle-cleaning-cert-as22-003007/",
-      "imgUrl": "https://airgas.my/wp-content/uploads/2022/01/scba.jpg",
+      "imgUrl": "assets/ServicesandMaintenance/Services for SCBA backplate inspection first reducing valve pressure gauge hoses  whistle cleaning c.png",
       "brand": "Airgas Technology",
       "industry": "Services & Maintenance",
       "subCategory": "Technical Services",
@@ -3207,7 +3209,7 @@
       "name": "** Services for SCBA Face Mask and backplate inspection, Fit test with POSICHECK, test including LD valve, first reducing valve,  pressure hose, gauge  and whistle . *cert AS22 #000010",
       "description": "** Services for SCBA Face Mask and backplate inspection, Fit test with POSICHECK, test including LD valve, first redu...",
       "url": "https://airgas.my/product/services-for-scba-face-mask-and-backplate-inspection-fit-test-with-posicheck-test-including-ld-valve-first-reducing-valve-pressure-hose-gauge-and-whistle-cert-as22/",
-      "imgUrl": "https://airgas.my/wp-content/uploads/2022/05/Screenshot-2022-05-10-164134.jpg",
+      "imgUrl": "assets/ServicesandMaintenance/Services for SCBA Face Mask and backplate inspection Fit test with POSICHECK test including LD valve.png",
       "brand": "Airgas Technology",
       "industry": "Services & Maintenance",
       "subCategory": "Technical Services",
@@ -3220,7 +3222,7 @@
       "name": "** Services and inspection CYLINDER for SCBA  / EEBD,  Hydro Testing, 1.5times from working pressure to 450bar,  Visual test including weight check,  cylinder wall thickness,  internal and external surfaces condition,  valve tread. *cert AS11 #000008",
       "description": "** Services and inspection CYLINDER for SCBA / EEBD, Hydro Testing, 1.5times from working pressure to 450bar, Visual...",
       "url": "https://airgas.my/product/services-and-inspection-cylinder-for-scba-eebd-hydro-testing-1-5times-from-working-pressure-to-450bar-visual-test-including-weight-check-cylinder-wall-thickness-internal-and-external-su/",
-      "imgUrl": "https://airgas.my/wp-content/uploads/2022/04/448928.jpg",
+      "imgUrl": "assets/ServicesandMaintenance/Services and inspection CYLINDER for SCBA   EEBD  Hydro Testing 15times from working pressure to 450.png",
       "brand": "Airgas Technology",
       "industry": "Services & Maintenance",
       "subCategory": "Technical Services",
@@ -4266,7 +4268,7 @@
       "imgUrl": "https://airgas.my/wp-content/uploads/2022/04/453442.jpg",
       "brand": "Elvex",
       "industry": "PPE",
-      "subCategory": "General Equipment",
+      "subCategory": "Hearing Protection",
       "industries": [
         "PPE"
       ]
@@ -4408,12 +4410,12 @@
       "name": "Powder ABC Refilling machine for fire extinguisher",
       "description": "User Instruction Powder ABC Refilling machine Weight : 47kg Dimension : 700 x 460 x 1600 (H) mm Power Requirement : 2...",
       "url": "https://airgas.my/product/powder-abc-refilling-machine-for-fire-extinguisher-2/",
-      "imgUrl": "https://airgas.my/wp-content/uploads/2022/04/Screenshot-2022-04-18-145222.jpg",
+      "imgUrl": "assets/ServicesandMaintenance/Powder ABC Refilling machine for fire extinguisher.png",
       "brand": "Airgas Technology",
-      "industry": "PPE",
+      "industry": "Services & Maintenance",
       "subCategory": "Technical Services",
       "industries": [
-        "PPE"
+        "Services & Maintenance"
       ]
     },
     {
@@ -4605,12 +4607,12 @@
       "name": "SCBA Valve repair kit",
       "description": "",
       "url": "https://airgas.my/product/scba-valve-repair-kit/",
-      "imgUrl": "https://airgas.my/wp-content/uploads/2022/03/658988.jpg",
+      "imgUrl": "assets/ServicesandMaintenance/SCBA Valve repair kit.png",
       "brand": "Airgas Technology",
-      "industry": "PPE",
+      "industry": "Services & Maintenance",
       "subCategory": "Technical Services",
       "industries": [
-        "PPE"
+        "Services & Maintenance"
       ]
     },
     {
@@ -4867,7 +4869,7 @@
       "imgUrl": "https://airgas.my/wp-content/uploads/2022/01/fireman-boot.jpg",
       "brand": "Harvik",
       "industry": "Maritime & Offshore",
-      "subCategory": "Footwear",
+      "subCategory": "Body Protection",
       "industries": [
         "Maritime & Offshore",
         "Oil & Gas",
@@ -4879,12 +4881,12 @@
       "name": "CO2 Transfer system pump 100/D1 High Pressure refilling unit #3150",
       "description": "100/D1 series .. the products details Cylinder to cylinder liquid CO2 transfer pump on skid 100/D1 unit is mainly sui...",
       "url": "https://airgas.my/product/co2-transfer-system/",
-      "imgUrl": "https://airgas.my/wp-content/uploads/2022/01/co2.jpg",
+      "imgUrl": "assets/ServicesandMaintenance/CO2 Transfer system pump 100D1 High Pressure refilling unit 3150.png",
       "brand": "Airgas Technology",
-      "industry": "PPE",
+      "industry": "Services & Maintenance",
       "subCategory": "Technical Services",
       "industries": [
-        "PPE"
+        "Services & Maintenance"
       ]
     },
     {
