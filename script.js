@@ -121,6 +121,7 @@ document.addEventListener('DOMContentLoaded', () => {
           <div class="card-content">
             <div class="product-brand">${product.brand || 'Airgas Technology'}</div>
             <div class="product-name" title="${product.name}">${product.name}</div>
+            <div class="product-description">${product.description || ''}</div>
             <a href="${product.url || '#'}" target="_blank" rel="noopener" class="view-more-btn">View more</a>
           </div>
         `;
