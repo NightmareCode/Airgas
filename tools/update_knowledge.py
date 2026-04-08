@@ -58,7 +58,10 @@ def main():
         
     for p in data['products']:
         # Fix Brand
-        p['brand'] = get_brand(p['name'])
+        if p.get('industry') == 'Services & Maintenance' or ('industries' in p and 'Services & Maintenance' in p['industries']):
+            p['brand'] = "Airgas Technology"
+        else:
+            p['brand'] = get_brand(p['name'])
             
     # Compact Industry Descriptions
     data['industryDescriptions'] = {
