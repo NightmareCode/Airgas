@@ -46,7 +46,7 @@ The Airgas Technology Landing Page is a high-performance, responsive single-page
 - Confined Space: SCBA, detectors, rescue systems, and escape sets.
 - Oil & Gas: Chemical suits, FR gear, and energy-sector tools.
 - Welding: Machines (MIG/TIG/ARC), electrodes, and accessories.
-- Gases & Equipment: Industrial/medical gases, cylinders, regulators, and manifolds.
+- Gases & Equipment: Industrial/medical gases (O2, N2, Ar, CO2, He), cylinders, regulators, and manifolds.
 - Gas Calibration: Calibration gases and specialized sensors.
 - PPE: Workplace protection (helmets, gloves, eyewear, vests).
 - Services & Maintenance: Hydro testing, calibration, and certification.
