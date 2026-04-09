@@ -1,13 +1,13 @@
 {
   "industryDescriptions": {
-    "Confined Space": "Safety gear for restricted entry: SCBA, detectors, and rescue systems.",
-    "Oil & Gas": "Heavy-duty protection: chemical suits, FR gear, and energy-sector gas tools.",
-    "Welding": "Professional welding: machines, electrodes, and high-precision accessories.",
-    "Gases & Equipment": "Gas solutions: industrial/medical gases, cylinders, and high-pressure regulators.",
-    "Gas Calibration": "Measurement precision: calibration gases and specialized detection sensors.",
-    "PPE": "Workplace protection: safety helmets, gloves, eyewear, and high-vis apparel.",
-    "Services & Maintenance": "Technical support: hydro testing, certification, gas detector calibration, and medical gas refilling.",
-    "Maritime & Offshore": "Marine safety: shipboard survival gear and offshore breathing apparatus."
+    "Confined Space": "Essential safety solutions for confined space entry: SCBA, EEBD, multi-gas detectors, tripods, and winches.",
+    "Oil & Gas": "High-performance protection for hazardous environments: chemical suits, fireman PPE, and flame-resistant gear.",
+    "Welding": "Professional welding systems: MIG/TIG/ARC machines, premium electrodes, and specialized cutting accessories.",
+    "Gases & Equipment": "Comprehensive gas solutions: industrial and medical gases, high-pressure regulators, cylinders, and storage systems.",
+    "Gas Calibration": "Precision measurement tools: calibration gases, specialized sensors, and testing mixtures for gas detection accuracy.",
+    "PPE": "Head-to-toe protection: high-visibility vests, safety helmets, specialized gloves, and protective eyewear.",
+    "Services & Maintenance": "Expert technical services: SCBA/EEBD hydro testing, certification, gas detector calibration, and equipment maintenance.",
+    "Maritime & Offshore": "Certified marine safety: offshore life-saving equipment, specialized breathing apparatus, and corrosion-resistant gear."
   },
   "products": [
     {
@@ -16,12 +16,9 @@
       "description": "Products Catalogue motionSCOUT Next Generation Stand-alone Personal Alert Safety System The next generation of stand-...",
       "url": "https://airgas.my/product/motionscout-msa/",
       "imgUrl": "https://airgas.my/wp-content/uploads/2026/01/1000330595.jpg",
-      "brand": "MSA Safety",
+      "brand": "MSA",
       "industry": "PPE",
-      "subCategory": "General Equipment",
-      "industries": [
-        "PPE"
-      ]
+      "subCategory": "General Equipment"
     },
     {
       "id": 5436,
@@ -29,13 +26,9 @@
       "description": "MSA 10038560 MiniScape Escape Respirator, Made in Germany",
       "url": "https://airgas.my/product/msa-10038560-miniscape-escape-respirator/",
       "imgUrl": "https://airgas.my/wp-content/uploads/2025/12/1000933404.jpg",
-      "brand": "MSA Safety",
+      "brand": "MSA",
       "industry": "Confined Space",
-      "subCategory": "Respiratory Protection",
-      "industries": [
-        "Confined Space",
-        "Maritime & Offshore"
-      ]
+      "subCategory": "Respiratory Protection"
     },
     {
       "id": 5434,
@@ -44,12 +37,8 @@
       "url": "https://airgas.my/product/cabinet-for-safety-or-fireman-ppe/",
       "imgUrl": "https://airgas.my/wp-content/uploads/2025/11/1000280300.jpg",
       "brand": "Airgas Technology",
-      "industry": "Maritime & Offshore",
-      "subCategory": "General Equipment",
-      "industries": [
-        "Maritime & Offshore",
-        "Oil & Gas"
-      ]
+      "industry": "Oil & Gas",
+      "subCategory": "General Equipment"
     },
     {
       "id": 5413,
@@ -59,12 +48,7 @@
       "imgUrl": "https://airgas.my/wp-content/uploads/2025/09/1000819739.jpg",
       "brand": "Airgas Technology",
       "industry": "Gases & Equipment",
-      "subCategory": "General Equipment",
-      "industries": [
-        "Gases & Equipment",
-        "Maritime & Offshore",
-        "Oil & Gas"
-      ]
+      "subCategory": "General Equipment"
     },
     {
       "id": 5409,
@@ -73,13 +57,8 @@
       "url": "https://airgas.my/product/booth-for-fireman-with-gore-tex-waterproof/",
       "imgUrl": "",
       "brand": "Airgas Technology",
-      "industry": "Maritime & Offshore",
-      "subCategory": "Body Protection",
-      "industries": [
-        "Maritime & Offshore",
-        "Oil & Gas",
-        "PPE"
-      ]
+      "industry": "Oil & Gas",
+      "subCategory": "Footwear"
     },
     {
       "id": 5408,
@@ -89,11 +68,7 @@
       "imgUrl": "https://airgas.my/wp-content/uploads/2025/07/1000125605.jpg",
       "brand": "Airgas Technology",
       "industry": "Confined Space",
-      "subCategory": "General Equipment",
-      "industries": [
-        "Confined Space",
-        "Maritime & Offshore"
-      ]
+      "subCategory": "General Equipment"
     },
     {
       "id": 5400,
@@ -103,27 +78,17 @@
       "imgUrl": "https://airgas.my/wp-content/uploads/2025/07/1000733408.jpg",
       "brand": "Airgas Technology",
       "industry": "Gases & Equipment",
-      "subCategory": "Gas Storage",
-      "industries": [
-        "Gases & Equipment",
-        "Maritime & Offshore",
-        "Oil & Gas"
-      ]
+      "subCategory": "Gas Storage"
     },
     {
       "id": 5395,
       "name": "racking for 16 cylinder , pallet",
       "description": "",
       "url": "https://airgas.my/product/racking-for-16-cylinder-pallet/",
-      "imgUrl": "assets/GasesandEquipment/racking for 16 cylinder  pallet.png",
+      "imgUrl": "",
       "brand": "Airgas Technology",
       "industry": "Gases & Equipment",
-      "subCategory": "Gas Storage",
-      "industries": [
-        "Gases & Equipment",
-        "Maritime & Offshore",
-        "Oil & Gas"
-      ]
+      "subCategory": "Gas Storage"
     },
     {
       "id": 5394,
@@ -133,12 +98,7 @@
       "imgUrl": "https://airgas.my/wp-content/uploads/2025/05/1000684276.jpg",
       "brand": "Airgas Technology",
       "industry": "Gases & Equipment",
-      "subCategory": "Gas Storage",
-      "industries": [
-        "Gases & Equipment",
-        "Maritime & Offshore",
-        "Oil & Gas"
-      ]
+      "subCategory": "Gas Storage"
     },
     {
       "id": 5385,
@@ -148,24 +108,17 @@
       "imgUrl": "https://airgas.my/wp-content/uploads/2025/05/Screenshot-2025-05-14-203947.png",
       "brand": "Airgas Technology",
       "industry": "PPE",
-      "subCategory": "General Equipment",
-      "industries": [
-        "PPE"
-      ]
+      "subCategory": "General Equipment"
     },
     {
       "id": 5383,
       "name": "fireman suit frypro X series",
       "description": "the products catalogue 1 the drawings",
       "url": "https://airgas.my/product/fireman-suit-frypro-x-series/",
-      "imgUrl": "https://airgas.my/wp-content/uploads/2025/05/1000680298.jpg",
-      "brand": "Frypro",
-      "industry": "Maritime & Offshore",
-      "subCategory": "Body Protection",
-      "industries": [
-        "Maritime & Offshore",
-        "Oil & Gas"
-      ]
+      "imgUrl": "https://airgas.my/wp-content/uploads/2025/05/1000680293.jpg",
+      "brand": "Airgas Technology",
+      "industry": "Oil & Gas",
+      "subCategory": "Body Protection"
     },
     {
       "id": 5375,
@@ -174,12 +127,8 @@
       "url": "https://airgas.my/product/rescue-kits-miller-quickpick/",
       "imgUrl": "https://airgas.my/wp-content/uploads/2025/05/1000051136.jpg",
       "brand": "Airgas Technology",
-      "industry": "Confined Space",
-      "subCategory": "General Equipment",
-      "industries": [
-        "Confined Space",
-        "Maritime & Offshore"
-      ]
+      "industry": "PPE",
+      "subCategory": "General Equipment"
     },
     {
       "id": 5370,
@@ -189,12 +138,7 @@
       "imgUrl": "https://airgas.my/wp-content/uploads/2025/04/1000825801.jpg",
       "brand": "Airgas Technology",
       "industry": "Gases & Equipment",
-      "subCategory": "Gas Storage",
-      "industries": [
-        "Gases & Equipment",
-        "Maritime & Offshore",
-        "Oil & Gas"
-      ]
+      "subCategory": "Gas Storage"
     },
     {
       "id": 5369,
@@ -202,14 +146,9 @@
       "description": "Made in the USA, these easy on, easy off work boots build on classic SuperSole\u00ae performance to provide even more dura...",
       "url": "https://airgas.my/product/red-wing-2541-mens-supersole-x-9-inch-pull-on-boot/",
       "imgUrl": "https://airgas.my/wp-content/uploads/2025/04/1000034125.jpg",
-      "brand": "Red Wing",
-      "industry": "Maritime & Offshore",
-      "subCategory": "Body Protection",
-      "industries": [
-        "Maritime & Offshore",
-        "Oil & Gas",
-        "PPE"
-      ]
+      "brand": "Airgas Technology",
+      "industry": "PPE",
+      "subCategory": "Footwear"
     },
     {
       "id": 5364,
@@ -219,12 +158,7 @@
       "imgUrl": "https://airgas.my/wp-content/uploads/2025/04/1000026900.jpg",
       "brand": "Airgas Technology",
       "industry": "Gases & Equipment",
-      "subCategory": "Gas Storage",
-      "industries": [
-        "Gases & Equipment",
-        "Maritime & Offshore",
-        "Oil & Gas"
-      ]
+      "subCategory": "Gas Storage"
     },
     {
       "id": 5359,
@@ -234,12 +168,7 @@
       "imgUrl": "https://airgas.my/wp-content/uploads/2025/04/1000024749.jpg",
       "brand": "Airgas Technology",
       "industry": "Gases & Equipment",
-      "subCategory": "Gas Storage",
-      "industries": [
-        "Gases & Equipment",
-        "Maritime & Offshore",
-        "Oil & Gas"
-      ]
+      "subCategory": "Gas Storage"
     },
     {
       "id": 5357,
@@ -249,12 +178,7 @@
       "imgUrl": "https://airgas.my/wp-content/uploads/2025/04/1000024750.jpg",
       "brand": "Airgas Technology",
       "industry": "Gases & Equipment",
-      "subCategory": "Gas Storage",
-      "industries": [
-        "Gases & Equipment",
-        "Maritime & Offshore",
-        "Oil & Gas"
-      ]
+      "subCategory": "Gas Storage"
     },
     {
       "id": 5355,
@@ -264,12 +188,7 @@
       "imgUrl": "https://airgas.my/wp-content/uploads/2025/04/1000024724.jpg",
       "brand": "Airgas Technology",
       "industry": "Gases & Equipment",
-      "subCategory": "Gas Storage",
-      "industries": [
-        "Gases & Equipment",
-        "Maritime & Offshore",
-        "Oil & Gas"
-      ]
+      "subCategory": "Gas Storage"
     },
     {
       "id": 5353,
@@ -279,13 +198,7 @@
       "imgUrl": "https://airgas.my/wp-content/uploads/2025/04/1000024079.jpg",
       "brand": "Seitron",
       "industry": "Confined Space",
-      "subCategory": "Gas Detection",
-      "industries": [
-        "Confined Space",
-        "Gases & Equipment",
-        "Maritime & Offshore",
-        "Oil & Gas"
-      ]
+      "subCategory": "Gas Detection"
     },
     {
       "id": 5349,
@@ -295,14 +208,7 @@
       "imgUrl": "https://airgas.my/wp-content/uploads/2025/04/1000024092.jpg",
       "brand": "Seitron",
       "industry": "Confined Space",
-      "subCategory": "Gas Detection",
-      "industries": [
-        "Confined Space",
-        "Gas Calibration",
-        "Gases & Equipment",
-        "Maritime & Offshore",
-        "Oil & Gas"
-      ]
+      "subCategory": "Gas Detection"
     },
     {
       "id": 5346,
@@ -310,13 +216,9 @@
       "description": "Ultra-sensitive universal refrigerant leak detectorThe H-10 PRO Refrigerant Leak Detectoris a highly responsive unive...",
       "url": "https://airgas.my/product/h-10-pro-refrigerant-leak-detector-bacharach-msa/",
       "imgUrl": "https://airgas.my/wp-content/uploads/2025/04/1000020461.jpg",
-      "brand": "MSA Safety",
+      "brand": "MSA",
       "industry": "Confined Space",
-      "subCategory": "Gas Detection",
-      "industries": [
-        "Confined Space",
-        "Maritime & Offshore"
-      ]
+      "subCategory": "Gas Detection"
     },
     {
       "id": 5341,
@@ -324,28 +226,19 @@
       "description": "EU certificate The SRH-30 hood, compliant with DIN 58647-7 and specially designed for the evacuation of industrial si...",
       "url": "https://airgas.my/product/self-rescue-hood-for-aggressive-chemicals-protection-srh-30-dpi-sekur-italy-43390310/",
       "imgUrl": "https://airgas.my/wp-content/uploads/2025/04/1000020286.jpg",
-      "brand": "DPI Sekur",
-      "industry": "Confined Space",
-      "subCategory": "General Equipment",
-      "industries": [
-        "Confined Space",
-        "Maritime & Offshore",
-        "Oil & Gas",
-        "PPE"
-      ]
+      "brand": "Airgas Technology",
+      "industry": "Oil & Gas",
+      "subCategory": "General Equipment"
     },
     {
       "id": 5323,
       "name": "Cylinder hydraulic expansion test control unit \u2013 Hydrotest",
       "description": "The WIN72 unit is useful to determine the residual, volumetric expansion of the cylinder under test pressure control....",
       "url": "https://airgas.my/product/cylinder-hydraulic-expansion-test-control-unit-hydrotest/",
-      "imgUrl": "assets/ServicesandMaintenance/Hydro Test Unit volumetric measuring.png",
+      "imgUrl": "https://airgas.my/wp-content/uploads/2025/03/Screenshot-2025-03-27-095906.png",
       "brand": "Airgas Technology",
-      "industry": "Services & Maintenance",
-      "subCategory": "Technical Services",
-      "industries": [
-        "Services & Maintenance"
-      ]
+      "industry": "Gases & Equipment",
+      "subCategory": "Gas Storage"
     },
     {
       "id": 5319,
@@ -353,15 +246,9 @@
       "description": "product catalogue S-Cap-Air is the Short Duration Compressed Air Emergency Escape Breathing Device [EEBD] from MSA,pr...",
       "url": "https://airgas.my/product/msa-eebd-escape-hood-s-cap-3l-cylinder/",
       "imgUrl": "https://airgas.my/wp-content/uploads/2025/03/1000627064.jpg",
-      "brand": "MSA Safety",
+      "brand": "MSA",
       "industry": "Confined Space",
-      "subCategory": "Gas Storage",
-      "industries": [
-        "Confined Space",
-        "Gases & Equipment",
-        "Maritime & Offshore",
-        "Oil & Gas"
-      ]
+      "subCategory": "Gas Storage"
     },
     {
       "id": 5315,
@@ -371,10 +258,7 @@
       "imgUrl": "https://airgas.my/wp-content/uploads/2025/02/Screenshot-2025-02-25-115646.png",
       "brand": "Airgas Technology",
       "industry": "PPE",
-      "subCategory": "General Equipment",
-      "industries": [
-        "PPE"
-      ]
+      "subCategory": "General Equipment"
     },
     {
       "id": 5311,
@@ -382,14 +266,9 @@
       "description": "",
       "url": "https://airgas.my/product/airline-auto-switch-swot-with-escape-mask-15-minutes-dpi-sekur/",
       "imgUrl": "https://airgas.my/wp-content/uploads/2025/02/1000590465.jpg",
-      "brand": "DPI Sekur",
+      "brand": "DPI SEKUR",
       "industry": "Confined Space",
-      "subCategory": "Respiratory Protection",
-      "industries": [
-        "Confined Space",
-        "Maritime & Offshore",
-        "PPE"
-      ]
+      "subCategory": "Respiratory Protection"
     },
     {
       "id": 5306,
@@ -397,15 +276,9 @@
       "description": "",
       "url": "https://airgas.my/product/battery-charges-for-msa-gas-detector-model-4x-and-5x-10092936/",
       "imgUrl": "https://airgas.my/wp-content/uploads/2025/01/1000563444.jpg",
-      "brand": "MSA Safety",
+      "brand": "MSA",
       "industry": "Confined Space",
-      "subCategory": "Gas Detection",
-      "industries": [
-        "Confined Space",
-        "Gases & Equipment",
-        "Maritime & Offshore",
-        "Oil & Gas"
-      ]
+      "subCategory": "Gas Detection"
     },
     {
       "id": 5281,
@@ -413,13 +286,9 @@
       "description": "catalog AlphaTec Size Chart Non-encapsulating gas-tight protection specially designed for the shipping industry Rear-...",
       "url": "https://airgas.my/product/alphatec-light-type-tr/",
       "imgUrl": "https://airgas.my/wp-content/uploads/2025/01/Screenshot-2025-01-05-135534.png",
-      "brand": "Ansell",
-      "industry": "Maritime & Offshore",
-      "subCategory": "General Equipment",
-      "industries": [
-        "Maritime & Offshore",
-        "Oil & Gas"
-      ]
+      "brand": "Airgas Technology",
+      "industry": "PPE",
+      "subCategory": "General Equipment"
     },
     {
       "id": 5276,
@@ -429,12 +298,7 @@
       "imgUrl": "https://airgas.my/wp-content/uploads/2024/12/1000534267.jpg",
       "brand": "Airgas Technology",
       "industry": "Gases & Equipment",
-      "subCategory": "General Equipment",
-      "industries": [
-        "Gases & Equipment",
-        "Maritime & Offshore",
-        "Oil & Gas"
-      ]
+      "subCategory": "General Equipment"
     },
     {
       "id": 5253,
@@ -444,10 +308,7 @@
       "imgUrl": "https://airgas.my/wp-content/uploads/2024/12/Guard-with-red-pin-update.png",
       "brand": "Globestock",
       "industry": "PPE",
-      "subCategory": "General Equipment",
-      "industries": [
-        "PPE"
-      ]
+      "subCategory": "General Equipment"
     },
     {
       "id": 5210,
@@ -457,11 +318,7 @@
       "imgUrl": "https://airgas.my/wp-content/uploads/2024/12/G.Winch-1-scaled.jpg",
       "brand": "Globestock",
       "industry": "Confined Space",
-      "subCategory": "General Equipment",
-      "industries": [
-        "Confined Space",
-        "Maritime & Offshore"
-      ]
+      "subCategory": "General Equipment"
     },
     {
       "id": 5233,
@@ -471,11 +328,7 @@
       "imgUrl": "https://airgas.my/wp-content/uploads/2024/12/G.Tripod-2.png",
       "brand": "Globestock",
       "industry": "Confined Space",
-      "subCategory": "General Equipment",
-      "industries": [
-        "Confined Space",
-        "Maritime & Offshore"
-      ]
+      "subCategory": "General Equipment"
     },
     {
       "id": 5224,
@@ -485,10 +338,7 @@
       "imgUrl": "https://airgas.my/wp-content/uploads/2024/12/USP-250-E-scaled.jpg",
       "brand": "Globestock",
       "industry": "PPE",
-      "subCategory": "General Equipment",
-      "industries": [
-        "PPE"
-      ]
+      "subCategory": "General Equipment"
     },
     {
       "id": 5213,
@@ -498,10 +348,7 @@
       "imgUrl": "https://airgas.my/wp-content/uploads/2024/12/1080-03-B.jpg",
       "brand": "Globestock",
       "industry": "PPE",
-      "subCategory": "General Equipment",
-      "industries": [
-        "PPE"
-      ]
+      "subCategory": "General Equipment"
     },
     {
       "id": 5203,
@@ -509,14 +356,9 @@
       "description": "MSA Confine space catalogue Steel Hook 1&#8243; carabiner with auto lock &amp; pin, MSA FallProtection 10089207, Leng...",
       "url": "https://airgas.my/product/tripod-fall-protection-set-hook-pully-workman-winch-workman-rescuer-msa-brand/",
       "imgUrl": "https://airgas.my/wp-content/uploads/2024/12/Screenshot-2024-12-21-141959.png",
-      "brand": "MSA Safety",
+      "brand": "MSA",
       "industry": "Confined Space",
-      "subCategory": "General Equipment",
-      "industries": [
-        "Confined Space",
-        "Maritime & Offshore",
-        "PPE"
-      ]
+      "subCategory": "General Equipment"
     },
     {
       "id": 5197,
@@ -526,13 +368,7 @@
       "imgUrl": "https://airgas.my/wp-content/uploads/2024/12/1000511594.jpg",
       "brand": "Airgas Technology",
       "industry": "Gas Calibration",
-      "subCategory": "General Equipment",
-      "industries": [
-        "Gas Calibration",
-        "Gases & Equipment",
-        "Maritime & Offshore",
-        "Oil & Gas"
-      ]
+      "subCategory": "General Equipment"
     },
     {
       "id": 5194,
@@ -542,11 +378,7 @@
       "imgUrl": "https://airgas.my/wp-content/uploads/2024/11/1000483920-scaled.jpg",
       "brand": "Airgas Technology",
       "industry": "Confined Space",
-      "subCategory": "General Equipment",
-      "industries": [
-        "Confined Space",
-        "Maritime & Offshore"
-      ]
+      "subCategory": "General Equipment"
     },
     {
       "id": 5174,
@@ -554,13 +386,9 @@
       "description": "",
       "url": "https://airgas.my/product/msa-altair-5x-case-assemblylower-case-with-label-part-no-10114809-part/",
       "imgUrl": "https://airgas.my/wp-content/uploads/2024/11/1000483955-scaled.jpg",
-      "brand": "MSA Safety",
+      "brand": "MSA",
       "industry": "Confined Space",
-      "subCategory": "General Equipment",
-      "industries": [
-        "Confined Space",
-        "Maritime & Offshore"
-      ]
+      "subCategory": "General Equipment"
     },
     {
       "id": 5169,
@@ -568,13 +396,9 @@
       "description": "",
       "url": "https://airgas.my/product/msa-altair-5x-case-assembly-upper-case-with-label-part-no-10114853-part/",
       "imgUrl": "https://airgas.my/wp-content/uploads/2024/11/1000483957-scaled.jpg",
-      "brand": "MSA Safety",
+      "brand": "MSA",
       "industry": "Confined Space",
-      "subCategory": "General Equipment",
-      "industries": [
-        "Confined Space",
-        "Maritime & Offshore"
-      ]
+      "subCategory": "General Equipment"
     },
     {
       "id": 5159,
@@ -584,11 +408,7 @@
       "imgUrl": "https://airgas.my/wp-content/uploads/2024/11/Screenshot-2024-11-19-085903.png",
       "brand": "Airgas Technology",
       "industry": "Confined Space",
-      "subCategory": "General Equipment",
-      "industries": [
-        "Confined Space",
-        "Maritime & Offshore"
-      ]
+      "subCategory": "General Equipment"
     },
     {
       "id": 5153,
@@ -597,11 +417,8 @@
       "url": "https://airgas.my/product/hornung-hp-hose/",
       "imgUrl": "https://airgas.my/wp-content/uploads/2024/11/1000464301-scaled.jpg",
       "brand": "Hornung",
-      "industry": "Gases & Equipment",
-      "subCategory": "General Equipment",
-      "industries": [
-        "Gases & Equipment"
-      ]
+      "industry": "PPE",
+      "subCategory": "General Equipment"
     },
     {
       "id": 5120,
@@ -611,12 +428,7 @@
       "imgUrl": "https://airgas.my/wp-content/uploads/2024/09/1000409663.jpg",
       "brand": "Airgas Technology",
       "industry": "Gases & Equipment",
-      "subCategory": "Gas Storage",
-      "industries": [
-        "Gases & Equipment",
-        "Maritime & Offshore",
-        "Oil & Gas"
-      ]
+      "subCategory": "Body Protection"
     },
     {
       "id": 5111,
@@ -624,14 +436,9 @@
       "description": "We have gone to great lengths testing various oil compositions for our compressors. The low carbon build up and the e...",
       "url": "https://airgas.my/product/full-synthetic-for-hp-breathing-air-compressor-4509001-oil-lw-1l-unit-3443/",
       "imgUrl": "https://airgas.my/wp-content/uploads/2024/09/Screenshot-2024-09-11-221413.png",
-      "brand": "L&W Compressor",
-      "industry": "Gases & Equipment",
-      "subCategory": "General Equipment",
-      "industries": [
-        "Gases & Equipment",
-        "Maritime & Offshore",
-        "Oil & Gas"
-      ]
+      "brand": "L&W",
+      "industry": "PPE",
+      "subCategory": "General Equipment"
     },
     {
       "id": 5099,
@@ -640,13 +447,8 @@
       "url": "https://airgas.my/product/fireman-helmet-china/",
       "imgUrl": "https://airgas.my/wp-content/uploads/2024/08/1000364290-scaled.jpg",
       "brand": "Airgas Technology",
-      "industry": "Maritime & Offshore",
-      "subCategory": "General Equipment",
-      "industries": [
-        "Maritime & Offshore",
-        "Oil & Gas",
-        "PPE"
-      ]
+      "industry": "Oil & Gas",
+      "subCategory": "General Equipment"
     },
     {
       "id": 5088,
@@ -656,13 +458,7 @@
       "imgUrl": "https://airgas.my/wp-content/uploads/2024/08/1000354434-scaled.jpg",
       "brand": "Airgas Technology",
       "industry": "Gas Calibration",
-      "subCategory": "General Equipment",
-      "industries": [
-        "Gas Calibration",
-        "Gases & Equipment",
-        "Maritime & Offshore",
-        "Oil & Gas"
-      ]
+      "subCategory": "General Equipment"
     },
     {
       "id": 5081,
@@ -672,13 +468,7 @@
       "imgUrl": "https://airgas.my/wp-content/uploads/2024/08/1000354425-scaled.jpg",
       "brand": "Airgas Technology",
       "industry": "Gas Calibration",
-      "subCategory": "General Equipment",
-      "industries": [
-        "Gas Calibration",
-        "Gases & Equipment",
-        "Maritime & Offshore",
-        "Oil & Gas"
-      ]
+      "subCategory": "General Equipment"
     },
     {
       "id": 5075,
@@ -688,12 +478,7 @@
       "imgUrl": "https://airgas.my/wp-content/uploads/2024/08/1000354403-scaled.jpg",
       "brand": "Airgas Technology",
       "industry": "Gases & Equipment",
-      "subCategory": "General Equipment",
-      "industries": [
-        "Gases & Equipment",
-        "Maritime & Offshore",
-        "Oil & Gas"
-      ]
+      "subCategory": "General Equipment"
     },
     {
       "id": 5066,
@@ -703,13 +488,7 @@
       "imgUrl": "https://airgas.my/wp-content/uploads/2024/08/1000354390-scaled.jpg",
       "brand": "Airgas Technology",
       "industry": "Gas Calibration",
-      "subCategory": "General Equipment",
-      "industries": [
-        "Gas Calibration",
-        "Gases & Equipment",
-        "Maritime & Offshore",
-        "Oil & Gas"
-      ]
+      "subCategory": "General Equipment"
     },
     {
       "id": 5061,
@@ -719,12 +498,7 @@
       "imgUrl": "https://airgas.my/wp-content/uploads/2024/08/1000354372-scaled.jpg",
       "brand": "Airgas Technology",
       "industry": "Gases & Equipment",
-      "subCategory": "General Equipment",
-      "industries": [
-        "Gases & Equipment",
-        "Maritime & Offshore",
-        "Oil & Gas"
-      ]
+      "subCategory": "General Equipment"
     },
     {
       "id": 5052,
@@ -734,12 +508,7 @@
       "imgUrl": "https://airgas.my/wp-content/uploads/2024/08/1000354359-scaled.jpg",
       "brand": "Airgas Technology",
       "industry": "Gases & Equipment",
-      "subCategory": "General Equipment",
-      "industries": [
-        "Gases & Equipment",
-        "Maritime & Offshore",
-        "Oil & Gas"
-      ]
+      "subCategory": "General Equipment"
     },
     {
       "id": 5035,
@@ -749,13 +518,7 @@
       "imgUrl": "https://airgas.my/wp-content/uploads/2024/08/1000354273-scaled.jpg",
       "brand": "Airgas Technology",
       "industry": "Gas Calibration",
-      "subCategory": "General Equipment",
-      "industries": [
-        "Gas Calibration",
-        "Gases & Equipment",
-        "Maritime & Offshore",
-        "Oil & Gas"
-      ]
+      "subCategory": "General Equipment"
     },
     {
       "id": 5026,
@@ -765,12 +528,7 @@
       "imgUrl": "https://airgas.my/wp-content/uploads/2024/08/1000354253-scaled.jpg",
       "brand": "Airgas Technology",
       "industry": "Gases & Equipment",
-      "subCategory": "General Equipment",
-      "industries": [
-        "Gases & Equipment",
-        "Maritime & Offshore",
-        "Oil & Gas"
-      ]
+      "subCategory": "General Equipment"
     },
     {
       "id": 5021,
@@ -780,13 +538,7 @@
       "imgUrl": "https://airgas.my/wp-content/uploads/2024/08/1000354214-scaled.jpg",
       "brand": "Airgas Technology",
       "industry": "Gas Calibration",
-      "subCategory": "General Equipment",
-      "industries": [
-        "Gas Calibration",
-        "Gases & Equipment",
-        "Maritime & Offshore",
-        "Oil & Gas"
-      ]
+      "subCategory": "General Equipment"
     },
     {
       "id": 5015,
@@ -794,14 +546,9 @@
       "description": "details of Helmet 660C link to MSA",
       "url": "https://airgas.my/product/msa-helmet-fireman-cairns-660c-metro-composite/",
       "imgUrl": "https://airgas.my/wp-content/uploads/2024/07/Screenshot-2024-07-31-112304.png",
-      "brand": "MSA Safety",
-      "industry": "Maritime & Offshore",
-      "subCategory": "General Equipment",
-      "industries": [
-        "Maritime & Offshore",
-        "Oil & Gas",
-        "PPE"
-      ]
+      "brand": "MSA",
+      "industry": "Confined Space",
+      "subCategory": "General Equipment"
     },
     {
       "id": 5011,
@@ -809,14 +556,9 @@
       "description": "use for USA Helmet",
       "url": "https://airgas.my/product/msa-elastic-chin-strap-2-points-10171104/",
       "imgUrl": "https://airgas.my/wp-content/uploads/2024/07/1000342888-scaled.jpg",
-      "brand": "MSA Safety",
-      "industry": "Maritime & Offshore",
-      "subCategory": "General Equipment",
-      "industries": [
-        "Maritime & Offshore",
-        "Oil & Gas",
-        "PPE"
-      ]
+      "brand": "MSA",
+      "industry": "PPE",
+      "subCategory": "General Equipment"
     },
     {
       "id": 4983,
@@ -824,14 +566,9 @@
       "description": "",
       "url": "https://airgas.my/product/fireman-glove-sw-brand-3-layer-dupont-fiber-glass-kevlar-lining-fpr-cut-protection-waterproof-100-genuine-dupont-non-flammable-thread/",
       "imgUrl": "https://airgas.my/wp-content/uploads/2024/07/Screenshot-2024-07-23-192526.png",
-      "brand": "DuPont",
-      "industry": "Maritime & Offshore",
-      "subCategory": "General Equipment",
-      "industries": [
-        "Maritime & Offshore",
-        "Oil & Gas",
-        "PPE"
-      ]
+      "brand": "Dupont",
+      "industry": "Oil & Gas",
+      "subCategory": "General Equipment"
     },
     {
       "id": 4980,
@@ -839,13 +576,9 @@
       "description": "Products Details catalogue FEATURES: \u2022 Made with DuPont Nomex knitted fibres for excellent durability \u2022 Breathable an...",
       "url": "https://airgas.my/product/fireman-hood-dupont-nomext-flame-resistant-sw-brand/",
       "imgUrl": "https://airgas.my/wp-content/uploads/2024/07/Screenshot-2024-07-23-192144.png",
-      "brand": "DuPont",
-      "industry": "Maritime & Offshore",
-      "subCategory": "Body Protection",
-      "industries": [
-        "Maritime & Offshore",
-        "Oil & Gas"
-      ]
+      "brand": "Dupont",
+      "industry": "Oil & Gas",
+      "subCategory": "General Equipment"
     },
     {
       "id": 4978,
@@ -853,13 +586,9 @@
       "description": "the products details Composition Outer Shell : Nomex IIIA Moisture Barrier : Nomex F-70 Thermal Barrier : Nomex T-70...",
       "url": "https://airgas.my/product/fireman-fighting-suit-with-dupont-nomex-an-inherently-heat-resistant-and-flame-resistant-designed-to-react-in-an-emergency-tested-to-en-469-by-bttg-uk-and-nfpa-1971-by-usa-for-c/",
       "imgUrl": "https://airgas.my/wp-content/uploads/2024/07/Screenshot-2024-07-23-191850.png",
-      "brand": "DuPont",
-      "industry": "Maritime & Offshore",
-      "subCategory": "Body Protection",
-      "industries": [
-        "Maritime & Offshore",
-        "Oil & Gas"
-      ]
+      "brand": "Dupont",
+      "industry": "Oil & Gas",
+      "subCategory": "Body Protection"
     },
     {
       "id": 4976,
@@ -867,27 +596,19 @@
       "description": "",
       "url": "https://airgas.my/product/msa-chin-strap-4-points/",
       "imgUrl": "https://airgas.my/wp-content/uploads/2024/07/1000342887-scaled.jpg",
-      "brand": "MSA Safety",
-      "industry": "Maritime & Offshore",
-      "subCategory": "General Equipment",
-      "industries": [
-        "Maritime & Offshore",
-        "Oil & Gas",
-        "PPE"
-      ]
+      "brand": "MSA",
+      "industry": "PPE",
+      "subCategory": "General Equipment"
     },
     {
       "id": 4968,
       "name": "Hydro Test Unit volumetric measuring",
       "description": "Hydro test unit, Movable high pressure test unit for measuring the volumetric with digital scale 1 g resolution, with...",
       "url": "https://airgas.my/product/hydro-test-unit-volumetric-measuring/",
-      "imgUrl": "assets/ServicesandMaintenance/Hydro Test Unit volumetric measuring.png",
+      "imgUrl": "https://airgas.my/wp-content/uploads/2024/05/Screenshot-2024-05-24-214701.png",
       "brand": "Airgas Technology",
       "industry": "Services & Maintenance",
-      "subCategory": "Technical Services",
-      "industries": [
-        "Services & Maintenance"
-      ]
+      "subCategory": "Technical Services"
     },
     {
       "id": 4962,
@@ -897,10 +618,7 @@
       "imgUrl": "https://airgas.my/wp-content/uploads/2024/04/1000226317.jpg",
       "brand": "Airgas Technology",
       "industry": "PPE",
-      "subCategory": "General Equipment",
-      "industries": [
-        "PPE"
-      ]
+      "subCategory": "General Equipment"
     },
     {
       "id": 4954,
@@ -908,12 +626,9 @@
       "description": "Part Number: 10065849 Length: 40.000 MM (1.575 IN) Width: 140.000 MM (5.512 IN) Height: 50.000 MM (1.969 IN) Weight:...",
       "url": "https://airgas.my/product/msa-voyager-safety-glasses-10065849-size-universal-02288-spectacles-voyager-clear-anti-fog/",
       "imgUrl": "https://airgas.my/wp-content/uploads/2024/03/Screenshot-2024-03-18-121751.png",
-      "brand": "MSA Safety",
+      "brand": "MSA",
       "industry": "PPE",
-      "subCategory": "General Equipment",
-      "industries": [
-        "PPE"
-      ]
+      "subCategory": "General Equipment"
     },
     {
       "id": 4951,
@@ -923,12 +638,7 @@
       "imgUrl": "https://airgas.my/wp-content/uploads/2024/08/1000354353-scaled.jpg",
       "brand": "Airgas Technology",
       "industry": "Gases & Equipment",
-      "subCategory": "General Equipment",
-      "industries": [
-        "Gases & Equipment",
-        "Maritime & Offshore",
-        "Oil & Gas"
-      ]
+      "subCategory": "General Equipment"
     },
     {
       "id": 4949,
@@ -936,16 +646,9 @@
       "description": "3357794 - Backplate Hardness Products Catalog 3358906 - PSS3000 Series Fixed LDV 3338700 - Plus LDV Short Hose Push i...",
       "url": "https://airgas.my/product/drager-pss-3000-scba-with-fps-7000-facemask-and-composite-cylinder/",
       "imgUrl": "https://airgas.my/wp-content/uploads/2024/02/Screenshot-2025-03-27-135409.png",
-      "brand": "Dr\u00e4ger",
+      "brand": "Drager",
       "industry": "Confined Space",
-      "subCategory": "Respiratory Protection",
-      "industries": [
-        "Confined Space",
-        "Gases & Equipment",
-        "Maritime & Offshore",
-        "Oil & Gas",
-        "PPE"
-      ]
+      "subCategory": "Respiratory Protection"
     },
     {
       "id": 4947,
@@ -953,30 +656,19 @@
       "description": "Products Catalog",
       "url": "https://airgas.my/product/drager-saver-pp-compressed-air-escape-device/",
       "imgUrl": "",
-      "brand": "Dr\u00e4ger",
+      "brand": "Drager",
       "industry": "Confined Space",
-      "subCategory": "General Equipment",
-      "industries": [
-        "Confined Space",
-        "Gases & Equipment",
-        "Maritime & Offshore"
-      ]
+      "subCategory": "General Equipment"
     },
     {
       "id": 4944,
       "name": "Drager Saver CF Compressed Air Escape Device with Hood 3363826",
       "description": "products catalog",
       "url": "https://airgas.my/product/drager-saver-cf-compressed-air-escape-device/",
-      "imgUrl": "assets/ConfinedSpace/Drager Saver CF Compressed Air Escape Device with Hood 3363826.png",
-      "brand": "Dr\u00e4ger",
+      "imgUrl": "",
+      "brand": "Drager",
       "industry": "Confined Space",
-      "subCategory": "General Equipment",
-      "industries": [
-        "Confined Space",
-        "Gases & Equipment",
-        "Maritime & Offshore",
-        "Oil & Gas"
-      ]
+      "subCategory": "General Equipment"
     },
     {
       "id": 4942,
@@ -984,14 +676,9 @@
       "description": "products catalog 10 PR per case",
       "url": "https://airgas.my/product/hearing-protection-verishield-dielectric1035203/",
       "imgUrl": "https://airgas.my/wp-content/uploads/2024/02/Screenshot-2024-02-08-071039.png",
-      "brand": "Honeywell",
-      "industry": "Maritime & Offshore",
-      "subCategory": "Hearing Protection",
-      "industries": [
-        "Maritime & Offshore",
-        "Oil & Gas",
-        "PPE"
-      ]
+      "brand": "Airgas Technology",
+      "industry": "PPE",
+      "subCategory": "General Equipment"
     },
     {
       "id": 4939,
@@ -1001,10 +688,7 @@
       "imgUrl": "https://airgas.my/wp-content/uploads/2024/02/Screenshot-2024-02-07-232011.png",
       "brand": "Airgas Technology",
       "industry": "PPE",
-      "subCategory": "General Equipment",
-      "industries": [
-        "PPE"
-      ]
+      "subCategory": "General Equipment"
     },
     {
       "id": 4937,
@@ -1014,10 +698,7 @@
       "imgUrl": "https://airgas.my/wp-content/uploads/2024/01/1000179597.jpg",
       "brand": "Honeywell",
       "industry": "PPE",
-      "subCategory": "Respiratory Protection",
-      "industries": [
-        "PPE"
-      ]
+      "subCategory": "Respiratory Protection"
     },
     {
       "id": 4911,
@@ -1027,25 +708,17 @@
       "imgUrl": "https://airgas.my/wp-content/uploads/2023/12/1000158993-scaled.jpg",
       "brand": "Airgas Technology",
       "industry": "Gases & Equipment",
-      "subCategory": "General Equipment",
-      "industries": [
-        "Gases & Equipment",
-        "Maritime & Offshore",
-        "Oil & Gas"
-      ]
+      "subCategory": "General Equipment"
     },
     {
       "id": 4900,
       "name": "MSA GALAXY\u00ae GX2 Automated Test System . automated calibration Docking",
       "description": "MSA Galaxy GX2 provides automated calibration of MSA ALTAIR Gas Detector fleet Simplicity counts with the MSA GALAXY\u00ae...",
       "url": "https://airgas.my/product/msa-galaxy-gx2-automated-test-system-automated-calibration-docking/",
-      "imgUrl": "assets/ServicesandMaintenance/MSA GALAXY GX2 Automated Test System  automated calibration Docking.png",
-      "brand": "MSA Safety",
+      "imgUrl": "https://airgas.my/wp-content/uploads/2023/12/Screenshot-2023-12-19-153448.png",
+      "brand": "MSA",
       "industry": "Services & Maintenance",
-      "subCategory": "Technical Services",
-      "industries": [
-        "Services & Maintenance"
-      ]
+      "subCategory": "Technical Services"
     },
     {
       "id": 4898,
@@ -1055,12 +728,7 @@
       "imgUrl": "https://airgas.my/wp-content/uploads/2023/12/1000158908-scaled.jpg",
       "brand": "Sanosub",
       "industry": "Gases & Equipment",
-      "subCategory": "General Equipment",
-      "industries": [
-        "Gases & Equipment",
-        "Maritime & Offshore",
-        "Oil & Gas"
-      ]
+      "subCategory": "General Equipment"
     },
     {
       "id": 4785,
@@ -1068,15 +736,9 @@
       "description": "link to the page video guide turn on and off video training video bump test procedure video calibration video alarm i...",
       "url": "https://airgas.my/product/t40-ii-rattler-portable-single-gas-monitor-and-t-dock-ir/",
       "imgUrl": "https://airgas.my/wp-content/uploads/2023/12/1000156066.jpg",
-      "brand": "Industrial Scientific",
-      "industry": "Confined Space",
-      "subCategory": "General Equipment",
-      "industries": [
-        "Confined Space",
-        "Gases & Equipment",
-        "Maritime & Offshore",
-        "Oil & Gas"
-      ]
+      "brand": "Airgas Technology",
+      "industry": "Gas Calibration",
+      "subCategory": "General Equipment"
     },
     {
       "id": 4887,
@@ -1086,10 +748,7 @@
       "imgUrl": "https://airgas.my/wp-content/uploads/2023/12/1000151509-scaled.jpg",
       "brand": "Honeywell",
       "industry": "PPE",
-      "subCategory": "Hearing Protection",
-      "industries": [
-        "PPE"
-      ]
+      "subCategory": "General Equipment"
     },
     {
       "id": 4880,
@@ -1099,12 +758,7 @@
       "imgUrl": "https://airgas.my/wp-content/uploads/2023/12/1000150482.jpg",
       "brand": "Cavagna",
       "industry": "Gases & Equipment",
-      "subCategory": "General Equipment",
-      "industries": [
-        "Gases & Equipment",
-        "Maritime & Offshore",
-        "Oil & Gas"
-      ]
+      "subCategory": "General Equipment"
     },
     {
       "id": 4876,
@@ -1114,13 +768,7 @@
       "imgUrl": "https://airgas.my/wp-content/uploads/2023/11/1000149693.jpg",
       "brand": "Honeywell",
       "industry": "Confined Space",
-      "subCategory": "Gas Detection",
-      "industries": [
-        "Confined Space",
-        "Gases & Equipment",
-        "Maritime & Offshore",
-        "Oil & Gas"
-      ]
+      "subCategory": "Gas Detection"
     },
     {
       "id": 4865,
@@ -1128,12 +776,9 @@
       "description": "the letter of change model",
       "url": "https://airgas.my/product/10242735-sensor-pid-0-2000ppm-evx-pkgd-msa/",
       "imgUrl": "https://airgas.my/wp-content/uploads/2023/11/Screenshot-2023-11-14-150750.png",
-      "brand": "MSA Safety",
-      "industry": "Gas Calibration",
-      "subCategory": "Gas Detection",
-      "industries": [
-        "Gas Calibration"
-      ]
+      "brand": "MSA",
+      "industry": "PPE",
+      "subCategory": "Gas Detection"
     },
     {
       "id": 4860,
@@ -1143,12 +788,7 @@
       "imgUrl": "https://airgas.my/wp-content/uploads/2023/11/Screenshot-2023-11-14-120827.png",
       "brand": "Airgas Technology",
       "industry": "Gases & Equipment",
-      "subCategory": "General Equipment",
-      "industries": [
-        "Gases & Equipment",
-        "Maritime & Offshore",
-        "Oil & Gas"
-      ]
+      "subCategory": "General Equipment"
     },
     {
       "id": 4859,
@@ -1156,15 +796,9 @@
       "description": "catalog 1 catalog 2",
       "url": "https://airgas.my/product/mx4-gas-detector-is/",
       "imgUrl": "https://airgas.my/wp-content/uploads/2024/03/1000206462.jpg",
-      "brand": "Industrial Scientific",
+      "brand": "Airgas Technology",
       "industry": "Confined Space",
-      "subCategory": "Gas Detection",
-      "industries": [
-        "Confined Space",
-        "Gases & Equipment",
-        "Maritime & Offshore",
-        "Oil & Gas"
-      ]
+      "subCategory": "Gas Detection"
     },
     {
       "id": 4857,
@@ -1174,11 +808,7 @@
       "imgUrl": "https://airgas.my/wp-content/uploads/2023/11/1000130711-scaled.jpg",
       "brand": "Honeywell",
       "industry": "Confined Space",
-      "subCategory": "General Equipment",
-      "industries": [
-        "Confined Space",
-        "Maritime & Offshore"
-      ]
+      "subCategory": "General Equipment"
     },
     {
       "id": 4849,
@@ -1188,12 +818,7 @@
       "imgUrl": "https://airgas.my/wp-content/uploads/2023/11/1000137317-1.jpg",
       "brand": "Airgas Technology",
       "industry": "Gases & Equipment",
-      "subCategory": "General Equipment",
-      "industries": [
-        "Gases & Equipment",
-        "Maritime & Offshore",
-        "Oil & Gas"
-      ]
+      "subCategory": "General Equipment"
     },
     {
       "id": 4841,
@@ -1201,12 +826,9 @@
       "description": "Products Catalog details DuPont\u2122 Tychem\u00ae 2000 Coverall. Standard Fit Hood. Stormflap. Elastic Wrists and Ankles. Serg...",
       "url": "https://airgas.my/product/dupont-tychem-2000/",
       "imgUrl": "https://airgas.my/wp-content/uploads/2023/11/Screenshot-2023-11-06-135924.png",
-      "brand": "DuPont",
+      "brand": "Dupont",
       "industry": "PPE",
-      "subCategory": "General Equipment",
-      "industries": [
-        "PPE"
-      ]
+      "subCategory": "General Equipment"
     },
     {
       "id": 4839,
@@ -1214,15 +836,9 @@
       "description": "Products Catalog 1 download Products catalog 2 download Approvals: EN1146:2005 cl 15 Dimensions: 500x180x180 Weight:...",
       "url": "https://airgas.my/product/fenzy-bioscape-eebd-3l-200b-steel-composite-cylinder-p-n-1815732-1815746-honeywell/",
       "imgUrl": "https://airgas.my/wp-content/uploads/2023/11/Screenshot-2023-11-05-115312.png",
-      "brand": "MSA Safety",
+      "brand": "Honeywell",
       "industry": "Confined Space",
-      "subCategory": "Gas Storage",
-      "industries": [
-        "Confined Space",
-        "Gases & Equipment",
-        "Maritime & Offshore",
-        "Oil & Gas"
-      ]
+      "subCategory": "Gas Storage"
     },
     {
       "id": 4826,
@@ -1230,12 +846,9 @@
       "description": "can be add on the microphone",
       "url": "https://airgas.my/product/half-facemask-avec-butyl/",
       "imgUrl": "https://airgas.my/wp-content/uploads/2023/10/1000132607-scaled.jpg",
-      "brand": "AVEC",
+      "brand": "Avec",
       "industry": "PPE",
-      "subCategory": "Respiratory Protection",
-      "industries": [
-        "PPE"
-      ]
+      "subCategory": "Respiratory Protection"
     },
     {
       "id": 4819,
@@ -1243,14 +856,9 @@
       "description": "link to PAB page",
       "url": "https://airgas.my/product/helmet-for-fireman-pab-fire-compact-2/",
       "imgUrl": "https://airgas.my/wp-content/uploads/2023/10/1000131568-scaled.jpg",
-      "brand": "PAB",
-      "industry": "Maritime & Offshore",
-      "subCategory": "General Equipment",
-      "industries": [
-        "Maritime & Offshore",
-        "Oil & Gas",
-        "PPE"
-      ]
+      "brand": "Pab",
+      "industry": "Oil & Gas",
+      "subCategory": "General Equipment"
     },
     {
       "id": 4812,
@@ -1258,14 +866,9 @@
       "description": "",
       "url": "https://airgas.my/product/helmet-for-fireman-pab-ht05/",
       "imgUrl": "https://airgas.my/wp-content/uploads/2023/10/1000131563-scaled.jpg",
-      "brand": "PAB",
-      "industry": "Maritime & Offshore",
-      "subCategory": "General Equipment",
-      "industries": [
-        "Maritime & Offshore",
-        "Oil & Gas",
-        "PPE"
-      ]
+      "brand": "Pab",
+      "industry": "Oil & Gas",
+      "subCategory": "General Equipment"
     },
     {
       "id": 4805,
@@ -1275,10 +878,7 @@
       "imgUrl": "https://airgas.my/wp-content/uploads/2023/10/1000131457-scaled.jpg",
       "brand": "Airgas Technology",
       "industry": "Gases & Equipment",
-      "subCategory": "General Equipment",
-      "industries": [
-        "Gases & Equipment"
-      ]
+      "subCategory": "General Equipment"
     },
     {
       "id": 4772,
@@ -1286,14 +886,9 @@
       "description": "For industrial workers, the V-Gard Cap Mounted Hearing Protection Line delivers enhanced comfort and top of the line...",
       "url": "https://airgas.my/product/4772/",
       "imgUrl": "https://airgas.my/wp-content/uploads/2023/10/Screenshot-2023-10-10-110016.png",
-      "brand": "MSA Safety",
-      "industry": "Maritime & Offshore",
-      "subCategory": "General Equipment",
-      "industries": [
-        "Maritime & Offshore",
-        "Oil & Gas",
-        "PPE"
-      ]
+      "brand": "MSA",
+      "industry": "PPE",
+      "subCategory": "General Equipment"
     },
     {
       "id": 4770,
@@ -1301,12 +896,9 @@
       "description": "MSA introduces Sound Control SH, a compatible ear muff that is designed to fit snugly into the new accessory slots on...",
       "url": "https://airgas.my/product/msa-sound-control-earmuff-sh-for-full-brim-hat-nrr-25-dba-10129327/",
       "imgUrl": "https://airgas.my/wp-content/uploads/2023/10/Screenshot-2023-10-10-105545.png",
-      "brand": "MSA Safety",
+      "brand": "MSA",
       "industry": "PPE",
-      "subCategory": "Hearing Protection",
-      "industries": [
-        "PPE"
-      ]
+      "subCategory": "General Equipment"
     },
     {
       "id": 4763,
@@ -1315,12 +907,8 @@
       "url": "https://airgas.my/product/explosion-proof-flood-light-100w-to-240w/",
       "imgUrl": "https://airgas.my/wp-content/uploads/2023/09/Screenshot-2023-09-28-112022.png",
       "brand": "Airgas Technology",
-      "industry": "Maritime & Offshore",
-      "subCategory": "General Equipment",
-      "industries": [
-        "Maritime & Offshore",
-        "Oil & Gas"
-      ]
+      "industry": "PPE",
+      "subCategory": "General Equipment"
     },
     {
       "id": 4757,
@@ -1328,26 +916,19 @@
       "description": "",
       "url": "https://airgas.my/product/self-retracting-lifeline-msa-v-tec-v-tec-srl-6-m-20-ft-galvanized-cable-63210-00aeu/",
       "imgUrl": "https://airgas.my/wp-content/uploads/2023/09/Screenshot-2023-09-18-164246.png",
-      "brand": "MSA Safety",
+      "brand": "MSA",
       "industry": "Confined Space",
-      "subCategory": "General Equipment",
-      "industries": [
-        "Confined Space",
-        "Maritime & Offshore"
-      ]
+      "subCategory": "General Equipment"
     },
     {
       "id": 4755,
       "name": "LW service kit LW 230/280/320 E/ES/EC mit (c/w) ACD",
       "description": "Service Kit 1000 hours Service Kit contains below mentioned parts: 2 x 002123 \u2013 Sinter filter (water separator 1st +...",
       "url": "https://airgas.my/product/lw-service-kit-lw-230-280-320-e-es-ec-mit-c-w-acd/",
-      "imgUrl": "assets/ServicesandMaintenance/LW service kit LW 230280320 EESEC mit cw ACD.png",
-      "brand": "L&W Compressor",
+      "imgUrl": "",
+      "brand": "Airgas Technology",
       "industry": "Services & Maintenance",
-      "subCategory": "Technical Services",
-      "industries": [
-        "Services & Maintenance"
-      ]
+      "subCategory": "Technical Services"
     },
     {
       "id": 4752,
@@ -1357,12 +938,7 @@
       "imgUrl": "https://airgas.my/wp-content/uploads/2023/08/1000184834-scaled.jpg",
       "brand": "Airgas Technology",
       "industry": "Gases & Equipment",
-      "subCategory": "General Equipment",
-      "industries": [
-        "Gases & Equipment",
-        "Maritime & Offshore",
-        "Oil & Gas"
-      ]
+      "subCategory": "General Equipment"
     },
     {
       "id": 4748,
@@ -1371,11 +947,8 @@
       "url": "https://airgas.my/product/hose-for-high-pressure-200bar-1m-ss304/",
       "imgUrl": "https://airgas.my/wp-content/uploads/2023/08/1000184831-scaled.jpg",
       "brand": "Airgas Technology",
-      "industry": "Gases & Equipment",
-      "subCategory": "General Equipment",
-      "industries": [
-        "Gases & Equipment"
-      ]
+      "industry": "PPE",
+      "subCategory": "General Equipment"
     },
     {
       "id": 4744,
@@ -1385,12 +958,7 @@
       "imgUrl": "https://airgas.my/wp-content/uploads/2023/08/1000184829-scaled.jpg",
       "brand": "Airgas Technology",
       "industry": "Gases & Equipment",
-      "subCategory": "General Equipment",
-      "industries": [
-        "Gases & Equipment",
-        "Maritime & Offshore",
-        "Oil & Gas"
-      ]
+      "subCategory": "General Equipment"
     },
     {
       "id": 4737,
@@ -1400,12 +968,7 @@
       "imgUrl": "https://airgas.my/wp-content/uploads/2023/08/1000184816-scaled.jpg",
       "brand": "Airgas Technology",
       "industry": "Gases & Equipment",
-      "subCategory": "General Equipment",
-      "industries": [
-        "Gases & Equipment",
-        "Maritime & Offshore",
-        "Oil & Gas"
-      ]
+      "subCategory": "General Equipment"
     },
     {
       "id": 4725,
@@ -1413,15 +976,9 @@
       "description": "the introduction link to MSA page ** Chlorine sensor only apply to 2X and 5X gas detector",
       "url": "https://airgas.my/product/gas-detector-altair-2x/",
       "imgUrl": "https://airgas.my/wp-content/uploads/2023/07/altair22x.png",
-      "brand": "MSA Safety",
+      "brand": "Airgas Technology",
       "industry": "Confined Space",
-      "subCategory": "Gas Detection",
-      "industries": [
-        "Confined Space",
-        "Gases & Equipment",
-        "Maritime & Offshore",
-        "Oil & Gas"
-      ]
+      "subCategory": "Gas Detection"
     },
     {
       "id": 4719,
@@ -1429,14 +986,9 @@
       "description": "Gallet F1 XF and Accessories Developed with firefighters from around the globe, the Gallet F1 XF sets the new standar...",
       "url": "https://airgas.my/product/msa-helmet-for-fireman/",
       "imgUrl": "https://airgas.my/wp-content/uploads/2023/07/helmet-msa.jpg",
-      "brand": "MSA Safety",
-      "industry": "Maritime & Offshore",
-      "subCategory": "General Equipment",
-      "industries": [
-        "Maritime & Offshore",
-        "Oil & Gas",
-        "PPE"
-      ]
+      "brand": "MSA",
+      "industry": "Oil & Gas",
+      "subCategory": "General Equipment"
     },
     {
       "id": 4700,
@@ -1446,12 +998,7 @@
       "imgUrl": "https://airgas.my/wp-content/uploads/2023/06/WhatsApp-Image-2023-06-19-at-14.31.09.jpeg",
       "brand": "Airgas Technology",
       "industry": "Gases & Equipment",
-      "subCategory": "Gas Storage",
-      "industries": [
-        "Gases & Equipment",
-        "Maritime & Offshore",
-        "Oil & Gas"
-      ]
+      "subCategory": "Gas Storage"
     },
     {
       "id": 4694,
@@ -1460,12 +1007,8 @@
       "url": "https://airgas.my/product/papr-honeywell-blower-set-with-head-top-and-hepa-pa701he/",
       "imgUrl": "https://airgas.my/wp-content/uploads/2023/06/papr1.jpg",
       "brand": "Honeywell",
-      "industry": "Confined Space",
-      "subCategory": "General Equipment",
-      "industries": [
-        "Confined Space",
-        "Maritime & Offshore"
-      ]
+      "industry": "PPE",
+      "subCategory": "General Equipment"
     },
     {
       "id": 4686,
@@ -1475,13 +1018,7 @@
       "imgUrl": "https://airgas.my/wp-content/uploads/2023/05/Screenshot-2023-05-24-180.jpg",
       "brand": "Airgas Technology",
       "industry": "Confined Space",
-      "subCategory": "Gas Storage",
-      "industries": [
-        "Confined Space",
-        "Gases & Equipment",
-        "Maritime & Offshore",
-        "Oil & Gas"
-      ]
+      "subCategory": "Gas Storage"
     },
     {
       "id": 4683,
@@ -1489,13 +1026,9 @@
       "description": "10147301 WORKMAN WINCH,20M,SS CABLE,PACKAGED,ANSI 10147566 WORKMAN WINCH,10M,SS CABLE,PACKAGED,EN 10153757 WORKMAN WI...",
       "url": "https://airgas.my/product/workman-winch-msa-confined-space-products/",
       "imgUrl": "https://airgas.my/wp-content/uploads/2023/05/Screenshot-2023-05-19-221015.png",
-      "brand": "MSA Safety",
+      "brand": "MSA",
       "industry": "Confined Space",
-      "subCategory": "General Equipment",
-      "industries": [
-        "Confined Space",
-        "Maritime & Offshore"
-      ]
+      "subCategory": "General Equipment"
     },
     {
       "id": 4681,
@@ -1503,13 +1036,9 @@
       "description": "link to MSA page 10158192 WORKMAN RESCUER,15m,SST CABLE,INTL, 10158178 WORKMAN RESCUER,50FT,SST CABLE,ANSI MSA\u2019s Work...",
       "url": "https://airgas.my/product/workman-rescuer-msa-confined-space-products/",
       "imgUrl": "",
-      "brand": "MSA Safety",
+      "brand": "MSA",
       "industry": "Confined Space",
-      "subCategory": "General Equipment",
-      "industries": [
-        "Confined Space",
-        "Maritime & Offshore"
-      ]
+      "subCategory": "General Equipment"
     },
     {
       "id": 4673,
@@ -1519,12 +1048,7 @@
       "imgUrl": "https://airgas.my/wp-content/uploads/2023/05/cyl1.jpeg",
       "brand": "Airgas Technology",
       "industry": "Gases & Equipment",
-      "subCategory": "Gas Storage",
-      "industries": [
-        "Gases & Equipment",
-        "Maritime & Offshore",
-        "Oil & Gas"
-      ]
+      "subCategory": "Gas Storage"
     },
     {
       "id": 4670,
@@ -1532,13 +1056,9 @@
       "description": "",
       "url": "https://airgas.my/product/pressure-gauge-scba-for-diablo-ind-sekur-42000245/",
       "imgUrl": "https://airgas.my/wp-content/uploads/2023/04/1000116055.jpg",
-      "brand": "DPI Sekur",
+      "brand": "Airgas Technology",
       "industry": "Confined Space",
-      "subCategory": "General Equipment",
-      "industries": [
-        "Confined Space",
-        "Maritime & Offshore"
-      ]
+      "subCategory": "General Equipment"
     },
     {
       "id": 4664,
@@ -1548,12 +1068,7 @@
       "imgUrl": "https://airgas.my/wp-content/uploads/2023/04/1000113572-scaled.jpg",
       "brand": "Cavagna",
       "industry": "Gases & Equipment",
-      "subCategory": "General Equipment",
-      "industries": [
-        "Gases & Equipment",
-        "Maritime & Offshore",
-        "Oil & Gas"
-      ]
+      "subCategory": "General Equipment"
     },
     {
       "id": 4655,
@@ -1563,12 +1078,7 @@
       "imgUrl": "https://airgas.my/wp-content/uploads/2023/04/Screenshot-2023-04-03-154033.png",
       "brand": "Airgas Technology",
       "industry": "Gases & Equipment",
-      "subCategory": "Gas Storage",
-      "industries": [
-        "Gases & Equipment",
-        "Maritime & Offshore",
-        "Oil & Gas"
-      ]
+      "subCategory": "Gas Storage"
     },
     {
       "id": 4652,
@@ -1576,14 +1086,9 @@
       "description": "Storage tanks are frequently used to provide extra filling capacity during peak periods (with or without cascade fill...",
       "url": "https://airgas.my/product/lw-cylinder-for-ba-storage/",
       "imgUrl": "https://airgas.my/wp-content/uploads/2023/04/Screenshot-2023-04-03-114209.png",
-      "brand": "L&W Compressor",
+      "brand": "Airgas Technology",
       "industry": "Gases & Equipment",
-      "subCategory": "Gas Storage",
-      "industries": [
-        "Gases & Equipment",
-        "Maritime & Offshore",
-        "Oil & Gas"
-      ]
+      "subCategory": "Gas Storage"
     },
     {
       "id": 4647,
@@ -1591,12 +1096,9 @@
       "description": "The MSA V-Gard Helmet, with its distinctive trademark \u201cV\u201d design, is a world recognized brand known for comfort, qual...",
       "url": "https://airgas.my/product/msa-v-gard-hard-hat-cap-style/",
       "imgUrl": "https://airgas.my/wp-content/uploads/2024/07/1000342894-scaled.jpg",
-      "brand": "MSA Safety",
+      "brand": "MSA",
       "industry": "PPE",
-      "subCategory": "General Equipment",
-      "industries": [
-        "PPE"
-      ]
+      "subCategory": "General Equipment"
     },
     {
       "id": 4644,
@@ -1606,12 +1108,7 @@
       "imgUrl": "https://airgas.my/wp-content/uploads/2023/03/49f18353-105a-4195-b651-ef157fe2b534.jpeg",
       "brand": "Hornung",
       "industry": "Gases & Equipment",
-      "subCategory": "General Equipment",
-      "industries": [
-        "Gases & Equipment",
-        "Maritime & Offshore",
-        "Oil & Gas"
-      ]
+      "subCategory": "General Equipment"
     },
     {
       "id": 4635,
@@ -1620,14 +1117,8 @@
       "url": "https://airgas.my/product/hornung-pid3-4-dome-pressure-regulator/",
       "imgUrl": "https://airgas.my/wp-content/uploads/2023/03/dcb31829-0be1-436e-a225-09f87989a8f7.jpeg",
       "brand": "Hornung",
-      "industry": "Gas Calibration",
-      "subCategory": "General Equipment",
-      "industries": [
-        "Gas Calibration",
-        "Gases & Equipment",
-        "Maritime & Offshore",
-        "Oil & Gas"
-      ]
+      "industry": "Gases & Equipment",
+      "subCategory": "General Equipment"
     },
     {
       "id": 4627,
@@ -1637,12 +1128,7 @@
       "imgUrl": "https://airgas.my/wp-content/uploads/2023/03/d144cdbc-6182-4c24-a5da-5fbaa7a1a9b3.jpeg",
       "brand": "Hornung",
       "industry": "Gases & Equipment",
-      "subCategory": "General Equipment",
-      "industries": [
-        "Gases & Equipment",
-        "Maritime & Offshore",
-        "Oil & Gas"
-      ]
+      "subCategory": "General Equipment"
     },
     {
       "id": 4620,
@@ -1652,12 +1138,7 @@
       "imgUrl": "https://airgas.my/wp-content/uploads/2023/03/702976e5-069e-46cb-9ccb-e6018f51093c.jpeg",
       "brand": "Hornung",
       "industry": "Gases & Equipment",
-      "subCategory": "Gas Storage",
-      "industries": [
-        "Gases & Equipment",
-        "Maritime & Offshore",
-        "Oil & Gas"
-      ]
+      "subCategory": "Gas Storage"
     },
     {
       "id": 4612,
@@ -1667,10 +1148,7 @@
       "imgUrl": "https://airgas.my/wp-content/uploads/2023/03/cfcf0134-da32-4aa2-800f-1d81c7f1cda3.jpeg",
       "brand": "Hornung",
       "industry": "PPE",
-      "subCategory": "General Equipment",
-      "industries": [
-        "PPE"
-      ]
+      "subCategory": "General Equipment"
     },
     {
       "id": 4605,
@@ -1678,15 +1156,9 @@
       "description": "link to MSA webpage",
       "url": "https://airgas.my/product/ultra-elite-ps-maxx-full-face-mask-rubber-headharness-msa-3490006/",
       "imgUrl": "https://airgas.my/wp-content/uploads/2023/03/Screenshot-2023-03-28-225229.png",
-      "brand": "MSA Safety",
+      "brand": "MSA",
       "industry": "Confined Space",
-      "subCategory": "Respiratory Protection",
-      "industries": [
-        "Confined Space",
-        "Maritime & Offshore",
-        "Oil & Gas",
-        "PPE"
-      ]
+      "subCategory": "Respiratory Protection"
     },
     {
       "id": 4603,
@@ -1694,12 +1166,9 @@
       "description": "the catalog link",
       "url": "https://airgas.my/product/bw-intellidox-docking-system1-intellidox-docking-station-for-bw-maxxtii/",
       "imgUrl": "https://airgas.my/wp-content/uploads/2023/03/1000106891.jpg",
-      "brand": "Honeywell",
-      "industry": "Gas Calibration",
-      "subCategory": "General Equipment",
-      "industries": [
-        "Gas Calibration"
-      ]
+      "brand": "Bw",
+      "industry": "PPE",
+      "subCategory": "General Equipment"
     },
     {
       "id": 4595,
@@ -1707,13 +1176,9 @@
       "description": "link to MSA page allows you to focus on your job &#8211; not your harness Featuring a patent-pending RaceFORM&#x2122;...",
       "url": "https://airgas.my/product/v-form-full-body-safety-harness-msa-10205340/",
       "imgUrl": "https://airgas.my/wp-content/uploads/2023/03/Screenshot-2023-03-24-100855.png",
-      "brand": "MSA Safety",
-      "industry": "Confined Space",
-      "subCategory": "General Equipment",
-      "industries": [
-        "Confined Space",
-        "Maritime & Offshore"
-      ]
+      "brand": "MSA",
+      "industry": "PPE",
+      "subCategory": "General Equipment"
     },
     {
       "id": 4592,
@@ -1723,12 +1188,7 @@
       "imgUrl": "https://airgas.my/wp-content/uploads/2023/03/Screenshot-2023-03-23-121156.png",
       "brand": "Airgas Technology",
       "industry": "Gases & Equipment",
-      "subCategory": "General Equipment",
-      "industries": [
-        "Gases & Equipment",
-        "Maritime & Offshore",
-        "Oil & Gas"
-      ]
+      "subCategory": "General Equipment"
     },
     {
       "id": 4586,
@@ -1736,14 +1196,9 @@
       "description": "V-Gard frames for elevated temperature applications Market : food manufacturing / canneries, steel mills, constructio...",
       "url": "https://airgas.my/product/frame-v-gard-et-for-slotted-caps-msa-10115821-10115836/",
       "imgUrl": "https://airgas.my/wp-content/uploads/2023/03/Screenshot-2023-03-21-185904.png",
-      "brand": "MSA Safety",
-      "industry": "Maritime & Offshore",
-      "subCategory": "General Equipment",
-      "industries": [
-        "Maritime & Offshore",
-        "Oil & Gas",
-        "PPE"
-      ]
+      "brand": "MSA",
+      "industry": "PPE",
+      "subCategory": "General Equipment"
     },
     {
       "id": 4584,
@@ -1751,13 +1206,9 @@
       "description": "Products Catalog for SCBA DPI Advance the video DIABLO range is enriched by the ADVANCED apparatus which, besides int...",
       "url": "https://airgas.my/product/scba-dpi-sekur-diablo-advance/",
       "imgUrl": "https://airgas.my/wp-content/uploads/2023/03/Screenshot-2023-03-20-185102.png",
-      "brand": "DPI Sekur",
+      "brand": "DPI SEKUR",
       "industry": "Confined Space",
-      "subCategory": "General Equipment",
-      "industries": [
-        "Confined Space",
-        "Maritime & Offshore"
-      ]
+      "subCategory": "General Equipment"
     },
     {
       "id": 4574,
@@ -1765,15 +1216,9 @@
       "description": "PAB : 951000001 airgas : 003266",
       "url": "https://airgas.my/product/inner-pab-helmet-basket-and-lining/",
       "imgUrl": "https://airgas.my/wp-content/uploads/2023/03/1000098453.jpg",
-      "brand": "PAB",
-      "industry": "Confined Space",
-      "subCategory": "General Equipment",
-      "industries": [
-        "Confined Space",
-        "Maritime & Offshore",
-        "Oil & Gas",
-        "PPE"
-      ]
+      "brand": "Pab",
+      "industry": "Oil & Gas",
+      "subCategory": "General Equipment"
     },
     {
       "id": 4568,
@@ -1781,14 +1226,9 @@
       "description": "the products catalog ITEM NUMBER/UPC \u2013 XPP-5418GX-K01, UPC 0 17398 80620 6 \u2013 XPP-5418RX-K01, UPC 0 17398 80622 0 MARK...",
       "url": "https://airgas.my/product/flash-light-for-fireman-attached-helmet/",
       "imgUrl": "https://airgas.my/wp-content/uploads/2023/03/Screenshot-2023-03-06-110210.png",
-      "brand": "MSA Safety",
-      "industry": "Maritime & Offshore",
-      "subCategory": "General Equipment",
-      "industries": [
-        "Maritime & Offshore",
-        "Oil & Gas",
-        "PPE"
-      ]
+      "brand": "MSA",
+      "industry": "Oil & Gas",
+      "subCategory": "General Equipment"
     },
     {
       "id": 4560,
@@ -1798,12 +1238,7 @@
       "imgUrl": "https://airgas.my/wp-content/uploads/2023/02/Kr.jpg",
       "brand": "Airgas Technology",
       "industry": "Gases & Equipment",
-      "subCategory": "General Equipment",
-      "industries": [
-        "Gases & Equipment",
-        "Maritime & Offshore",
-        "Oil & Gas"
-      ]
+      "subCategory": "General Equipment"
     },
     {
       "id": 4554,
@@ -1811,15 +1246,9 @@
       "description": "this line with 1. 25 ft 2. 10 ft",
       "url": "https://airgas.my/product/sample-line-probe-airline-for-altair-5x-msa-2/",
       "imgUrl": "https://airgas.my/wp-content/uploads/2023/02/1000088095.jpg",
-      "brand": "MSA Safety",
+      "brand": "MSA",
       "industry": "Confined Space",
-      "subCategory": "General Equipment",
-      "industries": [
-        "Confined Space",
-        "Gases & Equipment",
-        "Maritime & Offshore",
-        "Oil & Gas"
-      ]
+      "subCategory": "General Equipment"
     },
     {
       "id": 4551,
@@ -1827,15 +1256,9 @@
       "description": "details link to MSA Have 10ft and 25ft",
       "url": "https://airgas.my/product/sample-line-probe-airline-for-altair-5x-msa10040664-airgas003252/",
       "imgUrl": "https://airgas.my/wp-content/uploads/2023/02/1000088093.jpg",
-      "brand": "MSA Safety",
+      "brand": "MSA",
       "industry": "Confined Space",
-      "subCategory": "General Equipment",
-      "industries": [
-        "Confined Space",
-        "Gases & Equipment",
-        "Maritime & Offshore",
-        "Oil & Gas"
-      ]
+      "subCategory": "General Equipment"
     },
     {
       "id": 4547,
@@ -1845,13 +1268,7 @@
       "imgUrl": "https://airgas.my/wp-content/uploads/2023/02/1000088061.jpg",
       "brand": "Honeywell",
       "industry": "Confined Space",
-      "subCategory": "Gas Storage",
-      "industries": [
-        "Confined Space",
-        "Gases & Equipment",
-        "Maritime & Offshore",
-        "Oil & Gas"
-      ]
+      "subCategory": "Gas Storage"
     },
     {
       "id": 4545,
@@ -1860,13 +1277,8 @@
       "url": "https://airgas.my/product/medium-duty-15mil-13-chemical-resistant-flocklined-nitrilegnf1513/",
       "imgUrl": "https://airgas.my/wp-content/uploads/2023/02/15554.jpg",
       "brand": "Airgas Technology",
-      "industry": "Maritime & Offshore",
-      "subCategory": "General Equipment",
-      "industries": [
-        "Maritime & Offshore",
-        "Oil & Gas",
-        "PPE"
-      ]
+      "industry": "Oil & Gas",
+      "subCategory": "General Equipment"
     },
     {
       "id": 4543,
@@ -1876,10 +1288,7 @@
       "imgUrl": "https://airgas.my/wp-content/uploads/2023/02/10736.jpg",
       "brand": "Airgas Technology",
       "industry": "PPE",
-      "subCategory": "General Equipment",
-      "industries": [
-        "PPE"
-      ]
+      "subCategory": "General Equipment"
     },
     {
       "id": 4541,
@@ -1889,10 +1298,7 @@
       "imgUrl": "https://airgas.my/wp-content/uploads/2023/02/10743.jpg",
       "brand": "Airgas Technology",
       "industry": "PPE",
-      "subCategory": "General Equipment",
-      "industries": [
-        "PPE"
-      ]
+      "subCategory": "General Equipment"
     },
     {
       "id": 4535,
@@ -1901,13 +1307,8 @@
       "url": "https://airgas.my/product/anti-impact-cut-resistant-glove/",
       "imgUrl": "https://airgas.my/wp-content/uploads/2023/02/15434.jpg",
       "brand": "Airgas Technology",
-      "industry": "Maritime & Offshore",
-      "subCategory": "General Equipment",
-      "industries": [
-        "Maritime & Offshore",
-        "Oil & Gas",
-        "PPE"
-      ]
+      "industry": "PPE",
+      "subCategory": "General Equipment"
     },
     {
       "id": 4533,
@@ -1917,10 +1318,7 @@
       "imgUrl": "https://airgas.my/wp-content/uploads/2023/02/10757.jpg",
       "brand": "Airgas Technology",
       "industry": "PPE",
-      "subCategory": "General Equipment",
-      "industries": [
-        "PPE"
-      ]
+      "subCategory": "General Equipment"
     },
     {
       "id": 4531,
@@ -1930,10 +1328,7 @@
       "imgUrl": "https://airgas.my/wp-content/uploads/2023/02/10753.jpg",
       "brand": "Airgas Technology",
       "industry": "PPE",
-      "subCategory": "General Equipment",
-      "industries": [
-        "PPE"
-      ]
+      "subCategory": "General Equipment"
     },
     {
       "id": 4526,
@@ -1942,14 +1337,8 @@
       "url": "https://airgas.my/product/portwest-bz12-bizweld-flame-resistant-cape-hood/",
       "imgUrl": "https://airgas.my/wp-content/uploads/2023/02/15169.jpg",
       "brand": "Portwest",
-      "industry": "Maritime & Offshore",
-      "subCategory": "Welding Equipment",
-      "industries": [
-        "Maritime & Offshore",
-        "Oil & Gas",
-        "PPE",
-        "Welding"
-      ]
+      "industry": "Welding",
+      "subCategory": "Welding Equipment"
     },
     {
       "id": 4522,
@@ -1957,12 +1346,9 @@
       "description": "-Made with soft foam PU which are easy to insert correctly due to the tapered shape and moderate slow expansion rate....",
       "url": "https://airgas.my/product/easyfit-disposable-ear-plugs-uncordedtapered-shapehp101/",
       "imgUrl": "https://airgas.my/wp-content/uploads/2023/02/15363.jpg",
-      "brand": "Honeywell",
+      "brand": "Airgas Technology",
       "industry": "PPE",
-      "subCategory": "General Equipment",
-      "industries": [
-        "PPE"
-      ]
+      "subCategory": "General Equipment"
     },
     {
       "id": 4517,
@@ -1971,13 +1357,8 @@
       "url": "https://airgas.my/product/proguard-advantage-i-safety-helmet-ratchet-system/",
       "imgUrl": "https://airgas.my/wp-content/uploads/2023/02/15162.jpg",
       "brand": "Airgas Technology",
-      "industry": "Maritime & Offshore",
-      "subCategory": "General Equipment",
-      "industries": [
-        "Maritime & Offshore",
-        "Oil & Gas",
-        "PPE"
-      ]
+      "industry": "PPE",
+      "subCategory": "General Equipment"
     },
     {
       "id": 4514,
@@ -1985,12 +1366,9 @@
       "description": "Products Details Dirin 500 AB2P3 NBC is a combined filter equipped with a standard threaded connector according to EN...",
       "url": "https://airgas.my/product/filters-a2b2p3-r-d-nbc-dirin-500/",
       "imgUrl": "https://airgas.my/wp-content/uploads/2023/01/Screenshot-2023-01-25-153617.jpg",
-      "brand": "DPI Sekur",
+      "brand": "Airgas Technology",
       "industry": "PPE",
-      "subCategory": "General Equipment",
-      "industries": [
-        "PPE"
-      ]
+      "subCategory": "General Equipment"
     },
     {
       "id": 4512,
@@ -1998,12 +1376,9 @@
       "description": "Products Details Combined filter for organic vapours having boiling point higher than 65\u00b0C, inorganic gases and vapou...",
       "url": "https://airgas.my/product/respiratory-protection-filter-abek2-dirin-230-sekur/",
       "imgUrl": "https://airgas.my/wp-content/uploads/2023/01/Screenshot-2023-01-25-152912.jpg",
-      "brand": "DPI Sekur",
+      "brand": "Airgas Technology",
       "industry": "PPE",
-      "subCategory": "Respiratory Protection",
-      "industries": [
-        "PPE"
-      ]
+      "subCategory": "Respiratory Protection"
     },
     {
       "id": 4505,
@@ -2013,10 +1388,7 @@
       "imgUrl": "https://airgas.my/wp-content/uploads/2023/01/14504.jpg",
       "brand": "Airgas Technology",
       "industry": "PPE",
-      "subCategory": "General Equipment",
-      "industries": [
-        "PPE"
-      ]
+      "subCategory": "General Equipment"
     },
     {
       "id": 4503,
@@ -2025,13 +1397,8 @@
       "url": "https://airgas.my/product/high-impact-glove-portwest-brand-a721y1r/",
       "imgUrl": "https://airgas.my/wp-content/uploads/2023/01/14503.jpg",
       "brand": "Portwest",
-      "industry": "Maritime & Offshore",
-      "subCategory": "General Equipment",
-      "industries": [
-        "Maritime & Offshore",
-        "Oil & Gas",
-        "PPE"
-      ]
+      "industry": "PPE",
+      "subCategory": "General Equipment"
     },
     {
       "id": 4499,
@@ -2039,14 +1406,9 @@
       "description": "just for china helmet",
       "url": "https://airgas.my/product/msa-chin-strap-88128/",
       "imgUrl": "https://airgas.my/wp-content/uploads/2024/07/1000337006.jpg",
-      "brand": "MSA Safety",
-      "industry": "Maritime & Offshore",
-      "subCategory": "General Equipment",
-      "industries": [
-        "Maritime & Offshore",
-        "Oil & Gas",
-        "PPE"
-      ]
+      "brand": "MSA",
+      "industry": "PPE",
+      "subCategory": "General Equipment"
     },
     {
       "id": 4495,
@@ -2055,13 +1417,8 @@
       "url": "https://airgas.my/product/chem-pro-gnu2218-22mil-18-unlined-nitrile-gloves/",
       "imgUrl": "https://airgas.my/wp-content/uploads/2023/01/14396.jpg",
       "brand": "Airgas Technology",
-      "industry": "Maritime & Offshore",
-      "subCategory": "General Equipment",
-      "industries": [
-        "Maritime & Offshore",
-        "Oil & Gas",
-        "PPE"
-      ]
+      "industry": "PPE",
+      "subCategory": "General Equipment"
     },
     {
       "id": 4493,
@@ -2071,10 +1428,7 @@
       "imgUrl": "https://airgas.my/wp-content/uploads/2023/01/14395.jpg",
       "brand": "Airgas Technology",
       "industry": "PPE",
-      "subCategory": "General Equipment",
-      "industries": [
-        "PPE"
-      ]
+      "subCategory": "General Equipment"
     },
     {
       "id": 4489,
@@ -2084,13 +1438,7 @@
       "imgUrl": "https://airgas.my/wp-content/uploads/2023/01/1000064695-scaled.jpg",
       "brand": "Airgas Technology",
       "industry": "Confined Space",
-      "subCategory": "Gas Storage",
-      "industries": [
-        "Confined Space",
-        "Gases & Equipment",
-        "Maritime & Offshore",
-        "Oil & Gas"
-      ]
+      "subCategory": "Gas Storage"
     },
     {
       "id": 4487,
@@ -2100,10 +1448,7 @@
       "imgUrl": "https://airgas.my/wp-content/uploads/2023/01/14257.jpg",
       "brand": "Delta Plus",
       "industry": "PPE",
-      "subCategory": "General Equipment",
-      "industries": [
-        "PPE"
-      ]
+      "subCategory": "General Equipment"
     },
     {
       "id": 4481,
@@ -2111,14 +1456,9 @@
       "description": "Key Features -Electrostatic discharge protection: Safeguading product integrity &#8211;Polyurethane fingertip coating...",
       "url": "https://airgas.my/product/glove-hyflex-electrostatic-dischange-protection-48-135/",
       "imgUrl": "https://airgas.my/wp-content/uploads/2023/01/1000012828.jpg",
-      "brand": "Ansell",
-      "industry": "Maritime & Offshore",
-      "subCategory": "General Equipment",
-      "industries": [
-        "Maritime & Offshore",
-        "Oil & Gas",
-        "PPE"
-      ]
+      "brand": "Airgas Technology",
+      "industry": "PPE",
+      "subCategory": "General Equipment"
     },
     {
       "id": 4475,
@@ -2127,13 +1467,8 @@
       "url": "https://airgas.my/product/antistatic-pu-finger-glove-a198-portwest003222/",
       "imgUrl": "https://airgas.my/wp-content/uploads/2023/01/13762.jpg",
       "brand": "Portwest",
-      "industry": "Maritime & Offshore",
-      "subCategory": "General Equipment",
-      "industries": [
-        "Maritime & Offshore",
-        "Oil & Gas",
-        "PPE"
-      ]
+      "industry": "PPE",
+      "subCategory": "General Equipment"
     },
     {
       "id": 4472,
@@ -2141,16 +1476,9 @@
       "description": "link to MSA page Outfitted with rapid-response MSA XCell\u00ae sensors, the ALTAIR 4XR Gas Detector is the toughest 4-gas...",
       "url": "https://airgas.my/product/multigas-detector-msa-altair-4xr/",
       "imgUrl": "https://airgas.my/wp-content/uploads/2023/01/Screenshot-2023-01-09-104144.jpg",
-      "brand": "MSA Safety",
+      "brand": "MSA",
       "industry": "Confined Space",
-      "subCategory": "Gas Detection",
-      "industries": [
-        "Confined Space",
-        "Gases & Equipment",
-        "Maritime & Offshore",
-        "Oil & Gas",
-        "Welding"
-      ]
+      "subCategory": "Gas Detection"
     },
     {
       "id": 4453,
@@ -2159,11 +1487,8 @@
       "url": "https://airgas.my/product/1-8m-y-lanyar-with-energy-absorber-003180/",
       "imgUrl": "https://airgas.my/wp-content/uploads/2022/12/12203.jpg",
       "brand": "Airgas Technology",
-      "industry": "Maritime & Offshore",
-      "subCategory": "General Equipment",
-      "industries": [
-        "Maritime & Offshore"
-      ]
+      "industry": "PPE",
+      "subCategory": "General Equipment"
     },
     {
       "id": 4451,
@@ -2173,10 +1498,7 @@
       "imgUrl": "https://airgas.my/wp-content/uploads/2022/12/1000043414-scaled.jpg",
       "brand": "Airgas Technology",
       "industry": "Gases & Equipment",
-      "subCategory": "General Equipment",
-      "industries": [
-        "Gases & Equipment"
-      ]
+      "subCategory": "General Equipment"
     },
     {
       "id": 4444,
@@ -2186,13 +1508,7 @@
       "imgUrl": "https://airgas.my/wp-content/uploads/2022/12/1000047005-scaled.jpg",
       "brand": "Airgas Technology",
       "industry": "Gas Calibration",
-      "subCategory": "General Equipment",
-      "industries": [
-        "Gas Calibration",
-        "Gases & Equipment",
-        "Maritime & Offshore",
-        "Oil & Gas"
-      ]
+      "subCategory": "General Equipment"
     },
     {
       "id": 4440,
@@ -2202,12 +1518,7 @@
       "imgUrl": "https://airgas.my/wp-content/uploads/2022/12/1000058046-scaled.jpg",
       "brand": "Hornung",
       "industry": "Gases & Equipment",
-      "subCategory": "General Equipment",
-      "industries": [
-        "Gases & Equipment",
-        "Maritime & Offshore",
-        "Oil & Gas"
-      ]
+      "subCategory": "General Equipment"
     },
     {
       "id": 4429,
@@ -2217,12 +1528,7 @@
       "imgUrl": "https://airgas.my/wp-content/uploads/2022/12/1000056988-scaled.jpg",
       "brand": "Airgas Technology",
       "industry": "Gases & Equipment",
-      "subCategory": "General Equipment",
-      "industries": [
-        "Gases & Equipment",
-        "Maritime & Offshore",
-        "Oil & Gas"
-      ]
+      "subCategory": "General Equipment"
     },
     {
       "id": 4411,
@@ -2232,10 +1538,7 @@
       "imgUrl": "https://airgas.my/wp-content/uploads/2022/12/1649.jpg",
       "brand": "Airgas Technology",
       "industry": "PPE",
-      "subCategory": "General Equipment",
-      "industries": [
-        "PPE"
-      ]
+      "subCategory": "General Equipment"
     },
     {
       "id": 4408,
@@ -2245,10 +1548,7 @@
       "imgUrl": "https://airgas.my/wp-content/uploads/2022/12/1647.jpg",
       "brand": "Airgas Technology",
       "industry": "PPE",
-      "subCategory": "General Equipment",
-      "industries": [
-        "PPE"
-      ]
+      "subCategory": "General Equipment"
     },
     {
       "id": 4404,
@@ -2256,12 +1556,9 @@
       "description": "Features : Flexible Multi-Process Capability Including stick, DC TIG, MIG, flux-cored welding and carbon arc gouging...",
       "url": "https://airgas.my/product/austcorp-sa5000i-advance/",
       "imgUrl": "https://airgas.my/wp-content/uploads/2022/12/1577-1.jpg",
-      "brand": "AustCorp",
+      "brand": "Austcorp",
       "industry": "Welding",
-      "subCategory": "General Equipment",
-      "industries": [
-        "Welding"
-      ]
+      "subCategory": "General Equipment"
     },
     {
       "id": 4397,
@@ -2271,12 +1568,7 @@
       "imgUrl": "https://airgas.my/wp-content/uploads/2022/12/1000054663.jpg",
       "brand": "Airgas Technology",
       "industry": "Gases & Equipment",
-      "subCategory": "Gas Storage",
-      "industries": [
-        "Gases & Equipment",
-        "Maritime & Offshore",
-        "Oil & Gas"
-      ]
+      "subCategory": "Gas Storage"
     },
     {
       "id": 4355,
@@ -2284,12 +1576,9 @@
       "description": "V-Gard\u00ae Full Brim Hard HatsThe MSA V-Gard Helmet, with its distinctive trademark \u201cV\u201d design, is a world recognized br...",
       "url": "https://airgas.my/product/msa-v-gard-full-brim-safety-hats-w-fas-trac-suspension003209/",
       "imgUrl": "https://airgas.my/wp-content/uploads/2024/07/1000342889-scaled.jpg",
-      "brand": "MSA Safety",
+      "brand": "MSA",
       "industry": "PPE",
-      "subCategory": "General Equipment",
-      "industries": [
-        "PPE"
-      ]
+      "subCategory": "General Equipment"
     },
     {
       "id": 4336,
@@ -2297,15 +1586,9 @@
       "description": "Features &amp; Benefits PRODUCTS CATALOG The PremAire Combination, a Combination Supplied Airline Respirator with com...",
       "url": "https://airgas.my/product/breathing-airline-escape-set-msa-premaire-combination-with-2l-composite-cylinder-10222823/",
       "imgUrl": "https://airgas.my/wp-content/uploads/2022/12/Screenshot-2022-12-07-201223.jpg",
-      "brand": "MSA Safety",
+      "brand": "MSA",
       "industry": "Confined Space",
-      "subCategory": "Gas Storage",
-      "industries": [
-        "Confined Space",
-        "Gases & Equipment",
-        "Maritime & Offshore",
-        "Oil & Gas"
-      ]
+      "subCategory": "Gas Storage"
     },
     {
       "id": 4334,
@@ -2313,14 +1596,9 @@
       "description": "PRODUCTS CATALOG Specialty \u2022 Ease of changing compressed air cylinders \u2022 Single cylinder usage possible \u2022 Cylinders a...",
       "url": "https://airgas.my/product/breathing-airline-trolley-msa-aircart-4-unit-6-8l-composite-cylinder-hose-2-x-10-meter-10222630/",
       "imgUrl": "https://airgas.my/wp-content/uploads/2022/12/Screenshot-2022-12-07-200111.jpg",
-      "brand": "MSA Safety",
+      "brand": "MSA",
       "industry": "Gases & Equipment",
-      "subCategory": "Gas Storage",
-      "industries": [
-        "Gases & Equipment",
-        "Maritime & Offshore",
-        "Oil & Gas"
-      ]
+      "subCategory": "Gas Storage"
     },
     {
       "id": 4324,
@@ -2329,12 +1607,8 @@
       "url": "https://airgas.my/product/portwest-biztex-microporous-coverall-type-5-6-st40/",
       "imgUrl": "https://airgas.my/wp-content/uploads/2022/12/1000907190.jpg",
       "brand": "Airgas Technology",
-      "industry": "Maritime & Offshore",
-      "subCategory": "Body Protection",
-      "industries": [
-        "Maritime & Offshore",
-        "Oil & Gas"
-      ]
+      "industry": "Oil & Gas",
+      "subCategory": "General Equipment"
     },
     {
       "id": 4281,
@@ -2344,11 +1618,7 @@
       "imgUrl": "https://airgas.my/wp-content/uploads/2022/12/Screenshot-2022-12-01-124659.jpg",
       "brand": "Shell",
       "industry": "Confined Space",
-      "subCategory": "Gas Detection",
-      "industries": [
-        "Confined Space",
-        "Maritime & Offshore"
-      ]
+      "subCategory": "Gas Detection"
     },
     {
       "id": 4275,
@@ -2357,13 +1627,8 @@
       "url": "https://airgas.my/product/safety-gloves-est-5pcs-portwest-a197/",
       "imgUrl": "https://airgas.my/wp-content/uploads/2022/11/10741.jpg",
       "brand": "Portwest",
-      "industry": "Maritime & Offshore",
-      "subCategory": "General Equipment",
-      "industries": [
-        "Maritime & Offshore",
-        "Oil & Gas",
-        "PPE"
-      ]
+      "industry": "PPE",
+      "subCategory": "General Equipment"
     },
     {
       "id": 4273,
@@ -2371,12 +1636,9 @@
       "description": "*one pair price/with casing pair *Corded (PVC), Four Flange Shope *NRR : 27 dB *Material: TRP, Colour: Yellow",
       "url": "https://airgas.my/product/ear-plug-reusable-corded-with-casing/",
       "imgUrl": "https://airgas.my/wp-content/uploads/2022/11/10739.jpg",
-      "brand": "Honeywell",
+      "brand": "Airgas Technology",
       "industry": "PPE",
-      "subCategory": "General Equipment",
-      "industries": [
-        "PPE"
-      ]
+      "subCategory": "General Equipment"
     },
     {
       "id": 4269,
@@ -2386,10 +1648,7 @@
       "imgUrl": "https://airgas.my/wp-content/uploads/2022/11/10736.jpg",
       "brand": "Airgas Technology",
       "industry": "PPE",
-      "subCategory": "General Equipment",
-      "industries": [
-        "PPE"
-      ]
+      "subCategory": "General Equipment"
     },
     {
       "id": 4264,
@@ -2397,12 +1656,9 @@
       "description": "products details",
       "url": "https://airgas.my/product/kx3-drawstring-combat-trouser/",
       "imgUrl": "https://airgas.my/wp-content/uploads/2022/11/10900.jpg",
-      "brand": "Portwest",
+      "brand": "Airgas Technology",
       "industry": "PPE",
-      "subCategory": "Body Protection",
-      "industries": [
-        "PPE"
-      ]
+      "subCategory": "General Equipment"
     },
     {
       "id": 4260,
@@ -2412,10 +1668,7 @@
       "imgUrl": "https://airgas.my/wp-content/uploads/2022/11/1000006212-scaled.jpg",
       "brand": "Airgas Technology",
       "industry": "PPE",
-      "subCategory": "General Equipment",
-      "industries": [
-        "PPE"
-      ]
+      "subCategory": "General Equipment"
     },
     {
       "id": 4256,
@@ -2425,10 +1678,7 @@
       "imgUrl": "https://airgas.my/wp-content/uploads/2022/11/Screenshot-2022-11-14-124733.jpg",
       "brand": "Airgas Technology",
       "industry": "PPE",
-      "subCategory": "General Equipment",
-      "industries": [
-        "PPE"
-      ]
+      "subCategory": "General Equipment"
     },
     {
       "id": 4254,
@@ -2436,14 +1686,9 @@
       "description": "",
       "url": "https://airgas.my/product/lw-compressor-safety-valve-330bar-p-n-001816/",
       "imgUrl": "https://airgas.my/wp-content/uploads/2022/11/Screenshot-2022-11-09-214611.jpg",
-      "brand": "L&W Compressor",
+      "brand": "Airgas Technology",
       "industry": "Gases & Equipment",
-      "subCategory": "General Equipment",
-      "industries": [
-        "Gases & Equipment",
-        "Maritime & Offshore",
-        "Oil & Gas"
-      ]
+      "subCategory": "General Equipment"
     },
     {
       "id": 4252,
@@ -2453,12 +1698,7 @@
       "imgUrl": "https://airgas.my/wp-content/uploads/2022/11/H2.jpg",
       "brand": "Airgas Technology",
       "industry": "Gases & Equipment",
-      "subCategory": "Gas Storage",
-      "industries": [
-        "Gases & Equipment",
-        "Maritime & Offshore",
-        "Oil & Gas"
-      ]
+      "subCategory": "Gas Storage"
     },
     {
       "id": 4248,
@@ -2466,12 +1706,9 @@
       "description": "butyl material",
       "url": "https://airgas.my/product/full-facemask-avec/",
       "imgUrl": "https://airgas.my/wp-content/uploads/2022/11/1000025679-scaled.jpg",
-      "brand": "AVEC",
+      "brand": "Avec",
       "industry": "PPE",
-      "subCategory": "Respiratory Protection",
-      "industries": [
-        "PPE"
-      ]
+      "subCategory": "Respiratory Protection"
     },
     {
       "id": 4238,
@@ -2479,14 +1716,9 @@
       "description": "products details certificate",
       "url": "https://airgas.my/product/escape-hood/",
       "imgUrl": "https://airgas.my/wp-content/uploads/2022/11/1000025610-scaled.jpg",
-      "brand": "AVEC",
+      "brand": "Avec",
       "industry": "Confined Space",
-      "subCategory": "General Equipment",
-      "industries": [
-        "Confined Space",
-        "Maritime & Offshore",
-        "Oil & Gas"
-      ]
+      "subCategory": "General Equipment"
     },
     {
       "id": 4228,
@@ -2496,13 +1728,7 @@
       "imgUrl": "https://airgas.my/wp-content/uploads/2022/10/1000022923-1.jpg",
       "brand": "Airgas Technology",
       "industry": "Gas Calibration",
-      "subCategory": "Gas Storage",
-      "industries": [
-        "Gas Calibration",
-        "Gases & Equipment",
-        "Maritime & Offshore",
-        "Oil & Gas"
-      ]
+      "subCategory": "Gas Storage"
     },
     {
       "id": 4222,
@@ -2510,14 +1736,9 @@
       "description": "Fresh Air Hose BA A-Type Apparatus A-TYPE FRESH AIR BREATHING APPARATUS HOSE The device is a Type A respirator outsid...",
       "url": "https://airgas.my/product/fresh-air-hose-breathing-apparatuses-a-type-10m-fresh-air-light-duty-hose-sekur-dpi-44370508/",
       "imgUrl": "https://airgas.my/wp-content/uploads/2022/10/Screenshot-2022-10-18-235945.jpg",
-      "brand": "DPI Sekur",
-      "industry": "Gases & Equipment",
-      "subCategory": "General Equipment",
-      "industries": [
-        "Gases & Equipment",
-        "Maritime & Offshore",
-        "Oil & Gas"
-      ]
+      "brand": "Airgas Technology",
+      "industry": "PPE",
+      "subCategory": "General Equipment"
     },
     {
       "id": 4218,
@@ -2525,12 +1746,9 @@
       "description": "Fresh Air Hose BA A-Type Apparatus A-TYPE FRESH AIR BREATHING APPARATUS WITH FILTER \u2022 Perfect for application without...",
       "url": "https://airgas.my/product/fresh-air-hose-breathing-apparatuses-a-type-with-filter-sekur-dpi-copy-copy/",
       "imgUrl": "https://airgas.my/wp-content/uploads/2022/10/Screenshot-2022-10-18-234711.jpg",
-      "brand": "DPI Sekur",
-      "industry": "Gases & Equipment",
-      "subCategory": "General Equipment",
-      "industries": [
-        "Gases & Equipment"
-      ]
+      "brand": "Airgas Technology",
+      "industry": "PPE",
+      "subCategory": "General Equipment"
     },
     {
       "id": 4217,
@@ -2538,14 +1756,9 @@
       "description": "Fresh Air Hose BA A-Type Apparatus A-TYPE FRESH BREATHING APPARATUS FOR USE WITH BLOWER \u2022 Perfect for application wit...",
       "url": "https://airgas.my/product/fresh-air-hose-breathing-apparatuses-a-type-with-filter-sekur-dpi-copy/",
       "imgUrl": "https://airgas.my/wp-content/uploads/2022/05/Screenshot-2022-05-04-215940.jpg",
-      "brand": "DPI Sekur",
-      "industry": "Confined Space",
-      "subCategory": "General Equipment",
-      "industries": [
-        "Confined Space",
-        "Gases & Equipment",
-        "Maritime & Offshore"
-      ]
+      "brand": "Airgas Technology",
+      "industry": "PPE",
+      "subCategory": "General Equipment"
     },
     {
       "id": 4211,
@@ -2555,27 +1768,17 @@
       "imgUrl": "https://airgas.my/wp-content/uploads/2022/10/ballon-47L-scaled.jpg",
       "brand": "Airgas Technology",
       "industry": "Gases & Equipment",
-      "subCategory": "Gas Storage",
-      "industries": [
-        "Gases & Equipment",
-        "Maritime & Offshore",
-        "Oil & Gas"
-      ]
+      "subCategory": "Gas Storage"
     },
     {
       "id": 4206,
       "name": "Helium Balloon Gas with refilled cylinder for 125pcs",
       "description": "Helium Balloon gas with 10L cylinder cylinder vol. 10L pressure filling . 100bar Helium balloon gas content : 1000L N...",
       "url": "https://airgas.my/product/helium-balloon-gas-with-refilled-cylinder-for-125pcs/",
-      "imgUrl": "assets/ServicesandMaintenance/Helium Balloon Gas with refilled cylinder for 125pcs.png",
+      "imgUrl": "https://airgas.my/wp-content/uploads/2022/10/ballon-airgas-3-scaled.jpg",
       "brand": "Airgas Technology",
-      "industry": "Gases & Equipment",
-      "subCategory": "General Equipment",
-      "industries": [
-        "Gases & Equipment",
-        "Maritime & Offshore",
-        "Oil & Gas"
-      ]
+      "industry": "Services & Maintenance",
+      "subCategory": "Gas Storage"
     },
     {
       "id": 4200,
@@ -2585,12 +1788,7 @@
       "imgUrl": "https://airgas.my/wp-content/uploads/2022/10/Screenshot-2022-10-12-104307.jpg",
       "brand": "Airgas Technology",
       "industry": "Gases & Equipment",
-      "subCategory": "General Equipment",
-      "industries": [
-        "Gases & Equipment",
-        "Maritime & Offshore",
-        "Oil & Gas"
-      ]
+      "subCategory": "General Equipment"
     },
     {
       "id": 4191,
@@ -2600,12 +1798,7 @@
       "imgUrl": "https://airgas.my/wp-content/uploads/2022/10/1000013783-scaled.jpg",
       "brand": "Airgas Technology",
       "industry": "Gases & Equipment",
-      "subCategory": "General Equipment",
-      "industries": [
-        "Gases & Equipment",
-        "Maritime & Offshore",
-        "Oil & Gas"
-      ]
+      "subCategory": "General Equipment"
     },
     {
       "id": 4151,
@@ -2613,13 +1806,9 @@
       "description": "link to MSA webpage product catalogue This highly visible, one-size-fits-all yellow hood offers protection against sm...",
       "url": "https://airgas.my/product/msa-s-cap-hood/",
       "imgUrl": "https://airgas.my/wp-content/uploads/2022/10/Screenshot-2022-10-09-230657.jpg",
-      "brand": "MSA Safety",
-      "industry": "Maritime & Offshore",
-      "subCategory": "General Equipment",
-      "industries": [
-        "Maritime & Offshore",
-        "Oil & Gas"
-      ]
+      "brand": "MSA",
+      "industry": "PPE",
+      "subCategory": "General Equipment"
     },
     {
       "id": 4150,
@@ -2627,13 +1816,9 @@
       "description": "3464 set A, Light weight cylinder 7.2L (6.8+), type 4, NLL\u2026. with M1 basic backplate and mask 3466 set B, LUXFER US c...",
       "url": "https://airgas.my/product/scba-msa-m1/",
       "imgUrl": "https://airgas.my/wp-content/uploads/2022/10/Screenshot-2022-10-10-125957.jpg",
-      "brand": "MSA Safety",
+      "brand": "MSA",
       "industry": "Confined Space",
-      "subCategory": "General Equipment",
-      "industries": [
-        "Confined Space",
-        "Maritime & Offshore"
-      ]
+      "subCategory": "General Equipment"
     },
     {
       "id": 4145,
@@ -2641,14 +1826,9 @@
       "description": "the video of AirXpress 2 selling guide The MSA AirXpress 2 Fire is a simplistic, reliable and economical SCBA that me...",
       "url": "https://airgas.my/product/scba-msa-airxpress-2-fire/",
       "imgUrl": "https://airgas.my/wp-content/uploads/2022/10/Screenshot-2022-10-09-213722-1.jpg",
-      "brand": "MSA Safety",
+      "brand": "MSA",
       "industry": "Confined Space",
-      "subCategory": "General Equipment",
-      "industries": [
-        "Confined Space",
-        "Maritime & Offshore",
-        "Oil & Gas"
-      ]
+      "subCategory": "General Equipment"
     },
     {
       "id": 4120,
@@ -2656,13 +1836,9 @@
       "description": "Nomex IIIA Pants Royal blue",
       "url": "https://airgas.my/product/product/",
       "imgUrl": "https://airgas.my/wp-content/uploads/2022/10/1000001442-scaled.jpg",
-      "brand": "DuPont",
-      "industry": "Maritime & Offshore",
-      "subCategory": "Body Protection",
-      "industries": [
-        "Maritime & Offshore",
-        "Oil & Gas"
-      ]
+      "brand": "Airgas Technology",
+      "industry": "Oil & Gas",
+      "subCategory": "General Equipment"
     },
     {
       "id": 4111,
@@ -2672,12 +1848,7 @@
       "imgUrl": "",
       "brand": "Hornung",
       "industry": "Gases & Equipment",
-      "subCategory": "General Equipment",
-      "industries": [
-        "Gases & Equipment",
-        "Maritime & Offshore",
-        "Oil & Gas"
-      ]
+      "subCategory": "General Equipment"
     },
     {
       "id": 4092,
@@ -2685,13 +1856,9 @@
       "description": "the SEKUR ESCAPE esCAPe catalog User manual VIDEO S\u00e8kur esCAPe is an escape device with filter that protects respirat...",
       "url": "https://airgas.my/product/sekur-escape-escape/",
       "imgUrl": "https://airgas.my/wp-content/uploads/2022/10/Screenshot-2022-10-04-153617.jpg",
-      "brand": "DPI Sekur",
+      "brand": "Airgas Technology",
       "industry": "Confined Space",
-      "subCategory": "General Equipment",
-      "industries": [
-        "Confined Space",
-        "Maritime & Offshore"
-      ]
+      "subCategory": "General Equipment"
     },
     {
       "id": 4077,
@@ -2699,14 +1866,9 @@
       "description": "Proban Coverall which is fire retardant treated cotton 220gram,colour orange.",
       "url": "https://airgas.my/product/orange-coverall/",
       "imgUrl": "https://airgas.my/wp-content/uploads/2022/10/1000001365-scaled.jpg",
-      "brand": "Proban",
-      "industry": "Maritime & Offshore",
-      "subCategory": "Body Protection",
-      "industries": [
-        "Maritime & Offshore",
-        "Oil & Gas",
-        "PPE"
-      ]
+      "brand": "Airgas Technology",
+      "industry": "PPE",
+      "subCategory": "Body Protection"
     },
     {
       "id": 4068,
@@ -2715,14 +1877,8 @@
       "url": "https://airgas.my/product/cylinder-welded-1-5l/",
       "imgUrl": "https://airgas.my/wp-content/uploads/2022/10/1000009563-scaled.jpg",
       "brand": "Airgas Technology",
-      "industry": "Gases & Equipment",
-      "subCategory": "Gas Storage",
-      "industries": [
-        "Gases & Equipment",
-        "Maritime & Offshore",
-        "Oil & Gas",
-        "Welding"
-      ]
+      "industry": "Welding",
+      "subCategory": "Gas Storage"
     },
     {
       "id": 4044,
@@ -2731,13 +1887,8 @@
       "url": "https://airgas.my/product/kermel-fabric-coverall/",
       "imgUrl": "https://airgas.my/wp-content/uploads/2022/10/1000001376-scaled.jpg",
       "brand": "Kermel",
-      "industry": "Maritime & Offshore",
-      "subCategory": "Body Protection",
-      "industries": [
-        "Maritime & Offshore",
-        "Oil & Gas",
-        "PPE"
-      ]
+      "industry": "Oil & Gas",
+      "subCategory": "Body Protection"
     },
     {
       "id": 3997,
@@ -2746,13 +1897,8 @@
       "url": "https://airgas.my/product/pyrovatek/",
       "imgUrl": "https://airgas.my/wp-content/uploads/2022/10/1000001372-scaled.jpg",
       "brand": "Airgas Technology",
-      "industry": "Maritime & Offshore",
-      "subCategory": "Body Protection",
-      "industries": [
-        "Maritime & Offshore",
-        "Oil & Gas",
-        "PPE"
-      ]
+      "industry": "PPE",
+      "subCategory": "Body Protection"
     },
     {
       "id": 3996,
@@ -2760,14 +1906,9 @@
       "description": "ROYAL BLUE Size:S 2pcd,M 4pcs,L 9PCS,XL3 PCCS, XXL7PCS",
       "url": "https://airgas.my/product/nomex-iiia-coverall/",
       "imgUrl": "https://airgas.my/wp-content/uploads/2022/10/1000001477-scaled.jpg",
-      "brand": "DuPont",
-      "industry": "Maritime & Offshore",
-      "subCategory": "Body Protection",
-      "industries": [
-        "Maritime & Offshore",
-        "Oil & Gas",
-        "PPE"
-      ]
+      "brand": "Airgas Technology",
+      "industry": "Oil & Gas",
+      "subCategory": "Body Protection"
     },
     {
       "id": 3990,
@@ -2777,12 +1918,7 @@
       "imgUrl": "https://airgas.my/wp-content/uploads/2022/09/1000008090.jpg",
       "brand": "Airgas Technology",
       "industry": "Gases & Equipment",
-      "subCategory": "General Equipment",
-      "industries": [
-        "Gases & Equipment",
-        "Maritime & Offshore",
-        "Oil & Gas"
-      ]
+      "subCategory": "General Equipment"
     },
     {
       "id": 3977,
@@ -2790,14 +1926,9 @@
       "description": "",
       "url": "https://airgas.my/product/sekur-navy-eebd-low-pressure-spiral-hose-43716012/",
       "imgUrl": "https://airgas.my/wp-content/uploads/2022/09/Screenshot-2022-09-28-131709.jpg",
-      "brand": "DPI Sekur",
+      "brand": "Airgas Technology",
       "industry": "Confined Space",
-      "subCategory": "General Equipment",
-      "industries": [
-        "Confined Space",
-        "Gases & Equipment",
-        "Maritime & Offshore"
-      ]
+      "subCategory": "General Equipment"
     },
     {
       "id": 3976,
@@ -2807,12 +1938,7 @@
       "imgUrl": "https://airgas.my/wp-content/uploads/2022/09/1000005125.jpg",
       "brand": "Airgas Technology",
       "industry": "Gases & Equipment",
-      "subCategory": "General Equipment",
-      "industries": [
-        "Gases & Equipment",
-        "Maritime & Offshore",
-        "Oil & Gas"
-      ]
+      "subCategory": "General Equipment"
     },
     {
       "id": 3973,
@@ -2822,13 +1948,7 @@
       "imgUrl": "https://airgas.my/wp-content/uploads/2022/09/1000005119.jpg",
       "brand": "Airgas Technology",
       "industry": "Gas Calibration",
-      "subCategory": "General Equipment",
-      "industries": [
-        "Gas Calibration",
-        "Gases & Equipment",
-        "Maritime & Offshore",
-        "Oil & Gas"
-      ]
+      "subCategory": "General Equipment"
     },
     {
       "id": 3967,
@@ -2836,12 +1956,9 @@
       "description": "Products Details Complying with the requirements of UNI EN 136 (CL3) and developed by the CBRN school and by the spec...",
       "url": "https://airgas.my/product/dpi-sekur-m21-cbrn-full-face-mask/",
       "imgUrl": "https://airgas.my/wp-content/uploads/2022/09/Screenshot-2022-09-25-110834.jpg",
-      "brand": "DPI Sekur",
+      "brand": "DPI SEKUR",
       "industry": "PPE",
-      "subCategory": "Respiratory Protection",
-      "industries": [
-        "PPE"
-      ]
+      "subCategory": "Respiratory Protection"
     },
     {
       "id": 3964,
@@ -2849,12 +1966,9 @@
       "description": "products details Complying with the requirements of UNI EN 136 (CL3), for use with filters with STANAG threaded conne...",
       "url": "https://airgas.my/product/dpi-sekur-idea-cbrn-full-face-mask/",
       "imgUrl": "https://airgas.my/wp-content/uploads/2022/09/Screenshot-2022-09-25-110851.jpg",
-      "brand": "DPI Sekur",
+      "brand": "DPI SEKUR",
       "industry": "PPE",
-      "subCategory": "Respiratory Protection",
-      "industries": [
-        "PPE"
-      ]
+      "subCategory": "Respiratory Protection"
     },
     {
       "id": 3959,
@@ -2862,12 +1976,9 @@
       "description": "&nbsp; catalog for facemask 702 Watch the video and discover all the features",
       "url": "https://airgas.my/product/dpi-sekur-new-full-face-mask-c-702/",
       "imgUrl": "https://airgas.my/wp-content/uploads/2022/09/Screenshot-2022-09-25-105130.jpg",
-      "brand": "DPI Sekur",
+      "brand": "DPI SEKUR",
       "industry": "PPE",
-      "subCategory": "Respiratory Protection",
-      "industries": [
-        "PPE"
-      ]
+      "subCategory": "Respiratory Protection"
     },
     {
       "id": 3912,
@@ -2877,12 +1988,7 @@
       "imgUrl": "https://airgas.my/wp-content/uploads/2022/09/48bc81d3-7909-4c6a-a4a6-2592798028ff.jpeg",
       "brand": "Hornung",
       "industry": "Gases & Equipment",
-      "subCategory": "General Equipment",
-      "industries": [
-        "Gases & Equipment",
-        "Maritime & Offshore",
-        "Oil & Gas"
-      ]
+      "subCategory": "General Equipment"
     },
     {
       "id": 3909,
@@ -2892,10 +1998,7 @@
       "imgUrl": "https://airgas.my/wp-content/uploads/2022/09/img_8686.jpeg",
       "brand": "Hornung",
       "industry": "PPE",
-      "subCategory": "General Equipment",
-      "industries": [
-        "PPE"
-      ]
+      "subCategory": "General Equipment"
     },
     {
       "id": 3906,
@@ -2905,12 +2008,7 @@
       "imgUrl": "https://airgas.my/wp-content/uploads/2022/09/img_8684.jpeg",
       "brand": "Hornung",
       "industry": "Gases & Equipment",
-      "subCategory": "General Equipment",
-      "industries": [
-        "Gases & Equipment",
-        "Maritime & Offshore",
-        "Oil & Gas"
-      ]
+      "subCategory": "General Equipment"
     },
     {
       "id": 3903,
@@ -2920,12 +2018,7 @@
       "imgUrl": "https://airgas.my/wp-content/uploads/2022/09/img_8681.jpeg",
       "brand": "Hornung",
       "industry": "Gases & Equipment",
-      "subCategory": "General Equipment",
-      "industries": [
-        "Gases & Equipment",
-        "Maritime & Offshore",
-        "Oil & Gas"
-      ]
+      "subCategory": "General Equipment"
     },
     {
       "id": 3900,
@@ -2935,12 +2028,7 @@
       "imgUrl": "https://airgas.my/wp-content/uploads/2022/09/2931e033-6a25-4b68-ab23-eadc29a88c4a.jpeg",
       "brand": "Hornung",
       "industry": "Gases & Equipment",
-      "subCategory": "General Equipment",
-      "industries": [
-        "Gases & Equipment",
-        "Maritime & Offshore",
-        "Oil & Gas"
-      ]
+      "subCategory": "General Equipment"
     },
     {
       "id": 3898,
@@ -2950,12 +2038,7 @@
       "imgUrl": "https://airgas.my/wp-content/uploads/2022/09/Screenshot-2022-12-31-162015.jpg",
       "brand": "Hornung",
       "industry": "Gases & Equipment",
-      "subCategory": "General Equipment",
-      "industries": [
-        "Gases & Equipment",
-        "Maritime & Offshore",
-        "Oil & Gas"
-      ]
+      "subCategory": "General Equipment"
     },
     {
       "id": 3895,
@@ -2965,12 +2048,7 @@
       "imgUrl": "https://airgas.my/wp-content/uploads/2022/09/img_8676.jpeg",
       "brand": "Hornung",
       "industry": "Gases & Equipment",
-      "subCategory": "General Equipment",
-      "industries": [
-        "Gases & Equipment",
-        "Maritime & Offshore",
-        "Oil & Gas"
-      ]
+      "subCategory": "General Equipment"
     },
     {
       "id": 3890,
@@ -2980,12 +2058,7 @@
       "imgUrl": "https://airgas.my/wp-content/uploads/2022/09/img_8672.jpeg",
       "brand": "Hornung",
       "industry": "Gases & Equipment",
-      "subCategory": "General Equipment",
-      "industries": [
-        "Gases & Equipment",
-        "Maritime & Offshore",
-        "Oil & Gas"
-      ]
+      "subCategory": "General Equipment"
     },
     {
       "id": 3888,
@@ -2995,12 +2068,7 @@
       "imgUrl": "https://airgas.my/wp-content/uploads/2022/09/6a0a107c-821c-4864-a95a-69eceb0f5de7.jpeg",
       "brand": "Hornung",
       "industry": "Gases & Equipment",
-      "subCategory": "General Equipment",
-      "industries": [
-        "Gases & Equipment",
-        "Maritime & Offshore",
-        "Oil & Gas"
-      ]
+      "subCategory": "General Equipment"
     },
     {
       "id": 3885,
@@ -3010,12 +2078,7 @@
       "imgUrl": "https://airgas.my/wp-content/uploads/2022/09/img_8668.jpeg",
       "brand": "Hornung",
       "industry": "Gases & Equipment",
-      "subCategory": "General Equipment",
-      "industries": [
-        "Gases & Equipment",
-        "Maritime & Offshore",
-        "Oil & Gas"
-      ]
+      "subCategory": "General Equipment"
     },
     {
       "id": 3882,
@@ -3025,12 +2088,7 @@
       "imgUrl": "https://airgas.my/wp-content/uploads/2022/09/93a59d37-aaba-4461-b69b-e68319ef4dc5.jpeg",
       "brand": "Hornung",
       "industry": "Gases & Equipment",
-      "subCategory": "General Equipment",
-      "industries": [
-        "Gases & Equipment",
-        "Maritime & Offshore",
-        "Oil & Gas"
-      ]
+      "subCategory": "General Equipment"
     },
     {
       "id": 3878,
@@ -3040,10 +2098,7 @@
       "imgUrl": "https://airgas.my/wp-content/uploads/2022/09/c8c636c7-0fe9-479e-b968-3130ef4ffd85.jpeg",
       "brand": "Hornung",
       "industry": "PPE",
-      "subCategory": "General Equipment",
-      "industries": [
-        "PPE"
-      ]
+      "subCategory": "General Equipment"
     },
     {
       "id": 3875,
@@ -3053,12 +2108,7 @@
       "imgUrl": "https://airgas.my/wp-content/uploads/2022/09/cc05d1bb-e21a-4028-8c95-ded7fcd3834b.jpeg",
       "brand": "Hornung",
       "industry": "Gases & Equipment",
-      "subCategory": "General Equipment",
-      "industries": [
-        "Gases & Equipment",
-        "Maritime & Offshore",
-        "Oil & Gas"
-      ]
+      "subCategory": "General Equipment"
     },
     {
       "id": 3872,
@@ -3068,12 +2118,7 @@
       "imgUrl": "https://airgas.my/wp-content/uploads/2022/09/img_8658.jpeg",
       "brand": "Hornung",
       "industry": "Gases & Equipment",
-      "subCategory": "General Equipment",
-      "industries": [
-        "Gases & Equipment",
-        "Maritime & Offshore",
-        "Oil & Gas"
-      ]
+      "subCategory": "General Equipment"
     },
     {
       "id": 3869,
@@ -3083,12 +2128,7 @@
       "imgUrl": "https://airgas.my/wp-content/uploads/2022/09/7ed8410d-8670-4c4d-aee3-7befaac8fcd4.jpeg",
       "brand": "Hornung",
       "industry": "Gases & Equipment",
-      "subCategory": "General Equipment",
-      "industries": [
-        "Gases & Equipment",
-        "Maritime & Offshore",
-        "Oil & Gas"
-      ]
+      "subCategory": "General Equipment"
     },
     {
       "id": 3866,
@@ -3098,12 +2138,7 @@
       "imgUrl": "https://airgas.my/wp-content/uploads/2022/09/img_8673.jpeg",
       "brand": "Hornung",
       "industry": "Gases & Equipment",
-      "subCategory": "General Equipment",
-      "industries": [
-        "Gases & Equipment",
-        "Maritime & Offshore",
-        "Oil & Gas"
-      ]
+      "subCategory": "General Equipment"
     },
     {
       "id": 3863,
@@ -3113,12 +2148,7 @@
       "imgUrl": "https://airgas.my/wp-content/uploads/2022/09/img_8652.jpeg",
       "brand": "Hornung",
       "industry": "Gases & Equipment",
-      "subCategory": "General Equipment",
-      "industries": [
-        "Gases & Equipment",
-        "Maritime & Offshore",
-        "Oil & Gas"
-      ]
+      "subCategory": "General Equipment"
     },
     {
       "id": 3860,
@@ -3128,12 +2158,7 @@
       "imgUrl": "https://airgas.my/wp-content/uploads/2022/09/e73549a4-ecf7-40e6-b1e4-132ad96839eb.jpeg",
       "brand": "Hornung",
       "industry": "Gases & Equipment",
-      "subCategory": "General Equipment",
-      "industries": [
-        "Gases & Equipment",
-        "Maritime & Offshore",
-        "Oil & Gas"
-      ]
+      "subCategory": "General Equipment"
     },
     {
       "id": 3857,
@@ -3143,12 +2168,7 @@
       "imgUrl": "https://airgas.my/wp-content/uploads/2022/09/0dbffdb9-1dc3-41c0-a391-d7daad5ba24a.jpeg",
       "brand": "Hornung",
       "industry": "Gases & Equipment",
-      "subCategory": "General Equipment",
-      "industries": [
-        "Gases & Equipment",
-        "Maritime & Offshore",
-        "Oil & Gas"
-      ]
+      "subCategory": "General Equipment"
     },
     {
       "id": 3852,
@@ -3158,77 +2178,57 @@
       "imgUrl": "https://airgas.my/wp-content/uploads/2022/09/535892.jpg",
       "brand": "Airgas Technology",
       "industry": "Gases & Equipment",
-      "subCategory": "General Equipment",
-      "industries": [
-        "Gases & Equipment",
-        "Maritime & Offshore",
-        "Oil & Gas"
-      ]
+      "subCategory": "General Equipment"
     },
     {
       "id": 3845,
       "name": "** Services for Airline Escape set with Face Mask fit test with POSICHECK, test including LD valve, first reducing valve,  pressure hose, gauge  and whistle. auto switch valve *cert AS22 #003145",
       "description": "** Services for Airline Escape set with Face Mask fit test with POSICHECK, test including LD valve, first reducing va...",
       "url": "https://airgas.my/product/services-for-airline-escape-set-with-face-mask-fit-test-with-posicheck-test-including-ld-valve-first-reducing-valve-pressure-hose-gauge-and-whistle-auto-switch-valve-cert-as22-003145/",
-      "imgUrl": "assets/ServicesandMaintenance/Services for Airline Escape set with Face Mask fit test with POSICHECK test including LD valve first.png",
+      "imgUrl": "https://airgas.my/wp-content/uploads/2022/01/airline1.jpg",
       "brand": "Airgas Technology",
       "industry": "Services & Maintenance",
-      "subCategory": "Technical Services",
-      "industries": [
-        "Services & Maintenance"
-      ]
+      "subCategory": "Respiratory Protection"
     },
     {
       "id": 3844,
       "name": "** Services for EEBD set, hood inspection, refill B.air, valve test, hose,  *cert AS23 #003023",
       "description": "** Services for EEBD set, hood inspection, refill Breathing air, valve test, hose, *cert AS23",
       "url": "https://airgas.my/product/services-for-eebd-set-hood-inspection-refill-b-air-valve-test-hose-cert-as23-003023/",
-      "imgUrl": "assets/ServicesandMaintenance/Services for EEBD set hood inspection refill Bair valve test hose  cert AS23 003023.png",
+      "imgUrl": "https://airgas.my/wp-content/uploads/2022/01/eebd-sekur.jpg",
       "brand": "Airgas Technology",
       "industry": "Services & Maintenance",
-      "subCategory": "Technical Services",
-      "industries": [
-        "Services & Maintenance"
-      ]
+      "subCategory": "Technical Services"
     },
     {
       "id": 3843,
       "name": "** Services for SCBA backplate inspection, first reducing valve, pressure gauge, hoses,  whistle, cleaning. *cert AS22 #003007",
       "description": "** Services for SCBA backplate inspection, first reducing valve, pressure gauge, hoses, whistle, cleaning. *cert AS22",
       "url": "https://airgas.my/product/services-for-scba-backplate-inspection-first-reducing-valve-pressure-gauge-hoses-whistle-cleaning-cert-as22-003007/",
-      "imgUrl": "assets/ServicesandMaintenance/Services for SCBA backplate inspection first reducing valve pressure gauge hoses  whistle cleaning c.png",
+      "imgUrl": "https://airgas.my/wp-content/uploads/2022/01/scba.jpg",
       "brand": "Airgas Technology",
       "industry": "Services & Maintenance",
-      "subCategory": "Technical Services",
-      "industries": [
-        "Services & Maintenance"
-      ]
+      "subCategory": "Technical Services"
     },
     {
       "id": 3842,
       "name": "** Services for SCBA Face Mask and backplate inspection, Fit test with POSICHECK, test including LD valve, first reducing valve,  pressure hose, gauge  and whistle . *cert AS22 #000010",
       "description": "** Services for SCBA Face Mask and backplate inspection, Fit test with POSICHECK, test including LD valve, first redu...",
       "url": "https://airgas.my/product/services-for-scba-face-mask-and-backplate-inspection-fit-test-with-posicheck-test-including-ld-valve-first-reducing-valve-pressure-hose-gauge-and-whistle-cert-as22/",
-      "imgUrl": "assets/ServicesandMaintenance/Services for SCBA Face Mask and backplate inspection Fit test with POSICHECK test including LD valve.png",
+      "imgUrl": "https://airgas.my/wp-content/uploads/2022/05/Screenshot-2022-05-10-164134.jpg",
       "brand": "Airgas Technology",
       "industry": "Services & Maintenance",
-      "subCategory": "Technical Services",
-      "industries": [
-        "Services & Maintenance"
-      ]
+      "subCategory": "Respiratory Protection"
     },
     {
       "id": 3841,
       "name": "** Services and inspection CYLINDER for SCBA  / EEBD,  Hydro Testing, 1.5times from working pressure to 450bar,  Visual test including weight check,  cylinder wall thickness,  internal and external surfaces condition,  valve tread. *cert AS11 #000008",
       "description": "** Services and inspection CYLINDER for SCBA / EEBD, Hydro Testing, 1.5times from working pressure to 450bar, Visual...",
       "url": "https://airgas.my/product/services-and-inspection-cylinder-for-scba-eebd-hydro-testing-1-5times-from-working-pressure-to-450bar-visual-test-including-weight-check-cylinder-wall-thickness-internal-and-external-su/",
-      "imgUrl": "assets/ServicesandMaintenance/Services and inspection CYLINDER for SCBA   EEBD  Hydro Testing 15times from working pressure to 450.png",
+      "imgUrl": "https://airgas.my/wp-content/uploads/2022/04/448928.jpg",
       "brand": "Airgas Technology",
       "industry": "Services & Maintenance",
-      "subCategory": "Technical Services",
-      "industries": [
-        "Services & Maintenance"
-      ]
+      "subCategory": "Gas Storage"
     },
     {
       "id": 3840,
@@ -3238,12 +2238,7 @@
       "imgUrl": "https://airgas.my/wp-content/uploads/2022/09/532160.jpg",
       "brand": "Airgas Technology",
       "industry": "Gases & Equipment",
-      "subCategory": "Gas Storage",
-      "industries": [
-        "Gases & Equipment",
-        "Maritime & Offshore",
-        "Oil & Gas"
-      ]
+      "subCategory": "Gas Storage"
     },
     {
       "id": 3769,
@@ -3253,13 +2248,7 @@
       "imgUrl": "https://airgas.my/wp-content/uploads/2022/09/Screenshot-2022-09-01-145630.jpg",
       "brand": "Airgas Technology",
       "industry": "Gas Calibration",
-      "subCategory": "Gas Storage",
-      "industries": [
-        "Gas Calibration",
-        "Gases & Equipment",
-        "Maritime & Offshore",
-        "Oil & Gas"
-      ]
+      "subCategory": "Gas Storage"
     },
     {
       "id": 3766,
@@ -3269,12 +2258,7 @@
       "imgUrl": "https://airgas.my/wp-content/uploads/2022/09/Screenshot-2022-09-01-122255.jpg",
       "brand": "Airgas Technology",
       "industry": "Gases & Equipment",
-      "subCategory": "General Equipment",
-      "industries": [
-        "Gases & Equipment",
-        "Maritime & Offshore",
-        "Oil & Gas"
-      ]
+      "subCategory": "General Equipment"
     },
     {
       "id": 3761,
@@ -3282,16 +2266,9 @@
       "description": "The ALTAIR 5X Gas Detector is capable of measuring up to 6 gases simultaneously and is now available with integrated...",
       "url": "https://airgas.my/product/altair-5x-multigas-detector/",
       "imgUrl": "https://airgas.my/wp-content/uploads/2022/08/Screenshot-2022-08-29-152723.jpg",
-      "brand": "MSA Safety",
+      "brand": "Airgas Technology",
       "industry": "Confined Space",
-      "subCategory": "Gas Detection",
-      "industries": [
-        "Confined Space",
-        "Gases & Equipment",
-        "Maritime & Offshore",
-        "Oil & Gas",
-        "Welding"
-      ]
+      "subCategory": "Gas Detection"
     },
     {
       "id": 3745,
@@ -3301,10 +2278,7 @@
       "imgUrl": "https://airgas.my/wp-content/uploads/2022/08/Screenshot-2022-08-25-194511.jpg",
       "brand": "Airgas Technology",
       "industry": "PPE",
-      "subCategory": "General Equipment",
-      "industries": [
-        "PPE"
-      ]
+      "subCategory": "General Equipment"
     },
     {
       "id": 3743,
@@ -3314,12 +2288,7 @@
       "imgUrl": "https://airgas.my/wp-content/uploads/2022/08/525346.jpg",
       "brand": "Honeywell",
       "industry": "Confined Space",
-      "subCategory": "Respiratory Protection",
-      "industries": [
-        "Confined Space",
-        "Maritime & Offshore",
-        "PPE"
-      ]
+      "subCategory": "Respiratory Protection"
     },
     {
       "id": 3741,
@@ -3327,14 +2296,9 @@
       "description": "",
       "url": "https://airgas.my/product/valve-cga330-stainless-steel-25e-vti-k48-107-germany/",
       "imgUrl": "https://airgas.my/wp-content/uploads/2022/08/524973-scaled.jpg",
-      "brand": "VTI",
+      "brand": "Vti",
       "industry": "Gases & Equipment",
-      "subCategory": "General Equipment",
-      "industries": [
-        "Gases & Equipment",
-        "Maritime & Offshore",
-        "Oil & Gas"
-      ]
+      "subCategory": "General Equipment"
     },
     {
       "id": 3736,
@@ -3344,12 +2308,7 @@
       "imgUrl": "https://airgas.my/wp-content/uploads/2022/08/524964-scaled.jpg",
       "brand": "Airgas Technology",
       "industry": "Gases & Equipment",
-      "subCategory": "General Equipment",
-      "industries": [
-        "Gases & Equipment",
-        "Maritime & Offshore",
-        "Oil & Gas"
-      ]
+      "subCategory": "General Equipment"
     },
     {
       "id": 3730,
@@ -3358,13 +2317,8 @@
       "url": "https://airgas.my/product/coverall-for-fr-ranger-flame-resistant/",
       "imgUrl": "https://airgas.my/wp-content/uploads/2022/08/522564.jpg",
       "brand": "Airgas Technology",
-      "industry": "Maritime & Offshore",
-      "subCategory": "Body Protection",
-      "industries": [
-        "Maritime & Offshore",
-        "Oil & Gas",
-        "PPE"
-      ]
+      "industry": "PPE",
+      "subCategory": "Body Protection"
     },
     {
       "id": 3727,
@@ -3374,11 +2328,7 @@
       "imgUrl": "https://airgas.my/wp-content/uploads/2022/08/522190-scaled.jpg",
       "brand": "Airgas Technology",
       "industry": "Gases & Equipment",
-      "subCategory": "General Equipment",
-      "industries": [
-        "Gases & Equipment",
-        "Maritime & Offshore"
-      ]
+      "subCategory": "General Equipment"
     },
     {
       "id": 3721,
@@ -3388,11 +2338,7 @@
       "imgUrl": "https://airgas.my/wp-content/uploads/2022/08/522187-scaled.jpg",
       "brand": "Airgas Technology",
       "industry": "Gas Calibration",
-      "subCategory": "General Equipment",
-      "industries": [
-        "Gas Calibration",
-        "Gases & Equipment"
-      ]
+      "subCategory": "General Equipment"
     },
     {
       "id": 3716,
@@ -3402,11 +2348,7 @@
       "imgUrl": "https://airgas.my/wp-content/uploads/2022/08/522179-scaled.jpg",
       "brand": "Airgas Technology",
       "industry": "Gas Calibration",
-      "subCategory": "General Equipment",
-      "industries": [
-        "Gas Calibration",
-        "Gases & Equipment"
-      ]
+      "subCategory": "General Equipment"
     },
     {
       "id": 3698,
@@ -3416,12 +2358,7 @@
       "imgUrl": "https://airgas.my/wp-content/uploads/2022/08/8cb3c6f8-bb16-4daf-829f-2bdbfec3e229-79222-00000d0a7af0f0ff_file-scaled.jpeg",
       "brand": "Airgas Technology",
       "industry": "Gases & Equipment",
-      "subCategory": "General Equipment",
-      "industries": [
-        "Gases & Equipment",
-        "Maritime & Offshore",
-        "Oil & Gas"
-      ]
+      "subCategory": "General Equipment"
     },
     {
       "id": 3693,
@@ -3431,10 +2368,7 @@
       "imgUrl": "https://airgas.my/wp-content/uploads/2022/08/a35b5042-568f-4bd8-a2ce-79d17a82287f-79222-00000d0b3f7d7252_file-scaled.jpeg",
       "brand": "Airgas Technology",
       "industry": "PPE",
-      "subCategory": "General Equipment",
-      "industries": [
-        "PPE"
-      ]
+      "subCategory": "General Equipment"
     },
     {
       "id": 3688,
@@ -3444,10 +2378,7 @@
       "imgUrl": "https://airgas.my/wp-content/uploads/2022/08/0a2cb8e9-a499-412e-a68a-6a6cc86bfca1-scaled.jpeg",
       "brand": "Airgas Technology",
       "industry": "PPE",
-      "subCategory": "General Equipment",
-      "industries": [
-        "PPE"
-      ]
+      "subCategory": "General Equipment"
     },
     {
       "id": 3683,
@@ -3457,10 +2388,7 @@
       "imgUrl": "https://airgas.my/wp-content/uploads/2022/08/c5784fa2-5e54-4d0c-bc62-458b7464868f-scaled.jpeg",
       "brand": "Airgas Technology",
       "industry": "PPE",
-      "subCategory": "General Equipment",
-      "industries": [
-        "PPE"
-      ]
+      "subCategory": "General Equipment"
     },
     {
       "id": 3678,
@@ -3470,10 +2398,7 @@
       "imgUrl": "https://airgas.my/wp-content/uploads/2022/08/e50bd319-ac30-419d-bba6-10c3afcbbb4a-scaled.jpeg",
       "brand": "Airgas Technology",
       "industry": "PPE",
-      "subCategory": "General Equipment",
-      "industries": [
-        "PPE"
-      ]
+      "subCategory": "General Equipment"
     },
     {
       "id": 3673,
@@ -3483,10 +2408,7 @@
       "imgUrl": "https://airgas.my/wp-content/uploads/2022/08/54a4c257-419e-4ff1-985c-f268f8266f64-scaled.jpeg",
       "brand": "Airgas Technology",
       "industry": "PPE",
-      "subCategory": "General Equipment",
-      "industries": [
-        "PPE"
-      ]
+      "subCategory": "General Equipment"
     },
     {
       "id": 3667,
@@ -3496,10 +2418,7 @@
       "imgUrl": "https://airgas.my/wp-content/uploads/2022/08/c29536ee-c376-40cb-bb18-988f3b42bbaa-scaled.jpeg",
       "brand": "Airgas Technology",
       "industry": "PPE",
-      "subCategory": "General Equipment",
-      "industries": [
-        "PPE"
-      ]
+      "subCategory": "General Equipment"
     },
     {
       "id": 3663,
@@ -3509,10 +2428,7 @@
       "imgUrl": "https://airgas.my/wp-content/uploads/2022/08/65d1c789-fe67-4c6e-9e28-9e8117ab9c25-scaled.jpeg",
       "brand": "Airgas Technology",
       "industry": "PPE",
-      "subCategory": "General Equipment",
-      "industries": [
-        "PPE"
-      ]
+      "subCategory": "General Equipment"
     },
     {
       "id": 3655,
@@ -3522,10 +2438,7 @@
       "imgUrl": "https://airgas.my/wp-content/uploads/2022/08/874c7c30-0a0b-4ea1-916e-d80ea45eb8fc-scaled.jpeg",
       "brand": "Airgas Technology",
       "industry": "PPE",
-      "subCategory": "General Equipment",
-      "industries": [
-        "PPE"
-      ]
+      "subCategory": "General Equipment"
     },
     {
       "id": 3651,
@@ -3535,10 +2448,7 @@
       "imgUrl": "https://airgas.my/wp-content/uploads/2022/08/4182b18b-aab2-435d-95c3-b3079b66281a-scaled.jpeg",
       "brand": "Airgas Technology",
       "industry": "PPE",
-      "subCategory": "General Equipment",
-      "industries": [
-        "PPE"
-      ]
+      "subCategory": "General Equipment"
     },
     {
       "id": 3647,
@@ -3548,10 +2458,7 @@
       "imgUrl": "https://airgas.my/wp-content/uploads/2022/08/c63c074b-3b46-4ef9-bf20-2e0a210cd78c-79222-00000d092315af57_file-scaled.jpeg",
       "brand": "Airgas Technology",
       "industry": "PPE",
-      "subCategory": "General Equipment",
-      "industries": [
-        "PPE"
-      ]
+      "subCategory": "General Equipment"
     },
     {
       "id": 3643,
@@ -3561,12 +2468,7 @@
       "imgUrl": "https://airgas.my/wp-content/uploads/2022/08/0bb7a9ca-a368-4a15-a84a-94eb104c6120-79222-00000d087827d03c_file-scaled.jpeg",
       "brand": "Sanosub",
       "industry": "Gases & Equipment",
-      "subCategory": "General Equipment",
-      "industries": [
-        "Gases & Equipment",
-        "Maritime & Offshore",
-        "Oil & Gas"
-      ]
+      "subCategory": "General Equipment"
     },
     {
       "id": 3639,
@@ -3576,10 +2478,7 @@
       "imgUrl": "https://airgas.my/wp-content/uploads/2022/08/c1ce2ea0-4e6f-4004-9c6d-d8c7c07fcf51-79222-00000d07e661fb35_file-scaled.jpeg",
       "brand": "Airgas Technology",
       "industry": "PPE",
-      "subCategory": "General Equipment",
-      "industries": [
-        "PPE"
-      ]
+      "subCategory": "General Equipment"
     },
     {
       "id": 3635,
@@ -3589,12 +2488,7 @@
       "imgUrl": "https://airgas.my/wp-content/uploads/2022/08/7f4f8469-8caa-4813-ad34-344ad1733bab-79222-00000d07728e4c41_file-scaled.jpeg",
       "brand": "Sanosub",
       "industry": "Gases & Equipment",
-      "subCategory": "General Equipment",
-      "industries": [
-        "Gases & Equipment",
-        "Maritime & Offshore",
-        "Oil & Gas"
-      ]
+      "subCategory": "General Equipment"
     },
     {
       "id": 3631,
@@ -3604,10 +2498,7 @@
       "imgUrl": "https://airgas.my/wp-content/uploads/2022/08/1232925d-0b58-4562-9a64-38c4d0bafc95-scaled.jpeg",
       "brand": "Airgas Technology",
       "industry": "PPE",
-      "subCategory": "General Equipment",
-      "industries": [
-        "PPE"
-      ]
+      "subCategory": "General Equipment"
     },
     {
       "id": 3628,
@@ -3617,10 +2508,7 @@
       "imgUrl": "https://airgas.my/wp-content/uploads/2022/08/4ef8d781-4bfd-44f5-801b-86e41506ffaf-scaled.jpeg",
       "brand": "Airgas Technology",
       "industry": "PPE",
-      "subCategory": "General Equipment",
-      "industries": [
-        "PPE"
-      ]
+      "subCategory": "General Equipment"
     },
     {
       "id": 3625,
@@ -3630,10 +2518,7 @@
       "imgUrl": "https://airgas.my/wp-content/uploads/2022/08/2f860c0f-3ab7-49bb-aeb0-fc8b549b1d56-scaled.jpeg",
       "brand": "Airgas Technology",
       "industry": "PPE",
-      "subCategory": "General Equipment",
-      "industries": [
-        "PPE"
-      ]
+      "subCategory": "General Equipment"
     },
     {
       "id": 3594,
@@ -3641,14 +2526,9 @@
       "description": "catalog",
       "url": "https://airgas.my/product/alphatec-disposcoverall-2000-standard-model-iii/",
       "imgUrl": "https://airgas.my/wp-content/uploads/2022/07/508025-1.jpg",
-      "brand": "Ansell",
-      "industry": "Maritime & Offshore",
-      "subCategory": "Body Protection",
-      "industries": [
-        "Maritime & Offshore",
-        "Oil & Gas",
-        "PPE"
-      ]
+      "brand": "Airgas Technology",
+      "industry": "PPE",
+      "subCategory": "Body Protection"
     },
     {
       "id": 3575,
@@ -3656,16 +2536,9 @@
       "description": "The ToxiRAE Pro is the world\u2019s first wireless personal monitor for toxic gases and oxygen1. The ToxiRAE Pro can detec...",
       "url": "https://airgas.my/product/gas-detector-toxirae-pro-bw-single-gas-as-o2-co-nh2-etc/",
       "imgUrl": "https://airgas.my/wp-content/uploads/2022/06/Screenshot-2022-06-19-115125.jpg",
-      "brand": "Honeywell",
+      "brand": "Bw",
       "industry": "Confined Space",
-      "subCategory": "Gas Detection",
-      "industries": [
-        "Confined Space",
-        "Gas Calibration",
-        "Gases & Equipment",
-        "Maritime & Offshore",
-        "Oil & Gas"
-      ]
+      "subCategory": "Gas Detection"
     },
     {
       "id": 3573,
@@ -3675,12 +2548,7 @@
       "imgUrl": "https://airgas.my/wp-content/uploads/2022/06/112.jpg",
       "brand": "Airgas Technology",
       "industry": "Gases & Equipment",
-      "subCategory": "Gas Storage",
-      "industries": [
-        "Gases & Equipment",
-        "Maritime & Offshore",
-        "Oil & Gas"
-      ]
+      "subCategory": "Gas Storage"
     },
     {
       "id": 3562,
@@ -3690,12 +2558,7 @@
       "imgUrl": "https://airgas.my/wp-content/uploads/2022/06/484315.jpg",
       "brand": "Airgas Technology",
       "industry": "Gases & Equipment",
-      "subCategory": "General Equipment",
-      "industries": [
-        "Gases & Equipment",
-        "Maritime & Offshore",
-        "Oil & Gas"
-      ]
+      "subCategory": "General Equipment"
     },
     {
       "id": 3558,
@@ -3704,13 +2567,8 @@
       "url": "https://airgas.my/product/fire-hose-type-3/",
       "imgUrl": "https://airgas.my/wp-content/uploads/2022/06/484282.jpg",
       "brand": "Airgas Technology",
-      "industry": "Gases & Equipment",
-      "subCategory": "General Equipment",
-      "industries": [
-        "Gases & Equipment",
-        "Maritime & Offshore",
-        "Oil & Gas"
-      ]
+      "industry": "PPE",
+      "subCategory": "General Equipment"
     },
     {
       "id": 3548,
@@ -3720,11 +2578,7 @@
       "imgUrl": "https://airgas.my/wp-content/uploads/2022/06/Screenshot-2022-06-09-202846.jpg",
       "brand": "Airgas Technology",
       "industry": "Confined Space",
-      "subCategory": "General Equipment",
-      "industries": [
-        "Confined Space",
-        "Maritime & Offshore"
-      ]
+      "subCategory": "General Equipment"
     },
     {
       "id": 3523,
@@ -3734,10 +2588,7 @@
       "imgUrl": "",
       "brand": "Airgas Technology",
       "industry": "Welding",
-      "subCategory": "General Equipment",
-      "industries": [
-        "Welding"
-      ]
+      "subCategory": "General Equipment"
     },
     {
       "id": 3521,
@@ -3745,12 +2596,9 @@
       "description": "user instruction catalog Respirator Examination Instrument is automatic and controlled by computer to test the compre...",
       "url": "https://airgas.my/product/respirator-examination-instrument-mask-posicheck/",
       "imgUrl": "https://airgas.my/wp-content/uploads/2022/05/121-scaled.jpg",
-      "brand": "Honeywell",
+      "brand": "Airgas Technology",
       "industry": "PPE",
-      "subCategory": "Respiratory Protection",
-      "industries": [
-        "PPE"
-      ]
+      "subCategory": "Respiratory Protection"
     },
     {
       "id": 3516,
@@ -3760,10 +2608,7 @@
       "imgUrl": "",
       "brand": "Airgas Technology",
       "industry": "Welding",
-      "subCategory": "Welding Equipment",
-      "industries": [
-        "Welding"
-      ]
+      "subCategory": "Welding Equipment"
     },
     {
       "id": 3512,
@@ -3773,10 +2618,7 @@
       "imgUrl": "https://airgas.my/wp-content/uploads/2022/04/500pana3Meuro-2.jpg",
       "brand": "Airgas Technology",
       "industry": "Welding",
-      "subCategory": "General Equipment",
-      "industries": [
-        "Welding"
-      ]
+      "subCategory": "General Equipment"
     },
     {
       "id": 3497,
@@ -3786,10 +2628,7 @@
       "imgUrl": "https://airgas.my/wp-content/uploads/2022/05/oven-blue.jpg",
       "brand": "Airgas Technology",
       "industry": "Welding",
-      "subCategory": "Welding Equipment",
-      "industries": [
-        "Welding"
-      ]
+      "subCategory": "Welding Equipment"
     },
     {
       "id": 3493,
@@ -3797,12 +2636,9 @@
       "description": "Replacement Filter ABEK1 RD . SPR492 5 pairs per box",
       "url": "https://airgas.my/product/replacement-filters-elipse-abek1p3-rd-gvs-spr492/",
       "imgUrl": "https://airgas.my/wp-content/uploads/2022/05/Screenshot-2022-05-06-170635.jpg",
-      "brand": "GVS",
+      "brand": "Gvs",
       "industry": "PPE",
-      "subCategory": "General Equipment",
-      "industries": [
-        "PPE"
-      ]
+      "subCategory": "General Equipment"
     },
     {
       "id": 3491,
@@ -3810,12 +2646,9 @@
       "description": "Half Face Mask with ABEK1 filter Catalog SPR 490, 491 \u2022 Mask: Medical grade TPE Conforms to ISO 10993-10: 2010 for ir...",
       "url": "https://airgas.my/product/half-face-mask-with-replacement-filters-elipse-abek1p3-rd-gvs-spr490-491/",
       "imgUrl": "https://airgas.my/wp-content/uploads/2022/04/Screenshot-2022-04-25-144213.jpg",
-      "brand": "GVS",
+      "brand": "Gvs",
       "industry": "PPE",
-      "subCategory": "Respiratory Protection",
-      "industries": [
-        "PPE"
-      ]
+      "subCategory": "Respiratory Protection"
     },
     {
       "id": 3473,
@@ -3825,10 +2658,7 @@
       "imgUrl": "",
       "brand": "Airgas Technology",
       "industry": "Welding",
-      "subCategory": "General Equipment",
-      "industries": [
-        "Welding"
-      ]
+      "subCategory": "General Equipment"
     },
     {
       "id": 3451,
@@ -3836,14 +2666,9 @@
       "description": "Fresh Air Hose BA A-Type Apparatus The device is a Type A respirator outside air intake, designed to provide breathab...",
       "url": "https://airgas.my/product/fresh-air-hose-breathing-apparatuses-sekur-dpi/",
       "imgUrl": "https://airgas.my/wp-content/uploads/2022/05/Screenshot-2022-05-04-220231.jpg",
-      "brand": "DPI Sekur",
-      "industry": "Confined Space",
-      "subCategory": "General Equipment",
-      "industries": [
-        "Confined Space",
-        "Gases & Equipment",
-        "Maritime & Offshore"
-      ]
+      "brand": "Airgas Technology",
+      "industry": "PPE",
+      "subCategory": "General Equipment"
     },
     {
       "id": 3448,
@@ -3851,12 +2676,9 @@
       "description": "Diablo Amiante is a positive pressure breathing device with external compressed air supply, fitted with demand valve...",
       "url": "https://airgas.my/product/diablo-amiante-breathing-devices-with-external-compressed-air-supply/",
       "imgUrl": "https://airgas.my/wp-content/uploads/2022/05/Screenshot-2022-05-04-215429.jpg",
-      "brand": "DPI Sekur",
+      "brand": "Airgas Technology",
       "industry": "Gases & Equipment",
-      "subCategory": "General Equipment",
-      "industries": [
-        "Gases & Equipment"
-      ]
+      "subCategory": "General Equipment"
     },
     {
       "id": 3444,
@@ -3864,12 +2686,9 @@
       "description": "4333 3007 full face mask SFERA SP/A with thread connection to the mask according to EN 148/3 (M 45&#215;3) Extra wide...",
       "url": "https://airgas.my/product/full-face-mask-sfera-sekur-dpi/",
       "imgUrl": "https://airgas.my/wp-content/uploads/2022/05/Screenshot-2022-05-04-211618.jpg",
-      "brand": "DPI Sekur",
+      "brand": "Airgas Technology",
       "industry": "PPE",
-      "subCategory": "Respiratory Protection",
-      "industries": [
-        "PPE"
-      ]
+      "subCategory": "Respiratory Protection"
     },
     {
       "id": 3441,
@@ -3879,10 +2698,7 @@
       "imgUrl": "https://airgas.my/wp-content/uploads/2022/04/aceweld-mb15-mig-torch-yellow-handle.jpg",
       "brand": "Airgas Technology",
       "industry": "Welding",
-      "subCategory": "General Equipment",
-      "industries": [
-        "Welding"
-      ]
+      "subCategory": "General Equipment"
     },
     {
       "id": 3439,
@@ -3892,10 +2708,7 @@
       "imgUrl": "https://airgas.my/wp-content/uploads/2022/04/mb15-mig-torch-red.jpg",
       "brand": "Airgas Technology",
       "industry": "Welding",
-      "subCategory": "General Equipment",
-      "industries": [
-        "Welding"
-      ]
+      "subCategory": "General Equipment"
     },
     {
       "id": 3432,
@@ -3905,10 +2718,7 @@
       "imgUrl": "https://airgas.my/wp-content/uploads/2022/04/500pana3Meuro-2.jpg",
       "brand": "Airgas Technology",
       "industry": "Welding",
-      "subCategory": "General Equipment",
-      "industries": [
-        "Welding"
-      ]
+      "subCategory": "General Equipment"
     },
     {
       "id": 3429,
@@ -3918,10 +2728,7 @@
       "imgUrl": "https://airgas.my/wp-content/uploads/2022/04/pana350.jpg",
       "brand": "Airgas Technology",
       "industry": "Welding",
-      "subCategory": "General Equipment",
-      "industries": [
-        "Welding"
-      ]
+      "subCategory": "General Equipment"
     },
     {
       "id": 3427,
@@ -3930,12 +2737,8 @@
       "url": "https://airgas.my/product/fireman-suit/",
       "imgUrl": "https://airgas.my/wp-content/uploads/2022/04/457127.jpg",
       "brand": "Airgas Technology",
-      "industry": "Maritime & Offshore",
-      "subCategory": "Body Protection",
-      "industries": [
-        "Maritime & Offshore",
-        "Oil & Gas"
-      ]
+      "industry": "Oil & Gas",
+      "subCategory": "Body Protection"
     },
     {
       "id": 3419,
@@ -3945,10 +2748,7 @@
       "imgUrl": "https://airgas.my/wp-content/uploads/2022/04/pana350torchEuro.jpg",
       "brand": "Airgas Technology",
       "industry": "Welding",
-      "subCategory": "General Equipment",
-      "industries": [
-        "Welding"
-      ]
+      "subCategory": "General Equipment"
     },
     {
       "id": 3406,
@@ -3956,16 +2756,9 @@
       "description": "T40 H2S detector catalog The T40 Rattler&#x2122; is a low-cost, maintenance-free single gas monitor designed to prote...",
       "url": "https://airgas.my/product/gas-detector-single-h2s-t40-rattler/",
       "imgUrl": "https://airgas.my/wp-content/uploads/2022/04/Screenshot-2022-04-29-160948.jpg",
-      "brand": "Industrial Scientific",
+      "brand": "Airgas Technology",
       "industry": "Confined Space",
-      "subCategory": "Gas Detection",
-      "industries": [
-        "Confined Space",
-        "Gas Calibration",
-        "Gases & Equipment",
-        "Maritime & Offshore",
-        "Oil & Gas"
-      ]
+      "subCategory": "Gas Detection"
     },
     {
       "id": 3402,
@@ -3975,10 +2768,7 @@
       "imgUrl": "https://airgas.my/wp-content/uploads/2022/04/castarc-150n.jpg",
       "brand": "Airgas Technology",
       "industry": "Welding",
-      "subCategory": "General Equipment",
-      "industries": [
-        "Welding"
-      ]
+      "subCategory": "General Equipment"
     },
     {
       "id": 3396,
@@ -3988,10 +2778,7 @@
       "imgUrl": "https://airgas.my/wp-content/uploads/2022/04/vacuum.jpg",
       "brand": "Airgas Technology",
       "industry": "PPE",
-      "subCategory": "General Equipment",
-      "industries": [
-        "PPE"
-      ]
+      "subCategory": "General Equipment"
     },
     {
       "id": 3393,
@@ -4000,12 +2787,8 @@
       "url": "https://airgas.my/product/welding-sheild-screen-protection-dust/",
       "imgUrl": "https://airgas.my/wp-content/uploads/2022/04/weldsheild.jpg",
       "brand": "Airgas Technology",
-      "industry": "PPE",
-      "subCategory": "Welding Equipment",
-      "industries": [
-        "PPE",
-        "Welding"
-      ]
+      "industry": "Welding",
+      "subCategory": "Welding Equipment"
     },
     {
       "id": 3386,
@@ -4015,10 +2798,7 @@
       "imgUrl": "https://airgas.my/wp-content/uploads/2022/04/skylon.jpg",
       "brand": "Airgas Technology",
       "industry": "PPE",
-      "subCategory": "General Equipment",
-      "industries": [
-        "PPE"
-      ]
+      "subCategory": "General Equipment"
     },
     {
       "id": 3381,
@@ -4028,10 +2808,7 @@
       "imgUrl": "https://airgas.my/wp-content/uploads/2022/04/Brush1.5.jpg",
       "brand": "Airgas Technology",
       "industry": "PPE",
-      "subCategory": "General Equipment",
-      "industries": [
-        "PPE"
-      ]
+      "subCategory": "General Equipment"
     },
     {
       "id": 3379,
@@ -4041,10 +2818,7 @@
       "imgUrl": "https://airgas.my/wp-content/uploads/2022/04/sandpaper.jpg",
       "brand": "Airgas Technology",
       "industry": "PPE",
-      "subCategory": "General Equipment",
-      "industries": [
-        "PPE"
-      ]
+      "subCategory": "General Equipment"
     },
     {
       "id": 3377,
@@ -4053,13 +2827,8 @@
       "url": "https://airgas.my/product/teho-medical-examination-glove-no-powder-powderless-glove/",
       "imgUrl": "https://airgas.my/wp-content/uploads/2022/04/teho-glove.jpg",
       "brand": "Airgas Technology",
-      "industry": "Maritime & Offshore",
-      "subCategory": "General Equipment",
-      "industries": [
-        "Maritime & Offshore",
-        "Oil & Gas",
-        "PPE"
-      ]
+      "industry": "PPE",
+      "subCategory": "General Equipment"
     },
     {
       "id": 3375,
@@ -4069,12 +2838,7 @@
       "imgUrl": "https://airgas.my/wp-content/uploads/2022/04/Screenshot-2022-10-12-104457.jpg",
       "brand": "Airgas Technology",
       "industry": "Gases & Equipment",
-      "subCategory": "Gas Storage",
-      "industries": [
-        "Gases & Equipment",
-        "Maritime & Offshore",
-        "Oil & Gas"
-      ]
+      "subCategory": "Gas Storage"
     },
     {
       "id": 3368,
@@ -4082,13 +2846,9 @@
       "description": "Ideal forMMA, MIG/MAG, TIF ranting (10amp",
       "url": "https://airgas.my/product/njstar-auto-darkening-welding-helmet-njs-777/",
       "imgUrl": "https://airgas.my/wp-content/uploads/2022/04/njstarhelmet.jpg",
-      "brand": "NJSTAR",
-      "industry": "PPE",
-      "subCategory": "Welding Equipment",
-      "industries": [
-        "PPE",
-        "Welding"
-      ]
+      "brand": "Njstar",
+      "industry": "Welding",
+      "subCategory": "Welding Equipment"
     },
     {
       "id": 3363,
@@ -4098,10 +2858,7 @@
       "imgUrl": "https://airgas.my/wp-content/uploads/2022/04/welichi1.jpg",
       "brand": "Welichi",
       "industry": "Welding",
-      "subCategory": "Welding Equipment",
-      "industries": [
-        "Welding"
-      ]
+      "subCategory": "Welding Equipment"
     },
     {
       "id": 3361,
@@ -4109,12 +2866,9 @@
       "description": "Has TIG &amp; MMA function",
       "url": "https://airgas.my/product/jasic-tig-welding-machine-tig250s-w127pre-order/",
       "imgUrl": "https://airgas.my/wp-content/uploads/2022/04/Jasic.jpg",
-      "brand": "JASIC",
+      "brand": "Jasic",
       "industry": "Welding",
-      "subCategory": "Welding Equipment",
-      "industries": [
-        "Welding"
-      ]
+      "subCategory": "Welding Equipment"
     },
     {
       "id": 3359,
@@ -4122,12 +2876,9 @@
       "description": "INDUSTRIAL APPLICATIONS . Maintenance . Light Construction . Prototyping . Body Shops . Fabrication . HVAC Ductwork F...",
       "url": "https://airgas.my/product/austcorp-vt-201s-advance/",
       "imgUrl": "https://airgas.my/wp-content/uploads/2022/04/vt201s.jpg",
-      "brand": "AustCorp",
+      "brand": "Austcorp",
       "industry": "PPE",
-      "subCategory": "General Equipment",
-      "industries": [
-        "PPE"
-      ]
+      "subCategory": "General Equipment"
     },
     {
       "id": 3357,
@@ -4137,10 +2888,7 @@
       "imgUrl": "https://airgas.my/wp-content/uploads/2022/04/arc250.jpg",
       "brand": "Airgas Technology",
       "industry": "Welding",
-      "subCategory": "Welding Equipment",
-      "industries": [
-        "Welding"
-      ]
+      "subCategory": "Welding Equipment"
     },
     {
       "id": 3353,
@@ -4150,10 +2898,7 @@
       "imgUrl": "https://airgas.my/wp-content/uploads/2022/04/arc150a.jpg",
       "brand": "Airgas Technology",
       "industry": "Welding",
-      "subCategory": "Welding Equipment",
-      "industries": [
-        "Welding"
-      ]
+      "subCategory": "Welding Equipment"
     },
     {
       "id": 3346,
@@ -4161,12 +2906,9 @@
       "description": "FEATURES : USE OF PROTECTIVE ACCESSORIES SAFE USE OF TH WELDING GUN FIRE SAFETY SUPPLY VOLTAGE WELDING CIRCUT WELDING...",
       "url": "https://airgas.my/product/mig-welding-machine-brand-ymh-z-mig-200/",
       "imgUrl": "https://airgas.my/wp-content/uploads/2022/04/ymh-z-mig200.jpg",
-      "brand": "YMH",
+      "brand": "Ymh",
       "industry": "Welding",
-      "subCategory": "Welding Equipment",
-      "industries": [
-        "Welding"
-      ]
+      "subCategory": "Welding Equipment"
     },
     {
       "id": 3343,
@@ -4174,12 +2916,9 @@
       "description": "Single phase Heavy duty 3HP introduction motor for durable and lasting",
       "url": "https://airgas.my/product/njstar-air-compressor-150l-3hp/",
       "imgUrl": "https://airgas.my/wp-content/uploads/2022/04/comp.3hp.jpg",
-      "brand": "NJSTAR",
-      "industry": "Gases & Equipment",
-      "subCategory": "General Equipment",
-      "industries": [
-        "Gases & Equipment"
-      ]
+      "brand": "Njstar",
+      "industry": "PPE",
+      "subCategory": "General Equipment"
     },
     {
       "id": 3339,
@@ -4189,10 +2928,7 @@
       "imgUrl": "https://airgas.my/wp-content/uploads/2022/04/S400R.jpg",
       "brand": "Kemppi",
       "industry": "Welding",
-      "subCategory": "Welding Equipment",
-      "industries": [
-        "Welding"
-      ]
+      "subCategory": "Welding Equipment"
     },
     {
       "id": 3336,
@@ -4201,12 +2937,8 @@
       "url": "https://airgas.my/product/ventilator-blower-fan/",
       "imgUrl": "https://airgas.my/wp-content/uploads/2022/04/blower-fan.jpg",
       "brand": "Airgas Technology",
-      "industry": "Confined Space",
-      "subCategory": "General Equipment",
-      "industries": [
-        "Confined Space",
-        "Maritime & Offshore"
-      ]
+      "industry": "PPE",
+      "subCategory": "General Equipment"
     },
     {
       "id": 3329,
@@ -4214,12 +2946,9 @@
       "description": "Heavy Industrial Application Fabrications and Construction Heavy Manufacturing Maintenance/repair Shipbuilding Refine...",
       "url": "https://airgas.my/product/auscorp-sa-5000-i-igbt-mig-welding-machine/",
       "imgUrl": "https://airgas.my/wp-content/uploads/2022/04/sa-austcorp.jpg",
-      "brand": "AustCorp",
+      "brand": "Austcorp",
       "industry": "Welding",
-      "subCategory": "General Equipment",
-      "industries": [
-        "Welding"
-      ]
+      "subCategory": "General Equipment"
     },
     {
       "id": 3324,
@@ -4229,10 +2958,7 @@
       "imgUrl": "https://airgas.my/wp-content/uploads/2022/04/ws-mma-machine.jpg",
       "brand": "Airgas Technology",
       "industry": "Welding",
-      "subCategory": "Welding Equipment",
-      "industries": [
-        "Welding"
-      ]
+      "subCategory": "Welding Equipment"
     },
     {
       "id": 3322,
@@ -4240,12 +2966,9 @@
       "description": "Replacement Filter ABEK1 RD . SPR489 5 pairs per box",
       "url": "https://airgas.my/product/replacement-filters-elipse-abek1-rd/",
       "imgUrl": "https://airgas.my/wp-content/uploads/2022/04/Screenshot-2022-05-06-165432.jpg",
-      "brand": "GVS",
+      "brand": "Gvs",
       "industry": "PPE",
-      "subCategory": "General Equipment",
-      "industries": [
-        "PPE"
-      ]
+      "subCategory": "General Equipment"
     },
     {
       "id": 3319,
@@ -4253,12 +2976,9 @@
       "description": "Half Face Mask with ABEK1 filter Catalog SPR 487, 488 \u2022 Mask: Medical grade TPE Conforms to ISO 10993-10: 2010 for ir...",
       "url": "https://airgas.my/product/half-face-mask-with-replacement-filters-elipse-abek1-rd/",
       "imgUrl": "https://airgas.my/wp-content/uploads/2022/04/Screenshot-2022-04-25-144213.jpg",
-      "brand": "GVS",
+      "brand": "Gvs",
       "industry": "PPE",
-      "subCategory": "Respiratory Protection",
-      "industries": [
-        "PPE"
-      ]
+      "subCategory": "Respiratory Protection"
     },
     {
       "id": 3318,
@@ -4268,10 +2988,7 @@
       "imgUrl": "https://airgas.my/wp-content/uploads/2022/04/453442.jpg",
       "brand": "Elvex",
       "industry": "PPE",
-      "subCategory": "Hearing Protection",
-      "industries": [
-        "PPE"
-      ]
+      "subCategory": "General Equipment"
     },
     {
       "id": 3313,
@@ -4280,13 +2997,8 @@
       "url": "https://airgas.my/product/fitter-glove/",
       "imgUrl": "https://airgas.my/wp-content/uploads/2022/04/6904-scaled.jpg",
       "brand": "Airgas Technology",
-      "industry": "Maritime & Offshore",
-      "subCategory": "General Equipment",
-      "industries": [
-        "Maritime & Offshore",
-        "Oil & Gas",
-        "PPE"
-      ]
+      "industry": "PPE",
+      "subCategory": "General Equipment"
     },
     {
       "id": 3309,
@@ -4295,12 +3007,8 @@
       "url": "https://airgas.my/product/14-welding-glove/",
       "imgUrl": "https://airgas.my/wp-content/uploads/2022/04/6897-1-scaled.jpg",
       "brand": "Airgas Technology",
-      "industry": "PPE",
-      "subCategory": "Welding Equipment",
-      "industries": [
-        "PPE",
-        "Welding"
-      ]
+      "industry": "Welding",
+      "subCategory": "Welding Equipment"
     },
     {
       "id": 3304,
@@ -4309,13 +3017,8 @@
       "url": "https://airgas.my/product/cotton-gloves/",
       "imgUrl": "https://airgas.my/wp-content/uploads/2022/04/6902-scaled.jpg",
       "brand": "Airgas Technology",
-      "industry": "Maritime & Offshore",
-      "subCategory": "General Equipment",
-      "industries": [
-        "Maritime & Offshore",
-        "Oil & Gas",
-        "PPE"
-      ]
+      "industry": "PPE",
+      "subCategory": "General Equipment"
     },
     {
       "id": 3301,
@@ -4324,13 +3027,8 @@
       "url": "https://airgas.my/product/coverall-type-5-6-disposable-biztex-micro-60g/",
       "imgUrl": "https://airgas.my/wp-content/uploads/2022/04/Screenshot-2022-04-22-105035.jpg",
       "brand": "Portwest",
-      "industry": "Maritime & Offshore",
-      "subCategory": "Body Protection",
-      "industries": [
-        "Maritime & Offshore",
-        "Oil & Gas",
-        "PPE"
-      ]
+      "industry": "PPE",
+      "subCategory": "Body Protection"
     },
     {
       "id": 3294,
@@ -4340,10 +3038,7 @@
       "imgUrl": "https://airgas.my/wp-content/uploads/2022/04/6315.jpg",
       "brand": "Airgas Technology",
       "industry": "PPE",
-      "subCategory": "General Equipment",
-      "industries": [
-        "PPE"
-      ]
+      "subCategory": "General Equipment"
     },
     {
       "id": 3290,
@@ -4352,12 +3047,8 @@
       "url": "https://airgas.my/product/adjustable-welding-helmet/",
       "imgUrl": "https://airgas.my/wp-content/uploads/2022/04/6909-scaled.jpg",
       "brand": "Airgas Technology",
-      "industry": "PPE",
-      "subCategory": "Welding Equipment",
-      "industries": [
-        "PPE",
-        "Welding"
-      ]
+      "industry": "Welding",
+      "subCategory": "Welding Equipment"
     },
     {
       "id": 3285,
@@ -4367,12 +3058,7 @@
       "imgUrl": "https://airgas.my/wp-content/uploads/2022/04/Screenshot-2022-04-20-115345.jpg",
       "brand": "Airgas Technology",
       "industry": "Gases & Equipment",
-      "subCategory": "General Equipment",
-      "industries": [
-        "Gases & Equipment",
-        "Maritime & Offshore",
-        "Oil & Gas"
-      ]
+      "subCategory": "General Equipment"
     },
     {
       "id": 3284,
@@ -4382,13 +3068,7 @@
       "imgUrl": "https://airgas.my/wp-content/uploads/2022/04/Screenshot-2022-11-04-174322.jpg",
       "brand": "Airgas Technology",
       "industry": "Gas Calibration",
-      "subCategory": "General Equipment",
-      "industries": [
-        "Gas Calibration",
-        "Gases & Equipment",
-        "Maritime & Offshore",
-        "Oil & Gas"
-      ]
+      "subCategory": "General Equipment"
     },
     {
       "id": 3280,
@@ -4398,25 +3078,17 @@
       "imgUrl": "https://airgas.my/wp-content/uploads/2022/04/co2-food-grade-cylinder-250x250-1.jpg",
       "brand": "Airgas Technology",
       "industry": "Gases & Equipment",
-      "subCategory": "Gas Storage",
-      "industries": [
-        "Gases & Equipment",
-        "Maritime & Offshore",
-        "Oil & Gas"
-      ]
+      "subCategory": "Gas Storage"
     },
     {
       "id": 3256,
       "name": "Powder ABC Refilling machine for fire extinguisher",
       "description": "User Instruction Powder ABC Refilling machine Weight : 47kg Dimension : 700 x 460 x 1600 (H) mm Power Requirement : 2...",
       "url": "https://airgas.my/product/powder-abc-refilling-machine-for-fire-extinguisher-2/",
-      "imgUrl": "assets/ServicesandMaintenance/Powder ABC Refilling machine for fire extinguisher.png",
+      "imgUrl": "https://airgas.my/wp-content/uploads/2022/04/Screenshot-2022-04-18-145222.jpg",
       "brand": "Airgas Technology",
       "industry": "Services & Maintenance",
-      "subCategory": "Technical Services",
-      "industries": [
-        "Services & Maintenance"
-      ]
+      "subCategory": "General Equipment"
     },
     {
       "id": 3269,
@@ -4426,13 +3098,7 @@
       "imgUrl": "https://airgas.my/wp-content/uploads/2022/04/Screenshot-2022-04-19-145759.jpg",
       "brand": "Airgas Technology",
       "industry": "Gas Calibration",
-      "subCategory": "General Equipment",
-      "industries": [
-        "Gas Calibration",
-        "Gases & Equipment",
-        "Maritime & Offshore",
-        "Oil & Gas"
-      ]
+      "subCategory": "General Equipment"
     },
     {
       "id": 3266,
@@ -4440,13 +3106,9 @@
       "description": "AlphaTec Trainer Hazmat Chemical suit Designed to replicate the fit and feel of frontline gas-tight suits to ensure y...",
       "url": "https://airgas.my/product/alphatec-trainer-chemical-suit/",
       "imgUrl": "https://airgas.my/wp-content/uploads/2022/04/Screenshot-2022-04-19-092208.jpg",
-      "brand": "Ansell",
-      "industry": "Maritime & Offshore",
-      "subCategory": "Body Protection",
-      "industries": [
-        "Maritime & Offshore",
-        "Oil & Gas"
-      ]
+      "brand": "Airgas Technology",
+      "industry": "Oil & Gas",
+      "subCategory": "Body Protection"
     },
     {
       "id": 3263,
@@ -4456,12 +3118,7 @@
       "imgUrl": "https://airgas.my/wp-content/uploads/2022/04/Screenshot-2022-04-19-085041.jpg",
       "brand": "Airgas Technology",
       "industry": "Gases & Equipment",
-      "subCategory": "General Equipment",
-      "industries": [
-        "Gases & Equipment",
-        "Maritime & Offshore",
-        "Oil & Gas"
-      ]
+      "subCategory": "General Equipment"
     },
     {
       "id": 3261,
@@ -4471,12 +3128,7 @@
       "imgUrl": "https://airgas.my/wp-content/uploads/2022/04/Screenshot-2022-04-18-155512.jpg",
       "brand": "Airgas Technology",
       "industry": "Gases & Equipment",
-      "subCategory": "Gas Storage",
-      "industries": [
-        "Gases & Equipment",
-        "Maritime & Offshore",
-        "Oil & Gas"
-      ]
+      "subCategory": "Gas Storage"
     },
     {
       "id": 3259,
@@ -4486,13 +3138,7 @@
       "imgUrl": "https://airgas.my/wp-content/uploads/2022/04/Screenshot-2022-04-18-150259.jpg",
       "brand": "Airgas Technology",
       "industry": "Gas Calibration",
-      "subCategory": "Gas Storage",
-      "industries": [
-        "Gas Calibration",
-        "Gases & Equipment",
-        "Maritime & Offshore",
-        "Oil & Gas"
-      ]
+      "subCategory": "Gas Storage"
     },
     {
       "id": 3255,
@@ -4502,12 +3148,7 @@
       "imgUrl": "https://airgas.my/wp-content/uploads/2022/04/2065-scaled.jpg",
       "brand": "Airgas Technology",
       "industry": "Gases & Equipment",
-      "subCategory": "General Equipment",
-      "industries": [
-        "Gases & Equipment",
-        "Maritime & Offshore",
-        "Oil & Gas"
-      ]
+      "subCategory": "General Equipment"
     },
     {
       "id": 3251,
@@ -4517,10 +3158,7 @@
       "imgUrl": "https://airgas.my/wp-content/uploads/2022/04/6846.jpg",
       "brand": "Licota",
       "industry": "PPE",
-      "subCategory": "General Equipment",
-      "industries": [
-        "PPE"
-      ]
+      "subCategory": "General Equipment"
     },
     {
       "id": 3248,
@@ -4530,10 +3168,7 @@
       "imgUrl": "https://airgas.my/wp-content/uploads/2022/04/6842-scaled.jpg",
       "brand": "Chiyoda",
       "industry": "Welding",
-      "subCategory": "Welding Equipment",
-      "industries": [
-        "Welding"
-      ]
+      "subCategory": "Welding Equipment"
     },
     {
       "id": 3245,
@@ -4543,10 +3178,7 @@
       "imgUrl": "https://airgas.my/wp-content/uploads/2022/04/6840-scaled.jpg",
       "brand": "Chiyoda",
       "industry": "Welding",
-      "subCategory": "Welding Equipment",
-      "industries": [
-        "Welding"
-      ]
+      "subCategory": "Welding Equipment"
     },
     {
       "id": 3238,
@@ -4554,12 +3186,9 @@
       "description": "products details the size",
       "url": "https://airgas.my/product/alphatec-evo-type-cv/",
       "imgUrl": "https://airgas.my/wp-content/uploads/2022/04/448876-1.jpg",
-      "brand": "Ansell",
+      "brand": "Airgas Technology",
       "industry": "PPE",
-      "subCategory": "General Equipment",
-      "industries": [
-        "PPE"
-      ]
+      "subCategory": "General Equipment"
     },
     {
       "id": 3235,
@@ -4569,10 +3198,7 @@
       "imgUrl": "https://airgas.my/wp-content/uploads/2022/04/wp-1649911666824-scaled.jpg",
       "brand": "Airgas Technology",
       "industry": "PPE",
-      "subCategory": "General Equipment",
-      "industries": [
-        "PPE"
-      ]
+      "subCategory": "General Equipment"
     },
     {
       "id": 3226,
@@ -4580,12 +3206,9 @@
       "description": "C701 mask 4333 5000 catalog C 701 is the new full face mask of the S\u00e8kur range which, through the innovative Air-On i...",
       "url": "https://airgas.my/product/dpi-presents-new-full-face-mask-c-701/",
       "imgUrl": "https://airgas.my/wp-content/uploads/2022/04/447366.jpg",
-      "brand": "DPI Sekur",
+      "brand": "DPI SEKUR",
       "industry": "PPE",
-      "subCategory": "Respiratory Protection",
-      "industries": [
-        "PPE"
-      ]
+      "subCategory": "Respiratory Protection"
     },
     {
       "id": 3208,
@@ -4595,25 +3218,17 @@
       "imgUrl": "https://airgas.my/wp-content/uploads/2022/04/448928.jpg",
       "brand": "Airgas Technology",
       "industry": "Gases & Equipment",
-      "subCategory": "Gas Storage",
-      "industries": [
-        "Gases & Equipment",
-        "Maritime & Offshore",
-        "Oil & Gas"
-      ]
+      "subCategory": "Gas Storage"
     },
     {
       "id": 3207,
       "name": "SCBA Valve repair kit",
       "description": "",
       "url": "https://airgas.my/product/scba-valve-repair-kit/",
-      "imgUrl": "assets/ServicesandMaintenance/SCBA Valve repair kit.png",
+      "imgUrl": "https://airgas.my/wp-content/uploads/2022/03/658988.jpg",
       "brand": "Airgas Technology",
       "industry": "Services & Maintenance",
-      "subCategory": "Technical Services",
-      "industries": [
-        "Services & Maintenance"
-      ]
+      "subCategory": "General Equipment"
     },
     {
       "id": 3205,
@@ -4623,12 +3238,7 @@
       "imgUrl": "https://airgas.my/wp-content/uploads/2022/03/658986.jpg",
       "brand": "Sanosub",
       "industry": "Gases & Equipment",
-      "subCategory": "General Equipment",
-      "industries": [
-        "Gases & Equipment",
-        "Maritime & Offshore",
-        "Oil & Gas"
-      ]
+      "subCategory": "General Equipment"
     },
     {
       "id": 3202,
@@ -4638,11 +3248,7 @@
       "imgUrl": "https://airgas.my/wp-content/uploads/2022/03/Screenshot-2022-06-11-185105.jpg",
       "brand": "Airgas Technology",
       "industry": "Confined Space",
-      "subCategory": "General Equipment",
-      "industries": [
-        "Confined Space",
-        "Maritime & Offshore"
-      ]
+      "subCategory": "General Equipment"
     },
     {
       "id": 3197,
@@ -4652,11 +3258,7 @@
       "imgUrl": "https://airgas.my/wp-content/uploads/2022/03/658938.jpg",
       "brand": "Airgas Technology",
       "industry": "Confined Space",
-      "subCategory": "General Equipment",
-      "industries": [
-        "Confined Space",
-        "Maritime & Offshore"
-      ]
+      "subCategory": "General Equipment"
     },
     {
       "id": 3193,
@@ -4666,11 +3268,7 @@
       "imgUrl": "https://airgas.my/wp-content/uploads/2022/03/658931.jpg",
       "brand": "Airgas Technology",
       "industry": "Confined Space",
-      "subCategory": "General Equipment",
-      "industries": [
-        "Confined Space",
-        "Maritime & Offshore"
-      ]
+      "subCategory": "General Equipment"
     },
     {
       "id": 3188,
@@ -4680,11 +3278,7 @@
       "imgUrl": "https://airgas.my/wp-content/uploads/2022/03/658896.jpg",
       "brand": "Airgas Technology",
       "industry": "Confined Space",
-      "subCategory": "General Equipment",
-      "industries": [
-        "Confined Space",
-        "Maritime & Offshore"
-      ]
+      "subCategory": "General Equipment"
     },
     {
       "id": 3183,
@@ -4694,13 +3288,7 @@
       "imgUrl": "https://airgas.my/wp-content/uploads/2022/03/658894.jpg",
       "brand": "Airgas Technology",
       "industry": "Confined Space",
-      "subCategory": "General Equipment",
-      "industries": [
-        "Confined Space",
-        "Gases & Equipment",
-        "Maritime & Offshore",
-        "Oil & Gas"
-      ]
+      "subCategory": "General Equipment"
     },
     {
       "id": 3179,
@@ -4710,11 +3298,7 @@
       "imgUrl": "https://airgas.my/wp-content/uploads/2022/03/658864.jpg",
       "brand": "Airgas Technology",
       "industry": "Confined Space",
-      "subCategory": "General Equipment",
-      "industries": [
-        "Confined Space",
-        "Maritime & Offshore"
-      ]
+      "subCategory": "General Equipment"
     },
     {
       "id": 3174,
@@ -4724,11 +3308,7 @@
       "imgUrl": "https://airgas.my/wp-content/uploads/2022/03/658851.jpg",
       "brand": "Airgas Technology",
       "industry": "Confined Space",
-      "subCategory": "General Equipment",
-      "industries": [
-        "Confined Space",
-        "Maritime & Offshore"
-      ]
+      "subCategory": "General Equipment"
     },
     {
       "id": 3169,
@@ -4738,13 +3318,7 @@
       "imgUrl": "https://airgas.my/wp-content/uploads/2022/03/658844.jpg",
       "brand": "Sanosub",
       "industry": "Confined Space",
-      "subCategory": "General Equipment",
-      "industries": [
-        "Confined Space",
-        "Gases & Equipment",
-        "Maritime & Offshore",
-        "Oil & Gas"
-      ]
+      "subCategory": "General Equipment"
     },
     {
       "id": 3165,
@@ -4752,15 +3326,9 @@
       "description": "",
       "url": "https://airgas.my/product/scba-vti-valve-k44-300bar-m18/",
       "imgUrl": "https://airgas.my/wp-content/uploads/2022/03/658432.jpg",
-      "brand": "VTI",
+      "brand": "Vti",
       "industry": "Confined Space",
-      "subCategory": "General Equipment",
-      "industries": [
-        "Confined Space",
-        "Gases & Equipment",
-        "Maritime & Offshore",
-        "Oil & Gas"
-      ]
+      "subCategory": "General Equipment"
     },
     {
       "id": 3105,
@@ -4770,10 +3338,7 @@
       "imgUrl": "https://airgas.my/wp-content/uploads/2022/03/423806.jpg",
       "brand": "Airgas Technology",
       "industry": "PPE",
-      "subCategory": "General Equipment",
-      "industries": [
-        "PPE"
-      ]
+      "subCategory": "General Equipment"
     },
     {
       "id": 3141,
@@ -4783,10 +3348,7 @@
       "imgUrl": "https://airgas.my/wp-content/uploads/2022/03/422679-scaled.jpg",
       "brand": "Airgas Technology",
       "industry": "PPE",
-      "subCategory": "General Equipment",
-      "industries": [
-        "PPE"
-      ]
+      "subCategory": "General Equipment"
     },
     {
       "id": 3134,
@@ -4795,13 +3357,8 @@
       "url": "https://airgas.my/product/mask-3-play-top-glove/",
       "imgUrl": "https://airgas.my/wp-content/uploads/2022/03/923-scaled.jpg",
       "brand": "Top Glove",
-      "industry": "Maritime & Offshore",
-      "subCategory": "Respiratory Protection",
-      "industries": [
-        "Maritime & Offshore",
-        "Oil & Gas",
-        "PPE"
-      ]
+      "industry": "PPE",
+      "subCategory": "Respiratory Protection"
     },
     {
       "id": 2702,
@@ -4809,12 +3366,9 @@
       "description": "SEKUR CAR DIABLO, two-cylinder trolley, compact, consisting of one metal framed trolley, complete with second inlet,...",
       "url": "https://airgas.my/product/airline-trolley-breathing-air-sekur/",
       "imgUrl": "https://airgas.my/wp-content/uploads/2022/01/Screenshot-2021-07-26-172330.jpg",
-      "brand": "DPI Sekur",
+      "brand": "Airgas Technology",
       "industry": "Gases & Equipment",
-      "subCategory": "General Equipment",
-      "industries": [
-        "Gases & Equipment"
-      ]
+      "subCategory": "General Equipment"
     },
     {
       "id": 2689,
@@ -4822,14 +3376,9 @@
       "description": "Exceptional gas-tight and warfare agents protection \u2022 Well-proven design that fits on top of all major SCBA brands an...",
       "url": "https://airgas.my/product/chemical-protection-alphatec-super-type-cv/",
       "imgUrl": "https://airgas.my/wp-content/uploads/2022/01/alphatec2.jpg",
-      "brand": "Ansell",
-      "industry": "Maritime & Offshore",
-      "subCategory": "General Equipment",
-      "industries": [
-        "Maritime & Offshore",
-        "Oil & Gas",
-        "PPE"
-      ]
+      "brand": "Airgas Technology",
+      "industry": "Oil & Gas",
+      "subCategory": "General Equipment"
     },
     {
       "id": 2686,
@@ -4837,15 +3386,9 @@
       "description": "",
       "url": "https://airgas.my/product/bw-gas-alert-max-xt-ii-for-confined-space-gas-detector/",
       "imgUrl": "https://airgas.my/wp-content/uploads/2022/03/423808.jpg",
-      "brand": "Honeywell",
+      "brand": "Bw",
       "industry": "Confined Space",
-      "subCategory": "Gas Detection",
-      "industries": [
-        "Confined Space",
-        "Gases & Equipment",
-        "Maritime & Offshore",
-        "Oil & Gas"
-      ]
+      "subCategory": "Gas Detection"
     },
     {
       "id": 2684,
@@ -4853,13 +3396,9 @@
       "description": "Filter type emergency respirator for escape from buildings and industrial areas in case of accidental pollution by to...",
       "url": "https://airgas.my/product/respirator-for-escape/",
       "imgUrl": "https://airgas.my/wp-content/uploads/2022/07/img_7780-scaled.jpeg",
-      "brand": "DPI Sekur",
+      "brand": "Airgas Technology",
       "industry": "Confined Space",
-      "subCategory": "Respiratory Protection",
-      "industries": [
-        "Confined Space",
-        "Maritime & Offshore"
-      ]
+      "subCategory": "Respiratory Protection"
     },
     {
       "id": 2681,
@@ -4868,26 +3407,18 @@
       "url": "https://airgas.my/product/fireman-boot-harvik/",
       "imgUrl": "https://airgas.my/wp-content/uploads/2022/01/fireman-boot.jpg",
       "brand": "Harvik",
-      "industry": "Maritime & Offshore",
-      "subCategory": "Body Protection",
-      "industries": [
-        "Maritime & Offshore",
-        "Oil & Gas",
-        "PPE"
-      ]
+      "industry": "Oil & Gas",
+      "subCategory": "Footwear"
     },
     {
       "id": 2679,
       "name": "CO2 Transfer system pump 100/D1 High Pressure refilling unit #3150",
       "description": "100/D1 series .. the products details Cylinder to cylinder liquid CO2 transfer pump on skid 100/D1 unit is mainly sui...",
       "url": "https://airgas.my/product/co2-transfer-system/",
-      "imgUrl": "assets/ServicesandMaintenance/CO2 Transfer system pump 100D1 High Pressure refilling unit 3150.png",
+      "imgUrl": "https://airgas.my/wp-content/uploads/2022/01/co2.jpg",
       "brand": "Airgas Technology",
       "industry": "Services & Maintenance",
-      "subCategory": "Technical Services",
-      "industries": [
-        "Services & Maintenance"
-      ]
+      "subCategory": "General Equipment"
     },
     {
       "id": 2678,
@@ -4897,12 +3428,7 @@
       "imgUrl": "https://airgas.my/wp-content/uploads/2022/01/cts2.jpg",
       "brand": "Airgas Technology",
       "industry": "Gases & Equipment",
-      "subCategory": "Gas Storage",
-      "industries": [
-        "Gases & Equipment",
-        "Maritime & Offshore",
-        "Oil & Gas"
-      ]
+      "subCategory": "Gas Storage"
     },
     {
       "id": 2677,
@@ -4912,12 +3438,7 @@
       "imgUrl": "https://airgas.my/wp-content/uploads/2022/10/1000013759-scaled.jpg",
       "brand": "Airgas Technology",
       "industry": "Gases & Equipment",
-      "subCategory": "General Equipment",
-      "industries": [
-        "Gases & Equipment",
-        "Maritime & Offshore",
-        "Oil & Gas"
-      ]
+      "subCategory": "General Equipment"
     },
     {
       "id": 2676,
@@ -4925,14 +3446,9 @@
       "description": "During handling it may happen that a filled cylinder falls down and all of a sudden allows the complete cylinder cont...",
       "url": "https://airgas.my/product/vti-excess-flow-valve/",
       "imgUrl": "https://airgas.my/wp-content/uploads/2022/01/efv2.jpg",
-      "brand": "VTI",
+      "brand": "Vti",
       "industry": "Gases & Equipment",
-      "subCategory": "General Equipment",
-      "industries": [
-        "Gases & Equipment",
-        "Maritime & Offshore",
-        "Oil & Gas"
-      ]
+      "subCategory": "General Equipment"
     },
     {
       "id": 2671,
@@ -4942,10 +3458,7 @@
       "imgUrl": "https://airgas.my/wp-content/uploads/2022/01/appolo-2.jpg",
       "brand": "Airgas Technology",
       "industry": "Gases & Equipment",
-      "subCategory": "General Equipment",
-      "industries": [
-        "Gases & Equipment"
-      ]
+      "subCategory": "General Equipment"
     },
     {
       "id": 2670,
@@ -4955,12 +3468,7 @@
       "imgUrl": "https://airgas.my/wp-content/uploads/2022/01/airline1.jpg",
       "brand": "Airgas Technology",
       "industry": "Confined Space",
-      "subCategory": "Respiratory Protection",
-      "industries": [
-        "Confined Space",
-        "Maritime & Offshore",
-        "PPE"
-      ]
+      "subCategory": "Respiratory Protection"
     },
     {
       "id": 2666,
@@ -4968,15 +3476,9 @@
       "description": "M40 Multi gas monitor \u25a01 to 4 gas monitoring for O2, H2S, CO &amp; combustible gases Gas Ranges: -Carbon Monoxide 0-9...",
       "url": "https://airgas.my/product/gas-detector-4-gases-is/",
       "imgUrl": "https://airgas.my/wp-content/uploads/2022/01/M40_4_gas.jpg",
-      "brand": "Industrial Scientific",
+      "brand": "Airgas Technology",
       "industry": "Confined Space",
-      "subCategory": "Gas Detection",
-      "industries": [
-        "Confined Space",
-        "Gases & Equipment",
-        "Maritime & Offshore",
-        "Oil & Gas"
-      ]
+      "subCategory": "Gas Detection"
     },
     {
       "id": 2665,
@@ -4986,11 +3488,7 @@
       "imgUrl": "https://airgas.my/wp-content/uploads/2022/01/scba.jpg",
       "brand": "Honeywell",
       "industry": "Confined Space",
-      "subCategory": "General Equipment",
-      "industries": [
-        "Confined Space",
-        "Maritime & Offshore"
-      ]
+      "subCategory": "General Equipment"
     },
     {
       "id": 2664,
@@ -4999,12 +3497,8 @@
       "url": "https://airgas.my/product/honeywell-full-body-harness-mb9-mb9007/",
       "imgUrl": "https://airgas.my/wp-content/uploads/2022/01/honeywell_harness.jpg",
       "brand": "Honeywell",
-      "industry": "Confined Space",
-      "subCategory": "General Equipment",
-      "industries": [
-        "Confined Space",
-        "Maritime & Offshore"
-      ]
+      "industry": "PPE",
+      "subCategory": "General Equipment"
     },
     {
       "id": 2662,
@@ -5012,13 +3506,9 @@
       "description": "The SNC is a hood type, constant flow, breathing apparatus to escape from areas in which toxic substances or oxygen d...",
       "url": "https://airgas.my/product/eebd-sekur-emergency-escape-device/",
       "imgUrl": "https://airgas.my/wp-content/uploads/2022/01/eebd-sekur.jpg",
-      "brand": "DPI Sekur",
+      "brand": "Airgas Technology",
       "industry": "Confined Space",
-      "subCategory": "General Equipment",
-      "industries": [
-        "Confined Space",
-        "Maritime & Offshore"
-      ]
+      "subCategory": "General Equipment"
     },
     {
       "id": 2661,
@@ -5028,11 +3518,7 @@
       "imgUrl": "https://airgas.my/wp-content/uploads/2022/01/oxygen-cylinder-500x500-1.jpg",
       "brand": "Airgas Technology",
       "industry": "Gases & Equipment",
-      "subCategory": "General Equipment",
-      "industries": [
-        "Gases & Equipment",
-        "Maritime & Offshore"
-      ]
+      "subCategory": "General Equipment"
     },
     {
       "id": 2688,
@@ -5042,13 +3528,7 @@
       "imgUrl": "https://airgas.my/wp-content/uploads/2022/01/honeywell-bw-hu-x1w1h1h100-y-n-ultra-multi-gas-detector.png",
       "brand": "Honeywell",
       "industry": "Confined Space",
-      "subCategory": "Gas Detection",
-      "industries": [
-        "Confined Space",
-        "Gases & Equipment",
-        "Maritime & Offshore",
-        "Oil & Gas"
-      ]
+      "subCategory": "Gas Detection"
     },
     {
       "id": 2685,
@@ -5056,12 +3536,9 @@
       "description": "Specifications \u00bb\u00bbElectro motor / Petrol compressor c/w pull start and auto cut off at low oil level \u00bb\u00bbPower cable wit...",
       "url": "https://airgas.my/product/lw-compressor-100e/",
       "imgUrl": "https://airgas.my/wp-content/uploads/2022/01/LW-e100.jpg",
-      "brand": "L&W Compressor",
-      "industry": "Gases & Equipment",
-      "subCategory": "General Equipment",
-      "industries": [
-        "Gases & Equipment"
-      ]
+      "brand": "Airgas Technology",
+      "industry": "PPE",
+      "subCategory": "General Equipment"
     },
     {
       "id": 2683,
@@ -5070,13 +3547,8 @@
       "url": "https://airgas.my/product/glove-for-fireman/",
       "imgUrl": "https://airgas.my/wp-content/uploads/2022/01/fireglove.jpg",
       "brand": "Airgas Technology",
-      "industry": "Maritime & Offshore",
-      "subCategory": "General Equipment",
-      "industries": [
-        "Maritime & Offshore",
-        "Oil & Gas",
-        "PPE"
-      ]
+      "industry": "Oil & Gas",
+      "subCategory": "General Equipment"
     },
     {
       "id": 2682,
@@ -5085,13 +3557,8 @@
       "url": "https://airgas.my/product/firefighting-suit/",
       "imgUrl": "https://airgas.my/wp-content/uploads/2022/01/fireman-gear.jpg",
       "brand": "Airgas Technology",
-      "industry": "Maritime & Offshore",
-      "subCategory": "Body Protection",
-      "industries": [
-        "Maritime & Offshore",
-        "Oil & Gas",
-        "PPE"
-      ]
+      "industry": "Oil & Gas",
+      "subCategory": "Body Protection"
     },
     {
       "id": 2680,
@@ -5099,14 +3566,9 @@
       "description": "We are introducing the firefighter helmet of tomorrow. It is designed to protect the head in the most extreme conditi...",
       "url": "https://airgas.my/product/pab-fire-helmet-ht04/",
       "imgUrl": "https://airgas.my/wp-content/uploads/2022/01/PAB.jpg",
-      "brand": "PAB",
-      "industry": "Maritime & Offshore",
-      "subCategory": "General Equipment",
-      "industries": [
-        "Maritime & Offshore",
-        "Oil & Gas",
-        "PPE"
-      ]
+      "brand": "Pab",
+      "industry": "PPE",
+      "subCategory": "General Equipment"
     },
     {
       "id": 2675,
@@ -5114,14 +3576,9 @@
       "description": "*TRELLCOVER GLOVE 3-Finger Trellcover is a non-certified accessory, intended to be worn on top of an AlphaTec\u00ae chemic...",
       "url": "https://airgas.my/product/trellcover-glove-3-finger/",
       "imgUrl": "https://airgas.my/wp-content/uploads/2022/01/glove11.jpg",
-      "brand": "Trelleborg",
-      "industry": "Maritime & Offshore",
-      "subCategory": "General Equipment",
-      "industries": [
-        "Maritime & Offshore",
-        "Oil & Gas",
-        "PPE"
-      ]
+      "brand": "Airgas Technology",
+      "industry": "PPE",
+      "subCategory": "General Equipment"
     },
     {
       "id": 2674,
@@ -5131,12 +3588,7 @@
       "imgUrl": "https://airgas.my/wp-content/uploads/2022/01/10L.png",
       "brand": "Airgas Technology",
       "industry": "Gases & Equipment",
-      "subCategory": "General Equipment",
-      "industries": [
-        "Gases & Equipment",
-        "Maritime & Offshore",
-        "Oil & Gas"
-      ]
+      "subCategory": "General Equipment"
     },
     {
       "id": 2673,
@@ -5144,12 +3596,9 @@
       "description": "Exceptional gas-tight and warfare agents protection \u2022 Non-encapsulating design, suitable for work in confined spaces...",
       "url": "https://airgas.my/product/alphatec-super-agents-protection/",
       "imgUrl": "https://airgas.my/wp-content/uploads/2022/01/alphatec.jpg",
-      "brand": "Ansell",
+      "brand": "Airgas Technology",
       "industry": "PPE",
-      "subCategory": "General Equipment",
-      "industries": [
-        "PPE"
-      ]
+      "subCategory": "General Equipment"
     },
     {
       "id": 2672,
@@ -5159,10 +3608,7 @@
       "imgUrl": "https://airgas.my/wp-content/uploads/2022/01/mask.jpg",
       "brand": "Airgas Technology",
       "industry": "PPE",
-      "subCategory": "Respiratory Protection",
-      "industries": [
-        "PPE"
-      ]
+      "subCategory": "Respiratory Protection"
     },
     {
       "id": 2669,
@@ -5172,10 +3618,7 @@
       "imgUrl": "https://airgas.my/wp-content/uploads/2022/01/trolley.jpg",
       "brand": "Airgas Technology",
       "industry": "Gases & Equipment",
-      "subCategory": "General Equipment",
-      "industries": [
-        "Gases & Equipment"
-      ]
+      "subCategory": "General Equipment"
     },
     {
       "id": 2668,
@@ -5185,13 +3628,7 @@
       "imgUrl": "https://airgas.my/wp-content/uploads/2022/01/Capture.jpg",
       "brand": "Airgas Technology",
       "industry": "Confined Space",
-      "subCategory": "Gas Storage",
-      "industries": [
-        "Confined Space",
-        "Gases & Equipment",
-        "Maritime & Offshore",
-        "Oil & Gas"
-      ]
+      "subCategory": "Gas Storage"
     },
     {
       "id": 2667,
@@ -5199,13 +3636,9 @@
       "description": "VIDEO DIABLO compressed air self -contained breathing apparatus is available in INDUSTRIAL MM version for industrial...",
       "url": "https://airgas.my/product/sekur-dpi-scba-type-2/",
       "imgUrl": "https://airgas.my/wp-content/uploads/2022/01/sekur-set-full-cts.jpg",
-      "brand": "DPI Sekur",
+      "brand": "Airgas Technology",
       "industry": "Confined Space",
-      "subCategory": "General Equipment",
-      "industries": [
-        "Confined Space",
-        "Maritime & Offshore"
-      ]
+      "subCategory": "General Equipment"
     },
     {
       "id": 2663,
@@ -5215,70 +3648,7 @@
       "imgUrl": "https://airgas.my/wp-content/uploads/2022/01/WhatsApp-Image-2020-07-25-at-11.55.33-1.jpeg",
       "brand": "Airgas Technology",
       "industry": "Gases & Equipment",
-      "subCategory": "Gas Storage",
-      "industries": [
-        "Gases & Equipment",
-        "Maritime & Offshore",
-        "Oil & Gas"
-      ]
+      "subCategory": "Gas Storage"
     }
-  ],
-  "subCategoryKnowledge": {
-    "Gas Detection": {
-      "title": "Gas Detection Essentials",
-      "points": [
-        "Identifies toxic, flammable, or oxygen-deficient hazards in real-time.",
-        "Early warning system prevents poisoning and combustible accidents.",
-        "Critical for confined spaces, pipelines, and industrial area monitoring."
-      ]
-    },
-    "Respiratory Protection": {
-      "title": "Respiratory Safety",
-      "points": [
-        "The 'last line of defense' against airborne dust, mists, and toxic gases.",
-        "Prevents chronic lung diseases and immediate oxygen-deficiency risks.",
-        "Includes SCBA, EEBD, and filtered respirators for IDLH environments."
-      ]
-    },
-    "Technical Services": {
-      "title": "Expert Maintenance",
-      "points": [
-        "Hydro testing verifies cylinder strength; calibration ensures sensor accuracy.",
-        "Complies with DOT, NFPA, and OSHA standards for safety certification.",
-        "Reduces operational risk by identifying equipment failure before it happens."
-      ]
-    },
-    "Welding Equipment": {
-      "title": "Industrial Welding",
-      "points": [
-        "Premium ARC/MIG/TIG systems for high-precision structural joining.",
-        "Shielding gases protect welds from atmospheric contamination.",
-        "Pairs with FR gear and ventilation to manage UV and toxic fume hazards."
-      ]
-    },
-    "Gas Storage": {
-      "title": "Safe Gas Handling",
-      "points": [
-        "Heavy-duty cylinders and valves designed for pressures up to 300 bar.",
-        "Requires strict segregation of oxidizers and flammable gases for safety.",
-        "Racks and manifolds provide stability to prevent tipping and valve damage."
-      ]
-    },
-    "Body Protection": {
-      "title": "Full Body Shielding",
-      "points": [
-        "Chemical and flame-resistant suits prevent skin absorption and burns.",
-        "Protects against abrasions, impacts, and environmental thermal stress.",
-        "Essential for worker confidence and productivity in high-risk zones."
-      ]
-    },
-    "General Equipment": {
-      "title": "Site Safety Basics",
-      "points": [
-        "Foundational tools: high-vis vests, safety cones, and specialized kits.",
-        "Broad utility across construction, shipping, and manufacturing sectors.",
-        "Ergonomic designs reduce physical strain and workplace injuries."
-      ]
-    }
-  }
+  ]
 }
