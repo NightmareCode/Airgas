@@ -57,4 +57,5 @@ The Airgas Technology Landing Page is a high-performance, responsive single-page
 - Role: One-stop supply center for safety and gas solutions in Malaysia.
 - Locations: Showroom in Pasir Gudang (Johor) and a specialized workshop in Nilai (Negeri Sembilan).
 - Key Capabilities: Refilling (Medical O2/Air, CO2), Hydro-testing (up to 450bar), Posicheck testing, and technical safety training.
+- Note: We do NOT refill fire extinguishers, Acetylene, or refrigeration gases.
 - Value: Authorized distributor for premium global brands, ensuring products meet ANSI, CE, or EN standards.
