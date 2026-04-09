@@ -51,6 +51,12 @@ while True:
             
             for item in data:
                 name = decode_html(item.get("title", {}).get("rendered", ""))
+                lname = name.lower()
+                
+                # Filter out excluded products
+                if any(x in lname for x in ['acetylene', 'refrigeration']):
+                    continue
+
                 link = item.get("link", "")
                 content = item.get("content", {}).get("rendered", "")
                 excerpt = item.get("excerpt", {}).get("rendered", "")
@@ -59,26 +65,35 @@ while True:
                 
                 # Fetch featured media
                 img_url = ""
-                yoast = item.get("yoast_head_json", {})
-                og_image = yoast.get("og_image", [])
-                if og_image and len(og_image) > 0:
-                    img_url = og_image[0].get("url", "")
                 
-                if not img_url:
-                    wp_featuredmedia = item.get("_links", {}).get("wp:featuredmedia", [])
-                    if wp_featuredmedia:
-                        media_url = wp_featuredmedia[0].get("href", "")
-                        if media_url:
-                            try:
-                                m_req = urllib.request.Request(media_url, headers={'User-Agent': 'Mozilla/5.0'})
-                                with urllib.request.urlopen(m_req) as m_resp:
-                                    m_data = json.loads(m_resp.read().decode('utf-8'))
+                # Try to get high-res image from wp:featuredmedia link first
+                wp_featuredmedia = item.get("_links", {}).get("wp:featuredmedia", [])
+                if wp_featuredmedia:
+                    media_url = wp_featuredmedia[0].get("href", "")
+                    if media_url:
+                        try:
+                            m_req = urllib.request.Request(media_url, headers={'User-Agent': 'Mozilla/5.0'})
+                            with urllib.request.urlopen(m_req) as m_resp:
+                                m_data = json.loads(m_resp.read().decode('utf-8'))
+                                # Try full size, then large, then medium_large
+                                sizes = m_data.get("media_details", {}).get("sizes", {})
+                                if "full" in sizes:
+                                    img_url = sizes["full"].get("source_url", "")
+                                elif "large" in sizes:
+                                    img_url = sizes["large"].get("source_url", "")
+                                else:
                                     img_url = m_data.get("source_url", "")
-                            except Exception:
-                                pass
+                        except Exception:
+                            pass
+                
+                # Fallback to OG image if API call failed or no featured media
+                if not img_url:
+                    yoast = item.get("yoast_head_json", {})
+                    og_image = yoast.get("og_image", [])
+                    if og_image and len(og_image) > 0:
+                        img_url = og_image[0].get("url", "")
 
                 # Mapping Logic
-                lname = name.lower()
                 brand = get_brand(name)
                 
                 all_products.append({
@@ -109,7 +124,7 @@ def get_industry(name):
         return 'Confined Space'
     if any(k in name_lower for k in ['weld', 'electrode', 'kemppi', 'arc 150', 'arc 250', 'mig', 'tig', 'flux-cored', 'gouging', 'cutting torch']):
         return 'Welding'
-    if any(k in name_lower for k in ['cylinder', 'gas', 'argon', 'nitrogen', 'oxygen', 'helium', 'helox', 'ammonia', 'compressed air', 'co2', 'acetylene', 'regulator', 'valve', 'bullnose', 'trolley', 'rack', 'manifold', 'filling system', 'pump']):
+    if any(k in name_lower for k in ['cylinder', 'gas', 'argon', 'nitrogen', 'oxygen', 'helium', 'helox', 'ammonia', 'compressed air', 'co2', 'regulator', 'valve', 'bullnose', 'trolley', 'rack', 'manifold', 'filling system', 'pump']):
         return 'Gases & Equipment'
     if any(k in name_lower for k in ['maritime', 'marine', 'lifeboat', 'ship', 'offshore']):
         return 'Maritime & Offshore'
