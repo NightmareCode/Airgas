@@ -554,7 +554,21 @@ img { display: block; max-width: 100%; }
 .loc-icon svg { width: 24px; height: 24px; }
 
 .loc-details h4 { font-family: 'Space Grotesk', sans-serif; font-size: 1.1rem; font-weight: 700; margin-bottom: 8px; }
-.loc-details p { font-size: 0.95rem; color: var(--ink-secondary); line-height: 1.6; }
+.loc-details p { font-size: 0.95rem; color: var(--ink-secondary); line-height: 1.6; margin-bottom: 12px; }
+
+.map-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--primary);
+  transition: all 0.3s;
+}
+
+.map-link svg { width: 16px; height: 16px; transition: transform 0.3s; }
+.map-link:hover { color: var(--primary-hover); }
+.map-link:hover svg { transform: translate(2px, -2px); }
 
 /* Responsive Adjustments */
 @media (max-width: 1024px) {
