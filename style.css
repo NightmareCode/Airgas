@@ -395,52 +395,64 @@ img { display: block; max-width: 100%; }
 
 /* Collaboration Showcase */
 .collaboration-showcase {
-  margin-top: 80px;
-  padding: 60px;
-  background: #FFFFFF;
-  border-radius: 24px;
-  text-align: center;
-  border: 1px solid #F1F5F9;
+  margin-top: 100px !important;
+  padding: 80px 40px !important;
+  background: #F8F9FA !important; /* Light grey bg to make white cards pop */
+  border-radius: 32px !important;
+  text-align: center !important;
+  border: 1px solid #E9ECEF !important;
 }
 
 .showcase-title {
-  font-family: 'Space Grotesk', sans-serif;
-  font-size: 1.1rem;
-  font-weight: 700;
-  color: var(--ink-tertiary);
-  text-transform: uppercase;
-  letter-spacing: 0.1em;
-  margin-bottom: 48px;
+  font-family: 'Space Grotesk', sans-serif !important;
+  font-size: 1.75rem !important;
+  font-weight: 700 !important;
+  color: #111827 !important;
+  margin-bottom: 60px !important;
+  letter-spacing: -0.01em !important;
 }
 
 .logo-cloud {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-  gap: 48px;
-  opacity: 0.7;
-  transition: opacity 0.3s;
+  display: grid !important;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)) !important;
+  gap: 24px !important;
+  align-items: center !important;
+  justify-items: center !important;
 }
-
-.logo-cloud:hover { opacity: 1; }
 
 .logo-item {
-  width: 140px;
-  height: 60px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  filter: grayscale(1);
-  transition: all 0.3s;
+  width: 100% !important;
+  height: 120px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  padding: 20px !important;
+  background: #FFFFFF !important;
+  border-radius: 16px !important;
+  border: 1px solid #E5E7EB !important;
+  transition: all 0.3s ease !important;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05) !important;
 }
 
-.logo-item:hover { filter: grayscale(0); transform: scale(1.1); }
+.logo-item:hover {
+  transform: translateY(-5px) !important;
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1) !important;
+  border-color: var(--primary) !important;
+}
 
 .logo-item img {
-  max-width: 100%;
-  max-height: 100%;
-  object-fit: contain;
+  max-width: 100% !important;
+  max-height: 100% !important;
+  width: auto !important;
+  height: auto !important;
+  object-fit: contain !important;
+  filter: none !important; /* REMOVE ALL GRAYSCALE */
+  opacity: 1 !important;   /* FULL VISIBILITY */
+  transition: transform 0.3s ease !important;
+}
+
+.logo-item:hover img {
+  transform: scale(1.05) !important;
 }
 
 /* ============ Q&A Section ============ */
