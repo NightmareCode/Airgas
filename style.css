@@ -342,6 +342,80 @@ img { display: block; max-width: 100%; }
 .no-results { text-align: center; padding: 100px 0; grid-column: 1 / -1; }
 .no-results svg { width: 64px; height: 64px; color: #E2E8F0; margin-bottom: 20px; }
 
+/* ============ Q&A Section ============ */
+.qna-section { padding: 100px 0; background: #FFFFFF; }
+.accordion-container { max-width: 900px; margin: 60px auto 0; display: flex; flex-direction: column; gap: 16px; }
+
+.accordion-item {
+  background: #F9FAFB;
+  border: 1px solid #F1F5F9;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  transition: all var(--duration) var(--ease-out);
+}
+
+.accordion-item:hover {
+  border-color: rgba(248, 90, 43, 0.2);
+  background: #FFFFFF;
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05);
+}
+
+.accordion-header {
+  width: 100%;
+  padding: 24px 32px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: left;
+  font-weight: 700;
+  font-size: 1.1rem;
+  color: var(--ink);
+  font-family: 'Space Grotesk', sans-serif;
+  transition: color var(--duration);
+}
+
+.accordion-header:hover { color: var(--primary); }
+
+.accordion-item.active {
+  background: #FFFFFF;
+  border-color: var(--primary);
+  box-shadow: 0 15px 35px -10px rgba(248, 90, 43, 0.1);
+}
+
+.accordion-item.active .accordion-header { color: var(--primary); }
+
+.chevron {
+  width: 20px;
+  height: 20px;
+  transition: transform 0.4s var(--ease-out);
+  color: var(--ink-tertiary);
+}
+
+.accordion-item.active .chevron {
+  transform: rotate(180deg);
+  color: var(--primary);
+}
+
+.accordion-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: all 0.4s var(--ease-out);
+  padding: 0 32px;
+  opacity: 0;
+}
+
+.accordion-item.active .accordion-content {
+  max-height: 300px; /* Adjust as needed */
+  padding: 0 32px 32px;
+  opacity: 1;
+}
+
+.accordion-content p {
+  color: var(--ink-secondary);
+  line-height: 1.7;
+  font-size: 1rem;
+}
+
 /* ============ Contact Section ============ */
 .contact-section { padding: 100px 0; background: #F9FAFB; }
 .contact-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 32px; margin-top: 60px; }
