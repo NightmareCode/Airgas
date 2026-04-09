@@ -123,20 +123,20 @@ document.addEventListener('DOMContentLoaded', () => {
         const fallbackAvatar = `https://ui-avatars.com/api/?name=${initials}&background=F85A2B&color=fff&size=128`;
         
         // Industry-based folder path
-        // Use primary industry for folder mapping
         const primaryIndustry = (product.industries && product.industries[0]) || product.industry || 'PPE';
         const industryFolder = primaryIndustry.replace(/\s+/g, '').replace('&', 'and');
-        const sanitizedFilename = product.name.replace(/[^a-zA-Z0-9\s]/g, '').trim().substring(0, 100).trim() + '.png';
-        const localSrc = `assets/${industryFolder}/${sanitizedFilename}`;
         
-        const mainImgSrc = localSrc; 
-
+        let sanitizedName = product.name.replace(/[^a-zA-Z0-9\s]/g, '').trim();
+        if (sanitizedName.length > 150) sanitizedName = sanitizedName.substring(0, 146);
+        
+        const localSrc = `assets/${industryFolder}/${sanitizedName}.png`;
+        
         card.innerHTML = `
           <div class="card-image-area">
-            <img src="${mainImgSrc}" 
+            <img src="${localSrc}" 
                  class="product-img" 
                  alt="${product.name}" 
-                 onerror="if(this.src !== '${product.imgUrl || ''}') { this.src='${product.imgUrl || fallbackAvatar}'; } else { this.src='${fallbackAvatar}'; this.onerror=null; }" 
+                 onerror="if(this.src.includes('assets/')) { this.src='${product.imgUrl || fallbackAvatar}'; } else { this.src='${fallbackAvatar}'; this.onerror=null; }" 
                  loading="lazy" />
           </div>
           <div class="card-content">
