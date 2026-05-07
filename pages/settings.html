@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Settings - InventoriSystem">
+  <title>Settings - InventoriSystem</title>
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="icon" type="image/jpeg" href="../assets/images/LogoCompany.jpg">
+</head>
+<body>
+  <!-- Mobile Header -->
+  <header class="mobile-header">
+    <div class="hamburger" onclick="toggleSidebar()">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    <div class="sidebar-brand">InventoriSystem</div>
+    <div style="width: 40px;"></div>
+  </header>
+
+  <!-- Sidebar Overlay -->
+  <div class="sidebar-overlay" onclick="closeSidebar()"></div>
+
+  <div class="app-container">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <div class="sidebar-header">
+        <img 
+          src="../assets/images/LogoCompany.jpg" 
+          alt="Company Logo" 
+          class="sidebar-logo"
+        >
+        <span class="sidebar-brand">InventoriSystem</span>
+      </div>
+      
+      <nav class="sidebar-nav">
+        <ul>
+          <li class="nav-item">
+            <a href="dashboard.html" class="nav-link">
+              <span class="nav-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <rect x="3" y="3" width="7" height="7"></rect>
+                  <rect x="14" y="3" width="7" height="7"></rect>
+                  <rect x="14" y="14" width="7" height="7"></rect>
+                  <rect x="3" y="14" width="7" height="7"></rect>
+                </svg>
+              </span>
+              <span>Dashboard</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="products.html" class="nav-link">
+              <span class="nav-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path>
+                  <polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline>
+                  <line x1="12" y1="22.08" x2="12" y2="12"></line>
+                </svg>
+              </span>
+              <span>Products</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="reports.html" class="nav-link">
+              <span class="nav-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <line x1="18" y1="20" x2="18" y2="10"></line>
+                  <line x1="12" y1="20" x2="12" y2="4"></line>
+                  <line x1="6" y1="20" x2="6" y2="14"></line>
+                </svg>
+              </span>
+              <span>Reports</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="settings.html" class="nav-link active">
+              <span class="nav-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <circle cx="12" cy="12" r="3"></circle>
+                  <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path>
+                </svg>
+              </span>
+              <span>Settings</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+      
+      <div class="sidebar-footer">
+        <button class="logout-btn" onclick="handleLogout()">
+          <span class="nav-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path>
+              <polyline points="16 17 21 12 16 7"></polyline>
+              <line x1="21" y1="12" x2="9" y2="12"></line>
+            </svg>
+          </span>
+          <span>Logout</span>
+        </button>
+      </div>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content">
+      <div class="page-header">
+        <h1 class="page-title">Settings</h1>
+        <div class="flex items-center gap-md">
+          <label class="toggle-switch">
+            <input type="checkbox" id="themeToggle">
+            <span class="toggle-slider"></span>
+          </label>
+          <span style="font-size: 0.875rem; color: var(--text-secondary);">Dark Mode</span>
+        </div>
+      </div>
+
+      <!-- User Profile Settings -->
+      <div class="card" style="margin-bottom: 24px;">
+        <div class="card-header">
+          <h3 class="card-title">User Profile</h3>
+        </div>
+        <form id="profileForm">
+          <div class="flex items-center gap-lg" style="margin-bottom: 24px;">
+            <div style="position: relative;">
+              <img 
+                src="../assets/images/LogoCompany.jpg" 
+                alt="Profile" 
+                style="width: 80px; height: 80px; border-radius: 50%; object-fit: cover;"
+              >
+              <button 
+                type="button" 
+                class="btn btn-sm btn-secondary" 
+                style="position: absolute; bottom: -10px; right: -10px; border-radius: 50%; width: 32px; height: 32px; padding: 0; display: flex; align-items: center; justify-content: center;"
+              >
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                  <polyline points="17 8 12 3 7 8"></polyline>
+                  <line x1="12" y1="3" x2="12" y2="15"></line>
+                </svg>
+              </button>
+            </div>
+            <div>
+              <h4 style="margin-bottom: 4px;">Profile Picture</h4>
+              <p style="font-size: 0.875rem; color: var(--text-secondary); margin: 0;">JPG, PNG or GIF. Max 2MB</p>
+            </div>
+          </div>
+          
+          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px;">
+            <div class="form-group">
+              <label for="userName" class="form-label">Full Name</label>
+              <input type="text" id="userName" class="form-input" placeholder="Enter your name">
+            </div>
+            
+            <div class="form-group">
+              <label for="userEmail" class="form-label">Email Address</label>
+              <input type="email" id="userEmail" class="form-input" placeholder="Enter your email">
+            </div>
+            
+            <div class="form-group">
+              <label for="userPhone" class="form-label">Phone Number</label>
+              <input type="tel" id="userPhone" class="form-input" placeholder="Enter phone number">
+            </div>
+          </div>
+          
+          <div style="margin-top: 16px;">
+            <button type="submit" class="btn btn-primary">Save Profile</button>
+          </div>
+        </form>
+      </div>
+
+      <!-- Company Info -->
+      <div class="card" style="margin-bottom: 24px;">
+        <div class="card-header">
+          <h3 class="card-title">Company Information</h3>
+        </div>
+        <form id="companyForm">
+          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px;">
+            <div class="form-group">
+              <label for="companyName" class="form-label">Company Name</label>
+              <input type="text" id="companyName" class="form-input" placeholder="Enter company name" value="Your Company Name">
+            </div>
+            
+            <div class="form-group">
+              <label for="companyPhone" class="form-label">Phone Number</label>
+              <input type="tel" id="companyPhone" class="form-input" placeholder="Enter phone number" value="+1 234 567 890">
+            </div>
+            
+            <div class="form-group">
+              <label for="companyEmail" class="form-label">Email Address</label>
+              <input type="email" id="companyEmail" class="form-input" placeholder="Enter email" value="info@company.com">
+            </div>
+          </div>
+          
+          <div class="form-group">
+            <label for="companyAddress" class="form-label">Address</label>
+            <textarea id="companyAddress" class="form-input" placeholder="Enter company address">123 Business Street, City, Country</textarea>
+          </div>
+          
+          <div class="flex items-center gap-lg" style="margin-top: 16px;">
+            <button type="submit" class="btn btn-primary">Save Company Info</button>
+            <div class="flex items-center gap-md">
+              <div style="position: relative;">
+                <img 
+                  src="../assets/images/LogoCompany.jpg" 
+                  alt="Company Logo" 
+                  style="width: 50px; height: 50px; border-radius: 8px; object-fit: cover;"
+                >
+                <button 
+                  type="button" 
+                  class="btn btn-sm btn-secondary" 
+                  style="position: absolute; bottom: -8px; right: -8px; border-radius: 50%; width: 24px; height: 24px; padding: 0; display: flex; align-items: center; justify-content: center;"
+                >
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                    <polyline points="17 8 12 3 7 8"></polyline>
+                    <line x1="12" y1="3" x2="12" y2="15"></line>
+                  </svg>
+                </button>
+              </div>
+              <span style="font-size: 0.875rem; color: var(--text-secondary);">Company Logo</span>
+            </div>
+          </div>
+        </form>
+      </div>
+
+      <!-- Appearance Settings -->
+      <div class="card" style="margin-bottom: 24px;">
+        <div class="card-header">
+          <h3 class="card-title">Appearance</h3>
+        </div>
+        <div class="settings-grid">
+          <div class="setting-item">
+            <div class="setting-info">
+              <h4>Dark Mode</h4>
+              <p>Switch between light and dark theme</p>
+            </div>
+            <label class="toggle-switch">
+              <input type="checkbox" id="themeToggleSettings">
+              <span class="toggle-slider"></span>
+            </label>
+          </div>
+          
+          <div class="setting-item">
+            <div class="setting-info">
+              <h4>Compact Mode</h4>
+              <p>Reduce spacing for more content</p>
+            </div>
+            <label class="toggle-switch">
+              <input type="checkbox">
+              <span class="toggle-slider"></span>
+            </label>
+          </div>
+        </div>
+      </div>
+
+      <!-- Notification Settings -->
+      <div class="card" style="margin-bottom: 24px;">
+        <div class="card-header">
+          <h3 class="card-title">Notifications</h3>
+        </div>
+        <div class="settings-grid">
+          <div class="setting-item">
+            <div class="setting-info">
+              <h4>Email Notifications</h4>
+              <p>Receive updates via email</p>
+            </div>
+            <label class="toggle-switch">
+              <input type="checkbox" checked onchange="toggleNotification('email')">
+              <span class="toggle-slider"></span>
+            </label>
+          </div>
+          
+          <div class="setting-item">
+            <div class="setting-info">
+              <h4>Low Stock Alerts</h4>
+              <p>Get notified when items are low</p>
+            </div>
+            <label class="toggle-switch">
+              <input type="checkbox" checked onchange="toggleNotification('lowStock')">
+              <span class="toggle-slider"></span>
+            </label>
+          </div>
+          
+          <div class="setting-item">
+            <div class="setting-info">
+              <h4>SMS Notifications</h4>
+              <p>Receive text messages for urgent alerts</p>
+            </div>
+            <label class="toggle-switch">
+              <input type="checkbox" onchange="toggleNotification('sms')">
+              <span class="toggle-slider"></span>
+            </label>
+          </div>
+          
+          <div class="setting-item">
+            <div class="setting-info">
+              <h4>Weekly Reports</h4>
+              <p>Receive weekly summary reports</p>
+            </div>
+            <label class="toggle-switch">
+              <input type="checkbox" checked onchange="toggleNotification('weekly')">
+              <span class="toggle-slider"></span>
+            </label>
+          </div>
+        </div>
+      </div>
+
+      <!-- System Settings -->
+      <div class="card">
+        <div class="card-header">
+          <h3 class="card-title">System</h3>
+        </div>
+        <div class="settings-grid">
+          <div class="setting-item">
+            <div class="setting-info">
+              <h4>Auto Backup</h4>
+              <p>Automatically backup data daily</p>
+            </div>
+            <label class="toggle-switch">
+              <input type="checkbox" checked>
+              <span class="toggle-slider"></span>
+            </label>
+          </div>
+          
+          <div class="setting-item">
+            <div class="setting-info">
+              <h4>API Access</h4>
+              <p>Enable API for external integrations</p>
+            </div>
+            <label class="toggle-switch">
+              <input type="checkbox">
+              <span class="toggle-slider"></span>
+            </label>
+          </div>
+        </div>
+        
+        <div style="margin-top: 24px; padding-top: 24px; border-top: 1px solid var(--border-color);">
+          <h4 style="margin-bottom: 16px;">Danger Zone</h4>
+          <div class="flex gap-md" style="flex-wrap: wrap;">
+            <button class="btn btn-secondary" disabled>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                <polyline points="7 10 12 15 17 10"></polyline>
+                <line x1="12" y1="15" x2="12" y2="3"></line>
+              </svg>
+              Export All Data
+            </button>
+            <button class="btn btn-danger" disabled>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="3 6 5 6 21 6"></polyline>
+                <path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path>
+              </svg>
+              Clear All Data
+            </button>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <script src="../assets/js/script.js"></script>
+  <script>
+    // Additional settings-specific JavaScript
+    document.addEventListener('DOMContentLoaded', function() {
+      // Sync theme toggle in settings page with global theme
+      const settingsThemeToggle = document.getElementById('themeToggleSettings');
+      const mainThemeToggle = document.getElementById('themeToggle');
+      
+      if (settingsThemeToggle && mainThemeToggle) {
+        settingsThemeToggle.checked = mainThemeToggle.checked;
+        
+        settingsThemeToggle.addEventListener('change', function() {
+          mainThemeToggle.checked = this.checked;
+          mainThemeToggle.dispatchEvent(new Event('change'));
+        });
+      }
+    });
+  </script>
+</body>
+</html>

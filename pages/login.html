@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="InventoriSystem - Inventory Management System">
+  <title>Login - InventoriSystem</title>
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="icon" type="image/jpeg" href="../assets/images/LogoCompany.jpg">
+</head>
+<body>
+  <div class="login-page">
+    <div class="login-card fade-in">
+      <img 
+        src="../assets/images/LogoCompany.jpg" 
+        alt="Company Logo" 
+        class="login-logo"
+      >
+      <h1 class="login-title">InventoriSystem</h1>
+      <p class="login-subtitle">Inventory Management Platform</p>
+      
+      <div id="loginError" class="login-error">
+        Invalid username or password
+      </div>
+      
+      <form id="loginForm" class="login-form">
+        <div class="form-group">
+          <label for="username" class="form-label">Username</label>
+          <input 
+            type="text" 
+            id="username" 
+            class="form-input" 
+            placeholder="Enter your username"
+            autocomplete="username"
+          >
+        </div>
+        
+        <div class="form-group">
+          <label for="password" class="form-label">Password</label>
+          <input 
+            type="password" 
+            id="password" 
+            class="form-input" 
+            placeholder="Enter your password"
+            autocomplete="current-password"
+          >
+        </div>
+        
+        <button type="submit" class="btn btn-primary login-btn">
+          Log In
+        </button>
+      </form>
+      
+      <p style="margin-top: 24px; font-size: 0.875rem; color: var(--text-secondary);">
+        Demo: Enter any username and password to login
+      </p>
+    </div>
+  </div>
+
+  <script src="../assets/js/script.js"></script>
+</body>
+</html>
