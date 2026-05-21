@@ -166,7 +166,122 @@
     </main>
   </div>
 
-  <!-- Modal removed: system is read-only, all CRUD buttons are dummy -->
+  <!-- Product Detail Modal -->
+  <div class="detail-overlay" id="detailOverlay" onclick="closeDetail(event)">
+    <div class="detail-modal">
+      <div class="detail-header">
+        <h2 class="detail-title" id="detailTitle">Loading...</h2>
+        <button class="detail-close" onclick="closeDetailModal()">&times;</button>
+      </div>
+
+      <div class="detail-tabs">
+        <button class="detail-tab active" onclick="switchDetailTab('overview')">Overview</button>
+        <button class="detail-tab" onclick="switchDetailTab('locations')">Locations</button>
+        <button class="detail-tab" onclick="switchDetailTab('sales')">Sales History</button>
+        <button class="detail-tab" onclick="switchDetailTab('purchases')">Purchase History</button>
+        <button class="detail-tab" onclick="switchDetailTab('stockcard')">Stock Card</button>
+      </div>
+
+      <div class="detail-body">
+        <!-- Overview Tab -->
+        <div class="detail-section" id="dtab-overview">
+          <div class="detail-overview-grid">
+            <div class="detail-image-box" id="detailImageBox">
+              <div class="no-image">No Image</div>
+            </div>
+            <div class="detail-info">
+              <div class="detail-info-row">
+                <span class="detail-label">Item Code</span>
+                <span class="detail-value" id="detailCode">-</span>
+              </div>
+              <div class="detail-info-row">
+                <span class="detail-label">Description</span>
+                <span class="detail-value" id="detailDesc">-</span>
+              </div>
+              <div class="detail-info-row">
+                <span class="detail-label">Stock</span>
+                <span class="detail-value" id="detailStock">-</span>
+              </div>
+              <div class="detail-info-row">
+                <span class="detail-label">Status</span>
+                <span id="detailStatus">-</span>
+              </div>
+              <div class="detail-info-row" id="detailMemoRow" style="display:none;">
+                <span class="detail-label">Memo</span>
+                <span class="detail-value detail-memo" id="detailMemo">-</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Pricing Table -->
+          <div class="card" style="margin-top:16px;">
+            <div class="card-header"><h3 class="card-title">Pricing</h3></div>
+            <div class="table-container">
+              <table class="table">
+                <thead><tr><th>UOM</th><th>Tier</th><th>Factor</th><th>Price (RM)</th></tr></thead>
+                <tbody id="detailPricingTable"><tr><td colspan="4" style="text-align:center;">Loading...</td></tr></tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+
+        <!-- Locations Tab -->
+        <div class="detail-section" id="dtab-locations" style="display:none;">
+          <div class="card">
+            <div class="card-header"><h3 class="card-title">Stock by Location</h3></div>
+            <div class="table-container">
+              <table class="table">
+                <thead><tr><th>Location</th><th>On Hand Qty</th><th>UOM</th></tr></thead>
+                <tbody id="detailLocationsTable"><tr><td colspan="3" style="text-align:center;">Loading...</td></tr></tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+
+        <!-- Sales History Tab -->
+        <div class="detail-section" id="dtab-sales" style="display:none;">
+          <div class="card">
+            <div class="card-header"><h3 class="card-title">Sales History (Outgoing)</h3></div>
+            <div class="table-container">
+              <table class="table">
+                <thead><tr><th>Date</th><th>Invoice #</th><th>Customer</th><th>Qty</th><th>Unit Price</th><th>Amount</th></tr></thead>
+                <tbody id="detailSalesTable"><tr><td colspan="6" style="text-align:center;">Loading...</td></tr></tbody>
+              </table>
+            </div>
+            <div class="detail-table-info" id="salesInfo"></div>
+          </div>
+        </div>
+
+        <!-- Purchase History Tab -->
+        <div class="detail-section" id="dtab-purchases" style="display:none;">
+          <div class="card">
+            <div class="card-header"><h3 class="card-title">Purchase History (Incoming)</h3></div>
+            <div class="table-container">
+              <table class="table">
+                <thead><tr><th>Date</th><th>Document #</th><th>Supplier</th><th>Qty</th><th>Unit Price</th><th>Amount</th></tr></thead>
+                <tbody id="detailPurchasesTable"><tr><td colspan="6" style="text-align:center;">Loading...</td></tr></tbody>
+              </table>
+            </div>
+            <div class="detail-table-info" id="purchasesInfo"></div>
+          </div>
+        </div>
+
+        <!-- Stock Card Tab -->
+        <div class="detail-section" id="dtab-stockcard" style="display:none;">
+          <div class="card">
+            <div class="card-header"><h3 class="card-title">Stock Card</h3></div>
+            <div class="table-container">
+              <table class="table">
+                <thead><tr><th>Date</th><th>Type</th><th>Document</th><th>Qty</th><th>Balance</th><th>Name</th><th>Location</th></tr></thead>
+                <tbody id="detailStockCardTable"><tr><td colspan="7" style="text-align:center;">Loading...</td></tr></tbody>
+              </table>
+            </div>
+            <div class="detail-table-info" id="stockcardInfo"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 
   <script src="../assets/js/script.js"></script>
 </body>

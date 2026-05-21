@@ -369,18 +369,165 @@ function resetOverlay() {
   alert('System is in read-only mode. No local changes to reset.');
 }
 
-/** View item details in a simple alert */
+/** Open rich product detail modal */
+let currentDetailCode = null;
+
 function viewProduct(code) {
+  currentDetailCode = code;
+  const overlay = document.getElementById('detailOverlay');
+  if (!overlay) return;
+  overlay.classList.add('show');
+  document.body.style.overflow = 'hidden';
+
+  // Reset tabs
+  switchDetailTab('overview');
+
+  // Set title immediately from products list
   const p = products.find(i => i.code === code);
-  if (!p) return;
-  alert(
-    'Item Code: ' + p.code +
-    '\nDescription: ' + p.name +
-    '\nStock: ' + (p.stock !== null ? p.stock : 'Loading...') +
-    '\nStatus: ' + (p.status === 'in-stock' ? 'In Stock' :
-                    p.status === 'low-stock' ? 'Low Stock' :
-                    p.status === 'out-of-stock' ? 'Out of Stock' : 'Loading...')
-  );
+  document.getElementById('detailTitle').textContent = p ? p.name : code;
+
+  // Fetch full details from server
+  loadDetailOverview(code);
+}
+
+function closeDetailModal() {
+  const overlay = document.getElementById('detailOverlay');
+  if (overlay) overlay.classList.remove('show');
+  document.body.style.overflow = '';
+  currentDetailCode = null;
+}
+
+function closeDetail(event) {
+  if (event.target === event.currentTarget) closeDetailModal();
+}
+
+function switchDetailTab(tab) {
+  document.querySelectorAll('.detail-tab').forEach(t => t.classList.remove('active'));
+  document.querySelector(`.detail-tab[onclick="switchDetailTab('${tab}')"]`)?.classList.add('active');
+  document.querySelectorAll('.detail-section').forEach(s => s.style.display = 'none');
+  const target = document.getElementById('dtab-' + tab);
+  if (target) target.style.display = '';
+
+  // Lazy-load tab data
+  if (tab === 'sales' && currentDetailCode) loadDetailSales(currentDetailCode);
+  if (tab === 'purchases') loadDetailPurchases(currentDetailCode);
+  if (tab === 'stockcard') loadDetailStockCard(currentDetailCode);
+}
+
+async function loadDetailOverview(code) {
+  // Reset content
+  document.getElementById('detailCode').textContent = code;
+  document.getElementById('detailDesc').textContent = 'Loading...';
+  document.getElementById('detailStock').textContent = '...';
+  document.getElementById('detailStatus').innerHTML = getStatusBadge('loading');
+  document.getElementById('detailPricingTable').innerHTML = '<tr><td colspan="4" style="text-align:center;">Loading...</td></tr>';
+  document.getElementById('detailLocationsTable').innerHTML = '<tr><td colspan="3" style="text-align:center;">Loading...</td></tr>';
+  document.getElementById('detailImageBox').innerHTML = '<div class="no-image">Loading...</div>';
+  document.getElementById('detailMemoRow').style.display = 'none';
+
+  const data = await apiGet(`/items/${encodeURIComponent(code)}/details`);
+  if (!data) return;
+
+  document.getElementById('detailTitle').textContent = data.name;
+  document.getElementById('detailDesc').textContent = data.name;
+  document.getElementById('detailStock').textContent = data.stock !== null ? data.stock.toLocaleString() : 'N/A';
+  document.getElementById('detailStatus').innerHTML = getStatusBadge(data.status);
+
+  // Image
+  if (data.image) {
+    document.getElementById('detailImageBox').innerHTML = `<img src="${data.image}" alt="Product Image" class="detail-product-img">`;
+  } else {
+    document.getElementById('detailImageBox').innerHTML = '<div class="no-image">No Image Available</div>';
+  }
+
+  // Memo
+  if (data.memo) {
+    document.getElementById('detailMemoRow').style.display = '';
+    document.getElementById('detailMemo').textContent = data.memo;
+  }
+
+  // Pricing
+  const pTbody = document.getElementById('detailPricingTable');
+  if (data.pricing && data.pricing.length) {
+    pTbody.innerHTML = '';
+    data.pricing.forEach(p => {
+      const tr = document.createElement('tr');
+      tr.innerHTML = `<td>${escapeHtml(p.uom)}</td><td>${escapeHtml(p.description)}</td><td>${p.factor}</td><td style="font-weight:600;">${p.price.toFixed(2)}</td>`;
+      pTbody.appendChild(tr);
+    });
+  } else {
+    pTbody.innerHTML = '<tr><td colspan="4" style="text-align:center;padding:16px;">No pricing data</td></tr>';
+  }
+
+  // Locations
+  const lTbody = document.getElementById('detailLocationsTable');
+  if (data.locations && data.locations.length) {
+    lTbody.innerHTML = '';
+    data.locations.forEach(l => {
+      const tr = document.createElement('tr');
+      const color = l.qty > 0 ? '#22c55e' : l.qty < 0 ? '#ef4444' : 'var(--text-secondary)';
+      tr.innerHTML = `<td>${escapeHtml(l.location)}</td><td style="font-weight:600;color:${color};">${l.qty.toLocaleString()}</td><td>${escapeHtml(l.uom)}</td>`;
+      lTbody.appendChild(tr);
+    });
+  } else {
+    lTbody.innerHTML = '<tr><td colspan="3" style="text-align:center;padding:16px;">No location data</td></tr>';
+  }
+}
+
+function renderHistoryTable(tbodyId, infoId, rows, total, columns) {
+  const tbody = document.getElementById(tbodyId);
+  const info = document.getElementById(infoId);
+  if (!tbody) return;
+
+  if (!rows.length) {
+    tbody.innerHTML = `<tr><td colspan="${columns.length}" style="text-align:center;padding:20px;">No records found</td></tr>`;
+    if (info) info.textContent = '';
+    return;
+  }
+
+  tbody.innerHTML = '';
+  rows.forEach(r => {
+    const tr = document.createElement('tr');
+    tr.innerHTML = columns.map(col => `<td>${escapeHtml(String(r[col] || '-'))}</td>`).join('');
+    tbody.appendChild(tr);
+  });
+  if (info) info.textContent = `Showing ${rows.length} of ${total} records`;
+}
+
+async function loadDetailSales(code) {
+  const tbody = document.getElementById('detailSalesTable');
+  if (tbody.dataset.loaded === code) return;
+  tbody.innerHTML = '<tr><td colspan="6" style="text-align:center;">Loading...</td></tr>';
+
+  const data = await apiGet(`/items/${encodeURIComponent(code)}/outgoing?start=0&length=50`);
+  if (!data) return;
+  renderHistoryTable('detailSalesTable', 'salesInfo', data.rows, data.total,
+    ['date', 'document', 'customerName', 'qty', 'unitPrice', 'amount']);
+  tbody.dataset.loaded = code;
+}
+
+async function loadDetailPurchases(code) {
+  const tbody = document.getElementById('detailPurchasesTable');
+  if (tbody.dataset.loaded === code) return;
+  tbody.innerHTML = '<tr><td colspan="6" style="text-align:center;">Loading...</td></tr>';
+
+  const data = await apiGet(`/items/${encodeURIComponent(code)}/incoming?start=0&length=50`);
+  if (!data) return;
+  renderHistoryTable('detailPurchasesTable', 'purchasesInfo', data.rows, data.total,
+    ['date', 'document', 'supplierName', 'qty', 'unitPrice', 'amount']);
+  tbody.dataset.loaded = code;
+}
+
+async function loadDetailStockCard(code) {
+  const tbody = document.getElementById('detailStockCardTable');
+  if (tbody.dataset.loaded === code) return;
+  tbody.innerHTML = '<tr><td colspan="7" style="text-align:center;">Loading...</td></tr>';
+
+  const data = await apiGet(`/items/${encodeURIComponent(code)}/stockcard?start=0&length=50`);
+  if (!data) return;
+  renderHistoryTable('detailStockCardTable', 'stockcardInfo', data.rows, data.total,
+    ['date', 'type', 'invoiceNumber', 'qty', 'balance', 'name', 'locationFrom']);
+  tbody.dataset.loaded = code;
 }
 
 // ==========================================

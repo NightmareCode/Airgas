@@ -162,6 +162,102 @@ async function fetchOnHand(code) {
   } catch { return 0; }
 }
 
+// ── Fetch item detail tabs from SkyBiz ──
+
+async function fetchDetailTab(tab, code) {
+  await ensureAuth();
+  const res = await fetch(`${SKYBIZ.base}/sharedfunction/global/fnmitem_listing_details_${tab}.php`, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/x-www-form-urlencoded', 'Cookie': cookies },
+    body: `id=${encodeURIComponent(code)}&ItemCode=${encodeURIComponent(code)}&LocationType=All`
+  });
+  return await res.text();
+}
+
+function parsePricing(html) {
+  const rows = [];
+  const regex = /<tr>\s*<td[^>]*style="[^"]*display:none[^"]*"[^>]*>[\s\S]*?<\/td>\s*<td class="childtd">\s*(.*?)\s*<\/td>\s*<td class="childtd">\s*(.*?)\s*<\/td>\s*<td[^>]*>\s*([\d.,]+)\s*<\/td>\s*<td[^>]*>\s*([\d.,]+)\s*<\/td>/gi;
+  let m;
+  while ((m = regex.exec(html)) !== null) {
+    rows.push({
+      uom: m[1].trim(),
+      description: m[2].trim(),
+      factor: parseFloat(m[3].replace(/,/g, '')) || 0,
+      price: parseFloat(m[4].replace(/,/g, '')) || 0
+    });
+  }
+  return rows;
+}
+
+function parseLocations(html) {
+  const rows = [];
+  // Match location rows (NOT the Total row)
+  const regex = /<tr>\s*<td class="childtd">\s*(.*?)\s*<\/td>\s*<td class="childtd"[^>]*>\s*([-\d.,]+)\s*<\/td>\s*<td class="childtd">\s*(.*?)\s*<\/td>/gi;
+  let m;
+  while ((m = regex.exec(html)) !== null) {
+    const loc = m[1].trim();
+    if (loc.match(/<b>/i)) continue; // skip Total row
+    rows.push({
+      location: loc || '(No Location)',
+      qty: parseFloat(m[2].replace(/,/g, '')) || 0,
+      uom: m[3].trim()
+    });
+  }
+  return rows;
+}
+
+function parseImage(html) {
+  const m = html.match(/data:image\/[^"']+/i);
+  return m ? m[0] : null;
+}
+
+function parseMemo(html) {
+  const m = html.match(/<td class='childtd'>([\s\S]*?)<\/td>/i);
+  if (!m) return '';
+  return m[1].replace(/<br\s*\/?>/gi, '\n').replace(/<[^>]+>/g, '').trim();
+}
+
+async function fetchHistory(type, code, start, length) {
+  await ensureAuth();
+  const endpoint = type === 'outgoing'
+    ? 'fnmitem_listing_server_processing_outgoing_history.php'
+    : 'fnmitem_listing_server_processing_incoming_history.php';
+  const res = await fetch(`${SKYBIZ.base}/sharedfunction/global/${endpoint}`, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/x-www-form-urlencoded', 'Cookie': cookies },
+    body: `ItemCode=${encodeURIComponent(code)}&draw=1&start=${start || 0}&length=${length || 50}`
+  });
+  const json = await res.json();
+  const columns = type === 'outgoing'
+    ? ['date','document','customerCode','customerName','qty','fQty','uom','unitPrice','discPct','disc','tax','amount','batch','salesPerson','location','department','project','branch','id']
+    : ['date','document','supplierCode','supplierName','qty','fQty','uom','unitPrice','discPct','disc','tax','amount','batch','purchaser','location','department','project','branch','id'];
+  const rows = (json.data || []).map(row => {
+    const obj = {};
+    columns.forEach((col, i) => { obj[col] = row[i] || ''; });
+    return obj;
+  });
+  return { total: json.recordsTotal || 0, filtered: json.recordsFiltered || 0, rows };
+}
+
+async function fetchStockCard(code, start, length) {
+  await ensureAuth();
+  const res = await fetch(`${SKYBIZ.base}/sharedfunction/global/fnmitem_listing_server_processing_stock_card.php`, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/x-www-form-urlencoded', 'Cookie': cookies },
+    body: `ItemCode=${encodeURIComponent(code)}&draw=1&start=${start || 0}&length=${length || 50}&LocationCode=&DateFrom=&DateTo=&SerialNumberYN=0&InvalidSerialNumberYN=0`
+  });
+  try {
+    const json = await res.json();
+    const columns = ['date','doNumber','invoiceNumber','qty','balance','locationFrom','locationTo','type','fQty','uom','disc','tax','unitPrice','lineAmount','name','itemBatch','salesPerson','department','project'];
+    const rows = (json.data || []).map(row => {
+      const obj = {};
+      columns.forEach((col, i) => { obj[col] = row[i] || ''; });
+      return obj;
+    });
+    return { total: json.recordsTotal || 0, filtered: json.recordsFiltered || 0, rows };
+  } catch { return { total: 0, filtered: 0, rows: [] }; }
+}
+
 // ── Batch-fetch stocks ──
 
 async function batchFetchStocks(codes) {
@@ -300,6 +396,59 @@ app.get('/api/items/:code', async (req, res) => {
     stock,
     status: getStockStatus(stock)
   });
+});
+
+// ── Item Detail API ──
+
+app.get('/api/items/:code/details', async (req, res) => {
+  try {
+    const code = req.params.code;
+    const item = items.find(i => i.code === code);
+    if (!item) return res.status(404).json({ error: 'Item not found' });
+
+    const [pricingHtml, locationHtml, imageHtml, memoHtml] = await Promise.all([
+      fetchDetailTab('tab_pricing', code),
+      fetchDetailTab('tab_location_onhand', code),
+      fetchDetailTab('tab_item_picture', code),
+      fetchDetailTab('tab_memo', code)
+    ]);
+
+    const stock = stocks[code] !== undefined ? stocks[code] : await fetchOnHand(code);
+
+    res.json({
+      code: item.code,
+      name: item.description || item.code,
+      stock,
+      status: getStockStatus(stock),
+      pricing: parsePricing(pricingHtml),
+      locations: parseLocations(locationHtml),
+      image: parseImage(imageHtml),
+      memo: parseMemo(memoHtml)
+    });
+  } catch (err) {
+    res.status(500).json({ error: err.message });
+  }
+});
+
+app.get('/api/items/:code/outgoing', async (req, res) => {
+  try {
+    const data = await fetchHistory('outgoing', req.params.code, req.query.start, req.query.length);
+    res.json(data);
+  } catch (err) { res.status(500).json({ error: err.message }); }
+});
+
+app.get('/api/items/:code/incoming', async (req, res) => {
+  try {
+    const data = await fetchHistory('incoming', req.params.code, req.query.start, req.query.length);
+    res.json(data);
+  } catch (err) { res.status(500).json({ error: err.message }); }
+});
+
+app.get('/api/items/:code/stockcard', async (req, res) => {
+  try {
+    const data = await fetchStockCard(req.params.code, req.query.start, req.query.length);
+    res.json(data);
+  } catch (err) { res.status(500).json({ error: err.message }); }
 });
 
 // ── Reports API ──
