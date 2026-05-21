@@ -302,6 +302,68 @@ app.get('/api/items/:code', async (req, res) => {
   });
 });
 
+// ── Reports API ──
+
+app.get('/api/reports', (req, res) => {
+  const all = buildItems();
+
+  // Status counts
+  const inStock    = all.filter(i => i.status === 'in-stock').length;
+  const lowStock   = all.filter(i => i.status === 'low-stock').length;
+  const outOfStock = all.filter(i => i.status === 'out-of-stock').length;
+  const loading    = all.filter(i => i.status === 'loading').length;
+
+  // Stock distribution ranges
+  const distribution = { zero: 0, low: 0, medium: 0, high: 0, veryHigh: 0 };
+  all.forEach(i => {
+    if (i.stock === null) return;
+    if (i.stock <= 0)       distribution.zero++;
+    else if (i.stock <= 10) distribution.low++;
+    else if (i.stock <= 50) distribution.medium++;
+    else if (i.stock <= 100) distribution.high++;
+    else                     distribution.veryHigh++;
+  });
+
+  // Items with stock loaded (exclude still-loading)
+  const withStock = all.filter(i => i.stock !== null);
+
+  // Top 10 highest stock
+  const topStock = [...withStock]
+    .sort((a, b) => b.stock - a.stock)
+    .slice(0, 10)
+    .map(i => ({ code: i.code, name: i.name, stock: i.stock, status: i.status }));
+
+  // Bottom 10 (most critical — lowest/negative first)
+  const bottomStock = [...withStock]
+    .sort((a, b) => a.stock - b.stock)
+    .slice(0, 10)
+    .map(i => ({ code: i.code, name: i.name, stock: i.stock, status: i.status }));
+
+  // Low stock alerts (stock > 0 and <= 10)
+  const lowStockAlerts = withStock
+    .filter(i => i.stock > 0 && i.stock <= 10)
+    .sort((a, b) => a.stock - b.stock)
+    .map(i => ({ code: i.code, name: i.name, stock: i.stock, status: i.status }));
+
+  // Out of stock alerts (stock <= 0)
+  const outOfStockAlerts = withStock
+    .filter(i => i.stock <= 0)
+    .sort((a, b) => a.stock - b.stock)
+    .map(i => ({ code: i.code, name: i.name, stock: i.stock, status: i.status }));
+
+  res.json({
+    totalItems: all.length,
+    statusCounts: { inStock, lowStock, outOfStock, loading },
+    distribution,
+    topStock,
+    bottomStock,
+    lowStockAlerts,
+    outOfStockAlerts,
+    stocksFetched,
+    stockProgress
+  });
+});
+
 app.get('/api/items/:code/stock', async (req, res) => {
   const qty = await fetchOnHand(req.params.code);
   stocks[req.params.code] = qty;

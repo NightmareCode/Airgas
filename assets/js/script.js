@@ -399,9 +399,229 @@ function handleSearch() {
 // REPORTS
 // ==========================================
 
+let reportData = null;
+let pieChart = null;
+let barChart = null;
+
 function switchReportTab(tabName) {
   document.querySelectorAll('.report-tab').forEach(t => t.classList.remove('active'));
   document.querySelector(`[data-tab="${tabName}"]`)?.classList.add('active');
+
+  document.querySelectorAll('.report-section').forEach(s => s.style.display = 'none');
+  const target = document.getElementById('tab-' + tabName);
+  if (target) target.style.display = '';
+}
+
+async function loadReports() {
+  const statusEl = document.getElementById('connectionStatus');
+  if (statusEl) statusEl.textContent = 'Loading report data from SkyBiz...';
+
+  const data = await apiGet('/reports');
+  if (!data) {
+    if (statusEl) statusEl.textContent = 'Could not load report data. Make sure server is running.';
+    return;
+  }
+
+  reportData = data;
+  renderReportCards(data);
+  renderStatusPieChart(data.statusCounts);
+  renderDistributionBarChart(data.distribution);
+  renderAlertsTables(data);
+  renderTopBottomTables(data);
+
+  if (statusEl) {
+    if (data.stocksFetched) {
+      statusEl.textContent = `Connected to SkyBiz  |  ${data.totalItems} items loaded`;
+    } else {
+      const pct = data.stockProgress
+        ? Math.round((data.stockProgress.done / data.stockProgress.total) * 100)
+        : 0;
+      statusEl.textContent = `Connected to SkyBiz  |  ${data.totalItems} items  |  Stock: ${pct}% loaded`;
+    }
+  }
+}
+
+function renderReportCards(data) {
+  const s = data.statusCounts;
+  const set = (id, v) => { const e = document.getElementById(id); if (e) e.textContent = v.toLocaleString(); };
+  set('rInStock', s.inStock);
+  set('rLowStock', s.lowStock);
+  set('rOutOfStock', s.outOfStock);
+  set('rTotal', data.totalItems);
+}
+
+function renderStatusPieChart(counts) {
+  const ctx = document.getElementById('statusPieChart');
+  if (!ctx) return;
+
+  if (pieChart) pieChart.destroy();
+
+  const isDark = getCurrentTheme() === 'dark';
+  const textColor = isDark ? '#e0e0e0' : '#333';
+
+  pieChart = new Chart(ctx, {
+    type: 'doughnut',
+    data: {
+      labels: ['In Stock', 'Low Stock', 'Out of Stock'],
+      datasets: [{
+        data: [counts.inStock, counts.lowStock, counts.outOfStock],
+        backgroundColor: ['#22c55e', '#f59e0b', '#ef4444'],
+        borderWidth: 2,
+        borderColor: isDark ? '#1e1e2e' : '#ffffff'
+      }]
+    },
+    options: {
+      responsive: true,
+      maintainAspectRatio: false,
+      plugins: {
+        legend: { position: 'bottom', labels: { color: textColor, padding: 16 } }
+      }
+    }
+  });
+}
+
+function renderDistributionBarChart(dist) {
+  const ctx = document.getElementById('distributionBarChart');
+  if (!ctx) return;
+
+  if (barChart) barChart.destroy();
+
+  const isDark = getCurrentTheme() === 'dark';
+  const textColor = isDark ? '#e0e0e0' : '#333';
+  const gridColor = isDark ? '#333' : '#e5e7eb';
+
+  barChart = new Chart(ctx, {
+    type: 'bar',
+    data: {
+      labels: ['0 or less', '1 - 10', '11 - 50', '51 - 100', '100+'],
+      datasets: [{
+        label: 'Number of Items',
+        data: [dist.zero, dist.low, dist.medium, dist.high, dist.veryHigh],
+        backgroundColor: ['#ef4444', '#f59e0b', '#3b82f6', '#22c55e', '#06b6d4'],
+        borderRadius: 6
+      }]
+    },
+    options: {
+      responsive: true,
+      maintainAspectRatio: false,
+      plugins: {
+        legend: { display: false }
+      },
+      scales: {
+        y: {
+          beginAtZero: true,
+          ticks: { color: textColor, precision: 0 },
+          grid: { color: gridColor }
+        },
+        x: {
+          ticks: { color: textColor },
+          grid: { display: false }
+        }
+      }
+    }
+  });
+}
+
+function renderAlertsTables(data) {
+  // Out of stock table
+  const outTbody = document.getElementById('outOfStockTable');
+  const outCount = document.getElementById('outCount');
+  if (outTbody) {
+    outTbody.innerHTML = '';
+    if (outCount) outCount.textContent = data.outOfStockAlerts.length;
+    if (!data.outOfStockAlerts.length) {
+      outTbody.innerHTML = '<tr><td colspan="4" style="text-align:center;padding:20px;">No out of stock items</td></tr>';
+    } else {
+      data.outOfStockAlerts.forEach(i => {
+        const tr = document.createElement('tr');
+        tr.innerHTML = `
+          <td><strong>${escapeHtml(i.code)}</strong></td>
+          <td>${escapeHtml(i.name)}</td>
+          <td>${i.stock}</td>
+          <td>${getStatusBadge(i.status)}</td>`;
+        outTbody.appendChild(tr);
+      });
+    }
+  }
+
+  // Low stock table
+  const lowTbody = document.getElementById('lowStockTable');
+  const lowCount = document.getElementById('lowCount');
+  if (lowTbody) {
+    lowTbody.innerHTML = '';
+    if (lowCount) lowCount.textContent = data.lowStockAlerts.length;
+    if (!data.lowStockAlerts.length) {
+      lowTbody.innerHTML = '<tr><td colspan="4" style="text-align:center;padding:20px;">No low stock items</td></tr>';
+    } else {
+      data.lowStockAlerts.forEach(i => {
+        const tr = document.createElement('tr');
+        tr.innerHTML = `
+          <td><strong>${escapeHtml(i.code)}</strong></td>
+          <td>${escapeHtml(i.name)}</td>
+          <td>${i.stock}</td>
+          <td>${getStatusBadge(i.status)}</td>`;
+        lowTbody.appendChild(tr);
+      });
+    }
+  }
+}
+
+function renderTopBottomTables(data) {
+  const topTbody = document.getElementById('topStockTable');
+  if (topTbody) {
+    topTbody.innerHTML = '';
+    data.topStock.forEach(i => {
+      const tr = document.createElement('tr');
+      tr.innerHTML = `
+        <td><strong>${escapeHtml(i.code)}</strong></td>
+        <td>${escapeHtml(i.name)}</td>
+        <td style="font-weight:600;color:#22c55e;">${i.stock.toLocaleString()}</td>`;
+      topTbody.appendChild(tr);
+    });
+  }
+
+  const bottomTbody = document.getElementById('bottomStockTable');
+  if (bottomTbody) {
+    bottomTbody.innerHTML = '';
+    data.bottomStock.forEach(i => {
+      const tr = document.createElement('tr');
+      tr.innerHTML = `
+        <td><strong>${escapeHtml(i.code)}</strong></td>
+        <td>${escapeHtml(i.name)}</td>
+        <td style="font-weight:600;color:#ef4444;">${i.stock.toLocaleString()}</td>`;
+      bottomTbody.appendChild(tr);
+    });
+  }
+}
+
+function exportCSV() {
+  if (!reportData) { alert('Report data not loaded yet.'); return; }
+
+  // Fetch all items for full export
+  apiGet('/items?page=1&limit=99999').then(data => {
+    if (!data || !data.items) { alert('Could not load items for export.'); return; }
+
+    const rows = [['Item Code', 'Description', 'Stock', 'Status']];
+    data.items.forEach(i => {
+      rows.push([
+        i.code,
+        '"' + (i.name || '').replace(/"/g, '""') + '"',
+        i.stock !== null ? i.stock : '',
+        i.status === 'in-stock' ? 'In Stock' :
+        i.status === 'low-stock' ? 'Low Stock' :
+        i.status === 'out-of-stock' ? 'Out of Stock' : 'Loading'
+      ]);
+    });
+
+    const csv = rows.map(r => r.join(',')).join('\n');
+    const blob = new Blob([csv], { type: 'text/csv' });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = 'inventory_report_' + new Date().toISOString().slice(0, 10) + '.csv';
+    a.click();
+    URL.revokeObjectURL(url);
+  });
 }
 
 // ==========================================
@@ -468,6 +688,10 @@ function initApp() {
 
     case 'products.html':
       loadProducts(1, '');
+      break;
+
+    case 'reports.html':
+      loadReports();
       break;
 
     case 'settings.html':
