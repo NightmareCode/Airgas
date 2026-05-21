@@ -474,7 +474,7 @@ textarea.form-input {
    ========================================== */
 
 .table-container {
-  overflow-x: auto;
+  overflow-x: hidden;
   border-radius: var(--radius-md);
   transition: box-shadow var(--transition-normal);
 }
@@ -487,15 +487,29 @@ textarea.form-input {
   width: 100%;
   border-collapse: collapse;
   background-color: var(--bg-card);
+  table-layout: fixed;
 }
 
 .table th,
 .table td {
-  padding: var(--spacing-md);
+  padding: var(--spacing-sm) var(--spacing-md);
   text-align: left;
   border-bottom: 1px solid var(--border-color);
   transition: background-color var(--transition-fast), transform var(--transition-fast);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
+
+/* Products page table column widths */
+#productsTableBody td:nth-child(1) { width: 110px; }
+#productsTableBody td:nth-child(3) { width: 65px; text-align: right; }
+#productsTableBody td:nth-child(4) { width: 95px; }
+#productsTableBody td:nth-child(5) { width: 90px; }
+
+/* Detail modal tables — auto layout, allow wrapping */
+.detail-modal .table { table-layout: auto; }
+.detail-modal .table td { white-space: normal; word-break: break-word; }
 
 .table th {
   font-weight: 600;
@@ -522,7 +536,7 @@ textarea.form-input {
 }
 
 .table tr:hover td {
-  transform: translateX(3px);
+  transform: none;
 }
 
 .table tr:last-child td {
@@ -797,6 +811,8 @@ textarea.form-input {
   padding: var(--spacing-lg);
   min-height: 100vh;
   transition: margin-left var(--transition-normal);
+  overflow-x: hidden;
+  min-width: 0;
 }
 
 /* Mobile Header */
