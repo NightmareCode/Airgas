@@ -132,10 +132,6 @@
           >
         </div>
         
-        <select id="categoryFilter" class="form-select filter-select">
-          <option value="">All Categories</option>
-        </select>
-        
         <button class="btn btn-primary" onclick="openAddProductModal()">
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
             <line x1="12" y1="5" x2="12" y2="19"></line>
@@ -151,10 +147,9 @@
           <table class="table">
             <thead>
               <tr>
-                <th>Product Name</th>
-                <th>Category</th>
+                <th>Item Code</th>
+                <th>Description</th>
                 <th>Stock</th>
-                <th>Price</th>
                 <th>Status</th>
                 <th>Actions</th>
               </tr>
@@ -164,58 +159,14 @@
             </tbody>
           </table>
         </div>
+        <div class="pagination" id="pagination"></div>
       </div>
+
+      <div id="connectionStatus" style="text-align:center; padding:8px; font-size:0.8rem; color:var(--text-secondary);"></div>
     </main>
   </div>
 
-  <!-- Product Modal -->
-  <div id="productModal" class="modal-overlay">
-    <div class="modal">
-      <div class="modal-header">
-        <h3 class="modal-title" id="productModalTitle">Add New Product</h3>
-        <button class="modal-close" onclick="closeProductModal()">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <line x1="18" y1="6" x2="6" y2="18"></line>
-            <line x1="6" y1="6" x2="18" y2="18"></line>
-          </svg>
-        </button>
-      </div>
-      <form id="productForm">
-        <div class="modal-body">
-          <div class="form-group">
-            <label for="productName" class="form-label">Product Name</label>
-            <input type="text" id="productName" class="form-input" placeholder="Enter product name" required>
-          </div>
-          
-          <div class="form-group">
-            <label for="productCategory" class="form-label">Category</label>
-            <select id="productCategory" class="form-select" required>
-              <option value="">Select Category</option>
-            </select>
-          </div>
-          
-          <div class="form-group">
-            <label for="productStock" class="form-label">Stock Quantity</label>
-            <input type="number" id="productStock" class="form-input" placeholder="0" min="0" required>
-          </div>
-          
-          <div class="form-group">
-            <label for="productPrice" class="form-label">Price ($)</label>
-            <input type="number" id="productPrice" class="form-input" placeholder="0.00" min="0" step="0.01" required>
-          </div>
-          
-          <div class="form-group">
-            <label for="productDescription" class="form-label">Description (Optional)</label>
-            <textarea id="productDescription" class="form-input" placeholder="Enter product description"></textarea>
-          </div>
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" onclick="closeProductModal()">Cancel</button>
-          <button type="submit" class="btn btn-primary">Save Product</button>
-        </div>
-      </form>
-    </div>
-  </div>
+  <!-- Modal removed: system is read-only, all CRUD buttons are dummy -->
 
   <script src="../assets/js/script.js"></script>
 </body>
