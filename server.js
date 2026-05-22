@@ -284,6 +284,196 @@ async function batchFetchStocks(codes) {
   console.log('[SkyBiz] All stocks loaded');
 }
 
+// ── Analytics cache ──
+
+let analyticsCache = {
+  locations: null,
+  sales: null,
+  valuation: null,
+  fetchingLocations: false,
+  fetchingSales: false,
+  fetchingValuation: false
+};
+
+async function buildLocationAnalytics() {
+  if (analyticsCache.fetchingLocations) return analyticsCache.locations;
+  analyticsCache.fetchingLocations = true;
+  console.log('[Analytics] Fetching location data...');
+
+  const locationTotals = {};
+  const BATCH = 10;
+  const codes = items.map(i => i.code);
+
+  for (let i = 0; i < codes.length; i += BATCH) {
+    if (!authenticated) await skybizLogin();
+    const batch = codes.slice(i, i + BATCH);
+    await Promise.all(batch.map(async code => {
+      try {
+        const html = await (await fetch(`${SKYBIZ.base}/sharedfunction/global/fnmitem_listing_details_tab_location_onhand.php`, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/x-www-form-urlencoded', 'Cookie': cookies },
+          body: `id=${encodeURIComponent(code)}&ItemCode=${encodeURIComponent(code)}&LocationType=All`
+        })).text();
+
+        const regex = /<tr>\s*<td class="childtd">\s*(.*?)\s*<\/td>\s*<td class="childtd"[^>]*>\s*([-\d.,]+)\s*<\/td>/gi;
+        let m;
+        while ((m = regex.exec(html)) !== null) {
+          const loc = m[1].trim();
+          if (loc.match(/<b>/i)) continue;
+          const name = loc.replace(/\s*-\s*$/, '').trim() || '(No Location)';
+          const qty = parseFloat(m[2].replace(/,/g, '')) || 0;
+          if (!locationTotals[name]) locationTotals[name] = { stock: 0, items: 0 };
+          locationTotals[name].stock += qty;
+          locationTotals[name].items++;
+        }
+      } catch {}
+    }));
+    if ((i + BATCH) % 200 === 0) console.log(`[Analytics] Locations: ${Math.min(i + BATCH, codes.length)}/${codes.length}`);
+  }
+
+  analyticsCache.locations = Object.entries(locationTotals)
+    .map(([name, data]) => ({ name, stock: Math.round(data.stock * 100) / 100, items: data.items }))
+    .sort((a, b) => b.stock - a.stock);
+
+  analyticsCache.fetchingLocations = false;
+  console.log(`[Analytics] Location data ready (${analyticsCache.locations.length} locations)`);
+  return analyticsCache.locations;
+}
+
+async function buildSalesAnalytics() {
+  if (analyticsCache.fetchingSales) return analyticsCache.sales;
+  analyticsCache.fetchingSales = true;
+  console.log('[Analytics] Fetching sales data...');
+
+  // Get top 30 items with the most stock activity (non-zero stock)
+  const activeItems = items.filter(i => stocks[i.code] !== undefined && stocks[i.code] !== 0)
+    .slice(0, 30).map(i => i.code);
+
+  // Also add items with highest absolute stock values
+  const topByStock = [...items]
+    .filter(i => stocks[i.code] !== undefined)
+    .sort((a, b) => Math.abs(stocks[b.code] || 0) - Math.abs(stocks[a.code] || 0))
+    .slice(0, 20).map(i => i.code);
+
+  const codesToFetch = [...new Set([...activeItems, ...topByStock])];
+
+  const customers = {};
+  const topProducts = {};
+  let totalRevenue = 0;
+  let totalTransactions = 0;
+  const monthlyRevenue = {};
+
+  for (const code of codesToFetch) {
+    try {
+      if (!authenticated) await skybizLogin();
+      const data = await fetchHistory('outgoing', code, 0, 100);
+      const itemName = items.find(i => i.code === code)?.description || code;
+
+      data.rows.forEach(r => {
+        const amt = parseFloat(String(r.amount).replace(/,/g, '')) || 0;
+        const qty = parseFloat(String(r.qty).replace(/,/g, '')) || 0;
+        const custName = r.customerName || 'Unknown';
+
+        totalRevenue += amt;
+        totalTransactions++;
+
+        if (!customers[custName]) customers[custName] = { revenue: 0, orders: 0 };
+        customers[custName].revenue += amt;
+        customers[custName].orders++;
+
+        if (!topProducts[code]) topProducts[code] = { name: itemName, revenue: 0, qty: 0 };
+        topProducts[code].revenue += amt;
+        topProducts[code].qty += qty;
+
+        // Monthly breakdown
+        if (r.date) {
+          const parts = r.date.split('/');
+          if (parts.length === 3) {
+            const monthKey = `${parts[2]}-${parts[1]}`;
+            if (!monthlyRevenue[monthKey]) monthlyRevenue[monthKey] = 0;
+            monthlyRevenue[monthKey] += amt;
+          }
+        }
+      });
+    } catch {}
+  }
+
+  analyticsCache.sales = {
+    totalRevenue: Math.round(totalRevenue * 100) / 100,
+    totalTransactions,
+    itemsAnalyzed: codesToFetch.length,
+    topCustomers: Object.entries(customers)
+      .map(([name, d]) => ({ name, revenue: Math.round(d.revenue * 100) / 100, orders: d.orders }))
+      .sort((a, b) => b.revenue - a.revenue)
+      .slice(0, 10),
+    topProducts: Object.values(topProducts)
+      .sort((a, b) => b.revenue - a.revenue)
+      .slice(0, 10)
+      .map(p => ({ ...p, revenue: Math.round(p.revenue * 100) / 100, qty: Math.round(p.qty * 100) / 100 })),
+    monthlyRevenue: Object.entries(monthlyRevenue)
+      .sort(([a], [b]) => a.localeCompare(b))
+      .map(([month, revenue]) => ({ month, revenue: Math.round(revenue * 100) / 100 }))
+  };
+
+  analyticsCache.fetchingSales = false;
+  console.log(`[Analytics] Sales data ready (${totalTransactions} transactions)`);
+  return analyticsCache.sales;
+}
+
+async function buildValuationAnalytics() {
+  if (analyticsCache.fetchingValuation) return analyticsCache.valuation;
+  analyticsCache.fetchingValuation = true;
+  console.log('[Analytics] Fetching pricing for valuation...');
+
+  const valuations = [];
+  const BATCH = 10;
+  const itemsWithStock = items.filter(i => stocks[i.code] && stocks[i.code] > 0);
+
+  for (let i = 0; i < itemsWithStock.length; i += BATCH) {
+    if (!authenticated) await skybizLogin();
+    const batch = itemsWithStock.slice(i, i + BATCH);
+    await Promise.all(batch.map(async item => {
+      try {
+        const html = await (await fetch(`${SKYBIZ.base}/sharedfunction/global/fnmitem_listing_details_tab_pricing.php`, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/x-www-form-urlencoded', 'Cookie': cookies },
+          body: `id=${encodeURIComponent(item.code)}&ItemCode=${encodeURIComponent(item.code)}`
+        })).text();
+
+        const pricing = parsePricing(html);
+        const basePrice = pricing.find(p => p.description.toLowerCase() === 'base')?.price || pricing[0]?.price || 0;
+        const stock = stocks[item.code] || 0;
+        const uom = pricing[0]?.uom || '';
+
+        if (basePrice > 0) {
+          valuations.push({
+            code: item.code,
+            name: item.description || item.code,
+            stock,
+            price: basePrice,
+            value: Math.round(stock * basePrice * 100) / 100,
+            uom
+          });
+        }
+      } catch {}
+    }));
+  }
+
+  valuations.sort((a, b) => b.value - a.value);
+  const totalValue = valuations.reduce((sum, v) => sum + v.value, 0);
+
+  analyticsCache.valuation = {
+    totalValue: Math.round(totalValue * 100) / 100,
+    itemsWithPricing: valuations.length,
+    topByValue: valuations.slice(0, 10),
+    all: valuations
+  };
+
+  analyticsCache.fetchingValuation = false;
+  console.log(`[Analytics] Valuation ready (RM ${totalValue.toFixed(2)} total)`);
+  return analyticsCache.valuation;
+}
+
 // ── Build frontend item objects ──
 
 function getStockStatus(qty) {
@@ -511,6 +701,33 @@ app.get('/api/reports', (req, res) => {
     stocksFetched,
     stockProgress
   });
+});
+
+app.get('/api/reports/locations', async (req, res) => {
+  try {
+    if (analyticsCache.locations) return res.json({ ready: true, data: analyticsCache.locations });
+    if (analyticsCache.fetchingLocations) return res.json({ ready: false, message: 'Fetching location data...' });
+    buildLocationAnalytics();
+    res.json({ ready: false, message: 'Started fetching location data...' });
+  } catch (err) { res.status(500).json({ error: err.message }); }
+});
+
+app.get('/api/reports/sales', async (req, res) => {
+  try {
+    if (analyticsCache.sales) return res.json({ ready: true, data: analyticsCache.sales });
+    if (analyticsCache.fetchingSales) return res.json({ ready: false, message: 'Analyzing sales data...' });
+    buildSalesAnalytics();
+    res.json({ ready: false, message: 'Started analyzing sales data...' });
+  } catch (err) { res.status(500).json({ error: err.message }); }
+});
+
+app.get('/api/reports/valuation', async (req, res) => {
+  try {
+    if (analyticsCache.valuation) return res.json({ ready: true, data: analyticsCache.valuation });
+    if (analyticsCache.fetchingValuation) return res.json({ ready: false, message: 'Calculating inventory value...' });
+    buildValuationAnalytics();
+    res.json({ ready: false, message: 'Started calculating inventory value...' });
+  } catch (err) { res.status(500).json({ error: err.message }); }
 });
 
 app.get('/api/items/:code/stock', async (req, res) => {

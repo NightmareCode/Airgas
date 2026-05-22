@@ -121,6 +121,9 @@
         <button class="report-tab active" data-tab="overview" onclick="switchReportTab('overview')">Stock Overview</button>
         <button class="report-tab" data-tab="alerts" onclick="switchReportTab('alerts')">Stock Alerts</button>
         <button class="report-tab" data-tab="top-bottom" onclick="switchReportTab('top-bottom')">Top / Bottom Stock</button>
+        <button class="report-tab" data-tab="locations" onclick="switchReportTab('locations')">Location Analysis</button>
+        <button class="report-tab" data-tab="sales" onclick="switchReportTab('sales')">Sales Insights</button>
+        <button class="report-tab" data-tab="valuation" onclick="switchReportTab('valuation')">Inventory Value</button>
       </div>
 
       <!-- Tab: Stock Overview -->
@@ -222,6 +225,118 @@
                   <tr><th>Item Code</th><th>Description</th><th>Stock</th></tr>
                 </thead>
                 <tbody id="bottomStockTable"></tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tab: Location Analysis -->
+      <div class="report-section" id="tab-locations" style="display:none;">
+        <div class="analytics-loading" id="locationsLoading">
+          <div class="analytics-spinner"></div>
+          <p>Analyzing stock by location... This may take a moment on first load.</p>
+        </div>
+        <div id="locationsContent" style="display:none;">
+          <div class="report-summary-cards">
+            <div class="report-card card-purple">
+              <div class="report-card-value" id="rLocCount">-</div>
+              <div class="report-card-label">Warehouses</div>
+            </div>
+            <div class="report-card card-teal">
+              <div class="report-card-value" id="rLocTotalStock">-</div>
+              <div class="report-card-label">Total Distributed</div>
+            </div>
+          </div>
+          <div class="report-charts-row">
+            <div class="card chart-card chart-card-full">
+              <div class="card-header"><h3 class="card-title">Stock by Warehouse Location</h3></div>
+              <div class="chart-wrapper chart-wrapper-tall"><canvas id="locationBarChart"></canvas></div>
+            </div>
+          </div>
+          <div class="card" style="margin-top:20px;">
+            <div class="card-header"><h3 class="card-title">Location Breakdown</h3></div>
+            <div class="table-container">
+              <table class="table">
+                <thead><tr><th>Location</th><th>Total Stock</th><th>Items</th></tr></thead>
+                <tbody id="locationTable"></tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tab: Sales Insights -->
+      <div class="report-section" id="tab-sales" style="display:none;">
+        <div class="analytics-loading" id="salesLoading">
+          <div class="analytics-spinner"></div>
+          <p>Analyzing sales history... This may take a moment on first load.</p>
+        </div>
+        <div id="salesContent" style="display:none;">
+          <div class="report-summary-cards">
+            <div class="report-card card-green">
+              <div class="report-card-value" id="rTotalRevenue">-</div>
+              <div class="report-card-label">Total Revenue (RM)</div>
+            </div>
+            <div class="report-card card-blue">
+              <div class="report-card-value" id="rTotalTransactions">-</div>
+              <div class="report-card-label">Transactions</div>
+            </div>
+            <div class="report-card card-purple">
+              <div class="report-card-value" id="rItemsAnalyzed">-</div>
+              <div class="report-card-label">Items Analyzed</div>
+            </div>
+          </div>
+          <div class="report-charts-row">
+            <div class="card chart-card">
+              <div class="card-header"><h3 class="card-title">Top Customers by Revenue</h3></div>
+              <div class="chart-wrapper chart-wrapper-tall"><canvas id="customerRevenueChart"></canvas></div>
+            </div>
+            <div class="card chart-card">
+              <div class="card-header"><h3 class="card-title">Top Products by Sales</h3></div>
+              <div class="chart-wrapper chart-wrapper-tall"><canvas id="productSalesChart"></canvas></div>
+            </div>
+          </div>
+          <div class="card" style="margin-top:20px;">
+            <div class="card-header"><h3 class="card-title">Monthly Revenue Trend</h3></div>
+            <div class="chart-wrapper chart-wrapper-tall"><canvas id="monthlyRevenueChart"></canvas></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tab: Inventory Value -->
+      <div class="report-section" id="tab-valuation" style="display:none;">
+        <div class="analytics-loading" id="valuationLoading">
+          <div class="analytics-spinner"></div>
+          <p>Calculating inventory valuation... This may take a moment on first load.</p>
+        </div>
+        <div id="valuationContent" style="display:none;">
+          <div class="report-summary-cards">
+            <div class="report-card card-gold">
+              <div class="report-card-value" id="rTotalValue">-</div>
+              <div class="report-card-label">Total Inventory Value (RM)</div>
+            </div>
+            <div class="report-card card-teal">
+              <div class="report-card-value" id="rPricedItems">-</div>
+              <div class="report-card-label">Items with Pricing</div>
+            </div>
+          </div>
+          <div class="report-charts-row">
+            <div class="card chart-card">
+              <div class="card-header"><h3 class="card-title">Top 10 Most Valuable Items</h3></div>
+              <div class="chart-wrapper chart-wrapper-tall"><canvas id="valuationChart"></canvas></div>
+            </div>
+            <div class="card chart-card">
+              <div class="card-header"><h3 class="card-title">Value Distribution</h3></div>
+              <div class="chart-wrapper chart-wrapper-tall"><canvas id="valuePieChart"></canvas></div>
+            </div>
+          </div>
+          <div class="card" style="margin-top:20px;">
+            <div class="card-header"><h3 class="card-title">Inventory Valuation Table</h3></div>
+            <div class="table-container">
+              <table class="table">
+                <thead><tr><th>Item Code</th><th>Description</th><th>Stock</th><th>Unit Price (RM)</th><th>Total Value (RM)</th></tr></thead>
+                <tbody id="valuationTable"></tbody>
               </table>
             </div>
           </div>

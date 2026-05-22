@@ -550,6 +550,17 @@ let reportData = null;
 let pieChart = null;
 let barChart = null;
 
+// Analytics chart instances
+let locationChart = null;
+let customerChart = null;
+let productChart = null;
+let monthlyChart = null;
+let valuationBarChart = null;
+let valuePie = null;
+
+// Track which analytics tabs have been loaded
+let analyticsLoaded = { locations: false, sales: false, valuation: false };
+
 function switchReportTab(tabName) {
   document.querySelectorAll('.report-tab').forEach(t => t.classList.remove('active'));
   document.querySelector(`[data-tab="${tabName}"]`)?.classList.add('active');
@@ -557,6 +568,11 @@ function switchReportTab(tabName) {
   document.querySelectorAll('.report-section').forEach(s => s.style.display = 'none');
   const target = document.getElementById('tab-' + tabName);
   if (target) target.style.display = '';
+
+  // Trigger analytics loading on first visit
+  if (tabName === 'locations' && !analyticsLoaded.locations) loadLocationAnalytics();
+  if (tabName === 'sales' && !analyticsLoaded.sales) loadSalesAnalytics();
+  if (tabName === 'valuation' && !analyticsLoaded.valuation) loadValuationAnalytics();
 }
 
 async function loadReports() {
@@ -768,6 +784,420 @@ function exportCSV() {
     a.download = 'inventory_report_' + new Date().toISOString().slice(0, 10) + '.csv';
     a.click();
     URL.revokeObjectURL(url);
+  });
+}
+
+// ==========================================
+// ANALYTICS — LOCATION ANALYSIS
+// ==========================================
+
+async function loadLocationAnalytics() {
+  const loading = document.getElementById('locationsLoading');
+  const content = document.getElementById('locationsContent');
+
+  const data = await apiGet('/reports/locations');
+  if (!data) {
+    if (loading) loading.innerHTML = '<p style="color:var(--danger);">Could not load location data.</p>';
+    return;
+  }
+
+  if (!data.ready) {
+    // Poll every 3 seconds until ready
+    setTimeout(loadLocationAnalytics, 3000);
+    return;
+  }
+
+  analyticsLoaded.locations = true;
+  if (loading) loading.style.display = 'none';
+  if (content) content.style.display = '';
+
+  const locations = data.data;
+
+  // Summary cards
+  const locCount = document.getElementById('rLocCount');
+  const locTotal = document.getElementById('rLocTotalStock');
+  if (locCount) locCount.textContent = locations.length.toLocaleString();
+  const totalStock = locations.reduce((s, l) => s + l.stock, 0);
+  if (locTotal) locTotal.textContent = Math.round(totalStock).toLocaleString();
+
+  // Bar chart
+  renderLocationBarChart(locations);
+
+  // Table
+  const tbody = document.getElementById('locationTable');
+  if (tbody) {
+    tbody.innerHTML = '';
+    locations.forEach(loc => {
+      const tr = document.createElement('tr');
+      tr.innerHTML = `
+        <td><strong>${escapeHtml(loc.name)}</strong></td>
+        <td style="font-weight:600;">${loc.stock.toLocaleString()}</td>
+        <td>${loc.items.toLocaleString()}</td>`;
+      tbody.appendChild(tr);
+    });
+  }
+}
+
+function renderLocationBarChart(locations) {
+  const ctx = document.getElementById('locationBarChart');
+  if (!ctx) return;
+  if (locationChart) locationChart.destroy();
+
+  const isDark = getCurrentTheme() === 'dark';
+  const textColor = isDark ? '#e0e0e0' : '#333';
+  const gridColor = isDark ? '#333' : '#e5e7eb';
+
+  const colors = ['#3b82f6', '#8b5cf6', '#06b6d4', '#22c55e', '#f59e0b', '#ef4444',
+                  '#ec4899', '#14b8a6', '#f97316', '#6366f1', '#84cc16', '#a855f7'];
+
+  locationChart = new Chart(ctx, {
+    type: 'bar',
+    data: {
+      labels: locations.map(l => l.name.length > 20 ? l.name.slice(0, 18) + '...' : l.name),
+      datasets: [{
+        label: 'Total Stock',
+        data: locations.map(l => l.stock),
+        backgroundColor: locations.map((_, i) => colors[i % colors.length]),
+        borderRadius: 6
+      }]
+    },
+    options: {
+      responsive: true,
+      maintainAspectRatio: false,
+      indexAxis: locations.length > 6 ? 'y' : 'x',
+      plugins: {
+        legend: { display: false },
+        tooltip: {
+          callbacks: {
+            label: ctx => `Stock: ${ctx.raw.toLocaleString()}`
+          }
+        }
+      },
+      scales: {
+        y: { ticks: { color: textColor }, grid: { color: gridColor } },
+        x: { ticks: { color: textColor }, grid: { color: gridColor }, beginAtZero: true }
+      }
+    }
+  });
+}
+
+// ==========================================
+// ANALYTICS — SALES INSIGHTS
+// ==========================================
+
+async function loadSalesAnalytics() {
+  const loading = document.getElementById('salesLoading');
+  const content = document.getElementById('salesContent');
+
+  const data = await apiGet('/reports/sales');
+  if (!data) {
+    if (loading) loading.innerHTML = '<p style="color:var(--danger);">Could not load sales data.</p>';
+    return;
+  }
+
+  if (!data.ready) {
+    setTimeout(loadSalesAnalytics, 3000);
+    return;
+  }
+
+  analyticsLoaded.sales = true;
+  if (loading) loading.style.display = 'none';
+  if (content) content.style.display = '';
+
+  const sales = data.data;
+
+  // Summary cards
+  const setVal = (id, v) => { const e = document.getElementById(id); if (e) e.textContent = v; };
+  setVal('rTotalRevenue', 'RM ' + sales.totalRevenue.toLocaleString(undefined, {minimumFractionDigits: 2, maximumFractionDigits: 2}));
+  setVal('rTotalTransactions', sales.totalTransactions.toLocaleString());
+  setVal('rItemsAnalyzed', sales.itemsAnalyzed.toLocaleString());
+
+  // Charts
+  renderCustomerRevenueChart(sales.topCustomers);
+  renderProductSalesChart(sales.topProducts);
+  renderMonthlyRevenueChart(sales.monthlyRevenue);
+}
+
+function renderCustomerRevenueChart(customers) {
+  const ctx = document.getElementById('customerRevenueChart');
+  if (!ctx) return;
+  if (customerChart) customerChart.destroy();
+
+  const isDark = getCurrentTheme() === 'dark';
+  const textColor = isDark ? '#e0e0e0' : '#333';
+  const gridColor = isDark ? '#333' : '#e5e7eb';
+
+  const colors = ['#3b82f6', '#22c55e', '#f59e0b', '#ef4444', '#8b5cf6',
+                  '#06b6d4', '#ec4899', '#14b8a6', '#f97316', '#6366f1'];
+
+  customerChart = new Chart(ctx, {
+    type: 'bar',
+    data: {
+      labels: customers.map(c => c.name.length > 25 ? c.name.slice(0, 22) + '...' : c.name),
+      datasets: [{
+        label: 'Revenue (RM)',
+        data: customers.map(c => c.revenue),
+        backgroundColor: colors,
+        borderRadius: 6
+      }]
+    },
+    options: {
+      responsive: true,
+      maintainAspectRatio: false,
+      indexAxis: 'y',
+      plugins: {
+        legend: { display: false },
+        tooltip: {
+          callbacks: {
+            label: ctx => `RM ${ctx.raw.toLocaleString(undefined, {minimumFractionDigits: 2})} (${customers[ctx.dataIndex].orders} orders)`
+          }
+        }
+      },
+      scales: {
+        x: { ticks: { color: textColor, callback: v => 'RM ' + v.toLocaleString() }, grid: { color: gridColor }, beginAtZero: true },
+        y: { ticks: { color: textColor }, grid: { display: false } }
+      }
+    }
+  });
+}
+
+function renderProductSalesChart(products) {
+  const ctx = document.getElementById('productSalesChart');
+  if (!ctx) return;
+  if (productChart) productChart.destroy();
+
+  const isDark = getCurrentTheme() === 'dark';
+  const textColor = isDark ? '#e0e0e0' : '#333';
+  const gridColor = isDark ? '#333' : '#e5e7eb';
+
+  const colors = ['#22c55e', '#3b82f6', '#f59e0b', '#ef4444', '#8b5cf6',
+                  '#06b6d4', '#ec4899', '#14b8a6', '#f97316', '#6366f1'];
+
+  productChart = new Chart(ctx, {
+    type: 'bar',
+    data: {
+      labels: products.map(p => p.name.length > 25 ? p.name.slice(0, 22) + '...' : p.name),
+      datasets: [{
+        label: 'Revenue (RM)',
+        data: products.map(p => p.revenue),
+        backgroundColor: colors,
+        borderRadius: 6
+      }]
+    },
+    options: {
+      responsive: true,
+      maintainAspectRatio: false,
+      indexAxis: 'y',
+      plugins: {
+        legend: { display: false },
+        tooltip: {
+          callbacks: {
+            label: ctx => `RM ${ctx.raw.toLocaleString(undefined, {minimumFractionDigits: 2})} (${products[ctx.dataIndex].qty} units)`
+          }
+        }
+      },
+      scales: {
+        x: { ticks: { color: textColor, callback: v => 'RM ' + v.toLocaleString() }, grid: { color: gridColor }, beginAtZero: true },
+        y: { ticks: { color: textColor }, grid: { display: false } }
+      }
+    }
+  });
+}
+
+function renderMonthlyRevenueChart(monthly) {
+  const ctx = document.getElementById('monthlyRevenueChart');
+  if (!ctx) return;
+  if (monthlyChart) monthlyChart.destroy();
+
+  const isDark = getCurrentTheme() === 'dark';
+  const textColor = isDark ? '#e0e0e0' : '#333';
+  const gridColor = isDark ? '#333' : '#e5e7eb';
+
+  // Format month labels: "2024-01" → "Jan 2024"
+  const monthNames = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+  const labels = monthly.map(m => {
+    const [y, mo] = m.month.split('-');
+    return `${monthNames[parseInt(mo)-1] || mo} ${y}`;
+  });
+
+  monthlyChart = new Chart(ctx, {
+    type: 'line',
+    data: {
+      labels: labels,
+      datasets: [{
+        label: 'Revenue (RM)',
+        data: monthly.map(m => m.revenue),
+        borderColor: '#3b82f6',
+        backgroundColor: 'rgba(59, 130, 246, 0.1)',
+        fill: true,
+        tension: 0.4,
+        pointBackgroundColor: '#3b82f6',
+        pointBorderColor: '#fff',
+        pointBorderWidth: 2,
+        pointRadius: 5,
+        pointHoverRadius: 7
+      }]
+    },
+    options: {
+      responsive: true,
+      maintainAspectRatio: false,
+      plugins: {
+        legend: { display: false },
+        tooltip: {
+          callbacks: {
+            label: ctx => `RM ${ctx.raw.toLocaleString(undefined, {minimumFractionDigits: 2})}`
+          }
+        }
+      },
+      scales: {
+        y: { ticks: { color: textColor, callback: v => 'RM ' + v.toLocaleString() }, grid: { color: gridColor }, beginAtZero: true },
+        x: { ticks: { color: textColor, maxRotation: 45 }, grid: { display: false } }
+      }
+    }
+  });
+}
+
+// ==========================================
+// ANALYTICS — INVENTORY VALUATION
+// ==========================================
+
+async function loadValuationAnalytics() {
+  const loading = document.getElementById('valuationLoading');
+  const content = document.getElementById('valuationContent');
+
+  const data = await apiGet('/reports/valuation');
+  if (!data) {
+    if (loading) loading.innerHTML = '<p style="color:var(--danger);">Could not load valuation data.</p>';
+    return;
+  }
+
+  if (!data.ready) {
+    setTimeout(loadValuationAnalytics, 3000);
+    return;
+  }
+
+  analyticsLoaded.valuation = true;
+  if (loading) loading.style.display = 'none';
+  if (content) content.style.display = '';
+
+  const val = data.data;
+
+  // Summary cards
+  const setVal = (id, v) => { const e = document.getElementById(id); if (e) e.textContent = v; };
+  setVal('rTotalValue', 'RM ' + val.totalValue.toLocaleString(undefined, {minimumFractionDigits: 2, maximumFractionDigits: 2}));
+  setVal('rPricedItems', val.itemsWithPricing.toLocaleString());
+
+  // Charts
+  renderValuationBarChart(val.topByValue);
+  renderValuePieChart(val.topByValue, val.totalValue);
+
+  // Table
+  const tbody = document.getElementById('valuationTable');
+  if (tbody) {
+    tbody.innerHTML = '';
+    (val.all || val.topByValue).slice(0, 50).forEach(item => {
+      const tr = document.createElement('tr');
+      tr.innerHTML = `
+        <td><strong>${escapeHtml(item.code)}</strong></td>
+        <td>${escapeHtml(item.name)}</td>
+        <td>${item.stock.toLocaleString()}</td>
+        <td>${item.price.toLocaleString(undefined, {minimumFractionDigits: 2})}</td>
+        <td style="font-weight:600;color:#f59e0b;">RM ${item.value.toLocaleString(undefined, {minimumFractionDigits: 2})}</td>`;
+      tbody.appendChild(tr);
+    });
+  }
+}
+
+function renderValuationBarChart(topItems) {
+  const ctx = document.getElementById('valuationChart');
+  if (!ctx) return;
+  if (valuationBarChart) valuationBarChart.destroy();
+
+  const isDark = getCurrentTheme() === 'dark';
+  const textColor = isDark ? '#e0e0e0' : '#333';
+  const gridColor = isDark ? '#333' : '#e5e7eb';
+
+  const colors = ['#f59e0b', '#f97316', '#ef4444', '#ec4899', '#8b5cf6',
+                  '#6366f1', '#3b82f6', '#06b6d4', '#14b8a6', '#22c55e'];
+
+  valuationBarChart = new Chart(ctx, {
+    type: 'bar',
+    data: {
+      labels: topItems.map(i => i.name.length > 20 ? i.name.slice(0, 18) + '...' : i.name),
+      datasets: [{
+        label: 'Value (RM)',
+        data: topItems.map(i => i.value),
+        backgroundColor: colors,
+        borderRadius: 6
+      }]
+    },
+    options: {
+      responsive: true,
+      maintainAspectRatio: false,
+      indexAxis: 'y',
+      plugins: {
+        legend: { display: false },
+        tooltip: {
+          callbacks: {
+            label: ctx => `RM ${ctx.raw.toLocaleString(undefined, {minimumFractionDigits: 2})} (${topItems[ctx.dataIndex].stock} units @ RM ${topItems[ctx.dataIndex].price})`
+          }
+        }
+      },
+      scales: {
+        x: { ticks: { color: textColor, callback: v => 'RM ' + v.toLocaleString() }, grid: { color: gridColor }, beginAtZero: true },
+        y: { ticks: { color: textColor }, grid: { display: false } }
+      }
+    }
+  });
+}
+
+function renderValuePieChart(topItems, totalValue) {
+  const ctx = document.getElementById('valuePieChart');
+  if (!ctx) return;
+  if (valuePie) valuePie.destroy();
+
+  const isDark = getCurrentTheme() === 'dark';
+  const textColor = isDark ? '#e0e0e0' : '#333';
+
+  const top5 = topItems.slice(0, 5);
+  const top5Value = top5.reduce((s, i) => s + i.value, 0);
+  const otherValue = totalValue - top5Value;
+
+  const labels = top5.map(i => i.name.length > 20 ? i.name.slice(0, 18) + '...' : i.name);
+  const values = top5.map(i => i.value);
+  if (otherValue > 0) {
+    labels.push('Others');
+    values.push(Math.round(otherValue * 100) / 100);
+  }
+
+  const colors = ['#f59e0b', '#3b82f6', '#22c55e', '#ef4444', '#8b5cf6', '#94a3b8'];
+
+  valuePie = new Chart(ctx, {
+    type: 'doughnut',
+    data: {
+      labels: labels,
+      datasets: [{
+        data: values,
+        backgroundColor: colors,
+        borderWidth: 2,
+        borderColor: isDark ? '#1e1e2e' : '#ffffff'
+      }]
+    },
+    options: {
+      responsive: true,
+      maintainAspectRatio: false,
+      plugins: {
+        legend: { position: 'bottom', labels: { color: textColor, padding: 12, font: { size: 11 } } },
+        tooltip: {
+          callbacks: {
+            label: ctx => {
+              const pct = ((ctx.raw / totalValue) * 100).toFixed(1);
+              return `RM ${ctx.raw.toLocaleString(undefined, {minimumFractionDigits: 2})} (${pct}%)`;
+            }
+          }
+        }
+      }
+    }
   });
 }
 
