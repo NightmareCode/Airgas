@@ -86,6 +86,46 @@ async function apiGet(endpoint) {
   }
 }
 
+// Send a write (POST / PUT / DELETE). Returns { ok, status, data }.
+async function apiSend(method, endpoint, body) {
+  try {
+    const res = await fetch(API_BASE + endpoint, {
+      method,
+      headers: { 'Content-Type': 'application/json' },
+      body: body !== undefined ? JSON.stringify(body) : undefined
+    });
+    const data = await res.json().catch(() => ({}));
+    return { ok: res.ok, status: res.status, data };
+  } catch (err) {
+    console.error('API send error:', err);
+    return { ok: false, status: 0, data: { error: 'Could not connect to server.' } };
+  }
+}
+
+// ==========================================
+// TOAST NOTIFICATIONS
+// ==========================================
+
+function showToast(message, type) {
+  let container = document.getElementById('toastContainer');
+  if (!container) {
+    container = document.createElement('div');
+    container.id = 'toastContainer';
+    container.className = 'toast-container';
+    document.body.appendChild(container);
+  }
+  const toast = document.createElement('div');
+  toast.className = 'toast toast-' + (type || 'success');
+  toast.textContent = message;
+  container.appendChild(toast);
+  // Force reflow then animate in
+  requestAnimationFrame(() => toast.classList.add('show'));
+  setTimeout(() => {
+    toast.classList.remove('show');
+    setTimeout(() => toast.remove(), 300);
+  }, 4000);
+}
+
 // ==========================================
 // LOAD PRODUCTS (one-time, no auto-refresh)
 // ==========================================
@@ -277,13 +317,20 @@ function renderProducts() {
               <circle cx="12" cy="12" r="3"></circle>
             </svg>
           </button>
-          <button class="action-btn" onclick="dummyAction('Edit')" title="Edit (Demo)">
+          <button class="action-btn" onclick="openSellModal('${escapeHtml(p.code)}')" title="Sell / Reduce Stock">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="9" cy="21" r="1"></circle>
+              <circle cx="20" cy="21" r="1"></circle>
+              <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+            </svg>
+          </button>
+          <button class="action-btn" onclick="editProduct('${escapeHtml(p.code)}')" title="Edit">
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
               <path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path>
               <path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path>
             </svg>
           </button>
-          <button class="action-btn delete" onclick="dummyAction('Delete')" title="Delete (Demo)">
+          <button class="action-btn delete" onclick="confirmDeleteProduct('${escapeHtml(p.code)}')" title="Delete">
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
               <polyline points="3 6 5 6 21 6"></polyline>
               <path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path>
@@ -339,34 +386,217 @@ function goToPage(page) {
 }
 
 // ==========================================
-// DUMMY ACTIONS (buttons look real but do nothing)
-// These never modify SkyBiz data.
+// PRODUCT WRITE ACTIONS (Add / Edit / Delete / Sell)
+// In demo mode these update the server's in-memory cache only and never
+// touch the real SkyBiz database. See server.js WRITE config to go live.
 // ==========================================
 
-function dummyAction(action) {
-  alert(action + ' is disabled in read-only mode.\nSkyBiz data is protected and cannot be modified from this system.');
+let productFormMode = 'add';   // 'add' | 'edit'
+let editingCode = null;
+let pendingDeleteCode = null;
+let sellingCode = null;
+let writeBusy = false;
+
+function findProduct(code) {
+  return products.find(p => p.code === code) || null;
 }
 
+function setFeedback(id, msg, type) {
+  const el = document.getElementById(id);
+  if (!el) return;
+  el.textContent = msg || '';
+  el.className = 'form-feedback' + (msg ? ' ' + (type || 'error') : '');
+}
+
+function openModal(id)  { document.getElementById(id)?.classList.add('show'); }
+function closeModal(id) { document.getElementById(id)?.classList.remove('show'); }
+
+// Reload the products table after a successful write so the change shows.
+function refreshAfterWrite() {
+  const page = window.location.pathname.split('/').pop();
+  if (page === 'products.html') {
+    loadProducts(currentPage);
+  } else if (page === 'dashboard.html') {
+    updateDashboardStats();
+    loadProducts(1, '');
+  }
+}
+
+// ── Add / Edit ──
+
 function openAddProductModal() {
-  dummyAction('Add Product');
+  productFormMode = 'add';
+  editingCode = null;
+  document.getElementById('productFormTitle').textContent = 'Add Product';
+  document.getElementById('pfSubmit').textContent = 'Save Product';
+  document.getElementById('pfCode').value = '';
+  document.getElementById('pfCode').removeAttribute('disabled');
+  document.getElementById('pfDesc').value = '';
+  document.getElementById('pfStock').value = '0';
+  document.getElementById('pfPrice').value = '';
+  setFeedback('pfFeedback', '');
+  openModal('productFormOverlay');
+  document.getElementById('pfCode').focus();
 }
 
 function editProduct(code) {
-  dummyAction('Edit');
+  const p = findProduct(code);
+  if (!p) { showToast('Item not found on this page.', 'error'); return; }
+  productFormMode = 'edit';
+  editingCode = code;
+  document.getElementById('productFormTitle').textContent = 'Edit Product';
+  document.getElementById('pfSubmit').textContent = 'Save Changes';
+  const codeInput = document.getElementById('pfCode');
+  codeInput.value = code;
+  codeInput.setAttribute('disabled', 'disabled');   // code is the identifier — not editable
+  document.getElementById('pfDesc').value = p.name || '';
+  document.getElementById('pfStock').value = (p.stock !== null && p.stock !== undefined) ? p.stock : '';
+  document.getElementById('pfPrice').value = '';
+  setFeedback('pfFeedback', '');
+  openModal('productFormOverlay');
+  document.getElementById('pfDesc').focus();
 }
 
-function deleteProduct(code) {
-  dummyAction('Delete');
-}
+function closeProductForm() { closeModal('productFormOverlay'); }
 
-function saveProduct(event) {
+async function submitProductForm(event) {
   if (event) event.preventDefault();
-  dummyAction('Save');
+  if (writeBusy) return;
+
+  const code = document.getElementById('pfCode').value.trim();
+  const description = document.getElementById('pfDesc').value.trim();
+  const stockRaw = document.getElementById('pfStock').value.trim();
+  const priceRaw = document.getElementById('pfPrice').value.trim();
+
+  if (productFormMode === 'add' && !code) { setFeedback('pfFeedback', 'Item code is required.'); return; }
+  if (!description) { setFeedback('pfFeedback', 'Description is required.'); return; }
+  if (stockRaw !== '' && isNaN(parseFloat(stockRaw))) { setFeedback('pfFeedback', 'Stock must be a number.'); return; }
+  if (priceRaw !== '' && isNaN(parseFloat(priceRaw))) { setFeedback('pfFeedback', 'Price must be a number.'); return; }
+
+  const body = { description, stock: stockRaw, price: priceRaw };
+  const btn = document.getElementById('pfSubmit');
+  writeBusy = true; btn.disabled = true; setFeedback('pfFeedback', 'Saving...', 'info');
+
+  let result;
+  if (productFormMode === 'add') {
+    body.code = code;
+    result = await apiSend('POST', '/items', body);
+  } else {
+    result = await apiSend('PUT', '/items/' + encodeURIComponent(editingCode), body);
+  }
+
+  writeBusy = false; btn.disabled = false;
+
+  if (result.ok && result.data.success) {
+    closeProductForm();
+    showToast(result.data.message || 'Saved.', result.data.simulated ? 'info' : 'success');
+    if (productFormMode === 'add') {
+      const si = document.getElementById('searchInput');
+      if (si) si.value = code;
+      currentPage = 1;
+      loadProducts(1, code);
+    } else {
+      refreshAfterWrite();
+    }
+  } else {
+    setFeedback('pfFeedback', result.data.error || 'Could not save. Please try again.');
+  }
 }
 
-function resetOverlay() {
-  // No overlay to reset — system is read-only
-  alert('System is in read-only mode. No local changes to reset.');
+// ── Sell / Reduce Stock ──
+
+function openSellModal(code) {
+  const p = findProduct(code);
+  if (!p) { showToast('Item not found on this page.', 'error'); return; }
+  sellingCode = code;
+  document.getElementById('sellItemName').textContent = (p.name || code) + ' (' + code + ')';
+  document.getElementById('sellCurrentStock').textContent = (p.stock !== null && p.stock !== undefined) ? p.stock : '...';
+  document.getElementById('sellQty').value = '';
+  document.getElementById('sellCustomer').value = '';
+  document.getElementById('sellPrice').value = '';
+  setFeedback('sellFeedback', '');
+  openModal('sellOverlay');
+  document.getElementById('sellQty').focus();
+}
+
+function closeSellModal() { closeModal('sellOverlay'); }
+
+async function submitSell(event) {
+  if (event) event.preventDefault();
+  if (writeBusy) return;
+
+  const qtyRaw = document.getElementById('sellQty').value.trim();
+  const customer = document.getElementById('sellCustomer').value.trim();
+  const priceRaw = document.getElementById('sellPrice').value.trim();
+  const qty = parseFloat(qtyRaw);
+
+  if (qtyRaw === '' || isNaN(qty) || qty <= 0) { setFeedback('sellFeedback', 'Enter a quantity greater than 0.'); return; }
+  if (priceRaw !== '' && isNaN(parseFloat(priceRaw))) { setFeedback('sellFeedback', 'Unit price must be a number.'); return; }
+
+  const btn = document.getElementById('sellSubmit');
+  writeBusy = true; btn.disabled = true; setFeedback('sellFeedback', 'Recording sale...', 'info');
+
+  const result = await apiSend('POST', '/items/' + encodeURIComponent(sellingCode) + '/sell', {
+    qty: qtyRaw, customer, unitPrice: priceRaw
+  });
+
+  writeBusy = false; btn.disabled = false;
+
+  if (result.ok && result.data.success) {
+    closeSellModal();
+    showToast(result.data.message || 'Sale recorded.', result.data.simulated ? 'info' : 'success');
+    refreshAfterWrite();
+  } else {
+    setFeedback('sellFeedback', result.data.error || 'Could not record sale. Please try again.');
+  }
+}
+
+// ── Delete ──
+
+function confirmDeleteProduct(code) {
+  const p = findProduct(code);
+  pendingDeleteCode = code;
+  document.getElementById('deleteItemName').textContent = p ? `${p.name || code} (${code})` : code;
+  setFeedback('deleteFeedback', '');
+  openModal('deleteOverlay');
+}
+
+function closeDeleteModal() { closeModal('deleteOverlay'); }
+
+async function doDeleteProduct() {
+  if (writeBusy || !pendingDeleteCode) return;
+  const btn = document.getElementById('deleteSubmit');
+  writeBusy = true; btn.disabled = true; setFeedback('deleteFeedback', 'Deleting...', 'info');
+
+  const result = await apiSend('DELETE', '/items/' + encodeURIComponent(pendingDeleteCode));
+
+  writeBusy = false; btn.disabled = false;
+
+  if (result.ok && result.data.success) {
+    closeDeleteModal();
+    showToast(result.data.message || 'Deleted.', result.data.simulated ? 'info' : 'success');
+    pendingDeleteCode = null;
+    refreshAfterWrite();
+  } else {
+    setFeedback('deleteFeedback', result.data.error || 'Could not delete. Please try again.');
+  }
+}
+
+// ── Write-mode banner (Demo vs Live) ──
+
+async function showWriteModeBanner() {
+  const banner = document.getElementById('writeModeBanner');
+  if (!banner) return;
+  const status = await apiGet('/status');
+  if (!status) return;
+  if (status.writeLive) {
+    banner.className = 'write-mode-banner live';
+    banner.innerHTML = '<strong>Live mode:</strong> Add, Edit, Delete and Sell write directly to the SkyBiz database.';
+  } else {
+    banner.className = 'write-mode-banner demo';
+    banner.innerHTML = '<strong>Demo mode:</strong> All buttons work, but changes are kept locally only and are <strong>not</strong> saved to the real SkyBiz database. Refreshing reloads the real data.';
+  }
+  banner.style.display = '';
 }
 
 /** Open rich product detail modal */
@@ -1265,6 +1495,7 @@ function initApp() {
 
     case 'products.html':
       loadProducts(1, '');
+      showWriteModeBanner();
       break;
 
     case 'reports.html':
@@ -1317,6 +1548,20 @@ function setupEventListeners() {
 
   const companyForm = document.getElementById('companyForm');
   if (companyForm) companyForm.addEventListener('submit', saveCompanyInfo);
+
+  // Close any write modal when clicking the dark backdrop (not the modal itself)
+  document.querySelectorAll('.modal-overlay').forEach(overlay => {
+    overlay.addEventListener('mousedown', e => {
+      if (e.target === overlay) overlay.classList.remove('show');
+    });
+  });
+
+  // Close open write modals on Escape
+  document.addEventListener('keydown', e => {
+    if (e.key === 'Escape') {
+      document.querySelectorAll('.modal-overlay.show').forEach(o => o.classList.remove('show'));
+    }
+  });
 }
 
 document.addEventListener('DOMContentLoaded', initApp);

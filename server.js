@@ -14,6 +14,29 @@ const SKYBIZ = {
   pass:  process.env.SKYBIZ_PASS  || ''
 };
 
+// ── Write (mutation) configuration ──────────────────────────────────────────
+// The real SkyBiz "save" endpoints have NOT been reverse-engineered yet. Until
+// they are captured from the live SkyBiz UI and filled in below, every write
+// runs in SIMULATE mode: the change is applied to THIS server's in-memory cache
+// only and is NEVER sent to SkyBiz, so the real ERP data stays untouched.
+//
+// To go LIVE:
+//   1. In the real SkyBiz site, open DevTools > Network and perform each action
+//      (add / edit / delete item, record a sale). Copy each request URL + form
+//      fields.
+//   2. Put the endpoint URLs in the env vars below (or hard-code here) and map
+//      our fields to SkyBiz's expected field names in buildWriteBody().
+//   3. Set WRITE_LIVE=true. Real writes then hit SkyBiz.
+const WRITE = {
+  live: process.env.WRITE_LIVE === 'true',
+  endpoints: {
+    add:    process.env.SKYBIZ_EP_ADD    || null,
+    edit:   process.env.SKYBIZ_EP_EDIT   || null,
+    delete: process.env.SKYBIZ_EP_DELETE || null,
+    sell:   process.env.SKYBIZ_EP_SELL   || null
+  }
+};
+
 let cookies = '';
 let authenticated = false;
 let items = [];
@@ -501,6 +524,51 @@ function buildItems() {
 const APP_USER = process.env.APP_USER || 'airgas';
 const APP_PASS = process.env.APP_PASS || 'airgas';
 
+// ── Write helpers ───────────────────────────────────────────────────────────
+// buildWriteBody maps our normalized fields to SkyBiz's expected form fields.
+// The field names below are PLACEHOLDERS — replace them with the real ones once
+// the SkyBiz save requests are captured from the live UI.
+function buildWriteBody(action, p) {
+  const common = { ItemCode: p.code };
+  switch (action) {
+    case 'add':    return { ...common, ItemDesc: p.description ?? '', OnHand: p.stock ?? 0, Price: p.price ?? '' };
+    case 'edit':   return { ...common, ItemDesc: p.description ?? '', OnHand: p.stock ?? '', Price: p.price ?? '' };
+    case 'delete': return { ...common };
+    case 'sell':   return { ...common, Qty: p.qty ?? 0, Customer: p.customer ?? '', UnitPrice: p.unitPrice ?? '' };
+    default:       return common;
+  }
+}
+
+// applyWrite performs the real SkyBiz POST only in LIVE mode. In SIMULATE mode
+// it is a no-op (returns { simulated: true }) and the route updates the
+// in-memory cache so the change is visible in the app without touching SkyBiz.
+async function applyWrite(action, payload) {
+  if (!WRITE.live) return { simulated: true };
+
+  const endpoint = WRITE.endpoints[action];
+  if (!endpoint) {
+    const e = new Error(`SkyBiz "${action}" endpoint is not configured. Capture it from the live SkyBiz UI and set SKYBIZ_EP_${action.toUpperCase()}.`);
+    e.code = 'WRITE_NOT_CONFIGURED';
+    throw e;
+  }
+
+  await ensureAuth();
+  const res = await fetch(endpoint, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/x-www-form-urlencoded', 'Cookie': cookies },
+    body: new URLSearchParams(buildWriteBody(action, payload)).toString()
+  });
+  if (!res.ok) throw new Error(`SkyBiz ${action} failed: HTTP ${res.status}`);
+  // TODO: once the SkyBiz response shape is known, parse it here to confirm the
+  // write actually succeeded (SkyBiz may return HTTP 200 with an error body).
+  return { simulated: false };
+}
+
+function toNum(v) {
+  const n = parseFloat(v);
+  return Number.isFinite(n) ? n : null;
+}
+
 // ── Express setup ──
 
 app.use(cors());
@@ -521,7 +589,8 @@ app.get('/api/status', (req, res) => {
     connected: authenticated,
     itemCount: items.length,
     stocksFetched,
-    stockProgress
+    stockProgress,
+    writeLive: WRITE.live
   });
 });
 
@@ -734,6 +803,125 @@ app.get('/api/items/:code/stock', async (req, res) => {
   const qty = await fetchOnHand(req.params.code);
   stocks[req.params.code] = qty;
   res.json({ code: req.params.code, stock: qty });
+});
+
+// ── Write (mutation) API ────────────────────────────────────────────────────
+// Powers the Add / Edit / Delete / Sell buttons. In SIMULATE mode (default)
+// these update the in-memory cache only — nothing is sent to SkyBiz. Flip the
+// WRITE config at the top of this file to enable real writes.
+
+const writeStatus = err => (err && err.code === 'WRITE_NOT_CONFIGURED' ? 501 : 500);
+
+// Add a new product
+app.post('/api/items', async (req, res) => {
+  try {
+    const code = String(req.body.code || '').trim();
+    const description = String(req.body.description || '').trim();
+    const stock = toNum(req.body.stock) ?? 0;
+    const price = (req.body.price !== undefined && req.body.price !== '') ? toNum(req.body.price) : null;
+
+    if (!code) return res.status(400).json({ success: false, error: 'Item code is required.' });
+    if (!description) return res.status(400).json({ success: false, error: 'Description is required.' });
+    if (items.some(i => i.code === code)) return res.status(409).json({ success: false, error: `Item "${code}" already exists.` });
+    if (stock < 0) return res.status(400).json({ success: false, error: 'Stock cannot be negative.' });
+
+    const { simulated } = await applyWrite('add', { code, description, stock, price });
+
+    items.push({ code, description });
+    stocks[code] = stock;
+
+    res.json({
+      success: true, simulated,
+      message: simulated ? `Added "${code}" (demo — not saved to SkyBiz).` : `Added "${code}" to SkyBiz.`,
+      item: { code, name: description, stock, status: getStockStatus(stock) }
+    });
+  } catch (err) {
+    res.status(writeStatus(err)).json({ success: false, error: err.message });
+  }
+});
+
+// Edit an existing product (description / stock / price)
+app.put('/api/items/:code', async (req, res) => {
+  try {
+    const code = req.params.code;
+    const item = items.find(i => i.code === code);
+    if (!item) return res.status(404).json({ success: false, error: 'Item not found.' });
+
+    const description = req.body.description !== undefined ? String(req.body.description).trim() : undefined;
+    const stock = (req.body.stock !== undefined && req.body.stock !== '') ? toNum(req.body.stock) : undefined;
+    const price = (req.body.price !== undefined && req.body.price !== '') ? toNum(req.body.price) : undefined;
+
+    if (description !== undefined && !description) return res.status(400).json({ success: false, error: 'Description cannot be empty.' });
+    if (stock !== undefined && (stock === null || stock < 0)) return res.status(400).json({ success: false, error: 'Stock must be a number ≥ 0.' });
+
+    const { simulated } = await applyWrite('edit', { code, description, stock, price });
+
+    if (description !== undefined) item.description = description;
+    if (stock !== undefined) stocks[code] = stock;
+
+    const newStock = stocks[code] !== undefined ? stocks[code] : null;
+    res.json({
+      success: true, simulated,
+      message: simulated ? `Updated "${code}" (demo — not saved to SkyBiz).` : `Updated "${code}" in SkyBiz.`,
+      item: { code, name: item.description || code, stock: newStock, status: getStockStatus(newStock) }
+    });
+  } catch (err) {
+    res.status(writeStatus(err)).json({ success: false, error: err.message });
+  }
+});
+
+// Delete a product
+app.delete('/api/items/:code', async (req, res) => {
+  try {
+    const code = req.params.code;
+    const idx = items.findIndex(i => i.code === code);
+    if (idx === -1) return res.status(404).json({ success: false, error: 'Item not found.' });
+
+    const { simulated } = await applyWrite('delete', { code });
+
+    items.splice(idx, 1);
+    delete stocks[code];
+
+    res.json({
+      success: true, simulated,
+      message: simulated ? `Deleted "${code}" (demo — not removed from SkyBiz).` : `Deleted "${code}" from SkyBiz.`
+    });
+  } catch (err) {
+    res.status(writeStatus(err)).json({ success: false, error: err.message });
+  }
+});
+
+// Record a sale / reduce stock
+app.post('/api/items/:code/sell', async (req, res) => {
+  try {
+    const code = req.params.code;
+    const item = items.find(i => i.code === code);
+    if (!item) return res.status(404).json({ success: false, error: 'Item not found.' });
+
+    const qty = toNum(req.body.qty);
+    const customer = String(req.body.customer || '').trim();
+    const unitPrice = (req.body.unitPrice !== undefined && req.body.unitPrice !== '') ? toNum(req.body.unitPrice) : null;
+
+    if (qty === null || qty <= 0) return res.status(400).json({ success: false, error: 'Quantity must be greater than 0.' });
+
+    let current = stocks[code];
+    if (current === undefined) { current = await fetchOnHand(code); stocks[code] = current; }
+    if (qty > current) return res.status(400).json({ success: false, error: `Not enough stock. Available: ${current}.` });
+
+    const { simulated } = await applyWrite('sell', { code, qty, customer, unitPrice });
+
+    stocks[code] = Math.round((current - qty) * 1000) / 1000;
+
+    res.json({
+      success: true, simulated,
+      message: simulated
+        ? `Recorded sale of ${qty} unit(s) of "${code}" (demo — not saved to SkyBiz).`
+        : `Recorded sale of ${qty} unit(s) of "${code}" in SkyBiz.`,
+      item: { code, name: item.description || code, stock: stocks[code], status: getStockStatus(stocks[code]) }
+    });
+  } catch (err) {
+    res.status(writeStatus(err)).json({ success: false, error: err.message });
+  }
 });
 
 

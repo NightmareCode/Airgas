@@ -141,6 +141,9 @@
         </button>
       </div>
 
+      <!-- Write-mode banner (Demo vs Live) -->
+      <div id="writeModeBanner" class="write-mode-banner" style="display:none;"></div>
+
       <!-- Products Table -->
       <div class="card">
         <div class="table-container">
@@ -282,6 +285,98 @@
       </div>
     </div>
   </div>
+
+  <!-- Add / Edit Product Modal -->
+  <div class="modal-overlay" id="productFormOverlay">
+    <div class="modal">
+      <div class="modal-header">
+        <h2 class="modal-title" id="productFormTitle">Add Product</h2>
+        <button class="modal-close" onclick="closeProductForm()">&times;</button>
+      </div>
+      <form id="productForm" onsubmit="submitProductForm(event)">
+        <div class="modal-body">
+          <div class="form-group">
+            <label class="form-label" for="pfCode">Item Code</label>
+            <input class="form-input" id="pfCode" placeholder="e.g. 000123" autocomplete="off">
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="pfDesc">Description</label>
+            <input class="form-input" id="pfDesc" placeholder="Product description" autocomplete="off">
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="pfStock">Stock Quantity</label>
+            <input class="form-input" id="pfStock" type="number" step="any" value="0">
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="pfPrice">Unit Price (RM) <span class="form-hint">optional</span></label>
+            <input class="form-input" id="pfPrice" type="number" step="any" placeholder="0.00">
+          </div>
+          <div class="form-feedback" id="pfFeedback"></div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" onclick="closeProductForm()">Cancel</button>
+          <button type="submit" class="btn btn-primary" id="pfSubmit">Save Product</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Sell / Reduce Stock Modal -->
+  <div class="modal-overlay" id="sellOverlay">
+    <div class="modal">
+      <div class="modal-header">
+        <h2 class="modal-title">Sell / Reduce Stock</h2>
+        <button class="modal-close" onclick="closeSellModal()">&times;</button>
+      </div>
+      <form id="sellForm" onsubmit="submitSell(event)">
+        <div class="modal-body">
+          <div class="sell-item-summary">
+            <div><span class="detail-label">Item</span> <strong id="sellItemName">-</strong></div>
+            <div><span class="detail-label">Current Stock</span> <strong id="sellCurrentStock">-</strong></div>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="sellQty">Quantity to Sell</label>
+            <input class="form-input" id="sellQty" type="number" step="any" min="0" placeholder="0">
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="sellCustomer">Customer <span class="form-hint">optional</span></label>
+            <input class="form-input" id="sellCustomer" placeholder="Customer name" autocomplete="off">
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="sellPrice">Unit Price (RM) <span class="form-hint">optional</span></label>
+            <input class="form-input" id="sellPrice" type="number" step="any" placeholder="0.00">
+          </div>
+          <div class="form-feedback" id="sellFeedback"></div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" onclick="closeSellModal()">Cancel</button>
+          <button type="submit" class="btn btn-primary" id="sellSubmit">Confirm Sale</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Delete Confirmation Modal -->
+  <div class="modal-overlay" id="deleteOverlay">
+    <div class="modal" style="max-width:420px;">
+      <div class="modal-header">
+        <h2 class="modal-title">Delete Product</h2>
+        <button class="modal-close" onclick="closeDeleteModal()">&times;</button>
+      </div>
+      <div class="modal-body">
+        <p>Are you sure you want to delete <strong id="deleteItemName">-</strong>?</p>
+        <p style="color:var(--text-secondary); font-size:0.85rem; margin-top:8px;">This action cannot be undone.</p>
+        <div class="form-feedback" id="deleteFeedback"></div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" onclick="closeDeleteModal()">Cancel</button>
+        <button type="button" class="btn btn-danger" id="deleteSubmit" onclick="doDeleteProduct()">Delete</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast container -->
+  <div id="toastContainer" class="toast-container"></div>
 
   <script src="../assets/js/script.js"></script>
 </body>
