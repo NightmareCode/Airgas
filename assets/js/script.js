@@ -1440,11 +1440,6 @@ function saveProfile(event) {
   alert('Profile saved successfully!');
 }
 
-function saveCompanyInfo(event) {
-  event.preventDefault();
-  alert('Company info saved successfully!');
-}
-
 function toggleNotification(setting) {
   console.log(`Notification ${setting} toggled`);
 }
@@ -1545,9 +1540,6 @@ function setupEventListeners() {
 
   const profileForm = document.getElementById('profileForm');
   if (profileForm) profileForm.addEventListener('submit', saveProfile);
-
-  const companyForm = document.getElementById('companyForm');
-  if (companyForm) companyForm.addEventListener('submit', saveCompanyInfo);
 
   // Close any write modal when clicking the dark backdrop (not the modal itself)
   document.querySelectorAll('.modal-overlay').forEach(overlay => {
