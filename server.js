@@ -569,6 +569,18 @@ function toNum(v) {
   return Number.isFinite(n) ? n : null;
 }
 
+// ── Undo support ─────────────────────────────────────────────────────────────
+// Each successful write pushes an inverse operation onto this stack. POST /api/undo
+// pops and applies the most recent one. It reverts the in-memory cache, which
+// matches demo (simulate) mode. (In a future live mode, undo of a real SkyBiz
+// write would also need to push the reversal to SkyBiz.)
+const undoStack = [];
+const UNDO_MAX = 50;
+function pushUndo(label, revert) {
+  undoStack.push({ label, revert });
+  if (undoStack.length > UNDO_MAX) undoStack.shift();
+}
+
 // ── Express setup ──
 
 app.use(cors());
@@ -590,7 +602,8 @@ app.get('/api/status', (req, res) => {
     itemCount: items.length,
     stocksFetched,
     stockProgress,
-    writeLive: WRITE.live
+    writeLive: WRITE.live,
+    undoCount: undoStack.length
   });
 });
 
@@ -830,8 +843,14 @@ app.post('/api/items', async (req, res) => {
     items.push({ code, description });
     stocks[code] = stock;
 
+    pushUndo(`add of "${code}"`, () => {
+      const i = items.findIndex(x => x.code === code);
+      if (i !== -1) items.splice(i, 1);
+      delete stocks[code];
+    });
+
     res.json({
-      success: true, simulated,
+      success: true, simulated, undoCount: undoStack.length,
       message: simulated ? `Added "${code}" (demo — not saved to SkyBiz).` : `Added "${code}" to SkyBiz.`,
       item: { code, name: description, stock, status: getStockStatus(stock) }
     });
@@ -854,14 +873,25 @@ app.put('/api/items/:code', async (req, res) => {
     if (description !== undefined && !description) return res.status(400).json({ success: false, error: 'Description cannot be empty.' });
     if (stock !== undefined && (stock === null || stock < 0)) return res.status(400).json({ success: false, error: 'Stock must be a number ≥ 0.' });
 
+    // Capture previous state for undo
+    const prevDesc = item.description;
+    const prevStockDefined = stocks[code] !== undefined;
+    const prevStock = stocks[code];
+
     const { simulated } = await applyWrite('edit', { code, description, stock, price });
 
     if (description !== undefined) item.description = description;
     if (stock !== undefined) stocks[code] = stock;
 
+    pushUndo(`edit of "${code}"`, () => {
+      const it = items.find(x => x.code === code);
+      if (it) it.description = prevDesc;
+      if (prevStockDefined) stocks[code] = prevStock; else delete stocks[code];
+    });
+
     const newStock = stocks[code] !== undefined ? stocks[code] : null;
     res.json({
-      success: true, simulated,
+      success: true, simulated, undoCount: undoStack.length,
       message: simulated ? `Updated "${code}" (demo — not saved to SkyBiz).` : `Updated "${code}" in SkyBiz.`,
       item: { code, name: item.description || code, stock: newStock, status: getStockStatus(newStock) }
     });
@@ -877,13 +907,23 @@ app.delete('/api/items/:code', async (req, res) => {
     const idx = items.findIndex(i => i.code === code);
     if (idx === -1) return res.status(404).json({ success: false, error: 'Item not found.' });
 
+    // Capture previous state for undo
+    const removedItem = items[idx];
+    const prevStockDefined = stocks[code] !== undefined;
+    const prevStock = stocks[code];
+
     const { simulated } = await applyWrite('delete', { code });
 
     items.splice(idx, 1);
     delete stocks[code];
 
+    pushUndo(`deletion of "${code}"`, () => {
+      if (!items.some(x => x.code === code)) items.push(removedItem);
+      if (prevStockDefined) stocks[code] = prevStock;
+    });
+
     res.json({
-      success: true, simulated,
+      success: true, simulated, undoCount: undoStack.length,
       message: simulated ? `Deleted "${code}" (demo — not removed from SkyBiz).` : `Deleted "${code}" from SkyBiz.`
     });
   } catch (err) {
@@ -908,12 +948,18 @@ app.post('/api/items/:code/sell', async (req, res) => {
     if (current === undefined) { current = await fetchOnHand(code); stocks[code] = current; }
     if (qty > current) return res.status(400).json({ success: false, error: `Not enough stock. Available: ${current}.` });
 
+    const prevStock = current;   // for undo
+
     const { simulated } = await applyWrite('sell', { code, qty, customer, unitPrice });
 
     stocks[code] = Math.round((current - qty) * 1000) / 1000;
 
+    pushUndo(`sale of ${qty} of "${code}"`, () => {
+      stocks[code] = prevStock;
+    });
+
     res.json({
-      success: true, simulated,
+      success: true, simulated, undoCount: undoStack.length,
       message: simulated
         ? `Recorded sale of ${qty} unit(s) of "${code}" (demo — not saved to SkyBiz).`
         : `Recorded sale of ${qty} unit(s) of "${code}" in SkyBiz.`,
@@ -921,6 +967,18 @@ app.post('/api/items/:code/sell', async (req, res) => {
     });
   } catch (err) {
     res.status(writeStatus(err)).json({ success: false, error: err.message });
+  }
+});
+
+// Undo the most recent write
+app.post('/api/undo', (req, res) => {
+  if (!undoStack.length) return res.status(400).json({ success: false, error: 'Nothing to undo.' });
+  const entry = undoStack.pop();
+  try {
+    entry.revert();
+    res.json({ success: true, message: `Undone: ${entry.label}.`, undoCount: undoStack.length });
+  } catch (err) {
+    res.status(500).json({ success: false, error: 'Could not undo: ' + err.message });
   }
 });
 

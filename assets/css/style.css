@@ -1521,7 +1521,28 @@ textarea.form-input {
   opacity: 0;
   transform: translateX(20px);
   transition: opacity var(--transition-normal), transform var(--transition-normal);
+  display: flex;
+  align-items: center;
+  gap: 12px;
 }
+
+.toast-msg { flex: 1; }
+
+.toast-action {
+  flex-shrink: 0;
+  background: transparent;
+  color: var(--primary);
+  font-weight: 700;
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  padding: 4px 10px;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  transition: background-color var(--transition-fast);
+}
+
+.toast-action:hover { background: rgba(255, 102, 0, 0.12); }
 
 .toast.show {
   opacity: 1;

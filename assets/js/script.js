@@ -106,7 +106,7 @@ async function apiSend(method, endpoint, body) {
 // TOAST NOTIFICATIONS
 // ==========================================
 
-function showToast(message, type) {
+function showToast(message, type, action) {
   let container = document.getElementById('toastContainer');
   if (!container) {
     container = document.createElement('div');
@@ -116,14 +116,58 @@ function showToast(message, type) {
   }
   const toast = document.createElement('div');
   toast.className = 'toast toast-' + (type || 'success');
-  toast.textContent = message;
-  container.appendChild(toast);
-  // Force reflow then animate in
-  requestAnimationFrame(() => toast.classList.add('show'));
-  setTimeout(() => {
+
+  const msg = document.createElement('span');
+  msg.className = 'toast-msg';
+  msg.textContent = message;
+  toast.appendChild(msg);
+
+  let life = 4000;
+  const dismiss = () => {
+    clearTimeout(timer);
     toast.classList.remove('show');
     setTimeout(() => toast.remove(), 300);
-  }, 4000);
+  };
+
+  // Optional action button (e.g. Undo)
+  if (action && typeof action.onClick === 'function') {
+    const btn = document.createElement('button');
+    btn.className = 'toast-action';
+    btn.textContent = action.label || 'Undo';
+    btn.addEventListener('click', () => { dismiss(); action.onClick(); });
+    toast.appendChild(btn);
+    life = 8000;   // give the user longer to react when an action is offered
+  }
+
+  container.appendChild(toast);
+  requestAnimationFrame(() => toast.classList.add('show'));
+  const timer = setTimeout(dismiss, life);
+}
+
+// ==========================================
+// UNDO
+// ==========================================
+
+// Reflect how many changes can be undone in the toolbar button.
+function updateUndoButton(count) {
+  const btn = document.getElementById('undoBtn');
+  if (!btn) return;
+  const n = Number(count) || 0;
+  btn.disabled = n === 0;
+  btn.title = n ? `Undo last change (${n} available)` : 'Nothing to undo';
+}
+
+// Undo the most recent write (revert add/edit/delete/sell).
+async function undoLastChange() {
+  const result = await apiSend('POST', '/undo');
+  if (result.ok && result.data.success) {
+    showToast(result.data.message || 'Change undone.', 'success');
+    updateUndoButton(result.data.undoCount);
+    refreshAfterWrite();
+  } else {
+    showToast(result.data.error || 'Nothing to undo.', 'error');
+    updateUndoButton(0);
+  }
 }
 
 // ==========================================
@@ -489,7 +533,8 @@ async function submitProductForm(event) {
 
   if (result.ok && result.data.success) {
     closeProductForm();
-    showToast(result.data.message || 'Saved.', result.data.simulated ? 'info' : 'success');
+    showToast(result.data.message || 'Saved.', result.data.simulated ? 'info' : 'success', { label: 'Undo', onClick: undoLastChange });
+    updateUndoButton(result.data.undoCount);
     if (productFormMode === 'add') {
       const si = document.getElementById('searchInput');
       if (si) si.value = code;
@@ -544,7 +589,8 @@ async function submitSell(event) {
 
   if (result.ok && result.data.success) {
     closeSellModal();
-    showToast(result.data.message || 'Sale recorded.', result.data.simulated ? 'info' : 'success');
+    showToast(result.data.message || 'Sale recorded.', result.data.simulated ? 'info' : 'success', { label: 'Undo', onClick: undoLastChange });
+    updateUndoButton(result.data.undoCount);
     refreshAfterWrite();
   } else {
     setFeedback('sellFeedback', result.data.error || 'Could not record sale. Please try again.');
@@ -574,7 +620,8 @@ async function doDeleteProduct() {
 
   if (result.ok && result.data.success) {
     closeDeleteModal();
-    showToast(result.data.message || 'Deleted.', result.data.simulated ? 'info' : 'success');
+    showToast(result.data.message || 'Deleted.', result.data.simulated ? 'info' : 'success', { label: 'Undo', onClick: undoLastChange });
+    updateUndoButton(result.data.undoCount);
     pendingDeleteCode = null;
     refreshAfterWrite();
   } else {
@@ -589,6 +636,7 @@ async function showWriteModeBanner() {
   if (!banner) return;
   const status = await apiGet('/status');
   if (!status) return;
+  updateUndoButton(status.undoCount);
   if (status.writeLive) {
     banner.className = 'write-mode-banner live';
     banner.innerHTML = '<strong>Live mode:</strong> Add, Edit, Delete and Sell write directly to the SkyBiz database.';
@@ -1438,10 +1486,6 @@ function renderValuePieChart(topItems, totalValue) {
 function saveProfile(event) {
   event.preventDefault();
   alert('Profile saved successfully!');
-}
-
-function toggleNotification(setting) {
-  console.log(`Notification ${setting} toggled`);
 }
 
 // ==========================================
