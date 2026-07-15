@@ -164,6 +164,8 @@ async function undoLastChange() {
     showToast(result.data.message || 'Change undone.', 'success');
     updateUndoButton(result.data.undoCount);
     refreshAfterWrite();
+    // If the item view is open, refresh its remark too (the undo may have reverted it)
+    if (currentDetailCode) loadRemark(currentDetailCode);
   } else {
     showToast(result.data.error || 'Nothing to undo.', 'error');
     updateUndoButton(0);
@@ -248,7 +250,7 @@ async function handleLogin(event) {
     if (data.success) {
       sessionStorage.setItem('isLoggedIn', 'true');
       sessionStorage.setItem('username', username);
-      window.location.href = 'dashboard.html';
+      window.location.href = 'products.html';   // land straight on the Stock list
     } else {
       errorEl.textContent = 'Invalid username or password';
       errorEl.classList.add('show');
@@ -342,47 +344,40 @@ function renderProducts() {
   tbody.innerHTML = '';
 
   if (!products.length) {
-    tbody.innerHTML = '<tr><td colspan="5" style="text-align:center;padding:40px;">No products found</td></tr>';
+    tbody.innerHTML = '<tr><td colspan="3" style="text-align:center;padding:40px;">No products found</td></tr>';
     return;
   }
 
+  // Simple tappable rows — tap anywhere to open the item.
+  // All actions (Adjust / Stock Out / Delete / Remark) live inside the item view.
+  const statusWords = { 'in-stock': 'in stock', 'low-stock': 'low stock', 'out-of-stock': 'out of stock', 'loading': 'stock loading' };
   products.forEach(p => {
     const tr = document.createElement('tr');
+    tr.className = 'stock-row';
+    tr.setAttribute('tabindex', '0');
+    tr.setAttribute('role', 'button');
+    // Announce the row's actual data, not just its name
+    tr.setAttribute('aria-label',
+      `${p.name || p.code}, code ${p.code}, stock ${p.stock !== null ? p.stock : 'loading'}, ${statusWords[p.status] || ''}${p.remark ? ', has location remark' : ''}`);
     tr.innerHTML = `
-      <td><strong>${escapeHtml(p.code)}</strong></td>
-      <td>${escapeHtml(p.name)}</td>
-      <td>${p.stock !== null ? p.stock : '...'}</td>
-      <td>${getStatusBadge(p.status)}</td>
-      <td>
-        <div class="action-buttons">
-          <button class="action-btn" onclick="viewProduct('${escapeHtml(p.code)}')" title="View">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
-              <circle cx="12" cy="12" r="3"></circle>
-            </svg>
-          </button>
-          <button class="action-btn" onclick="openSellModal('${escapeHtml(p.code)}')" title="Sell / Reduce Stock">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <circle cx="9" cy="21" r="1"></circle>
-              <circle cx="20" cy="21" r="1"></circle>
-              <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
-            </svg>
-          </button>
-          <button class="action-btn" onclick="editProduct('${escapeHtml(p.code)}')" title="Edit">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path>
-              <path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path>
-            </svg>
-          </button>
-          <button class="action-btn delete" onclick="confirmDeleteProduct('${escapeHtml(p.code)}')" title="Delete">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <polyline points="3 6 5 6 21 6"></polyline>
-              <path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path>
-            </svg>
-          </button>
-        </div>
+      <td class="cell-item">
+        <div class="item-code">${escapeHtml(p.code)}${p.remark ? '<span class="remark-dot" title="Has a location remark">📍</span>' : ''}</div>
+        <div class="item-name">${escapeHtml(p.name)}</div>
+      </td>
+      <td class="cell-stock">
+        <div class="stock-qty">${p.stock !== null ? p.stock : '...'}</div>
+        ${getStatusBadge(p.status)}
+      </td>
+      <td class="cell-chevron" aria-hidden="true">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <polyline points="9 18 15 12 9 6"></polyline>
+        </svg>
       </td>
     `;
+    tr.addEventListener('click', () => viewProduct(p.code));
+    tr.addEventListener('keydown', e => {
+      if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); viewProduct(p.code); }
+    });
     tbody.appendChild(tr);
   });
 }
@@ -471,8 +466,8 @@ function refreshAfterWrite() {
 function openAddProductModal() {
   productFormMode = 'add';
   editingCode = null;
-  document.getElementById('productFormTitle').textContent = 'Add Product';
-  document.getElementById('pfSubmit').textContent = 'Save Product';
+  document.getElementById('productFormTitle').textContent = 'Add Item';
+  document.getElementById('pfSubmit').textContent = 'Add Item';
   document.getElementById('pfCode').value = '';
   document.getElementById('pfCode').removeAttribute('disabled');
   document.getElementById('pfDesc').value = '';
@@ -488,7 +483,7 @@ function editProduct(code) {
   if (!p) { showToast('Item not found on this page.', 'error'); return; }
   productFormMode = 'edit';
   editingCode = code;
-  document.getElementById('productFormTitle').textContent = 'Edit Product';
+  document.getElementById('productFormTitle').textContent = 'Adjust Stock';
   document.getElementById('pfSubmit').textContent = 'Save Changes';
   const codeInput = document.getElementById('pfCode');
   codeInput.value = code;
@@ -649,13 +644,18 @@ async function showWriteModeBanner() {
 
 /** Open rich product detail modal */
 let currentDetailCode = null;
+let detailTrigger = null;   // element to restore focus to when the dialog closes
 
 function viewProduct(code) {
   currentDetailCode = code;
   const overlay = document.getElementById('detailOverlay');
   if (!overlay) return;
+  detailTrigger = document.activeElement;
   overlay.classList.add('show');
   document.body.style.overflow = 'hidden';
+
+  // Move focus into the dialog (keyboard / screen-reader users)
+  overlay.querySelector('.detail-close')?.focus();
 
   // Reset tabs
   switchDetailTab('overview');
@@ -664,8 +664,9 @@ function viewProduct(code) {
   const p = products.find(i => i.code === code);
   document.getElementById('detailTitle').textContent = p ? p.name : code;
 
-  // Fetch full details from server
+  // Fetch full details + the storekeeper's location remark
   loadDetailOverview(code);
+  loadRemark(code);
 }
 
 function closeDetailModal() {
@@ -673,6 +674,89 @@ function closeDetailModal() {
   if (overlay) overlay.classList.remove('show');
   document.body.style.overflow = '';
   currentDetailCode = null;
+  // Give focus back to the row that opened the dialog
+  if (detailTrigger && document.contains(detailTrigger)) detailTrigger.focus();
+  detailTrigger = null;
+}
+
+// ── Actions from the item view (summary buttons) ──
+
+function editProductFromDetail() {
+  const code = currentDetailCode;
+  if (!code) return;
+  closeDetailModal();
+  editProduct(code);
+}
+
+function sellFromDetail() {
+  const code = currentDetailCode;
+  if (!code) return;
+  closeDetailModal();
+  openSellModal(code);
+}
+
+function deleteFromDetail() {
+  const code = currentDetailCode;
+  if (!code) return;
+  closeDetailModal();
+  confirmDeleteProduct(code);
+}
+
+// ── Location remark (storekeeper note, saved on the server) ──
+
+async function loadRemark(code) {
+  const input = document.getElementById('remarkInput');
+  const meta = document.getElementById('remarkMeta');
+  if (!input) return;
+  input.value = '';
+  if (meta) meta.textContent = 'Loading...';
+
+  const data = await apiGet(`/items/${encodeURIComponent(code)}/remark`);
+  if (currentDetailCode !== code) return;   // user moved to another item meanwhile
+  if (!data) { if (meta) meta.textContent = ''; return; }
+
+  input.value = data.remark || '';
+  if (meta) {
+    meta.textContent = data.updatedAt
+      ? 'Last updated: ' + new Date(data.updatedAt).toLocaleString()
+      : 'No remark yet — add one so the team knows where this item is placed.';
+  }
+}
+
+async function saveRemark() {
+  const code = currentDetailCode;
+  if (!code || writeBusy) return;
+  const input = document.getElementById('remarkInput');
+  const btn = document.getElementById('remarkSaveBtn');
+  const text = (input?.value || '').trim();
+
+  writeBusy = true;
+  if (btn) btn.disabled = true;
+
+  const result = await apiSend('PUT', `/items/${encodeURIComponent(code)}/remark`, { remark: text });
+
+  writeBusy = false;
+  if (btn) btn.disabled = false;
+
+  if (result.ok && result.data.success) {
+    showToast(result.data.message || 'Remark saved.', 'success', { label: 'Undo', onClick: undoLastChange });
+    updateUndoButton(result.data.undoCount);
+    // Only touch the meta line if this item is still the one on screen
+    const meta = document.getElementById('remarkMeta');
+    if (meta && currentDetailCode === code) {
+      meta.textContent = result.data.updatedAt
+        ? 'Last updated: ' + new Date(result.data.updatedAt).toLocaleString()
+        : 'No remark yet — add one so the team knows where this item is placed.';
+    }
+    // Update the 📍 indicator on the list without a full reload
+    const p = findProduct(code);
+    if (p) {
+      p.remark = text || null;
+      if (window.location.pathname.split('/').pop() === 'products.html') renderProducts();
+    }
+  } else {
+    showToast(result.data.error || 'Could not save remark.', 'error');
+  }
 }
 
 function closeDetail(event) {
@@ -698,6 +782,8 @@ async function loadDetailOverview(code) {
   document.getElementById('detailDesc').textContent = 'Loading...';
   document.getElementById('detailStock').textContent = '...';
   document.getElementById('detailStatus').innerHTML = getStatusBadge('loading');
+  const costEl = document.getElementById('detailCost');
+  if (costEl) costEl.textContent = '...';
   document.getElementById('detailPricingTable').innerHTML = '<tr><td colspan="4" style="text-align:center;">Loading...</td></tr>';
   document.getElementById('detailLocationsTable').innerHTML = '<tr><td colspan="3" style="text-align:center;">Loading...</td></tr>';
   document.getElementById('detailImageBox').innerHTML = '<div class="no-image">Loading...</div>';
@@ -705,6 +791,7 @@ async function loadDetailOverview(code) {
 
   const data = await apiGet(`/items/${encodeURIComponent(code)}/details`);
   if (!data) return;
+  if (currentDetailCode !== code) return;   // user opened another item meanwhile
 
   document.getElementById('detailTitle').textContent = data.name;
   document.getElementById('detailDesc').textContent = data.name;
@@ -724,13 +811,19 @@ async function loadDetailOverview(code) {
     document.getElementById('detailMemo').textContent = data.memo;
   }
 
+  // Cost in the summary header (Base price, falls back to first pricing row)
+  if (costEl) {
+    const base = (data.pricing || []).find(p => p.description && p.description.toLowerCase() === 'base') || (data.pricing || [])[0];
+    costEl.textContent = base ? 'RM ' + base.price.toFixed(2) + (base.uom ? ' / ' + base.uom : '') : '—';
+  }
+
   // Pricing
   const pTbody = document.getElementById('detailPricingTable');
   if (data.pricing && data.pricing.length) {
     pTbody.innerHTML = '';
     data.pricing.forEach(p => {
       const tr = document.createElement('tr');
-      tr.innerHTML = `<td>${escapeHtml(p.uom)}</td><td>${escapeHtml(p.description)}</td><td>${p.factor}</td><td style="font-weight:600;">${p.price.toFixed(2)}</td>`;
+      tr.innerHTML = `<td data-label="UOM">${escapeHtml(p.uom)}</td><td data-label="Tier">${escapeHtml(p.description)}</td><td data-label="Factor">${p.factor}</td><td data-label="Price (RM)" style="font-weight:600;">${p.price.toFixed(2)}</td>`;
       pTbody.appendChild(tr);
     });
   } else {
@@ -744,7 +837,7 @@ async function loadDetailOverview(code) {
     data.locations.forEach(l => {
       const tr = document.createElement('tr');
       const color = l.qty > 0 ? '#22c55e' : l.qty < 0 ? '#ef4444' : 'var(--text-secondary)';
-      tr.innerHTML = `<td>${escapeHtml(l.location)}</td><td style="font-weight:600;color:${color};">${l.qty.toLocaleString()}</td><td>${escapeHtml(l.uom)}</td>`;
+      tr.innerHTML = `<td data-label="Location">${escapeHtml(l.location)}</td><td data-label="On Hand" style="font-weight:600;color:${color};">${l.qty.toLocaleString()}</td><td data-label="UOM">${escapeHtml(l.uom)}</td>`;
       lTbody.appendChild(tr);
     });
   } else {
@@ -752,7 +845,7 @@ async function loadDetailOverview(code) {
   }
 }
 
-function renderHistoryTable(tbodyId, infoId, rows, total, columns) {
+function renderHistoryTable(tbodyId, infoId, rows, total, columns, labels) {
   const tbody = document.getElementById(tbodyId);
   const info = document.getElementById(infoId);
   if (!tbody) return;
@@ -766,7 +859,9 @@ function renderHistoryTable(tbodyId, infoId, rows, total, columns) {
   tbody.innerHTML = '';
   rows.forEach(r => {
     const tr = document.createElement('tr');
-    tr.innerHTML = columns.map(col => `<td>${escapeHtml(String(r[col] || '-'))}</td>`).join('');
+    tr.innerHTML = columns.map((col, i) =>
+      `<td data-label="${labels && labels[i] ? labels[i] : ''}">${escapeHtml(String(r[col] || '-'))}</td>`
+    ).join('');
     tbody.appendChild(tr);
   });
   if (info) info.textContent = `Showing ${rows.length} of ${total} records`;
@@ -779,8 +874,10 @@ async function loadDetailSales(code) {
 
   const data = await apiGet(`/items/${encodeURIComponent(code)}/outgoing?start=0&length=50`);
   if (!data) return;
+  if (currentDetailCode !== code) return;   // stale response — a different item is open
   renderHistoryTable('detailSalesTable', 'salesInfo', data.rows, data.total,
-    ['date', 'document', 'customerName', 'qty', 'unitPrice', 'amount']);
+    ['date', 'document', 'customerName', 'qty', 'unitPrice', 'amount'],
+    ['Date', 'Invoice #', 'Customer', 'Qty', 'Unit Price', 'Amount']);
   tbody.dataset.loaded = code;
 }
 
@@ -791,8 +888,10 @@ async function loadDetailPurchases(code) {
 
   const data = await apiGet(`/items/${encodeURIComponent(code)}/incoming?start=0&length=50`);
   if (!data) return;
+  if (currentDetailCode !== code) return;   // stale response — a different item is open
   renderHistoryTable('detailPurchasesTable', 'purchasesInfo', data.rows, data.total,
-    ['date', 'document', 'supplierName', 'qty', 'unitPrice', 'amount']);
+    ['date', 'document', 'supplierName', 'qty', 'unitPrice', 'amount'],
+    ['Date', 'Document #', 'Supplier', 'Qty', 'Unit Price', 'Amount']);
   tbody.dataset.loaded = code;
 }
 
@@ -803,8 +902,10 @@ async function loadDetailStockCard(code) {
 
   const data = await apiGet(`/items/${encodeURIComponent(code)}/stockcard?start=0&length=50`);
   if (!data) return;
+  if (currentDetailCode !== code) return;   // stale response — a different item is open
   renderHistoryTable('detailStockCardTable', 'stockcardInfo', data.rows, data.total,
-    ['date', 'type', 'invoiceNumber', 'qty', 'balance', 'name', 'locationFrom']);
+    ['date', 'type', 'invoiceNumber', 'qty', 'balance', 'name', 'locationFrom'],
+    ['Date', 'Type', 'Document', 'Qty', 'Balance', 'Name', 'Location']);
   tbody.dataset.loaded = code;
 }
 
@@ -1499,7 +1600,7 @@ function checkAuth() {
     return false;
   }
   if (page === 'login.html' && isLoggedIn()) {
-    window.location.href = 'dashboard.html';
+    window.location.href = 'products.html';
     return false;
   }
   return true;
@@ -1514,6 +1615,53 @@ function setActiveNav() {
 }
 
 // ==========================================
+// MOBILE NAVIGATION (bottom bar + FAB)
+// Injected by JS so all pages share one definition.
+// Only visible on small screens (CSS controls display).
+// ==========================================
+
+function buildMobileNav() {
+  if (document.querySelector('.bottom-nav')) return;
+  const page = window.location.pathname.split('/').pop();
+
+  const links = [
+    { href: 'dashboard.html', label: 'Dashboard', icon: '<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"></rect><rect x="14" y="3" width="7" height="7"></rect><rect x="14" y="14" width="7" height="7"></rect><rect x="3" y="14" width="7" height="7"></rect></svg>' },
+    { href: 'products.html', label: 'Stock', icon: '<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path><polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline><line x1="12" y1="22.08" x2="12" y2="12"></line></svg>' },
+    { href: 'reports.html', label: 'Reports', icon: '<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="20" x2="18" y2="10"></line><line x1="12" y1="20" x2="12" y2="4"></line><line x1="6" y1="20" x2="6" y2="14"></line></svg>' },
+    { href: 'settings.html', label: 'Settings', icon: '<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"></circle><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path></svg>' }
+  ];
+
+  const nav = document.createElement('nav');
+  nav.className = 'bottom-nav';
+  nav.setAttribute('aria-label', 'Main navigation');
+  nav.innerHTML = links.map(l =>
+    `<a href="${l.href}" class="bottom-nav-link${page === l.href ? ' active' : ''}"${page === l.href ? ' aria-current="page"' : ''}>${l.icon}<span>${l.label}</span></a>`
+  ).join('');
+
+  // Logout — the sidebar is unreachable on phones, so it must live here too
+  const logout = document.createElement('button');
+  logout.type = 'button';
+  logout.className = 'bottom-nav-link bottom-nav-logout';
+  logout.innerHTML = '<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path><polyline points="16 17 21 12 16 7"></polyline><line x1="21" y1="12" x2="9" y2="12"></line></svg><span>Logout</span>';
+  logout.addEventListener('click', handleLogout);
+  nav.appendChild(logout);
+
+  document.body.appendChild(nav);
+}
+
+function buildFab() {
+  if (document.getElementById('fabAdd')) return;
+  const b = document.createElement('button');
+  b.id = 'fabAdd';
+  b.className = 'fab';
+  b.type = 'button';
+  b.setAttribute('aria-label', 'Add item');
+  b.innerHTML = '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>';
+  b.addEventListener('click', openAddProductModal);
+  document.body.appendChild(b);
+}
+
+// ==========================================
 // INITIALIZATION
 // ==========================================
 
@@ -1524,6 +1672,7 @@ function initApp() {
   if (page !== 'login.html') {
     if (!checkAuth()) return;
     setActiveNav();
+    buildMobileNav();
   }
 
   switch (page) {
@@ -1535,6 +1684,7 @@ function initApp() {
     case 'products.html':
       loadProducts(1, '');
       showWriteModeBanner();
+      buildFab();
       break;
 
     case 'reports.html':
@@ -1559,8 +1709,8 @@ function setupEventListeners() {
   const loginForm = document.getElementById('loginForm');
   if (loginForm) loginForm.addEventListener('submit', handleLogin);
 
-  const hamburger = document.querySelector('.hamburger');
-  if (hamburger) hamburger.addEventListener('click', toggleSidebar);
+  // NOTE: .hamburger already has an inline onclick="toggleSidebar()" in the HTML —
+  // binding it here too made every tap toggle twice (open+close = no-op).
 
   const overlay = document.querySelector('.sidebar-overlay');
   if (overlay) overlay.addEventListener('click', closeSidebar);
@@ -1592,10 +1742,13 @@ function setupEventListeners() {
     });
   });
 
-  // Close open write modals on Escape
+  // Close open dialogs on Escape (write modals + the item detail view)
   document.addEventListener('keydown', e => {
     if (e.key === 'Escape') {
       document.querySelectorAll('.modal-overlay.show').forEach(o => o.classList.remove('show'));
+      if (document.getElementById('detailOverlay')?.classList.contains('show')) {
+        closeDetailModal();   // also restores body scroll + focus
+      }
     }
   });
 }

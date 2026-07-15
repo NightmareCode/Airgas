@@ -59,7 +59,7 @@
                   <line x1="12" y1="22.08" x2="12" y2="12"></line>
                 </svg>
               </span>
-              <span>Products</span>
+              <span>Stock</span>
             </a>
           </li>
           <li class="nav-item">
@@ -105,7 +105,7 @@
     <!-- Main Content -->
     <main class="main-content">
       <div class="page-header">
-        <h1 class="page-title">Products</h1>
+        <h1 class="page-title">Stock</h1>
         <div class="flex items-center gap-md">
           <label class="toggle-switch">
             <input type="checkbox" id="themeToggle">
@@ -155,14 +155,12 @@
       <!-- Products Table -->
       <div class="card">
         <div class="table-container">
-          <table class="table">
+          <table class="table stock-table">
             <thead>
               <tr>
-                <th>Item Code</th>
-                <th>Description</th>
-                <th>Stock</th>
-                <th>Status</th>
-                <th>Actions</th>
+                <th>Item</th>
+                <th style="text-align:right;">Stock</th>
+                <th><span class="sr-only">View</span></th>
               </tr>
             </thead>
             <tbody id="productsTableBody">
@@ -179,18 +177,35 @@
 
   <!-- Product Detail Modal -->
   <div class="detail-overlay" id="detailOverlay" onclick="closeDetail(event)">
-    <div class="detail-modal">
+    <div class="detail-modal" role="dialog" aria-modal="true" aria-labelledby="detailTitle">
       <div class="detail-header">
         <h2 class="detail-title" id="detailTitle">Loading...</h2>
         <button class="detail-close" onclick="closeDetailModal()">&times;</button>
       </div>
 
+      <!-- Quick summary: balance, cost, actions -->
+      <div class="detail-summary">
+        <div class="summary-block">
+          <span class="summary-label">Stock Balance</span>
+          <span><span class="summary-qty" id="detailStock">-</span> <span id="detailStatus"></span></span>
+        </div>
+        <div class="summary-block">
+          <span class="summary-label">Cost</span>
+          <span class="summary-cost" id="detailCost">-</span>
+        </div>
+        <div class="summary-actions">
+          <button class="btn btn-primary btn-sm" onclick="editProductFromDetail()">Adjust Stock</button>
+          <button class="btn btn-secondary btn-sm" onclick="sellFromDetail()">Stock Out</button>
+          <button class="btn btn-danger btn-sm" onclick="deleteFromDetail()">Delete</button>
+        </div>
+      </div>
+
       <div class="detail-tabs">
-        <button class="detail-tab active" onclick="switchDetailTab('overview')">Overview</button>
-        <button class="detail-tab" onclick="switchDetailTab('locations')">Locations</button>
-        <button class="detail-tab" onclick="switchDetailTab('sales')">Sales History</button>
-        <button class="detail-tab" onclick="switchDetailTab('purchases')">Purchase History</button>
-        <button class="detail-tab" onclick="switchDetailTab('stockcard')">Stock Card</button>
+        <button class="detail-tab active" onclick="switchDetailTab('overview')">Info</button>
+        <button class="detail-tab" onclick="switchDetailTab('locations')">Location</button>
+        <button class="detail-tab" onclick="switchDetailTab('purchases')">Stock In</button>
+        <button class="detail-tab" onclick="switchDetailTab('sales')">Stock Out</button>
+        <button class="detail-tab" onclick="switchDetailTab('stockcard')">Card</button>
       </div>
 
       <div class="detail-body">
@@ -208,14 +223,6 @@
               <div class="detail-info-row">
                 <span class="detail-label">Description</span>
                 <span class="detail-value" id="detailDesc">-</span>
-              </div>
-              <div class="detail-info-row">
-                <span class="detail-label">Stock</span>
-                <span class="detail-value" id="detailStock">-</span>
-              </div>
-              <div class="detail-info-row">
-                <span class="detail-label">Status</span>
-                <span id="detailStatus">-</span>
               </div>
               <div class="detail-info-row" id="detailMemoRow" style="display:none;">
                 <span class="detail-label">Memo</span>
@@ -238,6 +245,17 @@
 
         <!-- Locations Tab -->
         <div class="detail-section" id="dtab-locations" style="display:none;">
+          <!-- Storekeeper location remark -->
+          <div class="card" style="margin-bottom:16px;">
+            <div class="card-header"><h3 class="card-title">Location Remark</h3></div>
+            <div class="remark-form">
+              <label for="remarkInput" class="sr-only">Location remark</label>
+              <textarea id="remarkInput" class="form-input" rows="3" placeholder="e.g. 5 units moved to Rack B beside the workshop"></textarea>
+              <div class="remark-meta" id="remarkMeta"></div>
+              <button type="button" class="btn btn-primary btn-sm" id="remarkSaveBtn" onclick="saveRemark()">Save Remark</button>
+            </div>
+          </div>
+
           <div class="card">
             <div class="card-header"><h3 class="card-title">Stock by Location</h3></div>
             <div class="table-container">
@@ -333,7 +351,7 @@
   <div class="modal-overlay" id="sellOverlay">
     <div class="modal">
       <div class="modal-header">
-        <h2 class="modal-title">Sell / Reduce Stock</h2>
+        <h2 class="modal-title">Stock Out</h2>
         <button class="modal-close" onclick="closeSellModal()">&times;</button>
       </div>
       <form id="sellForm" onsubmit="submitSell(event)">
@@ -343,7 +361,7 @@
             <div><span class="detail-label">Current Stock</span> <strong id="sellCurrentStock">-</strong></div>
           </div>
           <div class="form-group">
-            <label class="form-label" for="sellQty">Quantity to Sell</label>
+            <label class="form-label" for="sellQty">Quantity Out</label>
             <input class="form-input" id="sellQty" type="number" step="any" min="0" placeholder="0">
           </div>
           <div class="form-group">
@@ -358,7 +376,7 @@
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-secondary" onclick="closeSellModal()">Cancel</button>
-          <button type="submit" class="btn btn-primary" id="sellSubmit">Confirm Sale</button>
+          <button type="submit" class="btn btn-primary" id="sellSubmit">Confirm Stock Out</button>
         </div>
       </form>
     </div>

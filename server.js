@@ -2,6 +2,7 @@ require('dotenv').config();
 const express = require('express');
 const cors = require('cors');
 const path = require('path');
+const fs = require('fs');
 
 const app = express();
 const PORT = process.env.PORT || 3000;
@@ -514,7 +515,8 @@ function buildItems() {
       code: item.code,
       name: item.description || item.code,
       stock,
-      status: getStockStatus(stock)
+      status: getStockStatus(stock),
+      remark: remarks[item.code] ? remarks[item.code].text : null
     };
   });
 }
@@ -581,10 +583,33 @@ function pushUndo(label, revert) {
   if (undoStack.length > UNDO_MAX) undoStack.shift();
 }
 
+// ── Location remarks ─────────────────────────────────────────────────────────
+// Storekeeper notes like "5 units moved to Rack B". App-side data — stored in
+// data/remarks.json on this server and NEVER sent to SkyBiz. Persists across
+// local restarts; note that Render's free tier wipes the disk on redeploy /
+// spin-down (set REMARKS_FILE to a mounted persistent-disk path to keep them).
+const REMARKS_FILE = process.env.REMARKS_FILE || path.join(__dirname, 'data', 'remarks.json');
+let remarks = {};
+try { remarks = JSON.parse(fs.readFileSync(REMARKS_FILE, 'utf8')); } catch { remarks = {}; }
+
+function saveRemarks() {
+  try {
+    fs.mkdirSync(path.dirname(REMARKS_FILE), { recursive: true });
+    fs.writeFileSync(REMARKS_FILE, JSON.stringify(remarks, null, 2));
+  } catch (err) { console.error('[Remarks] Save failed:', err.message); }
+}
+
 // ── Express setup ──
 
 app.use(cors());
 app.use(express.json());
+// Keep server-side data files out of the publicly served static root
+app.use((req, res, next) => {
+  if (req.path === '/remarks.json' || req.path.startsWith('/data/')) {
+    return res.status(404).end();
+  }
+  next();
+});
 app.use(express.static(path.join(__dirname)));
 
 app.post('/api/login', (req, res) => {
@@ -911,15 +936,18 @@ app.delete('/api/items/:code', async (req, res) => {
     const removedItem = items[idx];
     const prevStockDefined = stocks[code] !== undefined;
     const prevStock = stocks[code];
+    const prevRemark = remarks[code];   // clean up so a future re-add doesn't inherit it
 
     const { simulated } = await applyWrite('delete', { code });
 
     items.splice(idx, 1);
     delete stocks[code];
+    if (prevRemark) { delete remarks[code]; saveRemarks(); }
 
     pushUndo(`deletion of "${code}"`, () => {
       if (!items.some(x => x.code === code)) items.push(removedItem);
       if (prevStockDefined) stocks[code] = prevStock;
+      if (prevRemark) { remarks[code] = prevRemark; saveRemarks(); }
     });
 
     res.json({
@@ -961,8 +989,8 @@ app.post('/api/items/:code/sell', async (req, res) => {
     res.json({
       success: true, simulated, undoCount: undoStack.length,
       message: simulated
-        ? `Recorded sale of ${qty} unit(s) of "${code}" (demo — not saved to SkyBiz).`
-        : `Recorded sale of ${qty} unit(s) of "${code}" in SkyBiz.`,
+        ? `Stock out: ${qty} unit(s) of "${code}" (demo — not saved to SkyBiz).`
+        : `Stock out: ${qty} unit(s) of "${code}" recorded in SkyBiz.`,
       item: { code, name: item.description || code, stock: stocks[code], status: getStockStatus(stocks[code]) }
     });
   } catch (err) {
@@ -980,6 +1008,51 @@ app.post('/api/undo', (req, res) => {
   } catch (err) {
     res.status(500).json({ success: false, error: 'Could not undo: ' + err.message });
   }
+});
+
+// ── Location remarks API ────────────────────────────────────────────────────
+// Real app-side storage (remarks.json) shared by all users of this server.
+// Never touches SkyBiz, so it stays active even in demo mode.
+
+app.get('/api/items/:code/remark', (req, res) => {
+  const r = remarks[req.params.code];
+  res.json({ code: req.params.code, remark: r ? r.text : '', updatedAt: r ? r.updatedAt : null });
+});
+
+app.put('/api/items/:code/remark', (req, res) => {
+  const code = req.params.code;
+  if (!items.some(i => i.code === code)) return res.status(404).json({ success: false, error: 'Item not found.' });
+
+  const text = String(req.body.remark || '').trim();
+  const prev = remarks[code];
+
+  // No-op saves (empty→empty, or unchanged text) must not pollute the undo stack
+  if ((!text && !prev) || (prev && prev.text === text)) {
+    return res.json({
+      success: true,
+      undoCount: undoStack.length,
+      message: 'No changes to save.',
+      remark: text,
+      updatedAt: prev ? prev.updatedAt : null
+    });
+  }
+
+  if (text) remarks[code] = { text, updatedAt: new Date().toISOString() };
+  else delete remarks[code];
+  saveRemarks();
+
+  pushUndo(`remark on "${code}"`, () => {
+    if (prev) remarks[code] = prev; else delete remarks[code];
+    saveRemarks();
+  });
+
+  res.json({
+    success: true,
+    undoCount: undoStack.length,
+    message: text ? `Location remark saved for "${code}".` : `Location remark cleared for "${code}".`,
+    remark: text,
+    updatedAt: remarks[code] ? remarks[code].updatedAt : null
+  });
 });
 
 
