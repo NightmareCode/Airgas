@@ -2,3 +2,5 @@ node_modules/
 .env
 data/
 remarks.json
+skybiz_data.json
+InventoriSystem_Documentation.pdf
