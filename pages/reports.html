@@ -124,6 +124,7 @@
         <button class="report-tab" data-tab="locations" onclick="switchReportTab('locations')">Location Analysis</button>
         <button class="report-tab" data-tab="sales" onclick="switchReportTab('sales')">Sales Insights</button>
         <button class="report-tab" data-tab="valuation" onclick="switchReportTab('valuation')">Inventory Value</button>
+        <button class="report-tab" data-tab="branch" onclick="switchReportTab('branch')">Branch Stock Take</button>
       </div>
 
       <!-- Tab: Stock Overview -->
@@ -337,6 +338,55 @@
               <table class="table">
                 <thead><tr><th>Item Code</th><th>Description</th><th>Stock</th><th>Unit Price (RM)</th><th>Total Value (RM)</th></tr></thead>
                 <tbody id="valuationTable"></tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tab: Branch Stock Take -->
+      <div class="report-section" id="tab-branch" style="display:none;">
+        <div class="analytics-loading" id="branchLoading">
+          <div class="analytics-spinner"></div>
+          <p>Loading branch stock-take reconciliation...</p>
+        </div>
+        <div id="branchContent" style="display:none;">
+          <div class="branch-header">
+            <h3 id="branchTitle" style="margin:0;">Branch Stock Take</h3>
+            <p id="branchMeta" style="margin:4px 0 0; font-size:0.8rem; color:var(--text-secondary);"></p>
+          </div>
+          <div class="report-summary-cards" style="margin-top:16px;">
+            <div class="report-card card-blue">
+              <div class="report-card-value" id="bItems">-</div>
+              <div class="report-card-label">Items Counted</div>
+            </div>
+            <div class="report-card card-red">
+              <div class="report-card-value" id="bDiffs">-</div>
+              <div class="report-card-label">Discrepancies vs System</div>
+            </div>
+            <div class="report-card card-purple">
+              <div class="report-card-value" id="bUnmatched">-</div>
+              <div class="report-card-label">Not Found in SkyBiz</div>
+            </div>
+            <div class="report-card card-gold">
+              <div class="report-card-value" id="bValue">-</div>
+              <div class="report-card-label">Sheet Value (RM)</div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-header"><h3 class="card-title">Physical Count vs System Stock</h3></div>
+            <div class="table-container">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th>Item</th>
+                    <th style="text-align:right;">Counted</th>
+                    <th style="text-align:right;">System</th>
+                    <th style="text-align:right;">Diff</th>
+                    <th>Notes</th>
+                  </tr>
+                </thead>
+                <tbody id="branchTable"></tbody>
               </table>
             </div>
           </div>

@@ -938,7 +938,7 @@ let valuationBarChart = null;
 let valuePie = null;
 
 // Track which analytics tabs have been loaded
-let analyticsLoaded = { locations: false, sales: false, valuation: false };
+let analyticsLoaded = { locations: false, sales: false, valuation: false, branch: false };
 
 function switchReportTab(tabName) {
   document.querySelectorAll('.report-tab').forEach(t => t.classList.remove('active'));
@@ -952,6 +952,72 @@ function switchReportTab(tabName) {
   if (tabName === 'locations' && !analyticsLoaded.locations) loadLocationAnalytics();
   if (tabName === 'sales' && !analyticsLoaded.sales) loadSalesAnalytics();
   if (tabName === 'valuation' && !analyticsLoaded.valuation) loadValuationAnalytics();
+  if (tabName === 'branch' && !analyticsLoaded.branch) loadBranchReconcile();
+}
+
+// ==========================================
+// BRANCH STOCK TAKE — physical count vs system
+// ==========================================
+
+async function loadBranchReconcile() {
+  const loading = document.getElementById('branchLoading');
+  const content = document.getElementById('branchContent');
+
+  const data = await apiGet('/branches/nilai/reconcile');
+  if (!data || !data.rows) {
+    if (loading) loading.innerHTML = '<p style="color:var(--text-secondary);">No branch stock-take uploaded yet.<br>Upload one via PUT /api/branches/&lt;branch&gt;/stocktake.</p>';
+    return;
+  }
+
+  analyticsLoaded.branch = true;
+  if (loading) loading.style.display = 'none';
+  if (content) content.style.display = '';
+
+  const s = data.summary;
+  document.getElementById('branchTitle').textContent = `${data.branch} Branch — Stock Take`;
+  document.getElementById('branchMeta').textContent =
+    `Sheet updated ${new Date(data.updatedAt).toLocaleDateString()} · ${s.sheetLines} lines / ${s.uniqueItems} items` +
+    (s.stockPending ? ` · ${s.stockPending} item(s) still loading system stock` : '');
+
+  const set = (id, v) => { const e = document.getElementById(id); if (e) e.textContent = v; };
+  set('bItems', s.uniqueItems.toLocaleString());
+  set('bDiffs', s.discrepancies.toLocaleString());
+  set('bUnmatched', s.notInSystem.toLocaleString());
+  set('bValue', s.sheetValue.toLocaleString(undefined, { minimumFractionDigits: 2 }));
+
+  const tbody = document.getElementById('branchTable');
+  if (!tbody) return;
+  tbody.innerHTML = '';
+  data.rows.forEach(r => {
+    const tr = document.createElement('tr');
+
+    let diffHtml = '<span style="color:var(--text-secondary);">—</span>';
+    if (r.diff !== null) {
+      if (r.diff === 0) diffHtml = '<span class="badge badge-success">match</span>';
+      else diffHtml = `<span class="badge badge-danger">${r.diff > 0 ? '+' : ''}${r.diff}</span>`;
+    } else if (r.inSystem && r.systemStock === null) {
+      diffHtml = '<span style="color:var(--text-secondary);">loading…</span>';
+    }
+
+    const badges = [];
+    if (!r.inSystem) badges.push('<span class="badge badge-warning">not in SkyBiz</span>');
+    if (r.flags.includes('expired')) badges.push('<span class="badge badge-danger">EXPIRED</span>');
+    if (r.flags.includes('transfer-johor')) badges.push('<span class="badge badge-secondary">Transfer Johor</span>');
+    if (r.uncertain) badges.push('<span class="badge badge-warning" title="Handwriting unclear — re-check the sheet">re-check ?</span>');
+    const noteText = r.notes.length ? `<div class="item-name">${escapeHtml(r.notes.join(' · '))}</div>` : '';
+
+    tr.innerHTML = `
+      <td class="cell-item">
+        <div class="item-code">${escapeHtml(r.code || '(no code)')}</div>
+        <div class="item-name">${escapeHtml(r.description)}</div>
+      </td>
+      <td style="text-align:right; font-weight:600;">${r.counted !== null ? r.counted.toLocaleString() : '—'}</td>
+      <td style="text-align:right;">${r.systemStock !== null ? r.systemStock.toLocaleString() : (r.inSystem ? '…' : '—')}</td>
+      <td style="text-align:right;">${diffHtml}</td>
+      <td>${badges.join(' ')}${noteText}</td>
+    `;
+    tbody.appendChild(tr);
+  });
 }
 
 async function loadReports() {

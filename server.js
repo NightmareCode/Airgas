@@ -599,6 +599,21 @@ function saveRemarks() {
   } catch (err) { console.error('[Remarks] Save failed:', err.message); }
 }
 
+// ── Branch stock-takes ───────────────────────────────────────────────────────
+// Physical stock counts per branch (e.g. Nilai), uploaded via the API and
+// reconciled against the SkyBiz cache. App-side data only — never sent to
+// SkyBiz. Same Render free-tier caveat as remarks: re-upload after a redeploy.
+const STOCKTAKES_FILE = process.env.STOCKTAKES_FILE || path.join(__dirname, 'data', 'stocktakes.json');
+let stocktakes = {};
+try { stocktakes = JSON.parse(fs.readFileSync(STOCKTAKES_FILE, 'utf8')); } catch { stocktakes = {}; }
+
+function saveStocktakes() {
+  try {
+    fs.mkdirSync(path.dirname(STOCKTAKES_FILE), { recursive: true });
+    fs.writeFileSync(STOCKTAKES_FILE, JSON.stringify(stocktakes, null, 2));
+  } catch (err) { console.error('[Stocktakes] Save failed:', err.message); }
+}
+
 // ── Express setup ──
 
 app.use(cors());
@@ -1052,6 +1067,111 @@ app.put('/api/items/:code/remark', (req, res) => {
     message: text ? `Location remark saved for "${code}".` : `Location remark cleared for "${code}".`,
     remark: text,
     updatedAt: remarks[code] ? remarks[code].updatedAt : null
+  });
+});
+
+// ── Branch stock-take API ───────────────────────────────────────────────────
+
+app.get('/api/branches', (req, res) => {
+  res.json(Object.entries(stocktakes).map(([key, st]) => ({
+    key, name: st.name, updatedAt: st.updatedAt, lines: (st.items || []).length
+  })));
+});
+
+app.get('/api/branches/:branch/stocktake', (req, res) => {
+  const st = stocktakes[req.params.branch.toLowerCase()];
+  if (!st) return res.status(404).json({ error: 'No stock-take for this branch.' });
+  res.json(st);
+});
+
+// Upload/replace a branch stock-take. Guarded with the app password so random
+// visitors to the public URL cannot overwrite it.
+app.put('/api/branches/:branch/stocktake', (req, res) => {
+  if ((req.headers['x-app-pass'] || '') !== APP_PASS) {
+    return res.status(401).json({ success: false, error: 'Unauthorized.' });
+  }
+  const key = req.params.branch.toLowerCase();
+  const { name, source, items: list } = req.body || {};
+  if (!Array.isArray(list) || !list.length) {
+    return res.status(400).json({ success: false, error: 'items array is required.' });
+  }
+  stocktakes[key] = { name: name || key, updatedAt: new Date().toISOString(), source: source || '', items: list };
+  saveStocktakes();
+  res.json({ success: true, branch: key, lines: list.length });
+});
+
+// Reconcile a branch's physical count against the SkyBiz cache.
+// Sheet rows sharing an item code (e.g. size variants) are merged; codes are
+// matched ignoring leading zeros ("3053" matches "003053").
+app.get('/api/branches/:branch/reconcile', (req, res) => {
+  const st = stocktakes[req.params.branch.toLowerCase()];
+  if (!st) return res.status(404).json({ error: 'No stock-take for this branch.' });
+
+  const canon = s => String(s || '').trim().replace(/^0+/, '');
+  const byCanon = new Map();
+  items.forEach(i => {
+    const c = canon(i.code);
+    if (c && !byCanon.has(c)) byCanon.set(c, i);
+  });
+
+  // Merge sheet lines that share a code (size/colour variants)
+  const groups = new Map();
+  (st.items || []).forEach(r => {
+    const key = r.code ? canon(r.code) : '__nocode__' + r.desc;
+    if (!groups.has(key)) {
+      groups.set(key, { code: r.code || '', descs: [], printed: 0, hasPrinted: false, counted: 0, hasCounted: false, flags: new Set(), notes: [], uncertain: false, value: 0, lines: 0 });
+    }
+    const g = groups.get(key);
+    g.lines++;
+    g.descs.push(r.desc);
+    if (r.printed != null) { g.printed += r.printed; g.hasPrinted = true; }
+    const eff = r.counted != null ? r.counted : r.printed;   // counted wins; fall back to printed
+    if (eff != null) { g.counted += eff; g.hasCounted = true; }
+    (r.flags || []).forEach(f => g.flags.add(f));
+    if (r.note) g.notes.push(r.note);
+    if (r.uncertain) g.uncertain = true;
+    if (r.total != null) g.value += r.total;
+  });
+
+  const rows = [...groups.values()].map(g => {
+    const item = g.code ? byCanon.get(canon(g.code)) : null;
+    const systemStock = item && stocks[item.code] !== undefined ? stocks[item.code] : null;
+    const counted = g.hasCounted ? g.counted : null;
+    return {
+      code: g.code,
+      matchedCode: item ? item.code : null,
+      description: g.descs[0] + (g.lines > 1 ? ` (+${g.lines - 1} more variant lines)` : ''),
+      printed: g.hasPrinted ? g.printed : null,
+      counted,
+      systemStock,
+      diff: item && systemStock !== null && counted !== null ? Math.round((counted - systemStock) * 100) / 100 : null,
+      inSystem: !!item,
+      flags: [...g.flags],
+      notes: g.notes,
+      uncertain: g.uncertain,
+      value: Math.round(g.value * 100) / 100 || null
+    };
+  });
+
+  // Unmatched first, then biggest discrepancies
+  rows.sort((a, b) => {
+    if (a.inSystem !== b.inSystem) return a.inSystem ? 1 : -1;
+    return Math.abs(b.diff ?? 0) - Math.abs(a.diff ?? 0);
+  });
+
+  res.json({
+    branch: st.name,
+    updatedAt: st.updatedAt,
+    summary: {
+      sheetLines: (st.items || []).length,
+      uniqueItems: rows.length,
+      inSystem: rows.filter(r => r.inSystem).length,
+      notInSystem: rows.filter(r => !r.inSystem).length,
+      discrepancies: rows.filter(r => r.diff !== null && r.diff !== 0).length,
+      stockPending: rows.filter(r => r.inSystem && r.systemStock === null).length,
+      sheetValue: Math.round(rows.reduce((s, r) => s + (r.value || 0), 0) * 100) / 100
+    },
+    rows
   });
 });
 
